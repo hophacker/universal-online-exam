@@ -38,7 +38,7 @@
 		<child id="count3" text="统计3" />				
 	</parent>
         <parent id="feedback" text="信息反馈">
-            <child id="view_suggestion" text="See your suggestions" link="../suggestions/viewSuggestion/1" />
+            <child id="view_suggestion" text="All suggestions" link="../suggestions/viewSuggestion/1" />
         </parent>
         <parent id="logout" text="安全退出">
 	</parent>			

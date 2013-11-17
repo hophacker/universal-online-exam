@@ -1,2 +1,0 @@
-1384577632
-a:4:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:13:"suggestion_id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:7:"comment";s:17:"回复主题的id";}s:7:"content";a:7:{s:4:"type";s:6:"string";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:2000;s:7:"collate";s:15:"utf8_general_ci";s:7:"comment";s:15:"回复的内容";s:7:"charset";s:4:"utf8";}s:4:"date";a:5:{s:4:"type";s:4:"date";s:4:"null";b:0;s:7:"default";N;s:6:"length";N;s:7:"comment";s:15:"回复的日期";}}
