@@ -17,7 +17,7 @@
                     <div>
                         <form name="form1" action="Login.jsp" id="form1" method="post">
                             <marquee scrollamount="=8" style="width:300">
-                                <h2> <a>欢迎来到扬州大学党校测试平台</a> </h2>
+                                <h2> <a>Welcome to universal online examinations system</a> </h2>
                             </marquee>
                             <br />
                             <br />

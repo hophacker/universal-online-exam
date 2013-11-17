@@ -31,7 +31,7 @@
             echo $suggestion['Suggestion']['content'];
             
             // 回复列表
-            echo '<p class="larger_label">党校的回复</p>';
+            echo '<p class="larger_label">Reply</p>';
             echo '<table>';
             echo '<tr><th>序号</th><th>回复内容</th><th>日期</th></tr>';
             $reply = $suggestion['SuggestionReply'];

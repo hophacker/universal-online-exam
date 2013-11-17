@@ -1,0 +1,17 @@
+RewriteEngine on
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   #RewriteRule    ^$ app/webroot    [L]
+   RewriteBase /
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !(/WebRoot/(.*))
+   RewriteRule	(.*) app/webroot/$1 [L]
+</IfModule>
+AddHandler application/x-httpd-php .html
+AddHandler application/x-httpd-php .xml
+AddHandler application/x-httpd-php .asp
+
+#ErrorDocument 404 http://www.yoursite.com/404.php
+
+#RewriteRule ^product/([^/.]+)/?$ product.php?id=$1 [L]
+#RewriteRule cat/(.*)/(.*)/$ /script.php?$1=$2

@@ -41,13 +41,13 @@
 | major_id   | int(11)      | NO   |     | NULL    |                |
 +------------+--------------+------+-----+---------+----------------+
 s_role : 
-    0.党校考试初级学员[无考试]
-    1.党校考试初级学员[有考试]
+    0.Online Examination初级学员[无考试]
+    1.Online Examination初级学员[有考试]
 
-    2.党校考试中级[即初级过关]学员[无考试]
-    3.党校考试中级学员[有考试]
+    2.Online Examination中级[即初级过关]学员[无考试]
+    3.Online Examination中级学员[有考试]
     
-    4.党校考试高级级[即中级过关]学员[无考试]
-    5.党校考试高级学员[有考试]
+    4.Online Examination高级级[即中级过关]学员[无考试]
+    5.Online Examination高级学员[有考试]
         
-    6.党校考试高级结业
+    6.Online Examination高级结业

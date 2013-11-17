@@ -3,10 +3,10 @@
 bodyBgColor = #000000
 tableBgColor = #000000
 rowBgColor = #00ff00
-title = "扬州大学党校网上测试平台"
+title = "Universal Online Examination System"
 
 [title]
-title = "扬州大学党校网上测试平台"
+title = "Universal Online Examination System"
 
 [Customer]
 pageTitle = "Customer Info"

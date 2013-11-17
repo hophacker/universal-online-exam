@@ -40,7 +40,7 @@
         <child id="count1" text="注册人数统计" link="../../students/viewRegisterChartPerDepartment" />
 	</parent>
         <parent id="feedback" text="信息反馈">
-            <child id="view_suggestion" text="给党校建议查看" link="../../suggestions/viewSuggestion/1" />
+            <child id="view_suggestion" text="See your suggestions" link="../../suggestions/viewSuggestion/1" />
             <child id="view_suggestion" text="给系统建议查看" link="../../suggestions/viewSuggestion/0" />
         </parent>
         <parent id="logout" text="安全退出">

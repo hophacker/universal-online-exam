@@ -100,7 +100,7 @@ function getMessage() {
             <td width='20%' align='left'>发布时间：". $row['info_date'] ."</td>
             <td width='20%' align='left'>发布部门：";
         if($row['dept_name'] != "") $ret = $ret . $row['dept_name'];
-        else $ret = $ret . "党校";
+        else $ret = $ret . "UOES";
         $ret = $ret . "</td>
             </tr>
         </table>

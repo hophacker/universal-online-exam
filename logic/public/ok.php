@@ -14,7 +14,7 @@
         <script type="text/javascript" src="{$pubDir}/script/{$name}.js"></script>
         <script type="text/javascript" src="{$pubDir}/script/common.js"></script>
 
-        <title>{$title|default:'扬州大学党校网上测试平台'}</title>
+        <title>{$title|default:'Universal Online Examination System'}</title>
 
     </head>
     <body>

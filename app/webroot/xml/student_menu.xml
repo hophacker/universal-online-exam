@@ -8,7 +8,7 @@
                 <child id="view_perinfo" text="个人信息查看和修改" link="../../WebRoot/student/manage/account/profile/index.php" />
 	</parent>
 	<parent id="feedback" text="信息反馈">
-		<child id="toParty" text="给党校建议" link="../../suggestions/index/1" />
+		<child id="toParty" text="Suggestions" link="../../suggestions/index/1" />
 		<child id="toSystem" text="给系统建议" link="../../suggestions/index/0" />		
                 <child id="viewReply" text="查看回复" link="../../suggestions/viewReply" />		
                 		

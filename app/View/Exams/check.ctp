@@ -1,10 +1,10 @@
 <script type="text/javascript">
 $(function(){
 	$("#exam_now").click(function(){
-		window.open("/exams/index/1","党校考试","height=768, width=1100")
+		window.open("/exams/index/1","Online Examination","height=768, width=1100")
 	})
 	$("#exercise_now").click(function(){
-		window.open("/exams/index","党校练习","height=768, width=1100")
+		window.open("/exams/index","Online Excersize","height=768, width=1100")
 	})
 })
 </script>
@@ -53,7 +53,7 @@ $(function(){
 		<tr>
 			<td>考试状态</td>
 			<td><?php if(!$check['has_join']): ?><b>当前您已经参加过本场考试，无法再次参加</b><?php else:?>当前您没有参加本场考试<?php endif;?></td>
-			<td><?php if($check['has_join']) echo '通过'; else echo '请耐心等待党校审阅！' ?></td>
+			<td><?php if($check['has_join']) echo '通过'; else echo 'Please wait for reply patiently！' ?></td>
 		</tr>
 		<?php endif;?>
 	</table>

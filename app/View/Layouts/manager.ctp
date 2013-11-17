@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-            扬州大学党校管理后台
+            扬州大学Examination Management后台
 		</div>
 		<div id="content">
 

@@ -35,7 +35,7 @@ $(function(){
 <div style="display:none" id="target"><?php echo $target;?></div>
 <?php 
     if($target == 1) {
-        $msg = "给党校的建议";
+        $msg = "Suggestion History";
     } else {
         $msg = "给系统的建议";
     }

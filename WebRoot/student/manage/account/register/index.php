@@ -13,7 +13,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="zh-CN" lang="zh-CN">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>扬州大学党校用户注册</title>
+        <title>Account Registration</title>
         
         <link href="../../../../css/StuReg.css" rel="stylesheet" type="text/css" />
         <script src="<?php echo $webroot . '/jquery-ui/js/jquery-1.9.1.js' ?>"></script>
@@ -269,15 +269,15 @@
                                 </div>
 
                                 <div id="st_depart_aten" class="aten_style  gray">
-                                    选择所在院系，如若没有，请速与辅导员或党校管理员联系！
+                                    Please select your department, if there is none, please contact the administrators!
                                 </div>
                                 <div id="st_major_aten" class="aten_style  gray">
                                     选择学院后，专业会自动弹出，若网速慢，请稍作等待。
-                                    如若专业没有，请速与辅导员或党校管理员联系！
+                                    Please select your major, if there is none, please contact the administrators!
                                 </div>
                                 <div id="st_class_aten" class="aten_style  gray">
                                     选择专业后，班级会自动弹出，若网速慢，请稍作等待。
-                                    如若班级没有，请速与辅导员或党校管理员联系！
+                                    Please select your class, if there is none, please contact the administrators!
                                 </div>
                                 <div id="st_grade_aten" class="aten_style  gray">
                                 </div>

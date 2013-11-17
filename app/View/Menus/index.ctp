@@ -1,7 +1,7 @@
 <!Doctype html><html xmlns=http://www.w3.org/1999/xhtml>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8;"  />
-        <title>党校管理</title>
+        <title>Examination Management</title>
         <?php echo $this->Html->script('jquery-1.9.1'); ?>
         <style type="text/css">
         </style>

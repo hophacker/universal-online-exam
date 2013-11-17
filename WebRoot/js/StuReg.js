@@ -397,7 +397,7 @@ function CheckNum() {
         // 检查学号有没有在数据库中存在
         $.post(post_url, {oper:'CheckNo',st_No:$("#st_No").val()}, function(data) {
             if(data.isUsed == true) {
-                $("#st_No_aten").html("该学号已经被使用过，请重新输入一个学号，如果你的学号无法使用，则请联系党校");
+                $("#st_No_aten").html("This student number has been registered, please choose another one. Any problem, please refer to administrators");
                 addRed($("#st_No_aten"));
                 blankAddAlert($("#st_No"));
             } else {

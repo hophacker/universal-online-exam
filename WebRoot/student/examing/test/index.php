@@ -13,7 +13,7 @@
             <div class = "test_content">
                 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b> 
                 <form class = "form" id = 'form' name = 'form' action = 'asd.php' method = 'post'>
-                    <div class="sub_title">初级党校考试</div>
+                    <div class="sub_title">Primary Examination</div>
                     <!--                                         单选题开始                      -->
                     <h4>一、判断题</h4>
                     <ul>

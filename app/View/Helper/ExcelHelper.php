@@ -16,7 +16,7 @@ class ExcelHelper extends AppHelper {
         $this->sheet->getDefaultStyle()->getFont()->setName('Verdana');
     }
 
-    function generate(&$data, $fields = array(), $title = '党校表格', $name= '党校表格') {
+    function generate(&$data, $fields = array(), $title = 'UOES Excel', $name= 'UOES Excel') {
         $this->data = & $data;
         $this->fields = $fields;
         $this->_title($title);

@@ -14,7 +14,7 @@ $(document).ready(function() {
     	}
         var msg;
         if(target == 0) {
-            msg = "您确认向党校提出这个建议吗？";
+            msg = "Are you sure to make such suggestion?？";
         } else {
             msg = "您确认向开发者提出这个建议吗？";
         }

@@ -9,7 +9,7 @@ $webroot = "../../../..";
 <html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="zh-CN" lang="zh-CN">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{$title|default:'扬州大学党校网上测试平台'}</title>
+        <title>{$title|default:'Universal Online Examination System'}</title>
         <script src="<?php echo $webroot . '/ckeditor/ckeditor.js' ?>"></script>
         <script src="<?php echo $webroot . '/jquery-ui/js/jquery-1.9.1.js' ?>"></script>
         <script src="<?php echo $webroot . '/js/manager/newMessage.js' ?>"></script>
