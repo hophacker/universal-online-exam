@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ItemTemplate" usedb="true">
+	<title>ItemTemplate</title>
+	<metakeywords>php ajax autocomplete,ajax autocomplete php, php autocomplete, php ajax autosuggest, php autosuggest, php mysql autocomplete, ajax autocomplete textbox, ajax autocomplete mysql, ajax autocomplete example, php autocomplete dropdown</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolAutoComplete supports item template, in which we can define our own item's display. To use this feature, you need to set your template to <b>itemTemplate</b> property of KoolAutoComplete instance. Above example show you how to add image to item.
+</p>
+<p>
+When an item is rendered, KoolAutoComplete will read the <b>itemTemplate</b> and start fill in data to placeholder of template.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAutoComplete/koolautocomplete.php";
+
+	$kac = new KoolAutoComplete("kac");
+	$kac->scriptFolder = $KoolControlsFolder."/KoolAutoComplete";
+	$kac->width = "160px";
+	$kac->attachTo = "txtRegion";
+	$kac->styleFolder="default";
+
+
+	$result = mysql_query("select CountryName,FlagImage from kcb_tbcountries");
+	while($row = mysql_fetch_assoc($result))
+	{
+		$kac->addItem($row["CountryName"],array("image"=>$row["FlagImage"]));	
+	}
+	
+	$kac->itemTemplate ="<table><tr><td valign='middle' style='width:22px;height:20px;'><img src='../../../KoolComboBox/Resources/Flags/{image}' alt='{text}' title='{text}' /></td><td valign='middle'>{text}</td></tr></table>";
+?>
+
+<form id="form1" method="post">
+
+	<div style="padding-left:10px;padding-bottom:10px;">
+		Enter your country name:
+		<input type="text" id="txtRegion" autocomplete='off' />
+		<?php echo $kac->Render();?>
+	</div>
+	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAutoComplete/PHP/KoolAutoComplete_Class/index.php#itemTemplate">PHP :: KoolAutoComplete :: itemTemplate</doc>
+	</docs>
+</example>

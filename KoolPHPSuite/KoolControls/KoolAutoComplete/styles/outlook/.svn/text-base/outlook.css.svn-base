@@ -1,0 +1,148 @@
+.outlookKAC *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.outlookKAC table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.outlookKAC .kacUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.outlookKAC .kacLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.outlookKAC .kacCombobox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.outlookKAC .kacArrow
+{
+	border:none;
+	width:20px;
+	height:20px;
+	background:url(arrow.gif) 2px;
+}
+
+/*Box*/
+
+.outlookKAC .kacBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #91a7b4;
+	background-color:#f0f0eb;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.outlookKAC .kacIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.outlookKAC .kacItemBox
+{
+	overflow:auto;
+}
+
+.outlookKAC .kacItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .outlookKAC .kacItem
+{
+	display:block;
+}
+
+
+.outlookKAC .kacOpen
+{
+	display:block;
+}
+
+
+.outlookKAC .kacA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.outlookKAC .kacItem .kacIn img
+{
+	border:0px;
+}
+
+
+.outlookKAC .kacItem .kacIn
+{
+	color:#222;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:21px;
+}
+
+
+
+.outlookKAC .kacSelectFocus .kacIn
+{
+	background:#bbd7fa;
+	height:21px;
+	color:#222;
+}
+
+/*Disable Item*/
+.outlookKAC .kacDisable .kacIn
+{
+	color:gray;
+}
+
+.outlookKAC .kacDisable a.kacA:hover .kacIn
+{
+	background:none;
+	color:gray;
+}
+
+.outlookKAC .kacLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.outlookKAC .kacHeader,
+.outlookKAC .kacFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+.outlookKAC a:focus 
+{
+	outline:none;
+}

@@ -1,0 +1,58 @@
+body{margin: 0;border: 0;padding: 0;}
+table, th, td
+{
+    border: 0px solid black;
+}
+
+.dept_select{
+    width:140px;
+    margin-right:20px;
+    margin-bottom:10px;
+}
+.header{
+    background-color: #F0853D;
+}
+body{
+    color: #194F95;
+}
+#bod{
+    width:960px;
+    margin-left:auto;
+    margin-right:auto;	
+    background-color:#FFFFFF;
+}
+
+#bodin{
+    border: 1px solid #D0DBE7;
+    height:1200px;
+}
+
+table input{
+    background-color:#E0E8E9;
+    margin:0;
+    border:thin;
+    border-color:#09F;
+}
+#per #adva{
+    position: relative;
+    left: 60px;}
+#per p,#dat p{
+
+    font-weight:bold;
+    font-size:19px;
+}
+
+form input{
+
+    height:18px;
+}
+td{
+
+    font-size:14px;
+}
+#conf{
+    position:relative;
+    top:20px;
+    left:370px;
+
+}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth
+END
+ControllerAuthorizeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/ControllerAuthorizeTest.php
+END
+DigestAuthenticateTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/DigestAuthenticateTest.php
+END
+BasicAuthenticateTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/BasicAuthenticateTest.php
+END
+FormAuthenticateTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/FormAuthenticateTest.php
+END
+CrudAuthorizeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/CrudAuthorizeTest.php
+END
+ActionsAuthorizeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/ActionsAuthorizeTest.php
+END
+BlowfishAuthenticateTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Controller/Component/Auth/BlowfishAuthenticateTest.php
+END

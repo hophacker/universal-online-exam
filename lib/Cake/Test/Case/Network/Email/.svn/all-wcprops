@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/Email
+END
+CakeEmailTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/Email/CakeEmailTest.php
+END
+MailTransportTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/Email/MailTransportTest.php
+END
+SmtpTransportTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/Email/SmtpTransportTest.php
+END
+DebugTransportTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/Email/DebugTransportTest.php
+END

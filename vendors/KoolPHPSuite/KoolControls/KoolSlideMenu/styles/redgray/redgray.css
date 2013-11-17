@@ -1,0 +1,233 @@
+.redgrayKSM
+{
+	border:solid 1px #BDBDBD;
+	background-color:#F0F0F0;
+	padding:1px;
+}
+.redgrayKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.redgrayKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.redgrayKSM .ksmIn,
+.redgrayKSM .ksmLeft,
+.redgrayKSM .ksmRight,
+.redgrayKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.redgrayKSM .ksmA
+{
+	text-decoration:none;
+	color:#000000;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.redgrayKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.redgrayKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+
+.redgrayKSM .ksmChildBox .ksmCBB
+{
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;	
+}
+html>body .redgrayKSM .ksmChildBox .ksmCBB
+{
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+.redgrayKSM .ksmCollapse .ksmChildBox,
+.redgrayKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.redgrayKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+/*Parent*/
+.redgrayKSM .ksmParent
+{
+	line-height:31px;
+	cursor:pointer;
+	white-space:nowrap;
+}
+.redgrayKSM .ksmCollapse .ksmParent
+{
+	line-height:27px;
+}
+
+
+.redgrayKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_expand_mid.gif);
+	font-weight:bold;
+	color:white;
+	line-height:24px;
+	height:31px;
+}
+.redgrayKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:5px;
+}
+
+
+.redgrayKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_collapse_mid.gif);
+	font-weight:bold;
+	color:black;	
+}
+.redgrayKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.redgrayKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:26px;
+	height:31px;
+	background-image:url(parent_expand_left.gif);
+}
+.redgrayKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:27px;
+	background-image:url(parent_collapse_left.gif);
+}
+
+.redgrayKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:27px;
+	height:27px;
+}
+
+
+
+
+/*Child*/
+.redgrayKSM .ksmChild
+{
+	line-height:20px;
+}
+
+.redgrayKSM .ksmChild .ksmIn
+{
+	
+}
+.redgrayKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.redgrayKSM a.ksmChild:hover .ksmIn
+{
+	background:#F7F7F7;
+}
+
+.redgrayKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+	filter:alpha(opacity=30);
+	-moz-opacity:0.3;
+	opacity:0.3;	
+}
+
+
+.redgrayKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.redgrayKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.redgrayKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.redgrayKSM .ksmSelected .ksmIn
+{
+	font-weight:bold;
+	background:white;
+}
+
+.redgrayKSM .ksmSelected .ksmIn .ksmBul
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+}
+
+
+
+.redgrayKSM a.ksmSelected:hover .ksmIn
+{
+	background:white;
+	text-decoration:none;
+	cursor:default;
+
+}
+.redgrayKSM a.ksmSelected:hover .ksmIn .ksmBul
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	opacity:1.0;
+}
+/*Panel*/
+.redgrayKSM .ksmPanel
+{
+	line-height:normal;
+}
+.redgrayKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#000000;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;
+}

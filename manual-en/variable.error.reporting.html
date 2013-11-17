@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$error_reporting</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.variables.html" title="Chapter 13. Smarty Class Variables">
+<link rel="prev" href="variable.direct.access.security.html" title="$direct_access_security">
+<link rel="next" href="variable.escape.html.html" title="$escape_html">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">$error_reporting</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="variable.direct.access.security.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 13. Smarty Class Variables</th>
+<td width="20%" align="right"> <a accesskey="n" href="variable.escape.html.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="$error_reporting">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="variable.error.reporting"></a>$error_reporting</h2></div></div></div>
+<p>
+  When this value is set to a non-null-value it's value is used as php's
+  <a class="ulink" href="http://php.net/error_reporting" target="_top"><code class="varname">error_reporting</code></a>
+  level inside of <a class="link" href="api.display.html" title="display()"><code class="varname">display()</code></a>
+  and <a class="link" href="api.fetch.html" title="fetch()"><code class="varname">fetch()</code></a>.
+ </p>
+<p>
+  Smarty 3.1.2 introduced the <a class="link" href="api.mute.expected.errors.html" title="Smarty::muteExpectedErrors()"><code class="varname">muteExpectedErrors()</code></a> function.
+  Calling <code class="literal">Smarty::muteExpectedErrors();</code> after setting up custom error handling will ensure that 
+  warnings and notices (deliberately) produced by Smarty will not be passed to other custom error handlers. If your error logs 
+  are filling up with warnings regarding <code class="literal">filemtime()</code> or <code class="literal">unlink()</code> calls, please enable
+  Smarty's error muting.
+ </p>
+<p>
+  See also
+  <a class="link" href="chapter.debugging.console.html" title="Chapter 10. Debugging Console">debugging</a>
+  and
+  <a class="link" href="troubleshooting.html" title="Chapter 20. Troubleshooting">troubleshooting</a>.
+ </p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="variable.direct.access.security.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.variables.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="variable.escape.html.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">$direct_access_security </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> $escape_html</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

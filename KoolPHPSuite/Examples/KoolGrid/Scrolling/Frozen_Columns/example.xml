@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Frozen_Columns" usedb="true">
+	<title>Frozen Columns</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>When you need to show more data on a page while still want to maintain size of grid, you can use <b>scrolling</b> feature. Simply set $AllowScrolling to true and the $Height for the grid, you have enabled the feature.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+When you have a lot of horizontal columns and you hate to scroll back and forth to read information at last column and match them with the one at first column, the <b>Frozen Columns</b> feature will be the saver.
+</p>
+<p>
+Simply set the number of first columns you want to be frozen with <b>FrozenColumnsCount</b>, you have turned on the feature:
+</p>
+<p>
+	<b>$grid->MasterTable->FrozenColumnsCount = 2;</b> // You want first 2 columns are frozen
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,addressLine1, city, country from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="sunset";
+	$grid->DataSource = $ds;
+	$grid->AjaxEnabled = true;
+	$grid->AllowFiltering = true;
+
+	$grid->AllowResizing = true;
+	$grid->Width = "655px";
+	$grid->PageSize = 20;
+	$grid->RowAlternative = true;
+	$grid->AutoGenerateColumns = true;
+	$grid->MasterTable->ColumnWidth = "180px";
+
+	$grid->AllowScrolling = true;
+	$grid->MasterTable->Height = "300px";
+	
+	$grid->MasterTable->FrozenColumnsCount = 2;
+
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#AllowScrolling">KoolGrid::AllowScrolling</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#AllowScrolling">GridTableView::AllowScrolling</doc>
+	</docs>
+</example>

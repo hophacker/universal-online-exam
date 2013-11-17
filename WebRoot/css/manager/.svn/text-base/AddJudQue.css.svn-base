@@ -1,0 +1,43 @@
+/* CSS Document */
+#header{
+	font-size:18px;
+	color: #194F95;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight:900;
+	background-color:#F2F6FB;
+	border-bottom: 1px solid #D0DBE7;
+	margin:0;
+	padding:3px;
+}
+.m {
+    	font-size:14px;
+}
+
+#bod{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	background-color:#F2F6FB;
+	}
+
+#bodin{
+	color: #194F95;
+	border: 1px solid #D0DBE7;
+	height:960px;
+	padding:5px;
+	}
+.h{
+    font-weight:bold;
+	font-size:14px;
+   }
+textarea{
+	color: #194F95;
+	}
+#conf1,#conf2{
+	position:relative;
+	top:20px;
+	color: #194F95;
+	left:620px;
+	
+	}

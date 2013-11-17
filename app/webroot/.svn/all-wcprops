@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/dxks/!svn/ver/276/yangda/app/webroot
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/133/yangda/app/webroot/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/133/yangda/app/webroot/index.php
+END
+favicon.ico
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/133/yangda/app/webroot/favicon.ico
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/133/yangda/app/webroot/test.php
+END

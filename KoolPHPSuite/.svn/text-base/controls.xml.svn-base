@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<controls>
+
+	<control 	name="KoolPHPSuite" 
+				link="Examples/KoolPHPSuite/index.php" 
+				new="false" 
+				version="69"
+				releasedate="12/12/2012" />
+
+	<control 	name="KoolAjax" 
+				link="Examples/KoolAjax/index.php" 
+				new="false" 
+				version="3.0.0.0"
+				releasedate="10/22/2012" />
+				
+	<control 	name="KoolAutoComplete" 
+				link="Examples/KoolAutoComplete/index.php" 
+				new="false" 
+				version="1.5.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolButton" 
+				link="Examples/KoolButton/index.php" 
+				new="false" 
+				version="1.7.0.0"
+				releasedate="10/22/2012" />
+
+	<control 	name="KoolCalendar" 
+				link="Examples/KoolCalendar/index.php" 
+				new="false" 
+				version="1.9.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolChart" 
+				link="Examples/KoolChart/index.php" 
+				new="true" 
+				version="1.0.0.0"
+				releasedate="11/29/2012" />
+
+
+	<control 	name="KoolComboBox" 
+				link="Examples/KoolComboBox/index.php" 
+				new="false" 
+				version="1.8.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolForm" 
+				link="Examples/KoolForm/index.php" 
+				new="false" 
+				version="1.7.0.0"
+				releasedate="10/22/2012" />
+
+
+	<control 	name="KoolGrid" 
+				link="Examples/KoolGrid/index.php" 
+				new="false" 
+				version="4.5.0.0"
+				releasedate="12/12/2012" />
+
+	<control 	name="KoolImageView" 
+				link="Examples/KoolImageView/index.php" 
+				new="false" 
+				version="1.4.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolInput" 
+				link="Examples/KoolInput/index.php" 
+				new="false" 
+				version="1.7.0.0"
+				releasedate="10/22/2012" />
+
+	<control 	name="KoolListBox" 
+				link="Examples/KoolListBox/index.php" 
+				new="true" 
+				version="1.0.0.0"
+				releasedate="10/22/2012" />
+
+
+
+	<control 	name="KoolMenu" 
+				link="Examples/KoolMenu/index.php" 
+				new="false" 
+				version="1.2.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolSlideMenu" 
+				link="Examples/KoolSlideMenu/index.php" 
+				new="false" 
+				version="1.6.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolSocialShare" 
+				link="Examples/KoolSocialShare/index.php" 
+				new="true" 
+				version="1.0.0.0"
+				releasedate="09/25/2012" />
+
+
+
+	<control 	name="KoolTabs" 
+				link="Examples/KoolTabs/index.php"
+				new="false" 
+				version="1.8.0.0"
+				releasedate="04/16/2012" />
+
+	<control 	name="KoolTreeView" 
+				link="Examples/KoolTreeView/index.php" 
+				new="false" 
+				version="3.0.0.0" 
+				releasedate="10/22/2012" />
+
+	<control 	name="KoolUploader" 
+				link="Examples/KoolUploader/index.php" 
+				new="false" 
+				version="1.4.0.0" 
+				releasedate="04/16/2012" />
+</controls>

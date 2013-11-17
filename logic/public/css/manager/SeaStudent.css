@@ -1,0 +1,33 @@
+@charset "gb2312";
+/* CSS Document */
+body{
+		color: #194F95;
+		font-size:14px;
+	}
+#suser,#sname{
+		height:20px;
+	border-color:#0CF;
+	border-width:1px;
+	}
+
+#bod{
+	min-width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	background-color:#FFFFFF;
+	}
+table{
+	border-color:#0CF;
+	border-width:1px;
+	}
+#conf,#conf2{
+	color: #194F95;
+	font-size:14px;
+	}
+#bodin{
+	border: 1px solid #D0DBE7;
+	min-height:640px;
+	height:auto;
+    background-color:#F2F6FB;
+	}
+	

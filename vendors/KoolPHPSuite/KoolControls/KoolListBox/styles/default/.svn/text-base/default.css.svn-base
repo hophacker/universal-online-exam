@@ -1,0 +1,418 @@
+.defaultKLB
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;	
+}
+
+
+.defaultKLB_Scrollable .klbGroup
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #9AA0A6;	
+	overflow: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.defaultKLB .klbList
+{
+    height: 100%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.defaultKLB .klbItem
+{
+	line-height: 18px;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    cursor: default;
+    padding: 2px 5px;
+    white-space: nowrap;	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 		
+}
+
+.defaultKLB .klbDisabledItem 
+{
+	color: #AAAAAA;
+}
+
+.defaultKLB .klbGroup .klbHovered
+{
+    background: none repeat scroll 0 0 #FAE185;
+    color: #000000;
+}
+
+.defaultKLB .klbGroup .klbSelected {
+    background: none repeat scroll 0 0 #FFD86B;
+    color: #000000;
+}
+
+.defaultKLB .klbGroup .klbActive {
+    border: 1px dotted #555555;
+    padding: 1px 4px;
+}
+
+.defaultKLB .klbItem .klbText,
+.defaultKLB .klbItem .klbCheck,
+.defaultKLB .klbItem .klbImage
+{
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.defaultKLB .klbItem .klbImage
+{
+	padding-right:2px;
+}
+
+.defaultKLB .klbButtonAreaRight
+{
+	float:right;
+	width:30px;
+	height:100%;
+}
+
+.defaultKLB .klbButtonAreaLeft
+{
+	float:left;
+	width:30px;
+	height:100%;
+}
+
+.defaultKLB .klbButtonAreaTop,
+.defaultKLB .klbButtonAreaBottom
+{
+	float:left;
+	width:100%;
+	height:30px;
+}
+.defaultKLB .klbAlignLeft
+{
+	text-align:left;
+}
+.defaultKLB .klbAlignRight
+{
+	text-align:right;
+}
+.defaultKLB .klbAlignCenter
+{
+	text-align:center;
+}
+
+.defaultKLB .klbAlignTop td
+{
+	vertical-align:top;
+}
+.defaultKLB .klbAlignBottom td
+{
+	vertical-align:bottom;
+}
+.defaultKLB .klbAlignMiddle td
+{
+	vertical-align:middle;
+}
+
+
+
+
+.defaultKLB .klbButton
+{
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    line-height: 15px;
+    margin: 0 0 5px 6px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+.defaultKLB .klbButtonAreaLeft .klbButton
+{
+	margin: 0 6px 5px 0;
+}
+.defaultKLB .klbButtonAreaTop .klbButton
+{
+	display:inline-block;	
+	margin: 0 8px 6px 0;
+}
+.defaultKLB .klbButtonAreaBottom .klbButton
+{
+	display:inline-block;
+	margin: 6px 8px 0 0;
+}
+
+.defaultKLB .klbAlignBottom .klbButton
+{
+	margin-bottom:2px;
+	margin-top:5px;
+}
+.defaultKLB .klbAlignRight .klbButton
+{
+	margin-left:4px;
+	margin-right:4px;
+}
+
+
+
+.defaultKLB .klbButton .klbButtonBL,
+.defaultKLB .klbButton .klbButtonBR,
+.defaultKLB .klbButton .klbButtonTR,
+.defaultKLB .klbButton .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	display: inline-block;
+	position: relative;
+	width: auto;	
+}
+
+.defaultKLB .klbButton:hover .klbButtonBL,
+.defaultKLB .klbButton:hover .klbButtonBR,
+.defaultKLB .klbButton:hover .klbButtonTR,
+.defaultKLB .klbButton:hover .klbButtonTL
+{
+	background-image: url(ButtonHover.png);
+}
+
+.defaultKLB .klbDisabled:hover .klbButtonBL,
+.defaultKLB .klbDisabled:hover .klbButtonBR,
+.defaultKLB .klbDisabled:hover .klbButtonTR,
+.defaultKLB .klbDisabled:hover .klbButtonTL
+{
+	background-image: url(ButtonDisabled.png);
+	cursor:default;
+}
+
+.defaultKLB .klbButton .klbButtonBL
+{
+    background-position: 0 100%;
+    right: 0;
+    top: 4px;	
+}
+
+.defaultKLB .klbButton .klbButtonBR
+{
+    background-position: 100% 100%;
+    display: inline-block;
+    right: -4px;
+}
+.defaultKLB .klbButton .klbButtonTR
+{
+    background-position: 100% 0;
+    bottom: 4px;
+    overflow: visible;
+    right: 0;	
+}
+.defaultKLB .klbButton .klbButtonTL
+{
+    background-position: 0 0;
+    left: -4px;
+}
+
+
+.defaultKLB .klbButton .klbButtonText
+{
+    background: url(Sprite.png) no-repeat;
+    display: inline-block;
+	position: relative;
+    width: 0px;
+    padding-left: 18px;
+	height:13px;
+	padding-top: 3px;
+    text-align: left;
+    z-index: 1;
+	font-size: 0;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;	   
+}
+
+/*Default and right*/
+.defaultKLB .klbDelete .klbButtonText
+{
+   background-position: 0 -50px;
+}
+.defaultKLB .klbMoveUp .klbButtonText
+{
+  background-position: 0 0;
+}
+.defaultKLB .klbMoveDown .klbButtonText
+{
+  background-position: 0 -25px;
+}
+
+.defaultKLB .klbTransferOut .klbButtonText
+{
+  background-position: 0 -75px;
+}
+.defaultKLB .klbTransferIn .klbButtonText
+{
+  background-position: 0px -100px;
+}
+
+.defaultKLB .klbTransferAllOut .klbButtonText
+{
+  background-position: 0 -125px;
+}
+.defaultKLB .klbTransferAllIn .klbButtonText
+{
+  background-position: 0px -150px;
+}
+
+
+
+.defaultKLB .klbDeleteDisabled .klbButtonText
+{
+   background-position: -200px -50px;
+}
+.defaultKLB .klbMoveUpDisabled .klbButtonText
+{
+  background-position: -200px 0;
+}
+.defaultKLB .klbMoveDownDisabled .klbButtonText
+{
+  background-position: -200px -25px;
+}
+
+.defaultKLB .klbTransferOutDisabled .klbButtonText
+{
+  background-position: -200px -75px;
+}
+.defaultKLB .klbTransferInDisabled .klbButtonText
+{
+  background-position: -200px -100px;
+}
+
+.defaultKLB .klbTransferAllOutDisabled .klbButtonText
+{
+  background-position: -200px -125px;
+}
+.defaultKLB .klbTransferAllInDisabled .klbButtonText
+{
+  background-position: -200px -150px;
+}
+
+/*Left*/
+.defaultKLB .klbButtonAreaLeft .klbTransferOut .klbButtonText
+{
+	background-position: 0px -100px;
+  
+}
+.defaultKLB .klbButtonAreaLeft .klbTransferIn .klbButtonText
+{
+	background-position: 0 -75px;
+}
+.defaultKLB .klbButtonAreaLeft .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -150px;
+}
+.defaultKLB .klbButtonAreaLeft .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -125px;
+}
+
+
+.defaultKLB .klbButtonAreaLeft .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -100px;
+}
+.defaultKLB .klbButtonAreaLeft .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -75px;
+}
+
+.defaultKLB .klbButtonAreaLeft .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -150px;
+}
+.defaultKLB .klbButtonAreaLeft .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -125px;
+}
+
+/*Top*/
+.defaultKLB .klbButtonAreaTop .klbTransferOut .klbButtonText
+{
+	background-position: 0px -200px;
+  
+}
+.defaultKLB .klbButtonAreaTop .klbTransferIn .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.defaultKLB .klbButtonAreaTop .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -250px;
+}
+.defaultKLB .klbButtonAreaTop .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -225px;
+}
+
+
+.defaultKLB .klbButtonAreaTop .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+.defaultKLB .klbButtonAreaTop .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+
+.defaultKLB .klbButtonAreaTop .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}
+.defaultKLB .klbButtonAreaTop .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+
+
+/*Bottom*/
+.defaultKLB .klbButtonAreaBottom .klbTransferOut .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.defaultKLB .klbButtonAreaBottom .klbTransferIn .klbButtonText
+{
+	background-position: 0px -200px;
+}
+.defaultKLB .klbButtonAreaBottom .klbTransferAllOut .klbButtonText
+{
+	background-position: 0 -225px;
+}
+.defaultKLB .klbButtonAreaBottom .klbTransferAllIn .klbButtonText
+{
+	background-position: 0px -250px;
+}
+
+
+.defaultKLB .klbButtonAreaBottom .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+.defaultKLB .klbButtonAreaBottom .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+
+.defaultKLB .klbButtonAreaBottom .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+.defaultKLB .klbButtonAreaBottom .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}

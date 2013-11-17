@@ -1,0 +1,22 @@
+$(document).ready(function() {
+    $.ajaxSetup({
+        async: false
+    });
+    $('.listBlock').hide();
+    $('.delLink').click(function(){
+            var r=confirm("确认删除?");
+            if (r == true) {
+                //$(this).closest('tr').hide(400);
+                var flag = 0;
+                $.post('../../suggestions/delete/' + $(this).attr('delId'), function(data){
+                    flag = data.success
+                },'json');
+                if(flag == 1)
+                    $(this).closest('tr').hide(400);
+            }  
+    });
+    $('.listSuggestion').click(function() {
+        $('.listBlock').hide();
+        $('#div'+$(this).attr('viewId')).show(400);
+    })
+});

@@ -1,0 +1,175 @@
+<?php
+/**
+ * 考试分配信息的相关函数
+ * @author jiangjun 
+ * @version 1.0 考试分配页面相关函数
+ */
+class AssignmentsController extends AppController {
+	/**
+	 * 考试分配展示页面
+	 */
+	public function assign(){
+		$this->set('title_for_layout','学员考试分配');
+		$this->testTypes();
+	}
+	/**
+	 * 获得所有的部门信息
+	 */
+	public function departments(){
+		$this->autoRender=false;
+		//加载model类
+		$this->loadModel('Department');
+		$depts=$this->Department->find('list',array('fields'=>'id,dept_name'));
+		$departments=array();
+		foreach ($depts as $dept_id=>$dept_name){
+			$departments[]=array('value'=>$dept_id,
+				'name'=>$dept_name);
+		}
+		$this->response->body(json_encode($departments));
+	}
+	/**
+	 * 获得所有的考试类型
+	 */
+	protected function testTypes(){
+		//加载model类
+		$this->loadModel('TestTypes');
+		$testtype=$this->TestTypes->find('list',array('fields'=>'id,name'));
+		$testtypes[]=array();
+		foreach ($testtype as $id=>$name){
+			$testtypes[]=array('value'=>$id,
+					'name'=>$name);
+		}
+		$this->set('testtypes',$testtypes);
+	}
+	/**
+	 * 获得指定专业信息
+	 */
+	public function majors(){
+		$this->autoRender=false;
+		if(!$this->request->is('ajax')||!$this->request->is('post')){
+			throw new ForbiddenException();
+		}
+		$id=$this->request->data('key');
+		if(!$id){//指定的专业编号
+			throw new NotFoundException();
+		}
+		$this->loadModel('Major');
+		$major=$this->Major->find('list',array('conditions'=>array('department_id'=>$id),'fields'=>'id,major_name'));
+		if(!$major){
+			throw new NotFoundException();
+		}
+		$majors=array();
+		foreach ($major as $major_id=>$major_name)	{
+			$majors[]=array('value'=>$major_id,
+				'name'=>$major_name);
+		}
+		$this->response->body(json_encode($majors));
+	}
+	/**
+	 * 获得指定班级信息
+	 */
+	public function classes(){
+		$this->autoRender=false;
+		if(!$this->request->is('ajax')||!$this->request->is('post')){
+			throw new ForbiddenException();
+		}
+		$id=$this->request->data('key');
+		if(!$id){//指定的班级编号
+			throw new NotFoundException();
+		}
+		$this->loadModel('Class');
+		$class=$this->Class->find('list',array('conditions'=>array('major_id'=>$id),'fields'=>'id,class_name'));
+		if(!$class){
+			throw new NotFoundException();
+		}
+		$classes=array();
+		foreach ($class as $class_id=>$class_name)	{
+			$classes[]=array('value'=>$class_id,
+				'name'=>$class_name);
+		}
+		$this->response->body(json_encode($classes));
+	}
+	/**
+	 * 获得分配信息
+	 */
+       
+	public function getAssign(){
+            
+		$this->autoRender=false;
+		if(!$this->request->is('ajax')||!$this->request->is('post')){
+			throw new ForbiddenException();
+		}
+                              
+
+		$this->loadModel('Student');
+		$options['joins']=$this->Student->fullJoins();
+		
+		$conditions=array();
+		$dept_id=$this->getInt($this->request->data('dept_id'));
+		$major_id=$this->getInt($this->request->data('major_id'));
+		$class_id=$this->getInt($this->request->data('class_id'));
+		$st_type=$this->getInt($this->request->data('st_type'));
+		$s_grade=$this->getInt($this->request->data('s_grade'));
+		$see_type=$this->request->data('see_type');
+                $s_user =trim($this->request->data('s_user'));
+                /*
+                 * 0:练习已达标
+                 * 1:练习未达标 
+                 * 2:全部
+                 */
+                
+                if ($s_user != "") $conditions['s_user']=$s_user;
+                else{
+                    if ($class_id != -1) $conditions['Class.id']=$class_id;
+                    else if ($major_id != -1) $conditions['Major.id']=$major_id;
+                    else if ($dept_id != -1) $conditions['Department.id']=$dept_id;
+                }
+                
+		if ($st_type != -1) $conditions['test_type_id']=$st_type;
+		if ($s_grade != -1) $conditions['s_grade']=$s_grade;
+		
+                $this->loadModel('Promotion');
+                //debug($see_type);
+                $PC = $this->Promotion->getPromotionConditions($st_type);
+                if ($see_type == 0) $conditions[] = $PC;
+                else if ($see_type == 1) $conditions['not'] = $PC;
+//                $this->Student->getDataSource()->getLog(false,false);
+//                debug($conditions);
+//                return $conditions;
+//                debug($conditions);
+		if($conditions) $options['conditions']=$conditions;
+                $options['fields'] = array('id', 's_name', 's_num', 'test_id', 'times', 'highest');
+		$students=$this->Student->find('all',$options);
+//                debug($$this->Student->getDataSource()->getLog());
+		foreach ($students as $i=>$stuednt){
+			$students[$i]=$stuednt['Student'];
+		}
+		$this->response->body(json_encode($students));
+	}
+	/**
+	 * 分配考试
+	 */
+	public function assignRole(){
+		$this->autoRender=false;
+		if(!$this->request->is('ajax')||!$this->request->is('post')){
+			throw new ForbiddenException();
+		}
+		$students=$this->request->data('stus');
+		$this->loadModel('Student');
+		$ret=true;
+		if($students){
+			$ret=$this->Student->updateAll(array('has_test'=>0),array('id in'=>$students));
+		}
+		if($ret!==false){
+			$assigns=$this->request->data('assigns');
+			if($assigns){
+				$ret=$this->Student->updateAll(array('has_test'=>1),array('id in'=>$assigns));
+			}
+		}
+		if($ret){
+			$this->json_success('分配成功！');
+		}else{
+			$this->json_error('分配过程发生异常！');
+		}
+	}
+}

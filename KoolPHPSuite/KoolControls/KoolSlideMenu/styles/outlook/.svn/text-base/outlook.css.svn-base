@@ -1,0 +1,244 @@
+.outlookKSM
+{
+	background-color:white;
+	padding:1px;
+}
+.outlookKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.outlookKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.outlookKSM .ksmIn,
+.outlookKSM .ksmLeft,
+.outlookKSM .ksmRight,
+.outlookKSM .ksmBul
+{
+	display:block;
+}
+
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.outlookKSM .ksmA
+{
+	text-decoration:none;
+	color:#F4F4F4;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.outlookKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.outlookKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.outlookKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 
+}
+html>body .outlookKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.outlookKSM .ksmCollapse .ksmChildBox,
+.outlookKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.outlookKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.outlookKSM .ksmParent
+{
+	line-height:23px;
+	cursor:pointer;
+	white-space:nowrap;	
+}
+.outlookKSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.outlookKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid_ex.gif);
+	font-weight:bold;
+	color:#5e5d53;
+	line-height:23px;
+	height:23px;
+	margin-bottom:1px;
+}
+.outlookKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+	line-height:20px;
+}
+
+
+.outlookKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:#5e5d53;	
+}
+.outlookKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.outlookKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:9px;
+	height:23px;
+	background-image:url(parent_left_ex.gif);
+}
+.outlookKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:23px;
+	background-image:url(parent_left.gif);
+}
+
+.outlookKSM .ksmParent .ksmRight
+{
+	float:right;
+	width:23px;
+	height:23px;
+	background-image:url(parent_right_ex.gif);
+}
+.outlookKSM .ksmCollapse .ksmParent .ksmRight
+{
+	height:23px;
+	background-image:url(parent_right.gif);
+}
+
+.outlookKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:23px;
+	height:23px;
+}
+
+
+
+
+/*Child*/
+.outlookKSM .ksmChild
+{
+	line-height:20px;
+	color:#5e5d53;
+}
+
+.outlookKSM .ksmChild .ksmIn
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+	margin-bottom:1px;
+}
+.outlookKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.outlookKSM a.ksmChild:hover .ksmIn
+{
+	background:#ecebe6;
+}
+
+.outlookKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	
+}
+
+
+.outlookKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.outlookKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.outlookKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.outlookKSM .ksmSelected .ksmIn
+{
+	background:#ecebe6;
+}
+
+.outlookKSM .ksmSelected .ksmIn .ksmBul
+{
+	
+}
+
+.outlookKSM a.ksmSelected:hover .ksmIn
+{
+	background:#ecebe6;
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.outlookKSM .ksmPanel
+{
+	line-height:normal;
+}
+.outlookKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#333333;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}
+.outlookKSM a:focus 
+{
+	outline:none;
+}

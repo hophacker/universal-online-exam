@@ -1,0 +1,424 @@
+.vistaKUL
+{
+	margin:0px;
+	padding:5px;
+	padding-bottom:3px;
+	border:solid 1px #7A7C80;
+	background-color:#fff;
+}
+
+.vistaKUL .kulContainer
+{
+	background-color:white;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+.vistaKUL .kulContainerCover
+{
+	border:solid 1px #aaa;
+	vertical-align:top;
+}
+
+.vistaKUL .kulTemplate
+{
+	display:none;
+}
+
+
+
+.vistaKUL .kulA
+{
+	display:block;
+}
+
+.vistaKUL .kulText
+{
+	display:none;
+}
+
+/*btnAdd*/
+.vistaKUL .kulAdd
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.vistaKUL .kulAdd .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add.gif);
+}
+.vistaKUL .kulAddOver .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add_over.gif);
+}
+/*btnUploadAll*/
+.vistaKUL .kulUploadAll
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.vistaKUL .kulUploadAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall.gif);
+}
+.vistaKUL .kulUploadAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall_over.gif);
+}
+
+/*btnClearAll*/
+.vistaKUL .kulClearAll
+{
+	display:block;
+	float:right;
+	width:70px;	
+}
+
+.vistaKUL .kulClearAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall.gif);
+}
+.vistaKUL .kulClearAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall_over.gif);
+}
+
+/*Input File*/
+.vistaKUL .kulFileInput
+{
+	display:block;
+	width:68px;
+	height:24px;
+	overflow:hidden;
+	margin-top:-24px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+}
+.vistaKUL .kulFileInput input
+{
+	margin-left:-145px;
+}
+
+/*Item*/
+
+.vistaKUL .kulItem
+{
+	height:60px;
+	background-color:#d3f3ff;
+	border-bottom:solid 1px #a2d5e8;
+	vertical-align:top;
+	clear:both;
+}
+
+.vistaKUL .kulSelected
+{
+	background-color:#d3f3ff;
+}
+
+
+.vistaKUL .kulItem .kulText,
+.vistaKUL .kulItem .kulA
+{
+	display:inline;
+}
+.vistaKUL .kulItem .kulA .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	color:#0565b7;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.vistaKUL .kulItem .kulUpload .kulA:hover .kulText,
+.vistaKUL .kulItem .kulCancel .kulA:hover .kulText
+{
+	color:#0565b7;
+	text-decoration:none;
+}
+.vistaKUL .kulItem .kulRemove .kulA:hover .kulText
+{
+	color:crimson;
+	text-decoration:none;
+}
+
+
+.vistaKUL .kulFileName
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	display:block;
+}
+
+.vistaKUL .kulUpload,
+.vistaKUL .kulRemove,
+.vistaKUL .kulCancel
+{
+	display:block;
+	line-height:20px;
+}
+
+.vistaKUL .kulCancel
+{
+	display:none;
+}
+
+
+.vistaKUL .kulUploading .kulUpload,
+.vistaKUL .kulUploading .kulRemove,
+.vistaKUL .kulDone .kulUpload,
+.vistaKUL .kulDone .kulRemove,
+.vistaKUL .kulDone .kulCancel
+{
+	display:none;
+}
+
+.vistaKUL .kulUploading .kulCancel
+{
+	display:block;
+}
+
+.vistaKUL .kulNotAllowed .kulRemove
+{
+	display:block;
+}
+
+
+.vistaKUL .kulThumbnail
+{
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(ico_file.gif);
+}
+.vistaKUL .kulProgress
+{
+	display:none;
+}
+.vistaKUL .kulStatus
+{
+	display:none;
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	color:#0565b7;
+}
+.vistaKUL .kulError
+{
+	color:red;
+}
+
+.vistaKUL .kulDone .kulStatus
+{
+	display:block;
+}
+
+.vistaKUL .kulProgress
+{
+	vertical-align:top;
+}
+
+.vistaKUL .kulProgress .kulBar
+{
+	width:123px;
+	height:10px;
+	background:url(progressbg_#2c3a8b.gif) no-repeat -123px;
+}
+/*Alternative bar in case the progressEnabled==false*/
+.vistaKUL .kulProgress .kulAltBar
+{
+	width:96px;
+	height:10px;
+	background:url(progressbg_alt.gif);
+}
+
+.vistaKUL .kulProgress .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;	
+}
+
+
+.vistaKUL .kulUploading .kulProgress
+{
+	display:block;
+}
+
+
+.vistaKUL .kulItem .kulLeft
+{
+	float:left;
+	height:50px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:10px;
+}
+
+.vistaKUL .kulItem .kulRight
+{
+	float:right;
+	height:50px;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:7px;
+	vertical-align:top;
+}
+
+.vistaKUL .kulItem .kulMiddle
+{
+	height:45px;
+	padding-top:12px;
+	overflow:hidden;	
+}
+/*Hide iframe: this important, do not change*/
+.vistaKUL .kulItem iframe
+{
+	display:none;
+}
+/*Hide form: this important, do not change*/
+.vistaKUL .kulItem form
+{
+	display:none;
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*Image for thumpnail*/
+.vistaKUL .kuljpg
+{
+	background:url(ico_jpg.gif);
+}
+.vistaKUL .kulgif
+{
+	background:url(ico_gif.gif);
+}
+
+.vistaKUL .kulpng
+{
+	background:url(ico_png.gif);
+}
+.vistaKUL .kulbmp,
+.vistaKUL .kulpic,
+.vistaKUL .kultiff
+{
+	background:url(ico_image.gif);
+}
+
+.vistaKUL .kuldoc,
+.vistaKUL .kuldocx
+{
+	background:url(ico_doc.gif);
+}
+.vistaKUL .kulxls,
+.vistaKUL .kulxlsx
+{
+	background:url(ico_xls.gif);
+}
+.vistaKUL .kulmdb
+{
+	background:url(ico_mdb.gif);
+}
+.vistaKUL .kulppt
+{
+	background:url(ico_ppt.gif);
+}
+.vistaKUL .kulmdf
+{
+	background:url(ico_mdf.gif);
+}
+.vistaKUL .kuldll
+{
+	background:url(ico_dll.gif);
+}
+.vistaKUL .kulbat
+{
+	background:url(ico_bat.gif);
+}
+.vistaKUL .kulaspx
+{
+	background:url(ico_aspx.gif);
+}
+.vistaKUL .kulcs
+{
+	background:url(ico_cs.gif);
+}
+.vistaKUL .kulhtml,
+.vistaKUL .kulhtm
+{
+	background:url(ico_html.gif);
+}
+.vistaKUL .kulini
+{
+	background:url(ico_ini.gif);
+}
+.vistaKUL .kuljar
+{
+	background:url(ico_jar.gif);
+}
+.vistaKUL .kuljs
+{
+	background:url(ico_js.gif);
+}
+.vistaKUL .kullib
+{
+	background:url(ico_lib.gif);
+}
+.vistaKUL .kulmp3
+{
+	background:url(ico_mp3.gif);
+}
+.vistaKUL .kulmpg
+{
+	background:url(ico_mpg.gif);
+}
+.vistaKUL .kulpdf
+{
+	background:url(ico_pdf.gif);
+}
+.vistaKUL .kulphp
+{
+	background:url(ico_php.gif);
+}
+.vistaKUL .kulrar,
+.vistaKUL .kulzip,
+.vistaKUL .kultgz
+{
+	background:url(ico_rar.gif);
+}
+.vistaKUL .kultxt
+{
+	background:url(ico_txt.gif);
+}
+.vistaKUL .kulvb
+{
+	background:url(ico_vb.gif);
+}
+.vistaKUL .kulwma
+{
+	background:url(ico_wma.gif);
+}
+.vistaKUL .kulxml
+{
+	background:url(ico_xml.gif);
+}

@@ -1,0 +1,26 @@
+<control>
+	<name>KoolComboBox - Advanced PHP ComboBox</name>
+	<metadescription>KoolComboBox is excellent PHP Dropdown box. It is easy-to-use, highly customized interface and has many advanced behavior options. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<description>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</description>
+	<examples>
+		<example	name="MultiColumn ComboBox" 
+					link="Features/MultiColumn_ComboBox/index.php" 
+					image="Features/MultiColumn_ComboBox/preview.gif"/>
+		<example	name="CheckBoxList" 
+					link="Advances/CheckBoxList/index.php" 
+					image="Advances/CheckBoxList/preview.gif"/>
+		<example	name="With TreeView" 
+					link="Advances/With_TreeView/index.php" 
+					image="Advances/With_TreeView/preview.jpg"/>
+		<example	name="State Selector" 
+					link="Advances/State_Selector/index.php" 
+					image="Advances/State_Selector/preview.gif"/>
+		<example	name="Related ComboBoxes" 
+					link="Features/Related_ComboBoxes/index.php" 
+					image="Features/Related_ComboBoxes/preview.jpg"/>
+		<example	name="Overlay" 
+					link="Features/Overlay/index.php" 
+					image="Features/Overlay/preview.gif"/>
+	</examples>			
+</control>

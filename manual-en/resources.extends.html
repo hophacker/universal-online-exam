@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Extends Template Resources</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="resources.html" title="Chapter 16. Resources">
+<link rel="prev" href="resources.streams.html" title="Stream Template Resources">
+<link rel="next" href="resources.custom.html" title="Custom Template Resources">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Extends Template Resources</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="resources.streams.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 16. Resources</th>
+<td width="20%" align="right"> <a accesskey="n" href="resources.custom.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="Extends Template Resources">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="resources.extends"></a>Extends Template Resources</h2></div></div></div>
+<p>
+  The <code class="literal">extends:</code> resource is used to define child/parent relationships for template inheritance from the PHP script.
+  For details see section of <a class="link" href="advanced.features.template.inheritance.html" title="Template Inheritance">Template Interitance</a>.
+ </p>
+<p>
+   As of Smarty 3.1 the <code class="literal">extends:</code> resource may use any available 
+   <a class="link" href="resources.html" title="Chapter 16. Resources">template resource</a>, 
+   including <code class="literal">string:</code> and <code class="literal">eval:</code>.
+   When <a class="link" href="resources.string.html" title="String Template Resources">templates from strings</a> are used,
+   make sure they are properly (url or base64) encoded. Is an <code class="literal">eval:</code> resource
+   found within an inheritance chain, its "don't save a compile file" property is superseeded by
+   the <code class="literal">extends:</code> resource. The templates within an inheritance chain are not
+   compiled separately, though. Only a single compiled template will be generated.
+ </p>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+    Use this when inheritance is required programatically. When inheriting within PHP, 
+    it is not obvious from the child template what inheritance took place. If you have a choice, 
+    it is normally more flexible and intuitive to handle inheritance chains from within the templates.
+  </p>
+</div>
+<div class="example">
+<a name="id456430"></a><p class="title"><b>Example 16.9. Using template inheritance from the PHP script</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+$smarty-&gt;display('extends:parent.tpl|child.tpl|grandchild.tpl'); 
+
+// inheritance from multiple template sources
+$smarty-&gt;display('extends:db:parent.tpl|file:child.tpl|grandchild.tpl|eval:{block name="fooBazVar_"}hello world{/block}'); 
+?&gt;
+
+  </pre></div>
+</div>
+<br class="example-break"><p>
+  See also
+  <a class="link" href="advanced.features.template.inheritance.html" title="Template Inheritance">Template Inheritance</a>
+  <a class="link" href="language.function.block.html" title="{block}"><code class="varname">{block}</code></a> and
+  <a class="link" href="language.function.extends.html" title="{extends}"><code class="varname">{extends}</code></a>.
+  </p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="resources.streams.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="resources.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="resources.custom.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Stream Template Resources </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Custom Template Resources</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

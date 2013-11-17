@@ -1,0 +1,493 @@
+字符串或串(String)是由零个或多个字符组成的有限序列。一般记为 s='a1a2•••an'(n>=0)。它是编程语言中表示文本的数据类型。
+
+通常以串的整体作为操作对象，如：在串中查找某个子串、求取一个子串、在串的某个位置上插入一个子串以及删除一个子串等。两个字符串相等的充要条件是：长 度相等，并且各个对应位置上的字符都相等。设p、q是两个串，求q在p中首次出现的位置的运算叫做模式匹配。串的两种最基本的存储方式是顺序存储方式和链 接存储方式。
+
+下面我们来看看MySQL中的字符串函数
+
+假如结果的长度大于 max_allowed_packet 系统变量的最大值时，字符串值函数的返回值为NULL。
+
+对于在字符串位置操作的函数，第一个位置的编号为 1。
+
+◆ ASCII(str)
+
+返回值为字符串str 的最左字符的数值。假如str为空字符串，则返回值为 0 。假如str 为NULL，则返回值为 NULL。 ASCII()用于带有从 0到255的数值的字符。
+
+mysql>　SELECT　ASCII('2');
+
+->　50
+
+mysql>　SELECT　ASCII(2);
+
+->　50
+
+mysql>　SELECT　ASCII('dx');
+
+->　100
+
+见 ORD()函数。
+
+◆ BIN(N)
+
+返回值为N的二进制值的字符串表示，其中　 N 为一个longlong (BIGINT) 数字。这等同于 CONV(N,10,2)。假如N 为NULL，则返回值为 NULL。
+
+mysql>　SELECT　BIN(12);
+->　'1100'
+
+◆ BIT_LENGTH(str)
+
+返回值为二进制的字符串str 长度。
+
+mysql>　SELECT　BIT_LENGTH('text');
+->　32
+
+◆ CHAR(N,... [USING charset])
+
+CHAR()将每个参数N理解为一个整数，其返回值为一个包含这些整数的代码值所给出的字符的字符串。NULL值被省略。
+
+mysql>　SELECT　CHAR(77,121,83,81,'76');
+->　'MySQL'
+mysql>　SELECT　CHAR(77,77.3,'77.3');
+->　'MMM'
+大于 255的CHAR()参数被转换为多结果字符。 例如，CHAR(256) 相当于 CHAR(1,0), 而CHAR(256*256) 则相当于 CHAR(1,0,0)：
+
+mysql>　SELECT　HEX(CHAR(1,0)),　HEX(CHAR(256));
++----------------+----------------+
+|　HEX(CHAR(1,0))　|　HEX(CHAR(256))　|
++----------------+----------------+
+|　0100　　　　　　　　　　　|　0100　　　　　　　　　　　|
++----------------+----------------+
+mysql>　SELECT　HEX(CHAR(1,0,0)),　HEX(CHAR(256*256));
++------------------+--------------------+
+|　HEX(CHAR(1,0,0))　|　HEX(CHAR(256*256))　|
++------------------+--------------------+
+|　010000　　　　　　　　　　　|　010000　　　　　　　　　　　　　|
++------------------+--------------------+
+
+CHAR()的返回值为一个二进制字符串。可选择使用USING语句产生一个给出的字符集中的字符串：
+
+mysql>　SELECT　CHARSET(CHAR(0x65)),　CHARSET(CHAR(0x65　USING　utf8));
+mysql>　SELECT　CHARSET(CHAR(0x65)),　CHARSET(CHAR(0x65　USING　utf8));
++---------------------+--------------------------------+
+|　CHARSET(CHAR(0x65))　|　CHARSET(CHAR(0x65　USING　utf8))　|
++---------------------+--------------------------------+
+|　binary　　　　　　　　　　　　　　|　utf8　　　　　　　　　　　　　　　　　　　　　　　　　　　|
++---------------------+--------------------------------+
+
+如果 USING已经产生，而结果字符串不符合给出的字符集，则会发出警告。同样，如果严格的SQL模式被激活，则CHAR()的结果会成为 NULL。
+
+◆ CHAR_LENGTH(str)
+
+返回值为字符串str 的长度，长度的单位为字符。一个多字节字符算作一个单字符。对于一个包含五个二字节字符集, LENGTH()返回值为 10, 而CHAR_LENGTH()的返回值为5。
+
+◆ CHARACTER_LENGTH(str)
+
+CHARACTER_LENGTH()是CHAR_LENGTH()的同义词。
+
+◆ COMPRESS(string_to_compress)
+
+压缩一个字符串。这个函数要求 MySQL已经用一个诸如zlib的压缩库压缩过。　　 否则，返回值始终是NULL。UNCOMPRESS() 可将压缩过的字符串进行解压缩。
+
+mysql>　SELECT　LENGTH(COMPRESS(REPEAT('a',1000)));
+->　21
+mysql>　SELECT　LENGTH(COMPRESS(''));
+->　0
+mysql>　SELECT　LENGTH(COMPRESS('a'));
+->　13
+mysql>　SELECT　LENGTH(COMPRESS(REPEAT('a',16)));
+->　15
+压缩后的字符串的内容按照以下方式存储：
+
+空字符串按照空字符串存储。
+
+非空字符串未压缩字符串的四字节长度进行存储(首先为低字节),后面是压缩字符串。如果字符串以空格结尾，就会在后加一个"."号,以防止当结果值是存储 在CHAR或VARCHAR类型的字段列时,出现自动把结尾空格去掉的现象。(不推荐使用 CHAR 或VARCHAR 来存储压缩字符串。最好使用一个 BLOB 列代替）。
+
+◆ CONCAT(str1,str2,...)
+
+返回结果为连接参数产生的字符串。如有任何一个参数为NULL ，则返回值为 NULL。或许有一个或多个参数。如果所有参数均为非二进制字符串，则结果为非二进制字符串。如果自变量中含有任一二进制字符串，则结果为一个二进制字符 串。一个数字参数被转化为与之相等的二进制字符串格式；若要避免这种情况，可使用显式类型 cast, 例如： SELECT CONCAT(CAST(int_col AS CHAR), char_col)
+
+mysql>　SELECT　CONCAT('My',　'S',　'QL');
+->　'MySQL'
+mysql>　SELECT　CONCAT('My',　NULL,　'QL');
+->　NULL
+mysql>　SELECT　CONCAT(14.3);->　'14.3'
+
+◆ CONCAT_WS(separator,str1,str2,...)
+
+CONCAT_WS() 代表 CONCAT With Separator ，是CONCAT()的特殊形式。　　第一个参数是其它参数的分隔符。分隔符的位置放在要连接的两个字符串之间。分隔符可以是一个字符串，也可以是其它参 数。如果分隔符为 NULL，则结果为 NULL。函数会忽略任何分隔符参数后的 NULL 值。
+
+mysql>　SELECT　CONCAT_WS(',','First　name','Second　name','Last　Name');
+->　'First　name,Second　name,Last　Name'
+mysql>　SELECT　CONCAT_WS(',','First　name',NULL,'Last　Name');
+->　'First　name,Last　Name'
+
+CONCAT_WS()不会忽略任何空字符串。 (然而会忽略所有的 NULL）。
+
+◆ CONV(N,from_base,to_base)
+
+不同数基间转换数字。返回值为数字的N字符串表示，由from_base基转化为 to_base 基。如有任意一个参数为NULL，则返回值为 NULL。自变量 N 被理解为一个整数，但是可以被指定为一个整数或字符串。最小基数为 2 ，而最大基数则为 36。 If to_base 是一个负数，则 N 被看作一个带符号数。否则， N 被看作无符号数。 CONV() 的运行精确度为 64比特。
+
+mysql>　SELECT　CONV('a',16,2);
+->　'1010'
+mysql>　SELECT　CONV('6E',18,8);
+->　'172'
+mysql>　SELECT　CONV(-17,10,-18);
+->　'-H'
+mysql>　SELECT　CONV(10+'10'+'10'+0xa,10,10);
+->　'40'
+
+◆ ELT(N,str1,str2,str3,...)
+
+若N = 1，则返回值为　 str1 ，若N = 2，则返回值为 str2 ，以此类推。若N 小于1或大于参数的数目，则返回值为 NULL 。 ELT() 是　 FIELD()的补数。
+
+mysql>　SELECT　ELT(1,　'ej',　'Heja',　'hej',　'foo');
+->　'ej'
+mysql>　SELECT　ELT(4,　'ej',　'Heja',　'hej',　'foo');
+->　'foo'
+◆ EXPORT_SET(bits,on,off[,separator[,number_of_bits]])
+
+返回值为一个字符串，其中对于bits值中的每个位组，可以得到一个 on 字符串，而对于每个清零比特位，可以得到一个off 字符串。bits 中的比特值按照从右到左的顺序接受检验 (由低位比特到高位比特)。字符串被分隔字符串分开(默认为逗号‘,’)，按照从左到右的顺序被添加到结果中。number_of_bits 会给出被检验的二进制位数 (默认为 64)。
+
+mysql>　SELECT　EXPORT_SET(5,'Y','N',',',4);
+->　'Y,N,Y,N'
+mysql>　SELECT　EXPORT_SET(6,'1','0',',',10);
+->　'0,1,1,0,0,0,0,0,0,0'
+
+◆ FIELD(str,str1,str2,str3,...)
+
+返回值为str1, str2, str3,……列表中的str 指数。在找不到str 的情况下，返回值为 0 。
+
+如果所有对于FIELD() 的参数均为字符串，则所有参数均按照字符串进行比较。如果所有的参数均为数字，则按照数字进行比较。否则，参数按照双倍进行比较。
+
+如果str 为NULL，则返回值为0 ，原因是NULL不能同任何值进行同等比较。FIELD() 是ELT()的补数。
+
+mysql>　SELECT　FIELD('ej',　'Hej',　'ej',　'Heja',　'hej',　'foo');
+->　2
+mysql>　SELECT　FIELD('fo',　'Hej',　'ej',　'Heja',　'hej',　'foo');
+->　0
+
+◆ FIND_IN_SET(str,strlist)
+
+假如字符串str 在由N 子链组成的字符串列表strlist 中， 则返回值的范围在 1 到 N 之间。一个字符串列表就是一个由一些被‘,’符号分开的自链组成的字符串。如果第一个参数是一个常数字符串，而第二个是type SET列，则　　 FIND_IN_SET() 函数被优化，使用比特计算。如果str不在strlist 或strlist 为空字符串，则返回值为 0 。如任意一个参数为NULL，则返回值为 NULL。 这个函数在第一个参数包含一个逗号(‘,’)时将无法正常运行。
+
+mysql>　SELECT　FIND_IN_SET('b','a,b,c,d');
+->　2
+
+◆ FORMAT(X,D)
+
+将number X设置为格式 '#,###,###.##', 以四舍五入的方式保留到小数点后D位, 而返回结果为一个字符串。
+
+◆ HEX(N_or_S)
+
+如果N_OR_S 是一个数字，则返回一个 十六进制值 N 的字符串表示，在这里，　　 N 是一个longlong (BIGINT)数。这相当于 CONV(N,10,16)。
+
+如果N_OR_S 是一个字符串，则返回值为一个N_OR_S的十六进制字符串表示， 其中每个N_OR_S 里的每个字符被转化为两个十六进制数字。
+
+mysql>　SELECT　HEX(255);
+->　'FF'
+mysql>　SELECT　0x616263;
+->　'abc'
+mysql>　SELECT　HEX('abc');
+->　616263
+
+◆ INSERT(str,pos,len,newstr)
+
+返回字符串 str, 其子字符串起始于 pos 位置和长期被字符串 newstr取代的len 字符。　 如果pos 超过字符串长度，则返回值为原始字符串。假如len的长度大于其它字符串的长度，则从位置pos开始替换。若任何一个参数为null，则返回值为 NULL。
+
+mysql>　SELECT　INSERT('Quadratic',　3,　4,　'What');
+->　'QuWhattic'
+mysql>　SELECT　INSERT('Quadratic',　-1,　4,　'What');
+->　'Quadratic'
+mysql>　SELECT　INSERT('Quadratic',　3,　100,　'What');
+->　'QuWhat'
+
+这个函数支持多字节字元。
+
+◆ INSTR(str,substr)
+
+返回字符串 str 中子字符串的第一个出现位置。这和LOCATE()的双参数形式相同，除非参数的顺序被颠倒。
+
+mysql>　SELECT　INSTR('foobarbar',　'bar');
+->　4
+mysql>　SELECT　INSTR('xbar',　'foobar');
+->　0
+
+这个函数支持多字节字元，并且只有当至少有一个参数是二进制字符串时区分大小写。
+◆ LCASE(str)
+
+LCASE() 是 LOWER()的同义词。◆ LEFT(str,len)
+
+返回从字符串str 开始的len 最左字符。
+
+mysql>　SELECT　LEFT('foobarbar',　5);
+->　'fooba'
+
+◆ LENGTH(str)
+
+返回值为字符串str 的长度，单位为字节。一个多字节字符算作多字节。这意味着 对于一个包含5个2字节字符的字符串， LENGTH() 的返回值为 10, 而 CHAR_LENGTH()的返回值则为5。
+
+mysql>　SELECT　LENGTH('text');
+->　4
+
+◆ LOAD_FILE(file_name)
+
+读取文件并将这一文件按照字符串的格式返回。 文件的位置必须在服务器上,你必须为文件制定路径全名，而且你还必须拥有FILE 特许权。文件必须可读取，文件容量必须小于 max_allowed_packet字节。
+
+若文件不存在，或因不满足上述条件而不能被读取， 则函数返回值为 NULL。
+
+mysql>　UPDATE　tbl_name
+SET　blob_column=LOAD_FILE('/tmp/picture')
+WHERE　id=1;
+
+◆ LOCATE(substr,str) , LOCATE(substr,str,pos)
+
+第一个语法返回字符串 str中子字符串substr的第一个出现位置。第二个语法返回字符串 str中子字符串substr的第一个出现位置, 起始位置在pos。如若substr 不在str中，则返回值为0。
+
+mysql>　SELECT　LOCATE('bar',　'foobarbar');
+->　4
+mysql>　SELECT　LOCATE('xbar',　'foobar');
+->　0
+mysql>　SELECT　LOCATE('bar',　'foobarbar',5);
+->　7
+
+这个函数支持多字节字元，并且只有当至少有一个参数是二进制字符串时区分大小写。 
+◆ LOWER(str)
+
+返回字符串 str 以及所有根据最新的字符集映射表变为小写字母的字符 (默认为　 cp1252 Latin1)。
+
+mysql>　SELECT　LOWER('QUADRATICALLY');
+->　'quadratically'
+
+这个函数支持多字节字元。
+
+◆ LPAD(str,len,padstr)
+
+返回字符串 str, 其左边由字符串padstr 填补到len 字符长度。假如str 的长度大于len, 则返回值被缩短至 len 字符。
+
+mysql>　SELECT　LPAD('hi',4,'??');
+->　'??hi'
+mysql>　SELECT　LPAD('hi',1,'??');
+->　'h'
+
+◆ LTRIM(str)
+
+返回字符串 str ，其引导空格字符被删除。
+
+mysql>　SELECT　LTRIM('　　barbar');
+->　'barbar'
+
+这个函数支持多字节字元。
+◆ MAKE_SET(bits,str1,str2,...)
+
+返回一个设定值 (一个包含被‘,’号分开的字字符串的字符串) ，由在bits 组中具有相应的比特的字符串组成。str1 对应比特 0, str2 对应比特1,以此类推。str1, str2, ...中的 NULL值不会被添加到结果中。
+
+mysql>　SELECT　MAKE_SET(1,'a','b','c');
+->　'a'
+mysql>　SELECT　MAKE_SET(1　|　4,'hello','nice','world');
+->　'hello,world'
+mysql>　SELECT　MAKE_SET(1　|　4,'hello','nice',NULL,'world');
+->　'hello'
+mysql>　SELECT　MAKE_SET(0,'a','b','c');
+->　''
+
+◆ MID(str,pos,len)
+
+MID(str,pos,len) 是 SUBSTRING(str,pos,len)的同义词。
+
+◆ OCT(N)
+
+返回一个 N的八进制值的字符串表示，其中 N 是一个longlong (BIGINT)数。这等同于CONV(N,10,8)。若N 为 NULL ，则返回值为NULL。
+
+mysql>　SELECT　OCT(12);
+->　'14'
+
+◆ OCTET_LENGTH(str)
+
+OCTET_LENGTH() 是 LENGTH()的同义词。
+
+◆ ORD(str)
+
+若字符串str 的最左字符是一个多字节字符，则返回该字符的代码， 代码的计算通过使用以下公式计算其组成字节的数值而得出:
+
+(1st　byte　code)
++　(2nd　byte　code　×　256)
++　(3rd　byte　code　×　2562)　...
+
+假如最左字符不是一个多字节字符，那么 ORD()和函数ASCII()返回相同的值。
+
+mysql>　SELECT　ORD('2');
+->　50
+
+◆ POSITION(substr IN str)
+
+POSITION(substr IN str)是 LOCATE(substr,str)同义词。
+
+◆ QUOTE(str)
+
+引证一个字符串，由此产生一个在SQL语句中可用作完全转义数据值的结果。　 返回的字符串由单引号标注，每例都带有单引号 (‘'’)、反斜线符号 (‘’)、 ASCII NUL以及前面有反斜线符号的Control-Z 。如果自变量的值为NULL, 则返回不带单引号的单词 “NULL”。
+
+mysql>　SELECT　QUOTE('Don't!');
+->　'Don't!'
+mysql>　SELECT　QUOTE(NULL);
+->　NULL
+◆ REPEAT(str,count)
+
+返回一个由重复的字符串str 组成的字符串，字符串str的数目等于count 。若 count <= 0,则返回一个空字符串。若str 或 count 为 NULL，则返回 NULL 。
+
+mysql>　SELECT　REPEAT('MySQL',　3);
+->　'MySQLMySQLMySQL'
+
+◆ REPLACE(str,from_str,to_str)
+
+返回字符串str 以及所有被字符串to_str替代的字符串from_str 。
+
+mysql>　SELECT　REPLACE('www.mysql.com',　'w',　'Ww');
+->　'WwWwWw.mysql.com'
+
+这个函数支持多字节字元。
+
+◆ REVERSE(str)
+
+返回字符串 str ，顺序和字符顺序相反。
+
+mysql>　SELECT　REVERSE('abc');
+->　'cba'
+
+这个函数支持多字节字元。
+
+◆ RIGHT(str,len)
+
+从字符串str 开始，返回最右len 字符。
+
+mysql>　SELECT　RIGHT('foobarbar',　4);
+->　'rbar'
+
+这个函数支持多字节字元。◆ RPAD(str,len,padstr)
+
+返回字符串str, 其右边被字符串 padstr填补至len 字符长度。假如字符串str 的长度大于 len,则返回值被缩短到与 len 字符相同长度。
+
+mysql>　SELECT　RPAD('hi',5,'?');
+->　'hi???'
+mysql>　SELECT　RPAD('hi',1,'?');
+->　'h'
+
+这个函数支持多字节字元。
+
+◆ RTRIM(str)
+
+返回字符串 str ，结尾空格字符被删去。
+
+mysql>　SELECT　RTRIM('barbar　　　');
+->　'barbar'
+
+这个函数支持多字节字元。
+
+◆ SOUNDEX(str)
+
+从str返回一个soundex字符串。 两个具有几乎同样探测的字符串应该具有同样的 soundex 字符串。一个标准的soundex 字符串的长度为4个字符，然而SOUNDEX() 函数会返回一个人以长度的字符串。 可使用结果中的SUBSTRING() 来得到一个标准 soundex 字符串。在str中，会忽略所有未按照字母顺序排列的字符。 所有不在A-Z范围之内的国际字母符号被视为元音字母。
+
+mysql>　SELECT　SOUNDEX('Hello');
+->　'H400'
+mysql>　SELECT　SOUNDEX('Quadratically');
+->　'Q36324'
+
+注意：这个函数执行原始的Soundex算法，而非更加流行的加强版本(如D. Knuth所述)。其区别在于原始版本首先会删去元音，其次是重复，而加强版则首先删去重复，而后删去元音。
+◆ expr1 SOUNDS LIKE expr2
+
+这相当于SOUNDEX(expr1) = SOUNDEX(expr2)。
+
+◆ SPACE(N)
+
+返回一个由N 间隔符号组成的字符串。
+
+mysql>　SELECT　SPACE(6);
+->　'　　　　　　'
+
+◆ SUBSTRING(str,pos) , SUBSTRING(str FROM pos) SUBSTRING(str,pos,len) , SUBSTRING(str FROM pos FOR len)
+
+不带有len 参数的格式从字符串str返回一个子字符串，起始于位置 pos。带有len参数的格式从字符串str返回一个长度同len字符相同的子字符串，起始于位置 pos。 使用 FROM的格式为标准 SQL 语法。也可能对pos使用一个负值。假若这样，则子字符串的位置起始于字符串结尾的pos 字符，而不是字符串的开头位置。在以下格式的函数中可以对pos 使用一个负值。
+
+mysql>　SELECT　SUBSTRING('Quadratically',5);
+->　'ratically'
+mysql>　SELECT　SUBSTRING('foobarbar'　FROM　4);
+->　'barbar'
+mysql>　SELECT　SUBSTRING('Quadratically',5,6);
+->　'ratica'　　　　　　　
+mysql>　SELECT　SUBSTRING('Sakila',　-3);
+->　'ila'　　　　　　　
+mysql>　SELECT　SUBSTRING('Sakila',　-5,　3);
+->　'aki'
+mysql>　SELECT　SUBSTRING('Sakila'　FROM　-4　FOR　2);
+->　'ki'
+
+这个函数支持多字节字元。
+
+注意，如果对len使用的是一个小于1的值，则结果始终为空字符串。
+
+SUBSTR()是 SUBSTRING()的同义词。
+
+◆ SUBSTRING_INDEX(str,delim,count)
+
+在定界符 delim 以及count 出现前，从字符串str返回自字符串。若count为正值,则返回最终定界符(从左边开始)左边的一切内容。若count为负值，则返回定界符（从右边开始）右边的一切内容。
+
+mysql>　SELECT　SUBSTRING_INDEX('www.mysql.com',　'.',　2);
+->　'www.mysql'
+mysql>　SELECT　SUBSTRING_INDEX('www.mysql.com',　'.',　-2);
+->　'mysql.com'
+
+这个函数支持多字节字元。
+
+◆ TRIM([{BOTH | LEADING | TRAILING} [remstr] FROM] str) TRIM(remstr FROM] str)
+
+返回字符串 str ， 其中所有remstr 前缀和/或后缀都已被删除。若分类符BOTH、LEADIN或TRAILING中没有一个是给定的,则假设为BOTH 。 remstr 为可选项，在未指定情况下，可删除空格。
+
+mysql>　SELECT　TRIM('　　bar　　　');
+->　'bar'
+mysql>　SELECT　TRIM(LEADING　'x'　FROM　'xxxbarxxx');
+->　'barxxx'
+mysql>　SELECT　TRIM(BOTH　'x'　FROM　'xxxbarxxx');
+->　'bar'
+mysql>　SELECT　TRIM(TRAILING　'xyz'　FROM　'barxxyz');
+->　'barx'
+
+这个函数支持多字节字元。
+◆ UCASE(str)
+
+UCASE()是UPPER()的同义词。
+
+◆ UNCOMPRESS(string_to_uncompress)
+
+对经COMPRESS()函数压缩后的字符串进行解压缩。若参数为压缩值，则结果为 NULL。这个函数要求　 MySQL 已被诸如zlib 之类的压缩库编译过。否则, 返回值将始终是 NULL。
+
+mysql>　SELECT　UNCOMPRESS(COMPRESS('any　string'));
+->　'any　string'
+mysql>　SELECT　UNCOMPRESS('any　string');
+->　NULL
+
+◆ UNCOMPRESSED_LENGTH(compressed_string)
+
+返回压缩字符串压缩前的长度。
+
+mysql>　SELECT　UNCOMPRESSED_LENGTH(COMPRESS(REPEAT('a',30)));
+->　30
+
+◆ UNHEX(str)
+
+执行从HEX(str)的反向操作。就是说，它将参数中的每一对十六进制数字理解为一个数字，并将其转化为该数字代表的字符。结果字符以二进制字符串的形式返回。
+
+mysql>　SELECT　UNHEX('4D7953514C');
+->　'MySQL'
+mysql>　SELECT　0x4D7953514C;
+->　'MySQL'
+mysql>　SELECT　UNHEX(HEX('string'));
+->　'string'
+mysql>　SELECT　HEX(UNHEX('1267'));
+->　'1267'
+
+◆ UPPER(str)
+
+返回字符串str， 以及根据最新字符集映射转化为大写字母的字符 (默认为cp1252 Latin1).
+
+mysql>　SELECT　UPPER('Hej');
+->　'HEJ'
+
+该函数支持多字节字元。

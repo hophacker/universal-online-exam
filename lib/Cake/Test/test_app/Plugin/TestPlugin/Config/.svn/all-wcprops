@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config
+END
+nested.ini
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/nested.ini
+END
+acl.ini.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/acl.ini.php
+END
+bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/bootstrap.php
+END
+custom_config.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/custom_config.php
+END
+load.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/load.php
+END
+more.load.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/more.load.php
+END
+routes.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Config/routes.php
+END

@@ -1,0 +1,62 @@
+<navigation id="KoolTabs" title="PHP Tab Menu Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>			
+		</category>		
+		<category id="Features" text="Features">
+			<link 	id="Position" 
+					text="Position"
+					link="Features/Position/index.php" 
+					new="false"/>			
+			<link 	id="MultiRows" 
+					text="Multi-Rows"
+					link="Features/MultiRows/index.php" 
+					new="false"/>			
+			<link 	id="MultiLevels" 
+					text="Multi-Levels"
+					link="Features/MultiLevels/index.php" 
+					new="false"/>			
+			<link 	id="Alignment" 
+					text="Alignment"
+					link="Features/Alignment/index.php" 
+					new="false"/>
+			<link 	id="MultiPages" 
+					text="Multi-Pages"
+					link="Features/MultiPages/index.php" 
+					new="true"/>			
+			<link 	id="Scrolling" 
+					text="Scrolling"
+					link="Features/Scrolling/index.php" 
+					new="false"/>			
+			<link 	id="Template" 
+					text="Template"
+					link="Features/Template/index.php" 
+					new="true"/>			
+			<link 	id="Use_KoolScripting" 
+					text="Use KoolScripting"
+					link="Features/Use_KoolScripting/index.php" 
+					new="false"/>			
+		</category>		
+		<category id="Client_Side_API" text="Client-Side API">
+			<link 	id="RegisterEvent" 
+					text="RegisterEvent"
+					link="Client_Side_API/RegisterEvent/index.php" 
+					new="false"/>			
+			<link 	id="Add_Remove_Disable_Tab" 
+					text="Add/Remove/Disable Tab"
+					link="Client_Side_API/Add_Remove_Disable_Tab/index.php" 
+					new="true"/>
+		</category>		
+		<category id="Advances" text="Advances">
+			<link 	id="PostBack_On_Selection" 
+					text="PostBack On Selection"
+					link="Advances/PostBack_On_Selection/index.php" 
+					new="false"/>
+		</category>		
+	</category>
+</navigation>

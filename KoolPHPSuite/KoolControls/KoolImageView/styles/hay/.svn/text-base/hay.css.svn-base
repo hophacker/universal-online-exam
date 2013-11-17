@@ -1,0 +1,79 @@
+﻿.hayZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.hayKIV
+{
+	display:inline;
+}
+
+.hayKIV .kivZoomPanel
+{
+    position:absolute;
+	background:#61c619 url(bg.gif) no-repeat left top ;
+    border:solid 1px #3e830d;
+	padding:10px;
+	
+}
+
+.hayKIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:#61c619 ;
+    border:solid 1px gray;
+}
+
+.hayKIV .kivBigImage
+{
+	cursor:url(zoomout.cur),pointer !important;
+	border:solid 1px #3e830d;
+}
+
+
+.hayKIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+.hayKIV .kivEffectPanel
+{
+	background:#61c619 url(bg.gif) no-repeat left top ;
+	border:solid 1px gray;
+}
+
+.hayKIV .kivEffectImage
+{
+    border:solid 1px gray;
+}
+
+.hayKIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.hayKIV .kivDescription
+{
+	float:left;
+	padding-top:5px;
+    color:#fff;
+    font-family:Arial;
+    font-size:12px;
+}
+
+.hayKIV .kivCloseButton
+{
+
+}
+
+.hayKIV .kivMoveButton
+{
+
+}
+
+

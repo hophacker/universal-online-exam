@@ -1,0 +1,32 @@
+<control>
+	<name>KoolListBox - Advanced PHP ListBox</name>
+	<metadescription>KoolListBox is advanced control that extends the standard html listbox to the max. It supports order item, transfer item to another listbox, drag-and-drop and many more..</metadescription>
+	<metakeywords> listbox, php listbox, ajax listbox, web20 listbox, multi select listbox </metakeywords>	 
+	<description>
+		KoolListBox is advanced control that extends the standard html listbox to the max. It supports order item, transfer item to another listbox, drag-and-drop and many more..
+	</description>
+	<examples>
+		<example	name="Styles" 
+					link="Appearance/Styles/index.php" 
+					image="Appearance/Styles/preview.gif"/>
+
+		<example	name="ItemTemplate" 
+					link="Features/ItemTemplate/index.php" 
+					image="Features/ItemTemplate/preview.gif"/>
+
+		<example	name="Transfer" 
+					link="Features/Transfer/index.php" 
+					image="Features/Transfer/preview.gif"/>
+
+		<example	name="CheckBoxes" 
+					link="Features/CheckBoxes/index.php" 
+					image="Features/CheckBoxes/preview.gif"/>
+
+
+		<example	name="TextWithIcon" 
+					link="Features/TextWithIcon/index.php" 
+					image="Features/TextWithIcon/preview.gif"/>
+
+
+	</examples>			
+</control>

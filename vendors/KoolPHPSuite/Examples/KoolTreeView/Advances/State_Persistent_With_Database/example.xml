@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="State_Persistent_With_Database" usedb="true">
+	<title>State Persistent With Database</title>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview, treeview drag and drop, php treeview mysql, kooltreeview</metakeywords>	 
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+The example show how you can save KoolTreeView's state to database. In this example, you can:
+</p>
+
+<ul>
+	<li> - Create new file node under folder node.</li>
+	<li> - Delete any file node.</li>
+	<li> - Move the file node to another folder node.</li>	
+	<li> - Change order among file nodes with drag and drop.</li>		
+	<li> - Rename file node or folder node by double click.</li>
+	<li> - Expand/Collapse folder node</li>		
+</ul>
+<br/>
+<p>
+<i>*Note:</i> All changes will be saved to database. State of TreeView will be persistent on the next visit.
+</p>
+
+<p>
+Below is example's sample data:
+</p>
+<pre>
+-------------------------------------------------------------------------------------------------------------------------------
+|         ID         |      ParentID      |        Text        |       Image        |       Expand       |        Rank        |
+-------------------------------------------------------------------------------------------------------------------------------
+| amd                | software           | AMD.doc            | doc.gif            |                  0 |                  2 |
+-------------------------------------------------------------------------------------------------------------------------------
+| asus               | hardware           | Asus.doc           | doc.gif            |                  0 |                  1 |
+-------------------------------------------------------------------------------------------------------------------------------
+| ebook              | root               | E-books            | Folder.gif         |                  1 |                  4 |
+-------------------------------------------------------------------------------------------------------------------------------
+| hardware           | root               | Hardware           | Folder.gif         |                  1 |                  1 |
+-------------------------------------------------------------------------------------------------------------------------------
+| intel              | hardware           | Intel.doc          | doc.gif            |                  0 |                  2 |
+-------------------------------------------------------------------------------------------------------------------------------
+| linux              | software           | Linux.doc          | doc.gif            |                  0 |                  1 |
+-------------------------------------------------------------------------------------------------------------------------------
+| macos              |                    | MacOs.doc          | doc.gif            |                  0 |                  1 |
+-------------------------------------------------------------------------------------------------------------------------------
+| recycle            | root               | Recycle            | xpRecycle.gif      |                  1 |                  5 |
+-------------------------------------------------------------------------------------------------------------------------------
+| software           | root               | Software           | Folder.gif         |                  1 |                  2 |
+-------------------------------------------------------------------------------------------------------------------------------
+| windowxp           | hardware           | WindowXP.doc       | doc.gif            |                  0 |                  3 |
+-------------------------------------------------------------------------------------------------------------------------------
+</pre>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php 
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	require $KoolControlsFolder."/KoolTreeView/kooltreeview.php";
+	
+	if ($koolajax->isCallback==false)
+	{
+		//If it is not the callback, get tree data from database and render
+		$result = mysql_query("SELECT * FROM tbtreeviewdata order by rank asc");
+	
+		$arrtree = array();
+	
+		while($row = mysql_fetch_array($result))
+	  	{
+			array_push($arrtree,$row);
+	  	}
+		
+		$arrtree = sortTree("root",$arrtree);
+		
+		//Init treeview
+		$treeview = new KoolTreeView("treeview");
+		$treeview->imageFolder=$KoolControlsFolder."/KoolTreeView/icons";
+		$treeview->styleFolder="default";		
+		$treeview->selectEnable = true;
+		$treeview->multipleSelectEnable = true;
+		$treeview->DragAndDropEnable = true;
+		$treeview->EditNodeEnable = true;
+		
+		$treeview->showLines = true;		
+
+		//Root
+		$root = $treeview->getRootNode();
+		$root->text = "Local Disk(C:)";
+		$root->expand=true;
+		$root->image="xpDriveA.gif";
+
+
+		//Add item from database
+		foreach($arrtree as $node)
+		{
+			$treeview->Add($node["parentid"],$node["id"],$node["text"],$node["expand"],$node["image"]);		
+		}
+	}
+	
+	function sortTree($nodeid,$arTree)
+	{
+		$res = array();
+		for($i=0;$i<sizeof($arTree);$i++)
+			if ($arTree[$i]["parentid"]==$nodeid)
+			{
+				array_push($res,$arTree[$i]);
+				$subres = sortTree($arTree[$i]["id"],$arTree);
+				for ($j=0;$j<sizeof($subres);$j++)
+					array_push($res,$subres[$j]);
+			}
+		return $res;
+	}
+	
+	
+	function doCreateNode($parentid,$id,$text,$image,$rank)
+	{
+		if ($parentid=="treeview.root") $parentid="root";
+		mysql_query("INSERT INTO tbKoolTreeView VALUES ('$id','$parentid','$text','$image',false,$rank)");
+		return 1;
+	}
+	
+	function doDeleteNode($id)
+	{
+		mysql_query("DELETE FROM tbTreeViewData WHERE id='$id'");
+		return 1;
+	}
+	function doSort($joinlist)
+	{
+		$list = explode("|",$joinlist);
+		for($i=0;$i<sizeof($list);$i++)
+		{
+			$rank = $i+1;
+			mysql_query("UPDATE tbTreeViewData SET rank=$rank WHERE id='$list[$i]'");
+		}
+		return 1;
+	}
+	
+	function doMove($id,$parentid,$oldparentid)
+	{
+		
+		if ($parentid=="treeview.root") 
+		{
+			$_parentid="root";
+		}
+		else
+		{
+			$_parentid = $parentid;
+		}
+
+		mysql_query("UPDATE tbTreeViewData SET parentid='$_parentid' WHERE id='$id'");
+		return array("parentid"=>$parentid,"oldparentid"=>$oldparentid);
+	}
+	function doUpdate($id,$text,$expand)
+	{
+		mysql_query("UPDATE tbTreeViewData SET text='$text',expand=$expand WHERE id='$id'");
+		return 1;
+	}
+	
+	//Enable ajax function to be called at client-side
+	$koolajax->enableFunction("doCreateNode");
+	$koolajax->enableFunction("doDeleteNode");
+	$koolajax->enableFunction("doSort");
+	$koolajax->enableFunction("doMove");
+	$koolajax->enableFunction("doUpdate");		
+
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<div style="padding:10px;">
+		<?php echo $treeview->Render();?>
+	</div>
+	<input type="button" id="btnAdd" value="Create File" onclick="addTreeNode()"/>
+	<input type="button" id="btnRemove" value="Delete File" onclick="deleteTreeNode()"/>
+	
+	<div id="status" style="position:absolute;right:5px;top:5px;background-color:#FFFFA0;color:black;font-weight:bold;padding-left:5px;padding-right:5px;display:none;">Updating...</div>
+	
+	<script type="text/javascript">
+		var nodeselect = null;
+		
+		
+		function onCreateNodeDone(result)
+		{
+			hideStatus();
+		}
+		
+		function onDeleteDone(result)
+		{
+			hideStatus();
+		}
+
+		function onSortDone(result)
+		{
+			hideStatus();
+		}
+		function onUpdateDone(result)
+		{
+			hideStatus();
+		}
+		
+
+		function onMoveDone(result)
+		{
+
+			_childids = treeview.getNode(result.parentid).getChildIds();
+			koolajax.callback(doSort(_childids.join("|")),onSortDone);
+					
+			_childids = treeview.getNode(result.oldparentid).getChildIds();
+			koolajax.callback(doSort(_childids.join("|")),onSortDone);	
+		}		
+		
+		//OnBeforeDrop to handle node order
+		treeview.registerEvent("OnBeforeDrop",function(sender,arg){
+			var _dropid = arg.NodeId;
+			var _dragid = arg.DragNodeId;
+			
+			if (treeview.getNode(_dropid).getParentId()==treeview.getNode(_dragid).getParentId())
+			{
+				var parentid = treeview.getNode(_dropid).getParentId();
+				var childids = treeview.getNode(parentid).getChildIds();
+				var posdrag=0;posdrop = 0;
+				for(var i=0;i<childids.length;i++)
+				{
+					if (childids[i]==arg.NodeId)
+					{
+						posdrop = i;
+					}
+					if (childids[i]==arg.DragNodeId)
+					{
+						posdrag = i;
+					}	
+				}
+				if (posdrag<posdrop)
+				{
+					//Drag from above node to below node
+					treeview.getNode(arg.DragNodeId).moveToBelow(arg.NodeId);
+				}
+				else
+				{
+					//Drag from below node to node above
+					treeview.getNode(arg.DragNodeId).moveToAbove(arg.NodeId);
+				}
+				
+				var childids = treeview.getNode(parentid).getChildIds();
+				
+				koolajax.callback(doSort(childids.join("|")),onSortDone);
+				showStatus("Updating ...");
+			}
+			else
+			{
+				if (treeview.getNode(_dropid).getImageSrc().indexOf("doc.gif")==-1 && treeview.getNode(_dragid).getImageSrc().indexOf("doc.gif")>-1)
+				{
+					//Do move
+					_dragparentid = treeview.getNode(_dragid).getParentId();
+					treeview.getNode(_dragid).attachTo(_dropid);
+					
+					koolajax.callback(doMove(_dragid,_dropid,_dragparentid),onMoveDone);
+					showStatus("Updating ...");
+
+				}
+				else
+				{
+					setTimeout(function(){alert("Not allowed");},10);
+				}
+
+			}
+			
+			return false;
+		});
+		
+		
+		//OnSelect
+		treeview.registerEvent("OnSelect",function(sender,arg){
+			nodeselect = arg.NodeId;
+		});
+		
+		//OnExpand
+		treeview.registerEvent("OnExpand",function(sender,arg){
+			var _id = arg.NodeId;
+			var _text = treeview.getNode(_id).getText();
+			var _expand = 1;
+			koolajax.callback(doUpdate(_id,_text,_expand),onUpdateDone);
+			showStatus("Updating ...");
+		});
+		//OnCollapse
+		treeview.registerEvent("OnCollapse",function(sender,arg){
+			var _id = arg.NodeId;
+			var _text = treeview.getNode(_id).getText();
+			var _expand = 0;
+			koolajax.callback(doUpdate(_id,_text,_expand),onUpdateDone);
+			showStatus("Updating ...");
+		});
+		//OnEndEdit
+		treeview.registerEvent("OnEndEdit",function(sender,arg){
+			var _id = arg.NodeId;
+			var _text = treeview.getNode(_id).getText();
+			var _expand = 0;
+			koolajax.callback(doUpdate(_id,_text,_expand),onUpdateDone);
+			showStatus("Updating ...");
+		});
+		
+		//Add new treenode
+		function addTreeNode()
+		{
+			if (nodeselect!=null)
+			{
+				var image = treeview.getNode(nodeselect).getImageSrc();
+				if (image.indexOf("doc.gif")==-1)
+				{
+					var nodetext = prompt("Enter filename:","");
+										
+					if (nodetext!=null && nodetext!="")
+					{
+						var id = (new Date()).getTime();
+						treeview.getNode(nodeselect).addChildNode(id,nodetext,"<?php echo $KoolControlsFolder;?>/KoolTreeView/icons/doc.gif");					
+						var rank = treeview.getNode(nodeselect).getChildIds().length;
+						koolajax.callback(doCreateNode(nodeselect,id,nodetext,"doc.gif",rank),onCreateNodeDone);
+						showStatus("Creating file ...");						
+					}
+					
+				}
+				else
+				{
+					alert("Please select a folder");
+				}
+				
+			}
+			else
+			{
+				alert("Please select a folder");
+			}
+		}
+		
+		//Delete a node
+		function deleteTreeNode()
+		{
+			if (nodeselect != null) 
+			{
+				var image = treeview.getNode(nodeselect).getImageSrc();
+				if (image.indexOf("doc.gif")>-1)
+				{
+
+					if(confirm("Are you sure to delete this file?"))
+					{
+						treeview.removeNode(nodeselect);
+						koolajax.callback(doDeleteNode(nodeselect),onDeleteDone);
+						nodeselect = null;
+						showStatus("Deleting node ...");
+					}					
+
+				}
+				else
+				{
+					alert("Please select a file.")
+				}
+				
+			}
+		}
+		
+		
+		//Status
+		function showStatus(_text)
+		{
+			document.getElementById("status").innerHTML = _text;
+			document.getElementById("status").style.display="block";
+		}
+		function hideStatus()
+		{
+			document.getElementById("status").style.display="none";
+		}
+		
+	</script>	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/PHP/KoolTreeView_Class/index.php#Add">PHP :: KoolTreeView :: Add()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/KoolTreeView_Class/index.php#getNode">Javascript :: KoolTreeView :: getNode()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/KoolTreeView_Class/index.php#registerEvent">Javascript :: KoolTreeView :: registerEvent()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/TreeNode_Class/index.php#moveToAbove">Javascript :: TreeNode :: moveToAbove()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/TreeNode_Class/index.php#moveToBelow">Javascript :: TreeNode :: moveToBelow()</doc>
+		
+	</docs>
+</example>

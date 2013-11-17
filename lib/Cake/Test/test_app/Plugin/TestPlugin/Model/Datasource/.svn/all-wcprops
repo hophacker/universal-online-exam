@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Model/Datasource
+END
+TestSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Model/Datasource/TestSource.php
+END
+TestOtherSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Plugin/TestPlugin/Model/Datasource/TestOtherSource.php
+END

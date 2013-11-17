@@ -1,0 +1,53 @@
+ CREATE TABLE `class` (
+  `class_id` int(11) primary key auto_increment,
+  `class_name` varchar(100),
+  `enrol_year` int(11), -- 几几级学生, 例如2009级
+  `class_type` smallint(6),  -- 1.本科生 2.研究生 3.博士生
+  `major_id` int(11) NOT NULL,
+  `state` smallint(6) DEFAULT '1'
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+ CREATE TABLE `major` (
+  `major_id` int(11) primary key auto_increment,
+  `major_name` varchar(100),
+  `dept_id` int(11) NOT NULL,
+  `state` smallint(6) DEFAULT '1'
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+
+
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| s_user     | varchar(25)  | NO   |     | NULL    |                |
+| s_num      | varchar(25)  | YES  |     | NULL    |                |
+| s_pwd      | varchar(25)  | NO   |     | NULL    |                |
+| dept_id    | int(11)      | NO   |     | NULL    |                |
+| s_name     | varchar(25)  | NO   |     | NULL    |                |
+| s_class    | varchar(100) | NO   |     | NULL    |                |
+| s_mail     | varchar(40)  | YES  |     | NULL    |                |
+| score_1    | int(11)      | YES  |     | -1      |                |
+| score_2    | int(11)      | YES  |     | -1      |                |
+| score_3    | int(11)      | YES  |     | -1      |                |
+| score_ans  | int(11)      | YES  |     | -1      |                |
+| score_type | int(11)      | YES  |     | 0       |                |
+| end_sec    | int(11)      | YES  |     | -1      |                |
+| state      | smallint(6)  | YES  |     | 1       |                |
+| s_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| s_date     | date         | YES  |     | NULL    |                |
+| s_role     | smallint(6)  | YES  |     | 0       |                |
+| major_id   | int(11)      | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+s_role : 
+    0.党校考试初级学员[无考试]
+    1.党校考试初级学员[有考试]
+
+    2.党校考试中级[即初级过关]学员[无考试]
+    3.党校考试中级学员[有考试]
+    
+    4.党校考试高级级[即中级过关]学员[无考试]
+    5.党校考试高级学员[有考试]
+        
+    6.党校考试高级结业

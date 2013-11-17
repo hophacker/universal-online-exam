@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="KoolTextBox">
+	<title>KoolTextBox</title>
+	<metakeywords>php password input, php masked input, php numeric input</metakeywords>	 
+	<metadescription>KoolInput contains special textboxes for masked input, numeric input and password input.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>KoolTextBox has two modes: <b>SingeLine</b> and <b>MultiLine</b>. You can set them with <b>$Mode</b> property.</p>
+<p>To set the width and height of KoolTextBox, you use the property <b>$Width</b> and <b>$Height</b></p>
+<p>If you want to set style for KoolTextBox rather than just width and height, you may set the<b>$CssClass</b>. Value of <b>$CssClass</b> is the css class name that want to set to textbox.</p>
+<p>KoolTextBox is supported state persistent which means that after the form is posted back, the value on KoolTextBox will stay the same. To turn on/off this feature you set <b>$StatePersistent</b> to <b>true</b> or <b>false</b>.</p>
+<p>You can limit the maximum charaters input into textbox by using property <b>$MaxLength</b>.</p>
+<p>Also, you can set the ToolTip for KoolTextBox with <b>$ToolTip</b> property.</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolForm/koolform.php";	
+	$myform_manager = new KoolForm("myform");
+	$myform_manager->scriptFolder = $KoolControlsFolder."/KoolForm";	
+	$myform_manager->styleFolder = "sunset";
+	$myform_manager->DecorationEnabled = true;
+	
+	
+	$txtName = $myform_manager->AddControl(new KoolTextBox("txtName"));
+	$txtName->MaxLength = 10;
+	$txtName->EmptyMessage = "John Smith";
+	$txtName->ToolTip = "What is your name?";
+	
+	$txtDescription = $myform_manager->AddControl(new KoolTextBox("txtDescription"));
+	$txtDescription->Mode = "multiline";
+	$txtDescription->EmptyMessage = "I am engineer!";
+	$txtDescription->ToolTip = "Tell us more about you!";
+	$txtDescription->Width = "200px";
+	$txtDescription->Height = "100px";
+
+
+	//Init form
+	$myform_manager->Init();
+?>
+
+<form id="myform" method="post" class="decoration">
+	
+
+	<fieldset style="width:250px;padding-left:10px;padding-bottom:10px;">
+		<legend><b>Introduction</b></legend>
+		
+		Name (maxlength=10): <br/>
+		<?php echo $txtName->Render();?> <br /><br />
+	
+		Description: <br />
+		<?php echo $txtDescription->Render();?>
+		<br /><br />
+		<input id="btnSubmit" type="submit" value="Submit" /> 
+				
+	</fieldset>	
+	
+	<br/>
+	<?php if($txtName->Value!="") echo "<b>Your name: </b>".$txtName->Value; ?><br/>
+	<?php if($txtDescription->Value!="") echo "<b>Description: </b>\"".$txtDescription->Value."\""; ?>
+
+	<?php echo $myform_manager->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="">refresh()</doc>		
+	</docs>
+</example>

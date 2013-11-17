@@ -1,0 +1,12 @@
+insert into test_type ( style,
+              name,
+              sel_num,
+              sel_score,
+              jud_num,
+              jud_score,
+              ans_num,
+              ans_score,
+              duration,
+              comment,
+              grad_test_type_id
+          ) values(0,,,,,,,,,,1)

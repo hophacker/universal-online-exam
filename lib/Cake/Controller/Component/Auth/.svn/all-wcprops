@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth
+END
+ActionsAuthorize.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/ActionsAuthorize.php
+END
+BlowfishAuthenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/BlowfishAuthenticate.php
+END
+ControllerAuthorize.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/ControllerAuthorize.php
+END
+DigestAuthenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/DigestAuthenticate.php
+END
+BasicAuthenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/BasicAuthenticate.php
+END
+FormAuthenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/FormAuthenticate.php
+END
+BaseAuthorize.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/BaseAuthorize.php
+END
+CrudAuthorize.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/CrudAuthorize.php
+END
+BaseAuthenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php
+END

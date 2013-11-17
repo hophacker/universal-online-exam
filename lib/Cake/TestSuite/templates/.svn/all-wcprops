@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates
+END
+phpunit.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates/phpunit.php
+END
+header.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates/header.php
+END
+missing_connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates/missing_connection.php
+END
+footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates/footer.php
+END
+xdebug.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates/xdebug.php
+END
+menu.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/templates/menu.php
+END

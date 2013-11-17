@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Configure
+END
+IniReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Configure/IniReader.php
+END
+ConfigReaderInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Configure/ConfigReaderInterface.php
+END
+PhpReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Configure/PhpReader.php
+END

@@ -1,0 +1,2 @@
+1.30-fengjie
+增加REValidator.php 类，是一个工厂类，用来返回各种Regular Expression验证类

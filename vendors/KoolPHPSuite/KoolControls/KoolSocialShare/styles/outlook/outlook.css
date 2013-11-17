@@ -1,0 +1,208 @@
+.outlookKSS
+{
+	border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+
+	border: 1px solid #002D96;
+}
+
+
+.outlookKSS ul.kssUL
+{
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;	
+}
+
+
+.outlookKSS li.kssItem
+{
+	display: inline-block;
+	margin:2px 0px 2px 0px;
+    vertical-align: middle;
+}
+
+.outlookKSS ul.kssVertical li.kssItem
+{
+	display:block;
+}
+
+.outlookKSS li.kssLineBreak
+{
+	display:block;
+	margin:0px;
+}
+.outlookKSS ul.kssVertical li.kssLineBreak
+{
+	margin:4px 0px 4px 0px;
+	background-color:#002D96;
+	height:1px;
+}
+
+
+.outlookKSS a.kssLink
+{
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+
+.outlookKSS span.kssText
+{
+	color: #3B3B3B;
+	vertical-align: middle;
+	margin:0px 2px 0px 2px;
+}
+
+.outlookKSS span.kssIcon
+{
+	background-image: url(SocialShareSprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin:0px 2px 0px 2px;
+    width: 16px;
+	vertical-align: middle;
+}
+
+/*Facebook*/
+.outlookKSS .kssFacebook span.kssIcon
+{
+	background-position: -260px 0;
+}
+.outlookKSS .kssFacebook:hover span.kssIcon
+{
+	background-position: -260px -20px;
+}
+
+/*Twitter*/
+.outlookKSS .kssTwitter span.kssIcon
+{
+	background-position: -20px 0;
+}
+.outlookKSS .kssTwitter:hover span.kssIcon
+{
+	background-position: -20px -20px;
+}
+
+/*Blogger*/
+.outlookKSS .kssBlogger span.kssIcon
+{
+	background-position: 0 0;
+}
+.outlookKSS .kssBlogger:hover span.kssIcon
+{
+	background-position: 0 -20px;
+}
+
+/*Delicious*/
+.outlookKSS .kssDelicious span.kssIcon
+{
+	background-position: -60px 0;
+}
+.outlookKSS .kssDelicious:hover span.kssIcon
+{
+	background-position: -60px -20px;
+}
+
+/*Digg*/
+.outlookKSS .kssDigg span.kssIcon
+{
+	background-position: -80px 0;
+}
+.outlookKSS .kssDigg:hover span.kssIcon
+{
+	background-position: -80px -20px;
+}
+
+/*GoogleBookmarks*/
+.outlookKSS .kssGoogleBookmarks span.kssIcon
+{
+	background-position: -120px 0;
+}
+.outlookKSS .kssGoogleBookmarks:hover span.kssIcon
+{
+	background-position: -120px -20px;
+}
+
+/*LinkedIn*/
+.outlookKSS .kssLinkedIn span.kssIcon
+{
+	background-position: -140px 0;
+}
+.outlookKSS .kssLinkedIn:hover span.kssIcon
+{
+	background-position: -140px -20px;
+}
+
+/*MySpace*/
+.outlookKSS .kssMySpace span.kssIcon
+{
+	background-position: -40px 0;
+}
+.outlookKSS .kssMySpace:hover span.kssIcon
+{
+	background-position: -40px -20px;
+}
+
+/*Reddit*/
+.outlookKSS .kssReddit span.kssIcon
+{
+	background-position: -160px 0;
+}
+.outlookKSS .kssReddit:hover span.kssIcon
+{
+	background-position: -160px -20px;
+}
+
+/*StumbleUpon*/
+.outlookKSS .kssStumbleUpon span.kssIcon
+{
+	background-position: -180px 0;
+}
+.outlookKSS .kssStumbleUpon:hover span.kssIcon
+{
+	background-position: -180px -20px;
+}
+
+/*Tumblr*/
+.outlookKSS .kssTumblr span.kssIcon
+{
+	background-position: -200px 0;
+}
+.outlookKSS .kssTumblr:hover span.kssIcon
+{
+	background-position: -200px -20px;
+}
+
+/*MailTo*/
+.outlookKSS .kssMailTo span.kssIcon
+{
+	background-position: -220px 0;
+}
+.outlookKSS .kssMailTo:hover span.kssIcon
+{
+	background-position: -220px -20px;
+}
+
+/*SendEmail*/
+.outlookKSS .kssSendEmail span.kssIcon
+{
+	background-position: -100px 0;
+}
+.outlookKSS .kssSendEmail:hover span.kssIcon
+{
+	background-position: -100px -20px;
+}
+
+.outlookKSS  li.kssFacebookButton,
+.outlookKSS  li.kssTwitterButton,
+.outlookKSS  li.kssLinkedInButton,
+.outlookKSS  li.kssGooglePlusButton
+{
+	margin:0px 2px 0px 2px;
+}

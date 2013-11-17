@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="State_Selector" usedb="true">
+	<title>State Selector</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+The example shows how we can tweak CSS to have state selector. The items of KoolComboBox are placed in table, the arrangement that we could not achieve with normal combobox.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->styleFolder= "default";
+	$kcb->width = "186px";
+	$kcb->boxWidth="186px";
+	$kcb->boxHeight="234px";
+	$kcb->itemTemplate = "<div class='item'>{value}</div>";
+	
+	$result = mysql_query("select ID,StateName from kcb_tbstates");
+	while($row=mysql_fetch_assoc($result))
+	{
+		$kcb->addItem("State of ".$row["StateName"],$row["ID"]);
+	}
+?>
+
+<form id="form1" method="post">
+	<style type="text/css">
+		.kcbIn
+		{
+			line-height:23px;
+			padding:0px;
+			height : 25px;
+			width: 25px;
+			border-right : 1px dotted gray;
+			border-bottom : 1px dotted gray;
+			margin : 0; 
+			cursor:pointer;
+			text-align:center;
+		}
+		.kcbItem { float : left ;  }
+	</style>	
+	<div style="padding-left:10px;padding-bottom:10px;">
+		<table style="width:350px;">
+			<tr>
+				<td>Choose US state:</td>
+				<td><?php echo $kcb->Render();?></td>			
+			</tr>			
+		</table>
+	</div>		
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+</example>

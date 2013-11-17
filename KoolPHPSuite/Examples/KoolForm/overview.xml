@@ -1,0 +1,18 @@
+<control>
+	<name>KoolForm </name>
+	<metadescription>KoolForm is powerful PHP form decoration and management. It featues with advanced textboxes, buttons, dropdownlist and input validation. VIEW DEMO NOW!</metadescription>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown </metakeywords>	 
+	<description>
+		KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers.
+		KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.
+	</description>
+	<examples>
+		<example	name="First Look" 
+					link="Decoration/First_Look/index.php" 
+					image="Decoration/First_Look/preview.gif"/>
+
+		<example	name="Form Validation" 
+					link="Validation/First_Look/index.php" 
+					image="Validation/First_Look/preview.gif"/>
+	</examples>			
+</control>

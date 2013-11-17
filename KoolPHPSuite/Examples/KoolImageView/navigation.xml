@@ -1,0 +1,53 @@
+<navigation id="KoolImageView" title="PHP ImageView Demo">
+	<category id="root">
+		<link id="Overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>		
+		</category>	
+		<category id="Features" text="Features">	
+							
+			<link 	id="Effects" 
+					text="Effects"
+					link="Features/Effects/index.php" 
+					new="false"/>
+					
+			<link 	id="Open_Close_Speed" 
+					text="Open Close Speed"
+					link="Features/Open_Close_Speed/index.php" 
+					new="false"/>
+					
+			<link 	id="Background" 
+					text="Background"
+					link="Features/Background/index.php" 
+					new="false"/>	
+					
+			<link 	id="Position" 
+					text="Position"
+					link="Features/Position/index.php" 
+					new="false"/>	
+		</category>
+		<category id="Client-side-API" text="Client-side API">
+			
+			<link 	id="RegisterEvent" 
+					text="RegisterEvent"
+					link="Client-side-API/RegisterEvent/index.php" 
+					new="false"/>
+					
+			<link 	id="Manual_Control" 
+					text="Manual Control"
+					link="Client-side-API/Manual_Control/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Advances" text="Advances">
+			<link 	id="With_Database" 
+					text="With Database"
+					link="Advances/With_Database/index.php" 
+					new="false"/>
+		</category>
+					
+	</category>
+</navigation>

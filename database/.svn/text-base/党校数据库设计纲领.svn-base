@@ -1,0 +1,12 @@
+
+1.表名,数据库名和字段名： 统一小写
+
+2.字符集： 统一utf8
+ character set : UTF8
+ collation set: UTF8 general case ignore
+ create database dxks default character set UTF8 collate utf8_general_ci;
+3.外键：外键容易出问题，尽量用其他方式控制，例如函数、触发器等。  参见 <Learning MySQL> p187
+
+drop database dxks;
+create database dxks default character set UTF8 collate utf8_general_ci;
+use database dxks;

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Client_Side_Event" usedb="false">
+	<title>Client-Side Event</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. KoolAjax's Request class is used for advanced users who find that our built-in callback and updatepanel are not enough and want to build a custom ajax request.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+Request class is used for advanced users who find that our built-in callback and updatepanel are not enough and want to build a custom ajax request.
+</p>
+
+<p>
+This example show how we can create event handle for request class.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+    require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";	
+?>
+<div class="exampleContent" style="height:230px;width:650px;">
+	<?php echo $koolajax->Render();?>
+	<link rel="stylesheet" href="example.css" />	
+	<table ><tr><td width="50%">
+						
+		<input type="button" id="btnOrder" class="btn" name="btnOrder" value="Submit Order" onclick="Order()" />
+		<br/> <br/>
+		<div id="result" class="result" ></div>
+		<input type="hidden" name="Posted" value="" />					
+				
+	</td><td>
+	<div class="blog" >
+		<b>Client-side events:  </b>
+		<hr />
+		<div id="eventClient" />
+	</div>
+	</td></tr></table>
+	<br style="clear:both">
+	<script language="javascript">		
+		var startTime ;		
+		function Order()
+		{
+			var request = new KoolAjaxRequest({
+			method:"post",		
+			url:"Process.php",
+			onOpen:function()
+				{
+					var currentTime = new Date();	
+					startTime = currentTime.getTime() ;
+					document.getElementById( "eventClient" ).innerHTML += "onOpen event : Start update Order... " + "<br/>";
+					document.getElementById( "eventClient" ).scrollTop = 9999;
+					document.getElementById('btnOrder').disabled=true;	
+				},	
+			onSent:function()
+				{
+					var currentTime = new Date();	
+					var sentTime = currentTime.getTime() - startTime;
+					document.getElementById( "eventClient" ).innerHTML += "onSent event : Sent order to server after " + sentTime + " ms<br/>";
+					document.getElementById( "eventClient" ).scrollTop = 9999;
+				},
+			onDone:function(result){
+					//Show order was processed
+					document.getElementById('result').innerHTML =  result  ;	
+					var currentTime = new Date();
+					var afterTime = currentTime.getTime() - startTime;
+					document.getElementById( "eventClient" ).innerHTML += "onDone event : Finish update Order after " + afterTime + " ms<br/>";
+					document.getElementById( "eventClient" ).scrollTop = 9999;	
+					document.getElementById('btnOrder').disabled=false;					
+				}			
+			});			
+			//Send value to request, add value 'start order' to 'Posted'
+			request.addArg("Posted",'start order');
+			koolajax.sendRequest(request);					
+		}		
+	</script>
+</div>
+
+			]]>			
+		</code>		
+		<code header="Process.php">
+			<![CDATA[
+<?php 
+	require "../../../../KoolControls/KoolAjax/koolajax.php";	
+	if ($koolajax->isCallback)
+	{
+		//If it is callback request, Slow down processing to see loading effect
+		sleep(1);
+	}
+	//	 This will show the data posted in the post method to this page
+	if( isset( $_POST['Posted']))
+		{
+			echo "Order succesfull.<br/> Your OrderID is ".rand(0,9999);
+		}	
+?>
+			]]>			
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/KoolAjaxRequest_Class/index.php">Javascript :: KoolAjaxRequest</doc>
+	</docs>
+</example>

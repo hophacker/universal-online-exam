@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>fetch()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.enable.security.html" title="enableSecurity()">
+<link rel="next" href="api.get.cache.dir.html" title="getCacheDir()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">fetch()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.enable.security.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.get.cache.dir.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="fetch()">
+<a name="api.fetch"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>fetch() — returns the template output</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id432810"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">string </span><span class="methodname">fetch</span>(<span class="methodparam"><span class="type">string </span><span class="parameter">template</span></span>,<br>             <span class="methodparam"><span class="type">string </span><span class="parameter">cache_id</span></span>,<br>             <span class="methodparam"><span class="type">string </span><span class="parameter">compile_id</span></span>);</code><p>
+   This returns the template output instead of
+   <a class="link" href="api.display.html" title="display()">displaying</a> it.
+   Supply a valid <a class="link" href="resources.html" title="Chapter 16. Resources">template resource</a>
+   type and path. As an optional second parameter, you can pass a
+   <em class="parameter"><code>$cache id</code></em>, see the <a class="link" href="caching.html" title="Chapter 15. Caching">caching
+   section</a> for more information.
+  </p>
+<p>
+ As an optional third parameter, you can pass a
+ <em class="parameter"><code>$compile_id</code></em>.
+ This is in the event that you want to compile different versions of
+ the same template, such as having separate templates compiled
+ for different languages. You can
+ also set the <a class="link" href="variable.compile.id.html" title="$compile_id">
+ <em class="parameter"><code>$compile_id</code></em></a> variable once instead of passing
+  this to each call to this function.
+</p>
+<p>
+   </p>
+<div class="example">
+<a name="id433330"></a><p class="title"><b>Example 14.21. fetch()</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+include('Smarty.class.php');
+$smarty = new Smarty;
+
+$smarty-&gt;setCaching(true);
+
+// set a separate cache_id for each unique URL
+$cache_id = md5($_SERVER['REQUEST_URI']);
+
+// capture the output
+$output = $smarty-&gt;fetch('index.tpl', $cache_id);
+
+// do something with $output here
+echo $output;
+?&gt;
+
+    </pre></div>
+</div>
+<p><br class="example-break">
+  </p>
+<p>
+   </p>
+<div class="example">
+<a name="id433353"></a><p class="title"><b>Example 14.22. Using fetch() to send an email</b></p>
+<div class="example-contents">
+<p>
+     The <code class="filename">email_body.tpl</code> template
+    </p>
+<pre class="programlisting">
+
+Dear {$contact_info.name},
+
+Welcome and thank you for signing up as a member of our user group.
+
+Click on the link below to login with your user name
+of '{$contact_info.username}' so you can post in our forums.
+
+{$login_url}
+
+List master
+
+{textformat wrap=40}
+This is some long-winded disclaimer text that would automatically get wrapped
+at 40 characters. This helps make the text easier to read in mail programs that
+do not wrap sentences for you.
+{/textformat}
+
+    </pre>
+<p>
+     The php script using the PHP
+     <a class="ulink" href="http://php.net/function.mail" target="_top">
+     <code class="varname">mail()</code></a> function
+    </p>
+<pre class="programlisting">
+
+&lt;?php
+
+// get $contact_info from db or other resource here
+
+$smarty-&gt;assign('contact_info',$contact_info);
+$smarty-&gt;assign('login_url',"http://{$_SERVER['SERVER_NAME']}/login");
+
+mail($contact_info['email'], 'Thank You', $smarty-&gt;fetch('email_body.tpl'));
+
+?&gt;
+
+    </pre>
+</div>
+</div>
+<p><br class="example-break">
+  </p>
+<p>
+   See also
+   <a class="link" href="language.function.fetch.html" title="{fetch}"><code class="varname">{fetch}</code></a>
+   <a class="link" href="api.display.html" title="display()"><code class="varname">display()</code></a>,
+   <a class="link" href="language.function.eval.html" title="{eval}"><code class="varname">{eval}</code></a>,
+   and
+   <a class="link" href="api.template.exists.html" title="templateExists()"><code class="varname">templateExists()</code></a>.
+  </p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.enable.security.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.get.cache.dir.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">enableSecurity() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> getCacheDir()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

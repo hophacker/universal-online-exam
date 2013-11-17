@@ -1,0 +1,53 @@
+<control>
+	<name>KoolChart - Excellent PHP Chart and Graph</name>
+	<metadescription>KoolChart is a excellent PHP charting and graphing control to let you visualize your scientific, engineer, business data in a stunning chart. VIEW DEMO NOW!</metadescription>
+	<metakeywords>PHP Chart, PHP Charting, PHP Graphics, PHP Graph, column chart, area chart, bar chart, line chart, scatter chart, scatter line chart</metakeywords>	 
+	<description>
+		KoolChart is a powerful PHP charting and graphing control which allows you to visualize your financial, scientific, engineering, 
+		business or any kind of relevant data in a stunning data-driven graph. Equipped with very strong client-side rendering
+		engine, KoolChart shows a remarkable performance and quality images across browsers. 
+	</description>
+	<examples>
+		<example	name="First Look" 
+					link="First_Look/First_Look/index.php" 
+					image="First_Look/First_Look/preview.gif"/>
+
+		<example	name="Column Chart" 
+					link="ChartTypes/Column_Chart/index.php" 
+					image="ChartTypes/Column_Chart/preview.gif"/>
+
+		<example	name="Bar Chart" 
+					link="ChartTypes/Bar_Chart/index.php" 
+					image="ChartTypes/Bar_Chart/preview.gif"/>
+
+		<example	name="Line Chart" 
+					link="ChartTypes/Line_Chart/index.php" 
+					image="ChartTypes/Line_Chart/preview.gif"/>
+
+		<example	name="Area Chart" 
+					link="ChartTypes/Area_Chart/index.php" 
+					image="ChartTypes/Area_Chart/preview.gif"/>
+
+		<example	name="Pie Chart" 
+					link="ChartTypes/Pie_Chart/index.php" 
+					image="ChartTypes/Pie_Chart/preview.gif"/>
+
+		<example	name="Scatter Chart" 
+					link="ChartTypes/Scatter_Chart/index.php" 
+					image="ChartTypes/Scatter_Chart/preview.gif"/>
+
+		<example	name="ScatterLine Chart" 
+					link="ChartTypes/ScatterLine_Chart/index.php" 
+					image="ChartTypes/ScatterLine_Chart/preview.gif"/>
+
+		<example	name="Mixed Charts" 
+					link="Functionality/Mixed_Charts/index.php" 
+					image="Functionality/Mixed_Charts/preview.gif"/>
+
+		<example	name="Negative Values" 
+					link="Functionality/Negative_Values/index.php" 
+					image="Functionality/Negative_Values/preview.gif"/>
+
+
+	</examples>			
+</control>

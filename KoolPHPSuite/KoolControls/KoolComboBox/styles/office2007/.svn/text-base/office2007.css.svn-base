@@ -1,0 +1,203 @@
+.office2007KCB *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.office2007KCB table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.office2007KCB .kcbUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.office2007KCB .kcbLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.office2007KCB .kcbCombobox
+{
+	border:solid 1px #94b4dc;
+	height:18px;
+}
+
+.office2007KCB .kcbArrow
+{
+	border:none;
+	width:16px;
+	height:18px;
+	background:url(arrow.gif) 3px 0px;
+	border-left:1px #94b4dc solid;
+	float:right;
+}
+
+/*Box*/
+
+.office2007KCB .kcbBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #94b4dc;
+	border-top:solid 0px #94b4dc;
+	background-color:#bbd7fa;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.office2007KCB .kcbIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.office2007KCB .kcbItemBox
+{
+	overflow:auto;
+}
+
+.office2007KCB .kcbItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .office2007KCB .kcbItem
+{
+	display:block;
+}
+
+
+.office2007KCB .kcbOpen
+{
+	display:block;
+}
+
+
+.office2007KCB .kcbA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.office2007KCB .kcbItem .kcbIn img
+{
+	border:0px;
+}
+
+
+.office2007KCB .kcbItem .kcbIn
+{
+	color:#222;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:21px;
+	line-height:21px;
+}
+
+
+
+.office2007KCB .kcbSelectFocus .kcbIn
+{
+	background:url(b.gif);
+	height:21px;
+	line-height:21px;
+	color:#222;
+}
+
+/*Disable Item*/
+.office2007KCB .kcbDisable .kcbIn
+{
+	color:gray;
+}
+
+.office2007KCB .kcbDisable a.kcbA:hover .kcbIn
+{
+	background:none;
+	color:gray;
+}
+
+.office2007KCB .kcbLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.office2007KCB .kcbHeader,
+.office2007KCB .kcbFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+
+.office2007KCB .kcbOver .kcbArrow
+{
+	background:url(arrow.gif) 3px -19px;
+}
+
+.office2007KCB .kcbDown .kcbArrow
+{
+	background:url(arrow.gif) 3px 0px;
+}
+
+
+.office2007KCB .kcbCombobox .kcbInput
+{
+	border:none;
+	background:none;
+	width:100%;
+	cursor:default;
+	overflow:hidden;
+}
+
+.office2007KCB .kcbOpen .kcbBox 
+{
+	display:block;
+	overflow:hidden;
+}
+.office2007KCB .kcbOpen .kcbIframe
+{
+	display:block;
+}
+
+.office2007KCB .kcbIn
+{
+	display:block;
+}
+
+/*Textbox settings*/
+.office2007KCB .kcbTextbox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.office2007KCB .kcbTextbox .kcbInput
+{
+	width:100%;
+	border:none;
+	background:white;	
+	height:18px;
+}
+.office2007KCB a:focus 
+{
+	outline:none;
+}

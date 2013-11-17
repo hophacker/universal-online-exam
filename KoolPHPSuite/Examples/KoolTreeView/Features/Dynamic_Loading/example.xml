@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Dynamic_Loading" usedb="false">
+	<title>Dynamic Loading</title>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview, treeview drag and drop, php treeview mysql, kooltreeview</metakeywords>	 
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolTreeView supports dynamic loading feature. The tree nodes will be loaded on-demand.
+To enable this feature, you need to use <b>KoolAjax</b> and provide the service page parameter inside <b>Add()</b> function of KoolTreeView.
+</p>
+<p>
+This feature helps to improve performance when you have very large tree to render.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	require $KoolControlsFolder."/KoolTreeView/kooltreeview.php";
+		
+	$treeview = new KoolTreeView("treeview");
+	$treeview->scriptFolder = $KoolControlsFolder."/KoolTreeView";
+	$treeview->imageFolder=$KoolControlsFolder."/KoolTreeView/icons";
+	$treeview->styleFolder="default";
+	$treeview->showLines = true;
+	
+	$root = $treeview->getRootNode();
+	$root->text = "My Properties";
+	$root->expand=true;
+	$root->image="woman2S.gif";
+	$treeview->Add("root","hardware","Hardware",false,"xpNetwork.gif","");
+	$treeview->Add("hardware","laptop","HP dv2500 Laptop",false,"square_blueS.gif","");	
+	$treeview->Add("hardware","desktop","Lenovo desktop",false,"square_greenS.gif","");
+	$treeview->Add("hardware","lcd","Asus 19\" LCD",false,"square_redS.gif","");
+	
+	$treeview->Add("root","software","Software",false,"ie.gif","");
+	$treeview->Add("software","os","Operating System",false,"bfly.gif","");
+	$treeview->Add("os","linux","Ubuntu 8.10",false,"ball_redS.gif","");
+	$treeview->Add("os","windows","Vista Home Edition",false,"ball_blueS.gif","");
+	$treeview->Add("software","office","Office",false,"doc.gif","");
+	$treeview->Add("office","msoffice","Microsoft Office 2007",false,"square_redS.gif","");
+	$treeview->Add("office","ooffice","Open Office 2.4",false,"square_greenS.gif","");
+	$treeview->Add("software","burning","Burn CD/DVD",false,"xpShared.gif","");
+	$treeview->Add("burning","nero","Nero 8",false,"triangle_yellowS.gif","");
+	$treeview->Add("burning","k3b","K3B <i>(on Ubuntu)</i>",false,"triangle_blueS.gif","");
+	$treeview->Add("software","imageeditor","Image editors",false,"goblet_bronzeS.gif","");
+	$treeview->Add("imageeditor","photoshop","Photoshop 10",false,"ball_glass_blueS.gif","");
+	$treeview->Add("imageeditor","gimp","GIMP 2.3.4",false,"ball_glass_greenS.gif","");
+	
+	$treeview->Add("root","dynload","Load the same tree using dynamic loading",false,"tree.gif","subnode.php");
+	
+	$treeview->Add("root","book","Books",false,"book.gif","");
+	$treeview->Add("book","ajax","Ajax For Dummies",false,"BookY.gif","");
+	$treeview->Add("book","csharp","Mastering C#",false,"BookY.gif","");
+	$treeview->Add("book","flash","Flash 8 Bible",false,"BookY.gif","");
+	
+?>
+
+<?php echo $koolajax->Render();?>
+<div style="padding:10px;">
+	<?php echo $treeview->Render();?>
+</div>
+			]]>			
+		</code>
+		<code header="Subnode.php">
+			<![CDATA[
+<?php
+	$KoolControlsFolder = "../../../../KoolControls";
+	require $KoolControlsFolder."/KoolTreeView/kooltreeview.php";
+	$treeview = new KoolTreeView("treeview");
+	$treeview->scriptFolder = $KoolControlsFolder."/KoolTreeView";
+	$treeview->imageFolder=$KoolControlsFolder."/KoolTreeView/icons";
+	$treeview->styleFolder="default";
+		
+	$i = time();
+	$treeview->Add("root","hardware".$i,"Hardware",false,"xpNetwork.gif","");
+	$treeview->Add("hardware".$i,"laptop".$i,"HP dv2500 Laptop",false,"square_blueS.gif","");	
+	$treeview->Add("hardware".$i,"desktop".$i,"Lenovo desktop",false,"square_greenS.gif","");
+	$treeview->Add("hardware".$i,"lcd".$i,"Asus 19\" LCD",false,"square_redS.gif","");
+	
+	$treeview->Add("root","software".$i,"Software",false,"ie.gif","");
+	$treeview->Add("software".$i,"os".$i,"Operating System",false,"bfly.gif","");
+	$treeview->Add("os".$i,"linux".$i,"Ubuntu 8.10",false,"ball_redS.gif","");
+	$treeview->Add("os".$i,"windows".$i,"Vista Home Edition",false,"ball_blueS.gif","");
+	$treeview->Add("software".$i,"office".$i,"Office",false,"doc.gif","");
+	$treeview->Add("office".$i,"msoffice".$i,"Microsoft Office 2007",false,"square_redS.gif","");
+	$treeview->Add("office".$i,"ooffice".$i,"Open Office 2.4",false,"square_greenS.gif","");
+	$treeview->Add("software".$i,"burning".$i,"Burn CD/DVD",false,"xpShared.gif","");
+	$treeview->Add("burning".$i,"nero".$i,"Nero 8",false,"triangle_yellowS.gif","");
+	$treeview->Add("burning".$i,"k3b".$i,"K3B <i>(on Ubuntu)</i>",false,"triangle_blueS.gif","");
+	$treeview->Add("software".$i,"imageeditor".$i,"Image editors",false,"goblet_bronzeS.gif","");
+	$treeview->Add("imageeditor".$i,"photoshop".$i,"Photoshop 10",false,"ball_glass_blueS.gif","");
+	$treeview->Add("imageeditor".$i,"gimp".$i,"GIMP 2.3.4",false,"ball_glass_greenS.gif","");
+	
+	$treeview->Add("root","dynload".$i,"Load the same tree using dynamic loading",false,"tree.gif","subnode.php");
+	
+	$treeview->Add("root","book".$i,"Books",false,"book.gif","");
+	$treeview->Add("book".$i,"ajax".$i,"Ajax For Dummies",false,"BookY.gif","");
+	$treeview->Add("book".$i,"csharp".$i,"Mastering C#",false,"BookY.gif","");
+	$treeview->Add("book".$i,"flash".$i,"Flash 8 Bible",false,"BookY.gif","");
+	
+	sleep(1);//Slow down response	
+	$treeview->isSubTree = true;
+	$treeview->width="250px";
+	echo $treeview->Render();
+?>						
+			]]>				
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/PHP/KoolTreeView_Class/index.php#Add">KoolTreeView :: Add()</doc>
+	</docs>
+</example>

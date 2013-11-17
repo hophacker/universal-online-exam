@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="KoolMaskedTextBox">
+	<title>KoolMaskedTextBox</title>
+	<metakeywords>php masked input,php masked textbox</metakeywords>	 
+	<metadescription>Masked input for php</metadescription>
+	<description>
+		<![CDATA[ 
+<b></b>
+<p>With KoolMaskedTextBox, you can set the format that you need user to key in by using <b>$Mask</b> property.</p>
+<p>In the <b>$Mask</b>, there are several parts:
+<ul>	
+	<li>1. Number: denoted by '<b>#</b>' character.</li>
+	<li>2. Lower-case char: denoted by '<b>a</b>' character.</li>
+	<li>3. Uppper-case char: denoted by '<b>A</b>' character.</li>
+	<li>4. Special char: denoted by '<b>~</b>' character.</li>
+</ul>
+</p>
+
+<p>There are two type of special mask inputs:
+<ul>	
+	<li>1. Range input: User only can enter in a numner range only, for example <b>&lt;0..255&gt;</b> </li>
+	<li>2. Option input: User can only enter some character that you set, for example <b>&lt;m|f|b&gt</b> </li>
+</ul>
+</p>
+
+<p>You can set behavior of KoolMaskedTextBox with <b>$SelectionOnFocus</b> when it is focused:
+<ul>	
+	<li>1. <i>"None"</i> : Do nothing. </li>
+	<li>2. <i>"CaretToBeginning"</i> : Move the caret to beginning </li>
+	<li>3. <i>"CaretToEnd"</i> : Move caret to the end </li>
+	<li>4. <i>"SelectAll"</i> : Select all the text </li>
+</ul>
+</p>
+
+
+
+<p>After user submit the form, you can get the value from KoolMaskedTextBox through below properties:
+<ul>
+	<li>1. <b>$Value</b>: Exact what user input.</li>
+	<li>2. <b>$ValueWithPrompt</b>: User input and empty space filled with prompt char.</li>
+	<li>3. <b>$ValueWithLiterals</b>: User input and literals from the mask.</li>
+	<li>4. <b>$ValueWithPromptAndLiterals</b>: User input, prompt char in empty space and literals from the mask.</li>	
+</ul>
+</p>
+
+<p>At client-side, you can use:
+<ul>
+	<li>1. <b>set_value(_value),get_value()</b>:To set or get the value</li>
+	<li>2. <b>get_value_with_prompt()</b>: User input and empty space filled with prompt char.</li>
+	<li>3. <b>get_value_with_literals()</b>: User input and literals from the mask.</li>
+	<li>4. <b>get_value_with_prompt_and_literals()</b>: User input, prompt char in empty space and literals from the mask.</li>	
+</ul>
+</p>
+
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolForm/koolform.php";	
+	$myform_manager = new KoolForm("myform");
+	$myform_manager->scriptFolder = $KoolControlsFolder."/KoolForm";	
+	$myform_manager->styleFolder = "sunset";
+	$myform_manager->DecorationEnabled = true;
+	
+	
+	
+	$txtPhone = $myform_manager->AddControl(new KoolMaskedTextBox("txtPhone"));
+	$txtPhone->Mask = "(###) ###-####";
+	$txtPhone->PromptChar = "_";
+	$txtPhone->SelectionOnFocus = "SelectAll"; 
+	
+	$txtIPAddress = $myform_manager->AddControl(new KoolMaskedTextBox("txtIPAddress"));
+	$txtIPAddress->Mask = "<0..255>.<0..255>.<0..255>.<0..255>";
+	$txtIPAddress->SelectionOnFocus = "CaretToBeginning"; 
+	
+	$txtVisaCreditCard= $myform_manager->AddControl(new KoolMaskedTextBox("txtVisaCreditCard"));
+	$txtVisaCreditCard->Mask = "4### #### #### ####";
+	$txtVisaCreditCard->PromptChar = "_";
+	$txtVisaCreditCard->SelectionOnFocus = "SelectAll"; 
+	
+	$txtSSN= $myform_manager->AddControl(new KoolMaskedTextBox("txtSSN"));
+	$txtSSN->Mask = "###-##-####";
+	$txtSSN->PromptChar = "_";
+	$txtSSN->SelectionOnFocus = "SelectAll"; 
+
+	//Init form
+	$myform_manager->Init();
+?>
+
+<form id="myform" method="post" class="decoration">
+	
+
+	<fieldset style="width:250px;padding-left:10px;padding-bottom:10px;">
+		<legend><b>Enter following</b></legend>
+		
+		<div>
+			Phone: <br/>
+			<?php echo $txtPhone->Render();?>
+		</div>
+		<div style="margin-top:10px;">
+			IP Address: <br/>
+			<?php echo $txtIPAddress->Render();?>
+		</div>
+		<div style="margin-top:10px;">
+			Visa Credit Card: <br/>
+			<?php echo $txtVisaCreditCard->Render();?>
+		</div>
+		<div style="margin-top:10px;">
+			SSN: <br/>
+			<?php echo $txtSSN->Render();?>
+		</div>
+		<div style="margin-top:10px;">
+			<input type="submit" value="Submit" />
+		</div>		
+	</fieldset>	
+	
+	<?php echo $myform_manager->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="">refresh()</doc>		
+	</docs>
+</example>

@@ -1,0 +1,209 @@
+.vistaKSS
+{
+	border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+
+	background-color: #F0F0F0;
+    border: 1px solid #DFDFDF;
+}
+
+
+.vistaKSS ul.kssUL
+{
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;	
+}
+
+
+.vistaKSS li.kssItem
+{
+	display: inline-block;
+	margin:2px 0px 2px 0px;
+    vertical-align: middle;
+}
+
+.vistaKSS ul.kssVertical li.kssItem
+{
+	display:block;
+}
+
+.vistaKSS li.kssLineBreak
+{
+	display:block;
+	margin:0px;
+}
+.vistaKSS ul.kssVertical li.kssLineBreak
+{
+	margin:4px 0px 4px 0px;
+	background-color:#DFDFDF;
+	height:1px;
+}
+
+
+.vistaKSS a.kssLink
+{
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+
+.vistaKSS span.kssText
+{
+	color: #3B3B3B;
+	vertical-align: middle;
+	margin:0px 2px 0px 2px;
+}
+
+.vistaKSS span.kssIcon
+{
+	background-image: url(SocialShareSprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin:0px 2px 0px 2px;
+    width: 16px;
+	vertical-align: middle;
+}
+
+/*Facebook*/
+.vistaKSS .kssFacebook span.kssIcon
+{
+	background-position: -260px 0;
+}
+.vistaKSS .kssFacebook:hover span.kssIcon
+{
+	background-position: -260px -20px;
+}
+
+/*Twitter*/
+.vistaKSS .kssTwitter span.kssIcon
+{
+	background-position: -20px 0;
+}
+.vistaKSS .kssTwitter:hover span.kssIcon
+{
+	background-position: -20px -20px;
+}
+
+/*Blogger*/
+.vistaKSS .kssBlogger span.kssIcon
+{
+	background-position: 0 0;
+}
+.vistaKSS .kssBlogger:hover span.kssIcon
+{
+	background-position: 0 -20px;
+}
+
+/*Delicious*/
+.vistaKSS .kssDelicious span.kssIcon
+{
+	background-position: -60px 0;
+}
+.vistaKSS .kssDelicious:hover span.kssIcon
+{
+	background-position: -60px -20px;
+}
+
+/*Digg*/
+.vistaKSS .kssDigg span.kssIcon
+{
+	background-position: -80px 0;
+}
+.vistaKSS .kssDigg:hover span.kssIcon
+{
+	background-position: -80px -20px;
+}
+
+/*GoogleBookmarks*/
+.vistaKSS .kssGoogleBookmarks span.kssIcon
+{
+	background-position: -120px 0;
+}
+.vistaKSS .kssGoogleBookmarks:hover span.kssIcon
+{
+	background-position: -120px -20px;
+}
+
+/*LinkedIn*/
+.vistaKSS .kssLinkedIn span.kssIcon
+{
+	background-position: -140px 0;
+}
+.vistaKSS .kssLinkedIn:hover span.kssIcon
+{
+	background-position: -140px -20px;
+}
+
+/*MySpace*/
+.vistaKSS .kssMySpace span.kssIcon
+{
+	background-position: -40px 0;
+}
+.vistaKSS .kssMySpace:hover span.kssIcon
+{
+	background-position: -40px -20px;
+}
+
+/*Reddit*/
+.vistaKSS .kssReddit span.kssIcon
+{
+	background-position: -160px 0;
+}
+.vistaKSS .kssReddit:hover span.kssIcon
+{
+	background-position: -160px -20px;
+}
+
+/*StumbleUpon*/
+.vistaKSS .kssStumbleUpon span.kssIcon
+{
+	background-position: -180px 0;
+}
+.vistaKSS .kssStumbleUpon:hover span.kssIcon
+{
+	background-position: -180px -20px;
+}
+
+/*Tumblr*/
+.vistaKSS .kssTumblr span.kssIcon
+{
+	background-position: -200px 0;
+}
+.vistaKSS .kssTumblr:hover span.kssIcon
+{
+	background-position: -200px -20px;
+}
+
+/*MailTo*/
+.vistaKSS .kssMailTo span.kssIcon
+{
+	background-position: -220px 0;
+}
+.vistaKSS .kssMailTo:hover span.kssIcon
+{
+	background-position: -220px -20px;
+}
+
+/*SendEmail*/
+.vistaKSS .kssSendEmail span.kssIcon
+{
+	background-position: -100px 0;
+}
+.vistaKSS .kssSendEmail:hover span.kssIcon
+{
+	background-position: -100px -20px;
+}
+
+.vistaKSS  li.kssFacebookButton,
+.vistaKSS  li.kssTwitterButton,
+.vistaKSS  li.kssLinkedInButton,
+.vistaKSS  li.kssGooglePlusButton
+{
+	margin:0px 2px 0px 2px;
+}

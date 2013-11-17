@@ -1,0 +1,1379 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/dxks/!svn/ver/2/yangda/manual-en
+END
+language.function.insert.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.insert.html
+END
+language.modifier.to_charset.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.to_charset.html
+END
+language.modifier.upper.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.upper.html
+END
+plugins.prefilters.postfilters.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.prefilters.postfilters.html
+END
+variable.right.delimiter.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.right.delimiter.html
+END
+language.function.while.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.while.html
+END
+variable.debugging.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.debugging.html
+END
+api.assign.by.ref.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.assign.by.ref.html
+END
+api.add.config.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.add.config.dir.html
+END
+language.function.call.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.call.html
+END
+variable.cache.id.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.cache.id.html
+END
+variable.plugins.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.plugins.dir.html
+END
+variable.smarty.debug.id.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.smarty.debug.id.html
+END
+api.get.tags.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.tags.html
+END
+language.modifier.cat.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.cat.html
+END
+variable.compile.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.compile.dir.html
+END
+language.function.assign.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.assign.html
+END
+language.function.function.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.function.html
+END
+variable.trusted.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.trusted.dir.html
+END
+language.function.for.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.for.html
+END
+variable.default.config.type.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.default.config.type.html
+END
+language.syntax.attributes.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.syntax.attributes.html
+END
+variable.caching.type.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.caching.type.html
+END
+bugs.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/2/yangda/manual-en/bugs.html
+END
+smarty.for.programmers.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/smarty.for.programmers.html
+END
+variable.compile.locking.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.compile.locking.html
+END
+variable.compiler.class.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.compiler.class.html
+END
+api.unregister.object.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.unregister.object.html
+END
+language.function.strip.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.strip.html
+END
+plugins.outputfilters.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.outputfilters.html
+END
+language.function.append.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.append.html
+END
+variable.config.overwrite.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.config.overwrite.html
+END
+variable.default.resource.type.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.default.resource.type.html
+END
+language.syntax.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.syntax.functions.html
+END
+language.function.include.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.include.php.html
+END
+api.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.functions.html
+END
+api.clear.assign.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.clear.assign.html
+END
+resources.extends.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/resources.extends.html
+END
+api.unregister.filter.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.unregister.filter.html
+END
+resources.custom.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/resources.custom.html
+END
+variable.merge.compiled.includes.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.merge.compiled.includes.html
+END
+api.get.plugins.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.plugins.dir.html
+END
+advanced.features.template.inheritance.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.template.inheritance.html
+END
+variable.force.cache.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.force.cache.html
+END
+smarty.for.designers.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/smarty.for.designers.html
+END
+language.function.config.load.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.config.load.html
+END
+api.get.compile.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.compile.dir.html
+END
+api.unregister.plugin.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.unregister.plugin.html
+END
+language.function.eval.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.eval.html
+END
+plugins.naming.conventions.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.naming.conventions.html
+END
+api.mute.expected.errors.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.mute.expected.errors.html
+END
+advanced.features.postfilters.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.postfilters.html
+END
+language.modifier.indent.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.indent.html
+END
+plugins.compiler.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.compiler.functions.html
+END
+language.function.literal.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.literal.html
+END
+language.custom.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.custom.functions.html
+END
+advanced.features.static.classes.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.static.classes.html
+END
+language.function.cycle.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.cycle.html
+END
+variable.force.compile.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.force.compile.html
+END
+advanced.features.outputfilters.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.outputfilters.html
+END
+api.get.template.vars.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.template.vars.html
+END
+variable.cache.locking.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.cache.locking.html
+END
+language.function.foreach.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.foreach.html
+END
+tips.dates.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.dates.html
+END
+language.syntax.variables.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.syntax.variables.html
+END
+language.modifier.strip.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.strip.html
+END
+api.variables.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.variables.html
+END
+installing.smarty.extended.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/installing.smarty.extended.html
+END
+language.modifier.unescape.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.unescape.html
+END
+api.register.resource.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.resource.html
+END
+language.modifier.count.characters.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.count.characters.html
+END
+section.template.cache.handler.func.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/2/yangda/manual-en/section.template.cache.handler.func.html
+END
+language.syntax.quotes.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.syntax.quotes.html
+END
+api.add.template.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.add.template.dir.html
+END
+variable.escape.html.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.escape.html.html
+END
+api.register.default.plugin.handler.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.default.plugin.handler.html
+END
+language.basic.syntax.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.basic.syntax.html
+END
+plugins.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.functions.html
+END
+language.function.html.image.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.image.html
+END
+api.assign.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.assign.html
+END
+language.function.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.php.html
+END
+language.modifier.count.paragraphs.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.count.paragraphs.html
+END
+language.modifier.nl2br.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.nl2br.html
+END
+api.clear.cache.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.clear.cache.html
+END
+language.function.html.table.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.table.html
+END
+api.template.exists.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.template.exists.html
+END
+language.function.html.options.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.options.html
+END
+api.enable.security.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.enable.security.html
+END
+language.function.if.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.if.html
+END
+caching.custom.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/dxks/!svn/ver/2/yangda/manual-en/caching.custom.html
+END
+api.get.cache.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.cache.dir.html
+END
+language.function.capture.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.capture.html
+END
+caching.groups.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/dxks/!svn/ver/2/yangda/manual-en/caching.groups.html
+END
+caching.multiple.caches.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/caching.multiple.caches.html
+END
+language.math.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.math.html
+END
+language.escaping.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.escaping.html
+END
+language.function.ldelim.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.ldelim.html
+END
+variable.template.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.template.dir.html
+END
+api.append.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.append.html
+END
+language.modifier.escape.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.escape.html
+END
+tips.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.html
+END
+variable.debugging.ctrl.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.debugging.ctrl.html
+END
+language.function.html.checkboxes.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.checkboxes.html
+END
+variable.compile.check.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.compile.check.html
+END
+language.function.html.radios.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.radios.html
+END
+advanced.features.template.settings.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.template.settings.html
+END
+api.test.install.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.test.install.html
+END
+language.function.debug.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.debug.html
+END
+variable.cache.handler.func.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.cache.handler.func.html
+END
+variable.locking.timeout.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.locking.timeout.html
+END
+installing.smarty.basic.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/installing.smarty.basic.html
+END
+language.variable.scopes.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.variable.scopes.html
+END
+api.get.config.vars.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.config.vars.html
+END
+config.files.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/dxks/!svn/ver/2/yangda/manual-en/config.files.html
+END
+api.register.cacheresource.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.cacheresource.html
+END
+language.combining.modifiers.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.combining.modifiers.html
+END
+resources.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/2/yangda/manual-en/resources.html
+END
+api.display.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.display.html
+END
+variable.caching.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.caching.html
+END
+language.function.extends.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.extends.html
+END
+plugins.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.html
+END
+chapter.debugging.console.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/chapter.debugging.console.html
+END
+api.create.data.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.create.data.html
+END
+variable.cache.lifetime.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.cache.lifetime.html
+END
+bc.html
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/dxks/!svn/ver/2/yangda/manual-en/bc.html
+END
+api.unregister.resource.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.unregister.resource.html
+END
+language.function.html.select.time.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.select.time.html
+END
+resources.streams.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/resources.streams.html
+END
+api.clear.all.assign.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.clear.all.assign.html
+END
+variable.default.modifiers.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.default.modifiers.html
+END
+api.get.registered.object.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.registered.object.html
+END
+language.variables.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.variables.html
+END
+language.modifier.replace.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.replace.html
+END
+plugins.resources.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.resources.html
+END
+variable.left.delimiter.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.left.delimiter.html
+END
+api.add.plugins.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.add.plugins.dir.html
+END
+language.modifier.count.sentences.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.count.sentences.html
+END
+variable.php.handling.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.php.handling.html
+END
+language.function.fetch.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.fetch.html
+END
+language.function.math.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.math.html
+END
+language.function.block.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.block.html
+END
+api.register.object.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.object.html
+END
+api.fetch.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.fetch.html
+END
+api.clear.config.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.clear.config.html
+END
+plugins.inserts.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.inserts.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/2/yangda/manual-en/index.html
+END
+variable.use.sub.dirs.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.use.sub.dirs.html
+END
+api.unregister.cacheresource.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.unregister.cacheresource.html
+END
+language.function.section.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.section.html
+END
+api.load.filter.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.load.filter.html
+END
+language.modifier.spacify.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.spacify.html
+END
+api.register.filter.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.filter.html
+END
+language.modifier.wordwrap.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.wordwrap.html
+END
+troubleshooting.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/troubleshooting.html
+END
+api.register.plugin.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.plugin.html
+END
+charset.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/2/yangda/manual-en/charset.html
+END
+language.function.include.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.include.html
+END
+api.config.load.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.config.load.html
+END
+variable.use.include.path.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.use.include.path.html
+END
+language.config.variables.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.config.variables.html
+END
+api.set.plugins.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.set.plugins.dir.html
+END
+api.append.by.ref.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.append.by.ref.html
+END
+language.modifier.default.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.default.html
+END
+language.modifier.regex.replace.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.regex.replace.html
+END
+plugins.writing.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.writing.html
+END
+api.compile.all.templates.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.compile.all.templates.html
+END
+language.function.html.select.date.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.html.select.date.html
+END
+language.modifier.truncate.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.truncate.html
+END
+variable.cache.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.cache.dir.html
+END
+tips.wap.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.wap.html
+END
+api.set.compile.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.set.compile.dir.html
+END
+variable.compile.id.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.compile.id.html
+END
+language.variables.smarty.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.variables.smarty.html
+END
+api.get.config.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.config.dir.html
+END
+language.modifier.strip.tags.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.strip.tags.html
+END
+api.get.template.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.get.template.dir.html
+END
+variable.config.booleanize.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.config.booleanize.html
+END
+api.disable.security.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.disable.security.html
+END
+plugins.block.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.block.functions.html
+END
+variable.default.config.handler.func.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.default.config.handler.func.html
+END
+language.modifier.date.format.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.date.format.html
+END
+api.set.config.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.set.config.dir.html
+END
+variable.error.reporting.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.error.reporting.html
+END
+inforesources.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/2/yangda/manual-en/inforesources.html
+END
+variable.auto.literal.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.auto.literal.html
+END
+api.clear.compiled.tpl.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.clear.compiled.tpl.html
+END
+variable.default.template.handler.func.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.default.template.handler.func.html
+END
+tips.componentized.templates.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.componentized.templates.html
+END
+smarty.constants.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/smarty.constants.html
+END
+api.set.template.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.set.template.dir.html
+END
+language.function.mailto.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.mailto.html
+END
+language.modifier.from_charset.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.from_charset.html
+END
+what.is.smarty.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/dxks/!svn/ver/2/yangda/manual-en/what.is.smarty.html
+END
+variable.config.read.hidden.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.config.read.hidden.html
+END
+appendixes.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/2/yangda/manual-en/appendixes.html
+END
+api.register.class.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.register.class.html
+END
+plugins.modifiers.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/plugins.modifiers.html
+END
+variable.autoload.filters.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.autoload.filters.html
+END
+variable.direct.access.security.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.direct.access.security.html
+END
+preface.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/2/yangda/manual-en/preface.html
+END
+getting.started.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/2/yangda/manual-en/getting.started.html
+END
+variable.config.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.config.dir.html
+END
+language.function.setfilter.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.setfilter.html
+END
+api.clear.all.cache.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.clear.all.cache.html
+END
+advanced.features.objects.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.objects.html
+END
+api.compile.all.config.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.compile.all.config.html
+END
+tips.default.var.handling.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.default.var.handling.html
+END
+language.modifier.string.format.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.string.format.html
+END
+resources.string.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/2/yangda/manual-en/resources.string.html
+END
+caching.cacheable.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/caching.cacheable.html
+END
+advanced.features.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.html
+END
+api.set.cache.dir.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.set.cache.dir.html
+END
+variable.cache.modified.check.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.cache.modified.check.html
+END
+template.resources.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/template.resources.html
+END
+api.create.template.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.create.template.html
+END
+api.is.cached.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/2/yangda/manual-en/api.is.cached.html
+END
+tips.passing.vars.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.passing.vars.html
+END
+caching.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/2/yangda/manual-en/caching.html
+END
+advanced.features.streams.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.streams.html
+END
+language.builtin.functions.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.builtin.functions.html
+END
+advanced.features.prefilters.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/advanced.features.prefilters.html
+END
+installation.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/dxks/!svn/ver/2/yangda/manual-en/installation.html
+END
+language.modifiers.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifiers.html
+END
+language.function.textformat.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.textformat.html
+END
+language.modifier.count.words.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.count.words.html
+END
+variable.debug_template.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/variable.debug_template.html
+END
+language.function.nocache.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.function.nocache.html
+END
+language.modifier.lower.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/2/yangda/manual-en/language.modifier.lower.html
+END
+tips.obfuscating.email.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/2/yangda/manual-en/tips.obfuscating.email.html
+END

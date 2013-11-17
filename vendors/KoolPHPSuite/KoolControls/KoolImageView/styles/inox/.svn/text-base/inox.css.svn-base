@@ -1,0 +1,79 @@
+﻿.inoxZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.inoxKIV
+{
+	display:inline;
+}
+
+.inoxKIV .kivZoomPanel
+{
+    position:absolute;
+	background:url(bg.gif);
+    border:solid 1px gray;
+	padding:10px;
+	
+}
+
+.inoxKIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:white;
+    border:solid 1px gray;
+}
+
+.inoxKIV .kivBigImage
+{
+	cursor:url(zoomout.cur),pointer !important;
+	border:solid 1px gray;
+}
+
+
+.inoxKIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+.inoxKIV .kivEffectPanel
+{
+	background:url(bg.gif);
+	border:solid 1px gray;
+}
+
+.inoxKIV .kivEffectImage
+{
+    border:solid 1px gray;
+}
+
+.inoxKIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.inoxKIV .kivDescription
+{
+	float:left;
+	padding-top:5px;
+    color:#555;
+    font-family:Arial;
+    font-size:12px;
+}
+
+.inoxKIV .kivCloseButton
+{
+
+}
+
+.inoxKIV .kivMoveButton
+{
+
+}
+
+

@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{setfilter}</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="language.builtin.functions.html" title="Chapter 7. Built-in Functions">
+<link rel="prev" href="language.function.section.html" title="{section},{sectionelse}">
+<link rel="next" href="language.function.strip.html" title="{strip}">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">{setfilter}</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="language.function.section.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 7. Built-in Functions</th>
+<td width="20%" align="right"> <a accesskey="n" href="language.function.strip.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="{setfilter}">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="language.function.setfilter"></a>{setfilter}</h2></div></div></div>
+<p>
+  The <code class="varname">{setfilter}...{/setfilter}</code> block tag allows the definition of template instance's variable filters.
+ </p>
+<p>
+  SYNTAX: {setfilter filter1|filter2|filter3....}...{/setfilter}
+ </p>
+<p>
+  The filter can be:
+ </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>
+    A variable filter plugin specified by it's name.
+   </p></li>
+<li class="listitem"><p>
+    A modidier specified by it's name and optional additional parameter.
+   </p></li>
+</ul></div>
+<p>
+ <code class="varname">{setfilter}...{/setfilter}</code> blocks can be nested. The filter definition of inner blocks does replace the definition of the outer block.
+</p>
+<p>
+  Template instance filters run in addition to other modifiers and filters.
+  They run in the following order:
+  modifier,
+  default_modifier,
+  $escape_html,
+  registered variable filters,
+  autoloaded variable filters,
+  template instance's variable filters. Everything after default_modifier can be disabled with the <code class="literal">nofilter</code> flag.
+ </p>
+<div class="example">
+<a name="id382049"></a><p class="title"><b>Example 7.77. {setfilter} tags</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;script&gt;
+{setfilter filter1}
+  {$foo} {* filter1 runs on output of $foo *}
+  {setfilter filter2|mod:true}
+    {$bar} {* filter2 and modifier mod runs on output of $bar *}
+  {/setfilter}
+  {$buh} {* filter1 runs on output of $buh *}
+{/setfilter}
+{$blar} {* no template instance filter runs on output of $blar}
+&lt;/script&gt;
+
+  </pre></div>
+</div>
+<br class="example-break"><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+   The setting of template instance filters does not effect the output of included subtemplates.
+  </p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="language.function.section.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="language.builtin.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="language.function.strip.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">{section},{sectionelse} </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> {strip}</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

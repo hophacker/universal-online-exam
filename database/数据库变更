@@ -1,0 +1,48 @@
+1.add student.s_id
+2.combine student.s_date_year,s_date_month,s_date_day ==> s_date
+3.add id, primary key auto_increment to all tables
+4.add student.s_role 
+5.change infoborad to info_board
+6.change all column names and table names to lower case
+
+7.delete row of deparment
++---------+-----------+----------+-------+
+| dept_id | dept_name | paper_id | state |
++---------+-----------+----------+-------+
+|       0 | 无        |       -1 |     1 |
++---------+-----------+----------+-------+
+due to auto_increment problem
+8.Add student.reg_date, 注册时间
+9.Add table education[学历]
+
+CREATE TABLE `education` (
+  `edu_id` int(11) primary key AUTO_INCREMENT,
+  `education_name` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+10 
+rename table dept_manager to manager;
+drop table school_manager;
+alter table manager add type smallint default 2;
+type == 2: dept_manager
+type == 3: school_manager
+与登陆页面对应
+
+11.resize student.s_pwd to varchar(32);
+update student set s_pwd = md5("kaoshi");
+
+   resize manager.m_pwd to varchar(32);
+update manager set m_pwd = md5("dangxiao");
+
+12、student表增加st_grade字段INT(11)类型    入学年份        ——by zhu
+
+13. alter table manager add last_login datetime; 上次登入
+    alter table student add last_login datetime;
+14. 手机号码
+15.存入数据
+16.  alter table major add foreign key(dept_id) references department(dept_id);
+     alter table class add foreign key(major_id) references major(major_id);
+17: alter table student add s_phone varchar(25);
+18. student drop major_id, dept_id;
+19. alter table student add unique index(s_user);
+????20. trigger department->major   major->class class->student

@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Dragging</title>
+		<style type="text/css">
+			.dragMe
+			{
+				background-color:#8FBC8F;
+				border:1px solid black;
+				color: #fff;
+				float:left;
+				font-family:verdana,arial;
+				font-size:14px;
+				font-weight:bold;
+				height:100px;
+				margin:10px;
+				text-align:center;
+				width:100px;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div class="dragMe">Drag Me</div>
+		
+		<div class="dragMe">Drag Me too</div>
+
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function ()
+			{
+				var mousex = 0, mousey = 0;
+				var divLeft, divTop;
+				$('.dragMe').mousedown(function(e)
+				{
+					var offset = $(this).offset();
+					divLeft = parseInt(offset.left,10);
+					divTop = parseInt(offset.top,10);
+					mousey = e.pageY;
+					mousex = e.pageX;
+					$(this).bind('mousemove',dragElement);
+				});
+
+				function dragElement(event)
+				{
+					var left = divLeft + (event.pageX - mousex);
+					var top = divTop + (event.pageY - mousey);
+					$(this).css(
+					{
+						'top' :  top + 'px',
+						'left' : left + 'px',
+						'position' : 'absolute'
+					});
+					return false;
+				}
+				$(document).mouseup(function()
+				{
+					$('.dragMe').unbind('mousemove');
+				});
+
+			});
+		</script>
+	</body>
+</html>

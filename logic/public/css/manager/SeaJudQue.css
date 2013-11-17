@@ -1,0 +1,38 @@
+/* CSS Document */
+#header{
+		font-size:24px;
+	    color:#1C3CA8;
+	  }
+ #bod{
+
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	background-color:#F2F6FB;
+	}
+	
+#bodin{
+	border: 1px solid #D0DBE7;
+	min-height:800px;
+	height:auto;
+	}
+#seaKey{
+	height:20px;
+	margin-left:10px;
+	border-color:#0CF;
+	border-width:1px;
+	}
+#conf,#selAll,#del{
+	font-size:14px;
+	color: #194F95;
+	}
+#conf{
+	margin-left:20px;
+	}
+#del{
+	margin-left:10px;
+	}
+.h{
+	color: #194F95;
+font-size:14px;
+}

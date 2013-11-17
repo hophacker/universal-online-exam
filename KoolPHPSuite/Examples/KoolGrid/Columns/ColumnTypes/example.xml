@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ColumnTypes" usedb="true">
+	<title>Column Types</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid support various type of columns:GridBoundColumn, GridDateTimeColumn, GridDropDownColumn ...</metadescription>
+	<description>
+		<![CDATA[ 
+KoolGrid support various type of columns:
+<ul>
+<li>- GridBoundColumn</li>
+<li>- GridDateTimeColumn</li>
+<li>- GridDropDownColumn</li>
+<li>- GridBooleanColumn</li>
+<li>- GridImageColumn</li>
+<li>- GridCustomColumn</li>
+<li>- GridCommandColumn</li>
+<li>- GridEditDeleteColumn</li>
+<li>- GridExpandDetailColumn</li>
+<li>- GridRowSelectColumn</li>
+<li>...</li>
+</ul>
+
+
+Beside most-used columns which are provided, you can write your own column type and add to KoolGrid.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	require $KoolControlsFolder."/KoolCalendar/koolcalendar.php";
+	
+		
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select orderNumber,orderDate,status,comments from orders";
+	$ds->UpdateCommand = "update orders set orderDate='@orderDate', status='@status', comments='@comments' where orderNumber=@orderNumber";
+	$ds->DeleteCommand = "delete from orders where orderNumber=@orderNumber";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+
+	$grid->AjaxEnabled = true;
+	$grid->DataSource = $ds;
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->Width = "655px";
+	$grid->ColumnWrap = true;
+	$grid->AllowEditing = true;
+	$grid->AllowDeleting = true;
+	
+
+	$column = new GridBoundColumn();
+	$column->DataField = "orderNumber";
+	$column->ReadOnly = true;
+	$grid->MasterTable->AddColumn($column);
+
+	
+	$column = new GridDateTimeColumn();
+	$column->DataField = "orderDate";
+	$column->HeaderText = "GridDateTimeColumn";
+	$column->FormatString = "M d, Y";
+	//Assign datepicker for GridDateTimeColumn
+	$column->Picker = new KoolDatePicker();
+	$column->Picker->scriptFolder = $KoolControlsFolder."/KoolCalendar";
+	$column->Picker->styleFolder = "default";	
+	$column->Picker->DateFormat = "M d, Y";
+	
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridDropDownColumn();
+	$column->DataField = "status";
+	$column->HeaderText = "GridDropDownColumn";
+	$column->AddItem("In Process");
+	$column->AddItem("On Hold");
+	$column->AddItem("Disputed");
+	$column->AddItem("Cancelled");	
+	$column->AddItem("Resolved");	
+	$column->AddItem("Shipped");
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->DataField = "comments";
+	$column->HeaderText = "GridBoundColumn";
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridEditDeleteColumn();
+	$column->HeaderText = "GridEditDeleteColumn";
+	$column->Align = "center";
+	$grid->MasterTable->AddColumn($column);
+
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridColumn/index.php">GridColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridBoundColumn/index.php">GridBoundColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTextAreaColumn/index.php">GridTextAreaColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridDropDownColumn/index.php">GridDropDownColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridRowSelectColumn/index.php">GridRowSelectColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridBooleanColumn/index.php">GridBooleanColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridImageColumn/index.php">GridImageColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridCustomColumn/index.php">GridCustomColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridCommandColumn/index.php">GridCommandColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridEditDeleteColumn/index.php">GridEditDeleteColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridExpandDetailColumn/index.php">GridExpandDetailColumn</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridDateTimeColumn/index.php">GridDateTimeColumn</doc>
+	</docs>
+</example>

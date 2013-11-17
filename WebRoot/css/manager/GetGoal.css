@@ -1,0 +1,32 @@
+/* CSS Document */
+
+#bod{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	}
+	
+#bodin{
+	border: 1px solid #D0DBE7;
+	height:1200px;
+	
+	background-color:#F2F6FB;
+	}
+legend,span{
+		color: #194F95;
+}
+#conf{
+		color: #194F95;
+		font-size:14px;
+	}
+#divide,#divide1{
+		height:20px;
+	border-color:#0CF;
+	border-width:1px;
+	}
+legend{
+	font-weight:800;
+	}
+span,select{
+	font-size:14px;
+	}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="DatePicker_FirstLook" usedb="false">
+	<title>FirstLook</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker,</metakeywords>	 
+	<metadescription>Powerful PHP Date Picker</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+The example show how simply we can create a date picker and retrive its value after postback.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolCalendar/koolcalendar.php";	
+	
+	$datepicker = new KoolDatePicker("datepicker"); //Create calendar object
+	$datepicker->scriptFolder = $KoolControlsFolder."/KoolCalendar";//Set scriptFolder
+	$datepicker->styleFolder="default";
+
+	$datepicker->Init();
+?>
+
+<form id="form1" method="post">	
+	<div style="padding-top:20px;padding-bottom:40px;width:650px;">
+		Pick a date:
+		<br/>
+		<?php echo $datepicker->Render();?>
+		<div style="padding-top:10px;">
+			<input type="submit" value="Submit" />
+		</div>
+		<div style="padding-top:10px;">
+			<?php
+				if($datepicker->Value!=null)
+				{
+					echo "<b>Choosed date:</b> ".$datepicker->Value;
+				}
+			?>
+		</div>		
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolCalendar/PHP/KoolCalendar_Class/index.php">KoolCalendar</doc>
+	</docs>
+</example>

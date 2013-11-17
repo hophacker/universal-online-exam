@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console
+END
+AllShellsTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/AllShellsTest.php
+END
+ConsoleOutputTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/ConsoleOutputTest.php
+END
+AllConsoleLibsTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/AllConsoleLibsTest.php
+END
+ShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/ShellTest.php
+END
+ConsoleOptionParserTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/ConsoleOptionParserTest.php
+END
+ConsoleErrorHandlerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/ConsoleErrorHandlerTest.php
+END
+AllConsoleTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/AllConsoleTest.php
+END
+HelpFormatterTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/HelpFormatterTest.php
+END
+AllTasksTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/AllTasksTest.php
+END
+ShellDispatcherTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/ShellDispatcherTest.php
+END
+TaskCollectionTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/TaskCollectionTest.php
+END

@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>registerDefaultPluginHandler()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.register.class.html" title="registerClass()">
+<link rel="next" href="api.register.filter.html" title="registerFilter()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">registerDefaultPluginHandler()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.register.class.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.register.filter.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="registerDefaultPluginHandler()">
+<a name="api.register.default.plugin.handler"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>registerDefaultPluginHandler() — register a function which gets called on undefined tags</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id437044"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">void </span><span class="methodname">registerDefaultPluginHandler</span>(<span class="methodparam"><span class="type">mixed </span><span class="parameter">callback</span></span>);</code><p>
+      Register a default plugin handler which gets called if the compiler can not find a definition for a tag otherwise.
+      It uses the following parameters:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p>
+<em class="parameter"><code>callback</code></em> defines the PHP callback. it can be either:
+   </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle">
+<li class="listitem"><p>
+       A string containing the function <em class="parameter"><code>name</code></em>
+       </p></li>
+<li class="listitem"><p>
+       An array of the form <code class="literal">array(&amp;$object, $method)</code> with
+       <code class="literal">&amp;$object</code> being a reference to an
+       object and <code class="literal">$method</code> being a string
+       containing the method-name
+       </p></li>
+<li class="listitem"><p>
+       An array of the form
+       <code class="literal">array($class, $method)</code> with
+       <code class="literal">$class</code> being the class name and
+       <code class="literal">$method</code> being a method of the class.
+       </p></li>
+</ul></div>
+<p>
+   </p>
+</li></ul></div>
+<p>   
+  </p>
+<p>
+    If during compilation Smarty encounters tag which is not defined internal, registered or loacted in the plugins folder it tries
+    to resolve it by calling the registered default plugin handler. The handler may be called several times for same undefined tag
+    looping over valid plugin types.
+  </p>
+<div class="example">
+<a name="id437352"></a><p class="title"><b>Example 14.38. Default Plugin Handler Example</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+$smarty = new Smarty();
+$smarty-&gt;registerDefaultPluginHandler('my_plugin_handler');
+
+/**
+ * Default Plugin Handler
+ *
+ * called when Smarty encounters an undefined tag during compilation
+ * 
+ * @param string                     $name      name of the undefined tag
+ * @param string                     $type     tag type (e.g. Smarty::PLUGIN_FUNCTION, Smarty::PLUGIN_BLOCK, 
+                                               Smarty::PLUGIN_COMPILER, Smarty::PLUGIN_MODIFIER, Smarty::PLUGIN_MODIFIERCOMPILER)
+ * @param Smarty_Internal_Template   $template     template object
+ * @param string                     &amp;$callback    returned function name 
+ * @param string                     &amp;$script      optional returned script filepath if function is external
+ * @param bool                       &amp;$cacheable    true by default, set to false if plugin is not cachable (Smarty &gt;= 3.1.8)
+ * @return bool                      true if successfull
+ */
+function my_plugin_handler ($name, $type, $template, &amp;$callback, &amp;$script, &amp;$cacheable)
+{
+    switch ($type) {
+        case Smarty::PLUGIN_FUNCTION:
+            switch ($name) {
+                case 'scriptfunction':
+                    $script = './scripts/script_function_tag.php';
+                    $callback = 'default_script_function_tag';
+                    return true;
+                case 'localfunction':
+                    $callback = 'default_local_function_tag';
+                    return true;
+                default:
+                return false;
+            }
+        case Smarty::PLUGIN_COMPILER:
+            switch ($name) {
+                case 'scriptcompilerfunction':
+                    $script = './scripts/script_compiler_function_tag.php';
+                    $callback = 'default_script_compiler_function_tag';
+                    return true;
+                default:
+                return false;
+            }
+        case Smarty::PLUGIN_BLOCK:
+            switch ($name) {
+                case 'scriptblock':
+                    $script = './scripts/script_block_tag.php';
+                    $callback = 'default_script_block_tag';
+                    return true;
+                default:
+                return false;
+            }
+        default:
+        return false;
+    }
+ }
+
+?&gt;
+
+  </pre></div>
+</div>
+<br class="example-break"><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+             The return callback must be static; a function name or an array of class and method name.
+         </p>
+<p>
+             Dynamic callbacks like objects methods are not supported.
+         </p>
+</div>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.register.class.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.register.filter.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">registerClass() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> registerFilter()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

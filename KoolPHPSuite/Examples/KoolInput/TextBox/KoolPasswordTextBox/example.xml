@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="KoolPasswordTextBox">
+	<title>KoolPasswordTextBox</title>
+	<metakeywords>php password input, php password textbox</metakeywords>	 
+	<metadescription>KoolInput contains special password input.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>One of great things about <b>KoolPasswordTextBox</b> is the built-in password strength indicator.</p>
+<p>Simply by setting <b>$txtPassword->ShowIndicator = true;</b>, you already have the indicator showing up everytime user types in password.</p>
+<p>To calculate strength of password, <b>KoolPasswordTextBox</b> base on:
+<ul>
+	<li>1. Length of password.</li>
+	<li>2. Number of numeric characters.</li>
+	<li>3. Number of upper-case characters.</li>
+	<li>4. Number of symbol characters such as "%#*$"</li>
+</ul>
+</p>
+<p>In order to set above, you use :
+<ul>
+	<li>1. <b>$PreferredPasswordLength</b></li>
+	<li>2. <b>$MinimumNumericCharacters</b></li>
+	<li>3. <b>$MinimumUpperCaseCharacters</b></li>
+	<li>4. <b>$MinimumSymbolCharacters</b></li>
+</ul>
+</p>
+
+<p>In order to set weight on each of above items, you use <b>$CalculationWeightings</b> property:<br/>
+<u>For example:</u><br/>
+$txtPassword->CalculationWeightings="50;15;15;20";<br/>
+The number are the weight of above items respectively. Length of password: 50%. Numeric character: 15%. Upper-case character: 15%; Symbol character: 20%.
+</p>
+
+<p>You also can customize the indicator text with <b>$TextStrengthDescriptions</b> <br/>
+<u>For example:</u> <br/>
+$txtPassword->TextStrengthDescriptions="Very Weak;Weak;Medium;Strong;Very Strong";
+</p>
+<p>Lastly, you can customize the indicator css with <b>$TextStrengthDescriptionStyles</b> <br/>
+<u>For example:</u> <br/>
+$txtPassword->TextStrengthDescriptionStyles="cssVeryWeak;cssWeak;cssMedium;cssStrong;cssVeryStrong";
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolForm/koolform.php";	
+	$myform_manager = new KoolForm("myform");
+	$myform_manager->scriptFolder = $KoolControlsFolder."/KoolForm";	
+	$myform_manager->styleFolder = "sunset";
+	$myform_manager->DecorationEnabled = true;
+
+	$txtPassword = new KoolPasswordTextBox("txtPassword");
+	$txtPassword->ShowIndicator = true;
+	$myform_manager->AddControl($txtPassword);
+
+	$txtPassword_Confirm = new KoolPasswordTextBox("txtPassword_Confirm");
+	$myform_manager->AddControl($txtPassword_Confirm);
+
+	$valCheckPass = new KoolCustomValidator("valCheckPass");
+	$valCheckPass->TargetId = "txtPassword_Confirm";
+	$valCheckPass->ClientValidationFunction = "check_password_consistence";
+	$valCheckPass->ErrorMessage="Passwords are not the the same!";
+	$myform_manager->AddControl($valCheckPass);
+
+
+	$password_required_validator = new KoolRequiredFieldValidator("txtPassword_val"); 
+	$password_required_validator->TargetId = "txtPassword";
+	$password_required_validator->ErrorMessage = "Please, enter a password!";
+	$myform_manager->AddControl($password_required_validator);
+
+	//Init form
+	$myform_manager->Init();
+
+?>
+
+<form id="myform" method="post" class="decoration">
+	<script type="text/javascript">
+		function check_password_consistence()
+		{
+			//Check if password and confirm password are the same.
+			var _txtPassword = myform_manager.get_control("txtPassword");
+			var _txtPassword_Confirm = myform_manager.get_control("txtPassword_Confirm");
+			return (_txtPassword.get_value()==_txtPassword_Confirm.get_value());						
+		}
+	</script>
+	
+	<fieldset style="width:350px;padding-left:5px;padding-bottom:5px;">
+		<legend>Enter new password:</legend>
+
+		<table>
+			<tr>
+				<td>
+					Password:<br /> 
+					<?php echo $txtPassword->Render();?>
+					<?php echo $password_required_validator->Render();?>
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-top:5px;" colspan="2">
+					Confirm Password:<br/>
+					<?php echo $txtPassword_Confirm->Render();?> 
+					<?php echo $valCheckPass->Render();?>
+				</td>
+			</tr>
+			
+			<tr>
+				<td style="padding-top:10px;padding-bottom:5px;" colspan="2">
+					<input type="submit" value="Submit" />
+				</td>
+			</tr>
+			
+		</table>
+
+
+	</fieldset>
+	<?php
+		if($txtPassword->Value!=null) echo "Password Updated";
+	?>
+	<?php echo $myform_manager->Render();?>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="">refresh()</doc>		
+	</docs>
+</example>

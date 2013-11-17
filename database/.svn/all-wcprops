@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/dxks/!svn/ver/122/yangda/database
+END
+enable_remote_access
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/18/yangda/database/enable_remote_access
+END
+sql_temp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/dxks/!svn/ver/2/yangda/database/sql_temp
+END
+数据库字段说明
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dxks/!svn/ver/99/yangda/database/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E
+END
+Close PDO connection
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/49/yangda/database/Close%20PDO%20connection
+END
+修改表名字段名
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dxks/!svn/ver/15/yangda/database/%E4%BF%AE%E6%94%B9%E8%A1%A8%E5%90%8D%E5%AD%97%E6%AE%B5%E5%90%8D
+END
+mysql 中show 命令用法详细
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/dxks/!svn/ver/18/yangda/database/mysql%20%E4%B8%ADshow%20%E5%91%BD%E4%BB%A4%E7%94%A8%E6%B3%95%E8%AF%A6%E7%BB%86
+END
+yangda.sql
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/122/yangda/database/yangda.sql
+END
+MySQL中字符串函数详解
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/dxks/!svn/ver/15/yangda/database/MySQL%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3
+END
+information_schema
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/15/yangda/database/information_schema
+END
+党校数据库设计纲领
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/dxks/!svn/ver/55/yangda/database/%E5%85%9A%E6%A0%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E7%BA%B2%E9%A2%86
+END
+int 长度详解
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/15/yangda/database/int%20%E9%95%BF%E5%BA%A6%E8%AF%A6%E8%A7%A3
+END
+mysql alter 语句用法,添加、修改、删除字段等
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/dxks/!svn/ver/15/yangda/database/mysql%20alter%20%E8%AF%AD%E5%8F%A5%E7%94%A8%E6%B3%95,%E6%B7%BB%E5%8A%A0%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E7%AD%89
+END
+Renaming tables&columns to lower
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/28/yangda/database/Renaming%20tables&columns%20to%20lower
+END
+数据库变更
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/dxks/!svn/ver/86/yangda/database/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%98%E6%9B%B4
+END
+Ark Q&A J
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/18/yangda/database/Ark%20Q&A%20J
+END
+党校数据库常用
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/dxks/!svn/ver/18/yangda/database/%E5%85%9A%E6%A0%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8
+END
+MySQL_Stored_procedure_Tutorial
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/15/yangda/database/MySQL_Stored_procedure_Tutorial
+END

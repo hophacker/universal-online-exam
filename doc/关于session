@@ -1,0 +1,43 @@
+The session_start( ) function generates a random Session Id and stores it in a cookie on the 
+user's computer (this is the only session information that is actually stored on the client side.)  
+The default name for the cookie is PHPSESSID, although this can be changed in the PHP configuration 
+files on the server (most hosting companies will leave it alone, however.)  To reference the session 
+Id in you PHP code, you would therefore reference the variable $PHPSESSID (it's a cookie name; remember 
+that from Cookies?)
+Your sharp mind may be wondering what happens when you come to the second pass through your page and 
+reach the session_start( ) function again.  PHP knows that there is already a session on progress and
+ so ignores subsequent instances of the session_start( )   -- phew!!
+Using Session Data
+Having established a session, you can now create, store and retrieve information pertaining to that 
+session.  You might want, for example, to keep track of items in your visitor's shopping cart. 
+ Information for sessions is stored in a special directory on the server; the path of that directory 
+is specified in the server's PHP configuration files.
+Information to be stored for a session is kept in session variables.  Session variables are created 
+by registering them for the session, using the session_register( ) function.  To use that information 
+(on any page iteration in the session) you simply reference the variable just like you would any other 
+variable.  Here's an example:
+<?php
+session_start( );
+?>
+<html>
+<head>
+<title>Using a session variable</title>
+</head>
+<body>
+<?php
+print "Welcome to session number: ";
+print $PHPSESSID;
+?>
+<br />
+<?php
+session_register("username");
+$username = "Goody";
+print "Your name is: ";
+print $username;
+?>
+</body>
+</html>
+In this example we have created a session and displayed the session number.  We then registered a session variable called username (notice the quotes around the variable's name in the call to the session_register( ) function.)
+Next we assigned a value to that variable with the " = " assignment operator (remember operators from http://www.htmlgoodies.com/php/p05expressions.html?) and then displayed the value of that session variable.
+We now have all the basic tools to establish a session, and to create and use variables that last through the entire duration of the session.
+ 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ServiceFunction" usedb="true">
+	<title>ServiceFunction</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolComboBox supports loading options on-demand, the typed text of user to KoolComboBox will be sent back to server, server will query database for the list options which are close to what user typed.
+</p>
+
+<p>
+This feature is very helpful when you have a large list of option for user to choose. Loading options on-demand will be best solution to boost performance of page.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->itemTemplate = "<table><tr><td valign='middle' style='width:22px;height:20px;'><img src='../../Resources/Flags/{flagimage}' alt='{text}' title='{text}' /></td><td valign='middle'>{text}</td></tr></table>";
+
+
+
+	$kcb->width = "200px";
+	$kcb->styleFolder="inox";
+	
+	function funcService($text)
+	{
+		$itemlist = array();
+		$result = mysql_query("select CountryID,CountryName,FlagImage from kcb_tbcountries where CountryName LIKE '$text%';");
+		while($row = mysql_fetch_assoc($result))
+		{
+			$item = array("text"=>$row["CountryName"],"value"=>$row["CountryID"],"flagimage"=>$row["FlagImage"]);
+			array_push($itemlist,$item);
+		}
+		return $itemlist;		
+	}	
+	$koolajax->enableFunction("funcService");
+	$kcb->serviceFunction = "funcService";
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+
+	<div style="padding-left:10px;padding-bottom:10px;">	
+		Choose a nation:
+	</div>
+	<div style="padding-left:10px;padding-bottom:50px;">
+		<?php echo $kcb->Render();?>
+	</div>
+
+</form>
+			]]>
+		</code>	
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#serviceFunction">PHP :: KoolComboBox :: serviceFunction</doc>
+	</docs>
+</example>

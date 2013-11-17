@@ -1,0 +1,150 @@
+.silverKAC *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.silverKAC table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.silverKAC .kacUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.silverKAC .kacLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.silverKAC .kacCombobox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.silverKAC .kacArrow
+{
+	border:none;
+	width:20px;
+	height:20px;
+	background:url(arrow.gif) 2px;
+}
+
+/*Box*/
+
+.silverKAC .kacBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #ccc;
+	background-color:#ffffff;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.silverKAC .kacIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.silverKAC .kacItemBox
+{
+	overflow:auto;
+}
+
+.silverKAC .kacItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .silverKAC .kacItem
+{
+	display:block;
+}
+
+
+.silverKAC .kacOpen
+{
+	display:block;
+}
+
+
+.silverKAC .kacA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.silverKAC .kacItem .kacIn img
+{
+	border:0px;
+}
+
+
+.silverKAC .kacItem .kacIn
+{
+	color:#333;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:22px;
+	line-height:22px;
+}
+
+
+
+.silverKAC .kacSelectFocus .kacIn
+{
+	background:url(b.gif);
+	height:22px;
+	line-height:22px;
+	color:green;
+}
+
+/*Disable Item*/
+.silverKAC .kacDisable .kacIn
+{
+	color:gray;
+}
+
+.silverKAC .kacDisable a.kacA:hover .kacIn
+{
+	background:none;
+	color:gray;
+}
+
+.silverKAC .kacLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.silverKAC .kacHeader,
+.silverKAC .kacFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+.silverKAC a:focus 
+{
+	outline:none;
+}

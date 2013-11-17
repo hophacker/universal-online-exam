@@ -1,0 +1,53 @@
+<control>
+	<name>KoolPHPSuite</name> 
+	<metadescription>Group Of Excellent PHP UI Controls: PHP Ajax Framework, PHP TreeView, PHP SlideMenu, PHP AutoComplete And Many More Controls... VIEW DEMO NOW!</metadescription>
+	<metakeywords>PHP UI, PHP Components, PHP UI Components, PHP User Interface, PHP UI Controls, PHP Controls, PHP Ajax, PHP AJax Framework, PHP TreeView, PHP Slide Menu, PHP SlideMenu, PHP Tab Menu, PHP Ajax File Upload, PHP ComboBox, PHP Ajax AutoComplete, PHP Input Validator, PHP Form Decoration</metakeywords>	
+	<description>KoolPHPSuite contains a group of great UI controls to build Excellent Web 2.0 Application: Ajax FrameWork, TreeView, SlideMenu, AutoComplete and many more... View and Download NOW!</description>
+	<examples>
+		<example	name="KoolAjax" 
+					link="../KoolAjax/index.php" 
+					image="Images/KoolAjax.jpg"/>
+		<example	name="KoolAutoComplete" 
+					link="../KoolAutoComplete/index.php" 
+					image="Images/KoolAutoComplete.jpg"/>
+		<example	name="KoolCalendar" 
+					link="../KoolCalendar/index.php" 
+					image="Images/KoolCalendar.jpg"/>
+		<example	name="KoolComboBox" 
+					link="../KoolComboBox/index.php" 
+					image="Images/KoolCombobox.jpg"/>
+		<example	name="KoolChart" 
+					link="../KoolChart/index.php" 
+					image="Images/KoolChart.jpg"/>
+		<example	name="KoolForm" 
+					link="../KoolForm/index.php" 
+					image="Images/KoolForm.jpg"/>
+		<example	name="KoolGrid" 
+					link="../KoolGrid/index.php" 
+					image="Images/KoolGrid.jpg"/>					
+		<example	name="KoolImageView" 
+					link="../KoolImageView/index.php" 
+					image="Images/KoolImageView.jpg"/>
+		<example	name="KoolInput" 
+					link="../KoolInput/index.php" 
+					image="Images/KoolInput.jpg"/>					
+		<example	name="KoolListBox" 
+					link="../KoolListBox/index.php" 
+					image="Images/KoolListBox.jpg"/>					
+		<example	name="KoolMenu" 
+					link="../KoolMenu/index.php" 
+					image="Images/KoolMenu.jpg"/>
+		<example	name="KoolSlideMenu" 
+					link="../KoolSlideMenu/index.php" 
+					image="Images/KoolSlideMenu.jpg"/>
+		<example	name="KoolTabs" 
+					link="../KoolTabs/index.php" 
+					image="Images/KoolTabs.jpg"/>
+		<example	name="KoolTreeView" 
+					link="../KoolTreeView/index.php" 
+					image="Images/KoolTreeView.jpg"/>
+		<example	name="KoolUploader" 
+					link="../KoolUploader/index.php" 
+					image="Images/KoolUploader.jpg"/>
+	</examples>			
+</control>

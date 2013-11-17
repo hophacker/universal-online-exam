@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Scrolling" usedb="false">
+	<title>Scrolling </title>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolSlideMenu supports scrolling in childbox. To enable this feature, you need to set <b>scrollEnable</b> property of KoolSlideMenu's instance to <b>true</b>.
+</p>
+<p>
+This feature is very helpful when you have a long list of child items and you want to limit the height of childbox.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolSlideMenu/koolslidemenu.php";
+	
+	$ksm = new KoolSlideMenu("sm");
+	$ksm->scriptFolder =  $KoolControlsFolder."/KoolSlideMenu";	
+	$ksm->styleFolder = $KoolControlsFolder."KoolSlideMenu/styles/redgray";
+	$ksm->addParent("root","company","Company");
+	$ksm->addChild("company","about","About Us");
+	$ksm->addChild("company","news","Company News");
+	$ksm->addChild("company","contact","Contact us");	
+	$ksm->addChild("company","koolajax","KoolAjax");
+	$ksm->addChild("company","kooltreeview","KoolTreeView");
+	$ksm->addChild("company","koolslidemenu","KoolSlideMenu");	
+	$ksm->addChild("company","koolimageview","KoolImageView");
+	$ksm->addChild("company","kooltabs","KoolTabs");
+	$ksm->addChild("company","kooluploader","KoolUploader");	
+	
+	$ksm->addParent("root","services","Services");
+	$ksm->addChild("services","outsourcing","Out-sourcing");
+	$ksm->addChild("services","freelancer","Free-lancer");	
+	
+	$ksm->width="200px";
+	$ksm->singleExpand = true;
+	$ksm->boxHeight = 80;
+	$ksm->scrollEnable = true;
+
+?>
+<form id="form1" method="post">
+	<div style="padding-left:10px;">
+		<?php echo $ksm->Render();?>	
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/PHP/KoolSlideMenu_Class/index.php#scrollEnable">PHP :: KoolSlideMenu :: scrollEnable</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/PHP/KoolSlideMenu_Class/index.php#boxHeight">PHP :: KoolSlideMenu :: boxHeight</doc>
+	</docs>
+</example>

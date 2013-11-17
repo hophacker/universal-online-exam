@@ -1,0 +1,36 @@
+<navigation id="KoolAutoComplete" title="PHP Ajax AutoComplete Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Features" text="Features">
+			<link 	id="ItemTemplate" 
+					text="ItemTemplate"
+					link="Features/ItemTemplate/index.php" 
+					new="false"/>			
+			<link 	id="Google_AutoSuggest" 
+					text="Google AutoSuggest"
+					link="Features/Google_AutoSuggest/index.php" 
+					new="false"/>			
+			<link 	id="Gmail_AutoSuggest" 
+					text="Gmail AutoSuggest"
+					link="Features/Gmail_AutoSuggest/index.php" 
+					new="true"/>			
+			<link 	id="SeachFilter" 
+					text="SeachFilter"
+					link="Features/SeachFilter/index.php" 
+					new="false"/>
+		</category>
+		<category id="Client_Side_API" text="Client-Side API">
+			<link 	id="RegisterEvent" 
+					text="RegisterEvent"
+					link="Client_Side_API/RegisterEvent/index.php" 
+					new="false"/>
+		</category>		
+	</category>
+</navigation>

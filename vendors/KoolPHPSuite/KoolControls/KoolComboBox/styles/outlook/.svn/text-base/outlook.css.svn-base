@@ -1,0 +1,200 @@
+.outlookKCB *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.outlookKCB table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.outlookKCB .kcbUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.outlookKCB .kcbLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.outlookKCB .kcbCombobox
+{
+	border:solid 1px #306ac5;
+}
+
+.outlookKCB .kcbArrow
+{
+	border:none;
+	width:16px;
+	height:18px;
+	background:url(arrow.gif) 3px 0px;
+	margin-right:1px;
+	float:right;
+}
+
+/*Box*/
+
+.outlookKCB .kcbBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #306ac5;
+	border-top:solid 0px #306ac5;
+	background-color:#f0f0eb;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.outlookKCB .kcbIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.outlookKCB .kcbItemBox
+{
+	overflow:auto;
+}
+
+.outlookKCB .kcbItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .outlookKCB .kcbItem
+{
+	display:block;
+}
+
+
+.outlookKCB .kcbOpen
+{
+	display:block;
+}
+
+
+.outlookKCB .kcbA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.outlookKCB .kcbItem .kcbIn img
+{
+	border:0px;
+}
+
+
+.outlookKCB .kcbItem .kcbIn
+{
+	color:#222;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:21px;
+}
+
+
+
+.outlookKCB .kcbSelectFocus .kcbIn
+{
+	background:#bbd7fa;
+	height:21px;
+	color:#222;
+}
+
+/*Disable Item*/
+.outlookKCB .kcbDisable .kcbIn
+{
+	color:gray;
+}
+
+.outlookKCB .kcbDisable a.kcbA:hover .kcbIn
+{
+	background:none;
+	color:gray;
+}
+
+.outlookKCB .kcbLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.outlookKCB .kcbHeader,
+.outlookKCB .kcbFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+
+.outlookKCB .kcbOver .kcbArrow
+{
+	background:url(arrow.gif) 3px -17px;
+}
+
+.outlookKCB .kcbDown .kcbArrow
+{
+	background:url(arrow.gif) 3px 0px;
+}
+
+
+.outlookKCB .kcbCombobox .kcbInput
+{
+	border:none;
+	background:none;
+	width:100%;
+	cursor:default;
+	overflow:hidden;
+}
+
+.outlookKCB .kcbOpen .kcbBox 
+{
+	display:block;
+	overflow:hidden;
+}
+.outlookKCB .kcbOpen .kcbIframe
+{
+	display:block;
+}
+
+.outlookKCB .kcbIn
+{
+	display:block;
+}
+
+/*Textbox settings*/
+.outlookKCB .kcbTextbox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.outlookKCB .kcbTextbox .kcbInput
+{
+	width:100%;
+	border:none;
+	background:white;	
+	height:18px;
+}
+.outlookKCB a:focus 
+{
+	outline:none;
+}

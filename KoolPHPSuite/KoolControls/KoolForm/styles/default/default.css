@@ -1,0 +1,637 @@
+.defaultKFR,
+.defaultKFR input,
+.defaultKFR select
+
+{
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color: #3B3B3B;
+}
+
+
+.kfrRoundCorner
+{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+	border-radius:4px;	
+}
+
+/*Headings*/
+.defaultKFR h1.kfrH1
+{
+	font-size:16px;
+}
+.defaultKFR h2.kfrH2
+{
+	font-size:15px;
+}
+.defaultKFR h3.kfrH3
+{
+	font-size:14px;
+}
+.defaultKFR h4.kfrH4
+{
+	font-size:13px;
+}
+.defaultKFR h5.kfrH5
+{
+	font-size:12px;
+}
+/*FieldSet*/
+.defaultKFR .kfrFieldSet
+{
+    border: 1px solid #515151;	
+}
+.defaultKFR .kfrFieldSet legend
+{
+	padding-left:3px;
+	padding-right:3px;
+	color: #3B3B3B;
+}
+
+
+/*Start:------FieldSet in IE*/
+.defaultKFR table.kfrRoundedWrapper_FieldSet
+{
+	display:inline-block;
+	_display:inline;
+}
+.defaultKFR table.kfrRoundedWrapper_FieldSet td
+{
+	vertical-align:middle;
+}
+.defaultKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;	
+	background-color:#515151;
+}
+.defaultKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;	
+	border-top:1px solid #515151;
+	border-bottom:1px solid #515151;
+}
+.defaultKFR table.kfrRoundedWrapper_FieldSet .kfrFieldSet
+{
+	background-position:0px 7px;	
+}
+/*End:------FieldSet in IE*/
+
+
+/*Label*/
+.defaultKFR .kfrLabel
+{
+	margin-left:2px;
+	margin-right:2px;	
+}
+.defaultKFR .kfrDisabled
+{
+	color:#9F9F9F;
+}
+
+/*Validator*/
+.defaultKFR .kfrValidator
+{
+	margin-left:5px;
+	margin-right:5px;	
+	color:red;
+}
+
+
+/*KoolTextBox*/
+.defaultKFR .kfrTextBox
+{
+    background-color: #FFFFFF;
+    border: 1px solid #8E8E8E;
+    height: auto;
+    line-height: normal;
+    padding: 2px 2px 3px;	
+}
+
+.defaultKFR .kfrTextBox:hover,
+.defaultKFR .kfrTextBox:focus
+{
+    border: 1px solid #515151;
+}
+
+
+.defaultKFR .kfrEmpty .kfrTextBox
+{
+	color:#9F9F9F;
+}
+
+.defaultKFR .kfrTable
+{
+	vertical-align: bottom;
+    border-collapse: collapse;
+    border-width: 0;
+	vertical-align:middle;
+}
+
+
+.defaultKFR .kfrTextBoxWrapper
+{
+	display:inline-block;
+	vertical-align:middle;	
+}
+
+
+
+
+
+/*Start:----------------------------TextBox in IE*/
+.defaultKFR .kfrRoundedWrapper
+{
+	border:0px !important;
+	display:inline-block;
+	vertical-align:middle;
+	vertical-align: bottom;
+    border-collapse: collapse;
+	_display:inline;
+}
+
+.defaultKFR .kfrRoundedWrapper td
+{
+	border:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+
+
+.defaultKFR table.kfrRoundedWrapper div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;
+	background-color:#8E8E8E;
+}
+.defaultKFR table.kfrRoundedWrapper div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;
+	background-color:#FFFFFF;
+	border-top:1px solid #8E8E8E;
+	border-bottom:1px solid #8E8E8E;
+	background-image:none;
+}
+
+.defaultKFR table.kfrRoundedWrapper:hover div.kfrRoundedOuter,
+.defaultKFR table.kfrFocus div.kfrRoundedOuter
+{
+	background-color:#515151 !important;
+}
+.defaultKFR table.kfrRoundedWrapper:hover div.kfrRoundedInner,
+.defaultKFR table.kfrFocus div.kfrRoundedInner
+{
+	border-top-color:#515151 !important;
+	border-bottom-color:#515151 !important;
+}
+/*End:----------------------------TextBox in IE*/
+
+
+
+/*KoolNumericTextBox*/
+.defaultKFR .kfrTable .kfrSpinUp,
+.defaultKFR .kfrTable .kfrSpinDown
+{
+    height: 7px;
+    line-height: 7px;
+    width: 15px;
+    display: block;
+    outline: medium none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -2222px;
+    z-index: 2;
+	cursor:pointer;
+}
+
+
+
+.defaultKFR .kfrTable .kfrSpinUp
+{
+	background-position: 4px -98px;
+	background-image:url(sprite.gif);
+}
+.defaultKFR .kfrTable .kfrSpinUp:hover
+{
+	background-position: 4px -148px;
+}
+
+.defaultKFR .kfrTable .kfrSpinDown
+{
+	margin-top: 3px;
+	background-position: 4px -199px;
+	background-image:url(sprite.gif);
+}
+.defaultKFR .kfrTable .kfrSpinDown:hover
+{
+	background-position: 4px -249px;
+}
+
+/*KoolPasswordTextBox*/
+.defaultKFR .kfrIndicator
+{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+	margin:0px 10px 0px 10px;
+	padding:3px 5px 3px 5px;
+	border-radius:4px;
+}
+.defaultKFR .kfrIndicator_Score_0
+{
+	display:none;
+}
+.defaultKFR .kfrIndicator_Score_1
+{
+	background:#FF7553;
+}
+.defaultKFR .kfrIndicator_Score_2
+{
+	background:#FFEDA4;
+}
+.defaultKFR .kfrIndicator_Score_3
+{
+	background:#93C9FF;
+}
+.defaultKFR .kfrIndicator_Score_4
+{
+	background:#6CFF92;
+}
+.defaultKFR .kfrIndicator_Score_5
+{
+	background:#20FF58;
+}
+
+
+
+/*KoolCheckBox*/
+.defaultKFR .kfrHide
+{
+	position:absolute;
+	left:-9999px;
+}
+.defaultKFR .kfrCheckBox .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(CheckBoxSprites.gif);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.defaultKFR .kfrCheckBox .kfrOver
+{
+	background-position:-3px -203px;
+}
+.defaultKFR .kfrCheckBoxSelected .kfrSub
+{
+	background-position:-3px -423px;
+}
+.defaultKFR .kfrCheckBoxSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.defaultKFR .kfrCheckBox .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.defaultKFR .kfrCheckBoxSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolRadioButton*/
+.defaultKFR .kfrRadio .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(RadioSprites.png);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.defaultKFR .kfrRadio .kfrOver
+{
+	background-position:-3px -223px;
+}
+.defaultKFR .kfrRadioSelected .kfrSub
+{
+	background-position:-3px -443px;
+}
+.defaultKFR .kfrRadioSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.defaultKFR .kfrRadio .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.defaultKFR .kfrRadioSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+
+/*KoolDropDownList*/
+.defaultKFR .kfrRealDropDown
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+	height:22px;
+	position:relative;
+}
+/*Safari*/
+body:nth-of-type(1) .defaultKFR .kfrRealDropDown
+{
+	line-height:18px;
+}
+.defaultKFR .kfrDropDownList
+{
+	display:inline-block;
+	padding-right:1px;
+	cursor:default;
+	overflow:hidden;
+	vertical-align:middle;
+}
+
+.defaultKFR .kfrOut
+{
+	display:inline-block;
+	position:relative;
+	background-image:url(ComboSprites.gif);
+	height:22px;
+}
+
+
+
+.defaultKFR .kfrDropDownList .kfrSub
+{
+	position:absolute;
+	float:left;
+	left:0px;
+	height:22px;
+	padding-left:4px;
+	overflow:hidden;
+	line-height:22px;
+}
+.defaultKFR .kfrDropDownList .kfrArrow
+{
+	position:absolute;
+	display:inline-block;
+	float:right;
+	height:22px;
+	width:22px;
+	height:22px;
+	background-image:url(ComboSprites.gif);
+ 	background-position: right -22px;
+	right:-1px;
+}
+.defaultKFR .kfrDropDownList:hover .kfrOut
+{
+ 	background-position: 0 -44px;
+}
+
+.defaultKFR .kfrDropDownList:hover .kfrArrow
+{
+ 	background-position: right -66px;
+}
+
+.defaultKFR .kfrDropDownList .kfrDisabled
+{
+	background-position: 0 -176px !important;
+}
+.defaultKFR .kfrDropDownList .kfrDisabled .kfrArrow
+{
+	background-position: right -198px;
+}
+.defaultKFR .kfrDropDownList .kfrDisabled .kfrSub
+{
+	color:#9F9F9F;
+}
+
+
+
+/*KoolButton*/
+.defaultKFR a.kfrButtonWrapper
+{
+	background-image: url(ButtonSprites.gif);	
+    background-color: transparent;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+	vertical-align:middle; 
+	cursor:pointer;   
+}
+
+.defaultKFR a.kfrButtonWrapper span.kfrOut 
+{
+	background-image: url(ButtonSprites.gif);
+    background-color: transparent;
+    background-position: left -22px;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;    
+	margin-right:4px;
+}
+
+
+.defaultKFR a.kfrButtonWrapper input.kfrButton
+{
+	background:none;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    outline: medium none;
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 6px;
+   	padding-bottom:1px;
+    text-align: center;
+	vertical-align:middle;
+}
+
+.defaultKFR a.kfrButtonWrapper:hover
+{
+	background-position: right -44px;
+}
+.defaultKFR a.kfrButtonWrapper:hover span.kfrOut
+{
+	background-position: left -66px;
+}
+
+.defaultKFR a.kfrButtonDown:hover 
+{
+	background-position: right -88px;
+}
+.defaultKFR a.kfrButtonDown:hover span.kfrOut
+{
+	background-position: left -110px;
+}
+
+.defaultKFR a.kfrButtonWrapper span.kfrLeftImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	left:5px;
+}
+
+.defaultKFR a.kfrButtonWrapper span.kfrSpaceLeft .kfrButton
+{
+	padding-left:22px;
+}
+
+.defaultKFR a.kfrButtonWrapper span.kfrRightImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	right:2px;
+}
+
+.defaultKFR a.kfrButtonWrapper span.kfrSpaceRight .kfrButton
+{
+	padding-right:22px;
+}
+.defaultKFR a.kfrButtonWrapper span.kfrSpaceBoth .kfrButton
+{
+	padding-left:22px;
+	padding-right:22px;
+}
+/*KoolLinkButton*/
+.defaultKFR span.kfrButton
+{
+    line-height: 22px;
+}
+.defaultKFR a.kfrButtonWrapper
+{
+	outline:none;
+}
+.defaultKFR  a.kfrButtonLink
+{
+	background-image:none;
+    border: 1px solid #666666;
+    color: #333333;
+    text-decoration: none;	
+}
+.defaultKFR a.kfrButtonLink:hover
+{
+	background-color:#C5C5C5;
+	border: solid 1px #666666;
+}
+.defaultKFR  a.kfrButtonLink span.kfrOut
+{
+	background-image:none;	
+}
+.defaultKFR a.kfrButtonLink:active
+{
+	background-color:#FFE172;
+	border: solid 1px #C28B31;
+}
+
+/*KoolSplitButton*/
+.defaultKFR a.kfrSplitButton span.kfrOut
+{
+	margin-right:18px;
+}
+.defaultKFR a.kfrSplitButton span.kfrSplitRight
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -137px;
+    right: 0;
+	top:0;	
+	height: 100%;
+	width:18px;
+	display:block;
+	position:absolute;
+}
+.defaultKFR a.kfrSplitButton span.kfrSplitRight:hover
+{
+    background-position: -18px -137px;
+}
+
+.defaultKFR a.kfrSplitArrowDown span.kfrSplitRight:hover
+{
+	background-position: -36px -137px;
+}
+
+
+.defaultKFR a.kfrSplitButton div.kfrSplitButtonContainer
+{
+	position:absolute;
+	top:22px;
+	left:0px;
+}
+.defaultKFR div.kfrSplitButtonContainer div.kfrContainerInner
+{
+	border-radius:3px;
+	border:solid 1px #D0D0D0;
+	background-color:#F2F1F1;
+}
+
+
+
+.defaultKFR div.kfrSplitButtonContainer div.kfrOutter
+{
+	margin:1px;
+}
+.defaultKFR div.kfrSplitButtonContainer div.kfrOutter:hover
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 100% -44px;
+	background-repeat:no-repeat;
+}
+
+.defaultKFR div.kfrSplitButtonContainer div.kfrInner
+{
+	position:relative;
+	text-align:left;
+	margin-right:4px;
+}
+.defaultKFR div.kfrOutter:hover div.kfrInner
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -66px;
+	background-repeat:no-repeat;
+}
+
+.defaultKFR div.kfrSplitButtonContainer span.kfrLeftImage
+{
+	left:4px;
+}
+
+
+.defaultKFR div.kfrInner span.kfrText
+{
+	color: #3B3B3B;
+	background:none;
+    border: 0 none;
+    line-height: 22px;
+    margin-left: 24px;
+	padding-right:20px;
+}
+
+

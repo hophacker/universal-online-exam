@@ -1,0 +1,10 @@
+
+add $page_type = 1 to every tpl->render function;
+$page_type == 1: student;
+$page_type == 2: dept manager;
+$page_type == 3: school manager;
+
+
+1.fengjie:koolphp的数据库链接被封装在$db_con = DB_Connect::mysql_db();里面,这里面其实是mysql()链接
+DB_Connect通过autoload.inc过来
+2.皮肤的元素被我设置在autoload.inc中

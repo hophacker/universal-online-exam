@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ArrayData" usedb="false">
+	<title>Array Data</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>This example show how to throw custom array data to KoolGrid with the help of ArrayDataSource class.</metadescription>
+	<description>
+		<![CDATA[ 
+This example show how to throw custom array data to KoolGrid with the help of ArrayDataSource class.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	
+	
+	//Generate array
+	$arr = array();
+	for($i=0;$i<10;$i++)
+	{
+		$arr[] = array("ID"=>$i,"Text"=>"Text ".$i);
+	}
+	
+	$ds = new ArrayDataSource($arr);
+	
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+
+	$grid->AjaxEnabled = true;
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+	$grid->ShowStatus = false;
+	$grid->PageSize = 5;
+	
+	
+	$grid->MasterTable->Pager = new GridPrevNextPager();
+	
+
+	$column = new GridBoundColumn();
+	$column->DataField = "ID";
+	$column->HeaderText = "ID";
+	$column->ReadOnly = true;
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->DataField = "Text";
+	$column->HeaderText = "Text";
+	$column->ReadOnly = true;
+	$grid->MasterTable->AddColumn($column);
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/ArrayDataSource/index.php">ArrayDataSource</doc>
+	</docs>
+</example>

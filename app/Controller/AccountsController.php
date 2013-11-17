@@ -1,0 +1,129 @@
+<?php
+
+App::import('Controller', 'Jqgrid');
+
+/**
+ * 帐号管理
+ * @author jiangjun 
+ * @version 1.0 
+ */
+class AccountsController extends JqgridController {
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+        parent::requireManager();
+    }
+
+    /**
+     * 院系主表
+     */
+    public function department() {
+        if ($this->request->is('ajax') && $this->request->is('post')) {
+            $this->autoRender = false;
+            $this->loadModel('Department');
+            echo $this->show_results($this->Department);
+        }
+    }
+
+    /**
+     * 院系管理员表
+     */
+    public function admin() {
+        if ($this->request->is('ajax') && $this->request->is('post')) {
+            $dept_id = $this->request->query('dept_id');
+            if (empty($dept_id)) {
+                exit();
+            }
+            $this->autoRender = false;
+            $where = array('department_id' => $dept_id);
+            $this->loadModel('Manager');
+            echo $this->show_results($this->Manager, 'id,m_user,m_name,m_pwd', '', $where);
+        }
+    }
+
+    /**
+     * 院系管理员账号维护
+     */
+    public function adminOper() {
+        if ($this->request->is('ajax') && $this->request->is('post')) {
+            $dept_id = $this->request->query('dept_id');
+            if (empty($dept_id)) {
+                exit();
+            }
+            $this->autoRender = false;
+            $oper = $this->request->data('oper');
+            $conditions = array();
+            if ($this->request->data('id'))
+                $conditions = array('id' => $this->request->data('id'));
+            $data = array();
+            $data['m_user'] = $this->request->data('m_user');
+            $data['m_name'] = $this->request->data('m_name');
+            $pwd = $this->request->data('m_pwd');
+            if (!empty($pwd)) {
+                $data['m_pwd'] = md5($pwd);
+            }
+            $data['department_id'] = $dept_id;
+            $this->loadModel('Manager');
+            $this->oper($oper, $this->Manager, $conditions, $data);
+        } else {
+            throw new ForbiddenException();
+        }
+    }
+
+    /**
+     * 学生帐号管理
+     */
+    public function student() {
+        if ($this->request->is('ajax') && $this->request->is('post')) {
+            $this->autoRender = false;
+            $this->loadModel('Student');
+            $joins = $this->Student->fullJoins();
+
+            $dept_id = $this->getInt($this->request->query('dept_id'));
+            $major_id = $this->getInt($this->request->query('major_id'));
+            $class_id = $this->getInt($this->request->query('class_id'));
+
+            $where = array();
+            //直接查询条件
+            $fields = array('s_name', 's_num', 's_user');
+            $where = $this->defaultFilterToolbar($fields, $this->request->data);
+
+            if ($class_id != -1)
+                $where['Class.id'] = $class_id;
+            else if ($major_id != -1)
+                $where['Major.id'] = $major_id;
+            else if ($dept_id != -1)
+                $where['Department.id'] = $dept_id;
+
+            echo $this->show_results($this->Student, 'Student.id as s_id,s_name,s_num,s_user,s_pwd,s_mail,s_date,s_role,s_phone,
+						reg_date,last_login,Education.edu_name,Department.dept_name,
+						Major.major_name,Class.class_name', '', $where, true, false, $joins);
+        }
+    }
+
+    /**
+     * 学生信息操作
+     */
+    public function studentOper() {
+        $this->autoRender = false;
+        $oper = $this->request->data('oper');
+        if ($this->request->is('ajax') && $this->request->is('post')) {
+            $oper = $this->request->data('oper');
+            $conditions = array();
+            if ($this->request->data('id'))
+                $conditions = array('id' => $this->request->data('id'));
+            $data = array();
+            $data['s_name'] = $this->request->data('s_name');
+            $data['s_num'] = $this->request->data('s_num');
+            $pwd = $this->request->data('s_pwd');
+            if (!empty($pwd)) {
+                $data['s_pwd'] = md5($pwd);
+            }
+            $this->loadModel('Student');
+            $this->oper($oper, $this->Student, $conditions, $data);
+        } else {
+            throw new ForbiddenException();
+        }
+    }
+
+}

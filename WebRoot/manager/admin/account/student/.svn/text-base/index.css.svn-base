@@ -1,0 +1,4 @@
+.dept_select{
+    width:180px;
+    margin:10px;
+}

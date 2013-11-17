@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Hide_Buttons_With_Css" usedb="false">
+	<title>Hide Buttons With Css</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+The example shows how to use CSS to remove the ClearAll and UploadAll buttons.
+</p>
+<p>
+You may have a look at our code section for more details.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul->handlePage = "handle.php";
+	$kul->allowedExtension = "txt,jpg,gif,doc,pdf";
+	$kul->maxFileSize = 512*1024; //500KB
+	$kul->progressTracking = true;
+	
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<style type="text/css">
+		.defaultKUL .kulClearAll
+		{
+			display:none;
+		}
+		.defaultKUL .kulUploadAll
+		{
+			display:none;
+		}		
+	</style>
+	
+	<div style="padding:10px;">
+		<?php echo $kul->Render();?>
+	</div>
+</form>
+			]]>			
+		</code>
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>						
+	</samplecodes>
+</example>

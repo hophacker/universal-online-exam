@@ -1,0 +1,22 @@
+input[type="text"]{
+    width:100px;
+}
+.record{
+    width:600px;
+    margin:  10px;
+    border-style:solid;
+    border-width:1px;
+}
+.link{
+    margin-left: 100px;
+    margin-top: 40px;
+    font-weight:bold;
+    width:620px;
+}
+.highest{
+    margin-left: 50px;
+}
+#or{
+    font-size: 20px;
+    color: red;
+}

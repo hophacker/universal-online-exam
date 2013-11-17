@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Styles" usedb="false">
+	<title>Styles</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolTabs is very flexible in changing appearance look with styleFolder settings.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->scriptFolder = $KoolControlsFolder."/KoolTabs";
+	
+	$kts->addTab("root","home","Home");	
+	$kts->addTab("root","products","Products");
+	$kts->addTab("root","services","Services");
+	$kts->addTab("root","company","Company");
+	$kts->addTab("root","contactus","Contact us");
+		
+	
+	$style_select = "default";
+	
+	if(isset($_POST["style_select"]))
+	{
+		$style_select = $_POST["style_select"];
+	}
+	$kts->styleFolder=$style_select;
+?>
+
+<form id="form1" method="post">
+
+	Select style:
+	<select id="style_select" name="style_select" onchange="submit();">
+		<option value="default"		<?php if ($style_select=="default") echo "selected" ?> >Default</option>
+		<option value="silver" 		<?php if ($style_select=="silver") echo "selected" ?> >Silver</option>
+	</select>
+	
+	<div style="padding:10px;">
+		<?php echo $kts->Render();?>
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#styleFolder">PHP :: KoolTabs :: styleFolder</doc>
+	</docs>
+</example>

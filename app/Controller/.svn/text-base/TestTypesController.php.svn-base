@@ -1,0 +1,129 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of TestTypesController
+ *
+ * @author ark
+ */
+class TestTypesController extends AppController {
+    //put your code here
+    public  $helpers  = array(
+        'Html'
+    );
+    
+    public function getName($data) {
+        foreach($data as $row) {
+            $name[$row['TestType']['id']] = $row['TestType']['name'];
+        }
+        return $name;
+    }
+    
+    public function index() {
+        $data = $this->TestType->find('all');
+        $this->set('test_types',$data);
+        
+        $this->set('name', $this->getName($data)); 
+    }
+    
+    public function delType($id) {
+        //if ($this->request->is('get')) throw new MethodNotAllowedException();
+
+        if ($this->TestType->delete($id)) {
+            $this->artFlash('ok');
+            $this->redirect(array('action' => 'index', 1));
+        }
+    }
+    
+    public function editType($id) {
+        if (!$id) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+        $test_type = $this->TestType->findById($id);
+        $data = $this->TestType->find('all');
+        $this->set('option', $this->getName($data));
+        if (!$test_type) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+        if ($this->request->is('post') || $this->request->is('put')) {
+            $this->TestType->id = $id;
+            debug($this->request->data);
+            if ($this->TestType->save($this->request->data)) {
+                $this->artFlash('ok');
+                $this->redirect(array('action' => 'index'));
+            } else {
+                $this->artFlash('fail');
+            }
+        }
+        if (!$this->request->data) {
+            $this->request->data = $test_type;
+        }
+    }
+    
+    public function addType() {
+        $data = $this->TestType->find('all');
+        $this->set('option', $this->getName($data));
+        if ($this->request->is('post') || $this->request->is('put')) {
+            //$this->TestType->id = $id;
+            //debug($this->request->data);
+            if ($this->TestType->save($this->request->data)) {
+                $this->artFlash('ok');
+                $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash('Unable to insert your post.');
+            }
+        }
+    }
+    
+    public function delPromotion($id, $test_type_id) {
+        $this->loadModel('Promotion');
+        if ($this->Promotion->delete($id)) {
+            $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
+            $this->redirect(array('action' => '/editPromotion/'.$test_type_id));
+        }
+    }
+    
+    
+    public function editPromotion($id) {  
+        
+        if ($this->request->is('post') || $this->request->is('put')) {
+            //debug($this->request->data);
+            $this->loadModel('Promotion');
+            
+            if ($this->Promotion->save($this->request->data)) {
+                $this->artFlash('ok');
+                $this->redirect(array('action' => '/editPromotion/'.$id));
+            } else {
+                $this->artFlash('fail');
+            }
+        }
+        
+        $data = $this->TestType->find('all');
+        $name = $this->getName($data);
+        $test_type = $this->TestType->findById($id);
+        //debug($data);
+        $this->set('legend', $name[$test_type['TestType']['id']].'=>'.$name[$test_type['TestType']['grad_test_type_id']]);
+        
+        $promotion = $this->TestType->find('all', array(
+            'conditions' => array('`TestType`.`id`'=>$id),
+                'fields' => array('`promotions`.`test_type_id`',
+                    '`promotions`.`id`','`promotions`.`times`','`promotions`.`highest`'),
+            'joins' => array(
+                array(
+                    'table' => 'promotions',
+                    //'type' => 'LEFT',
+                    'conditions' => '`TestType`.`id` = `promotions`.`test_type_id`'
+                )
+            )
+        ));
+        //debug($promotion);
+        $this->set('promotions', $promotion);
+        $this->set('test_type_id', $id);
+    }
+}
+
+?>

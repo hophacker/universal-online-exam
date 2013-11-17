@@ -1,0 +1,203 @@
+.vistaKCB *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.vistaKCB table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.vistaKCB .kcbUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.vistaKCB .kcbLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.vistaKCB .kcbCombobox
+{
+	border:solid 1px #3c7fb1;
+	background:url(b.gif);
+}
+
+.vistaKCB .kcbArrow
+{
+	border:none;
+	width:16px;
+	height:20px;
+	background:url(arrow.gif) -6px -48px;
+	border-left:solid 1px #3c7fb1;
+	float:right;
+}
+
+/*Box*/
+
+.vistaKCB .kcbBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #8ac1e0;
+	background-color:#fff;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.vistaKCB .kcbIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.vistaKCB .kcbItemBox
+{
+	overflow:auto;
+}
+
+.vistaKCB .kcbItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .vistaKCB .kcbItem
+{
+	display:block;
+}
+
+
+.vistaKCB .kcbOpen
+{
+	display:block;
+}
+
+
+.vistaKCB .kcbA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.vistaKCB .kcbItem .kcbIn img
+{
+	border:0px;
+}
+
+
+.vistaKCB .kcbItem .kcbIn
+{
+	color:#333;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:23px;
+	line-height:23px;
+}
+
+
+
+.vistaKCB .kcbSelectFocus .kcbIn
+{
+	background:url(b.gif);
+	height:19px;
+	color:#0068a0;
+	height:23px;
+	line-height:23px;
+}
+
+/*Disable Item*/
+.vistaKCB .kcbDisable .kcbIn
+{
+	color:gray;
+}
+
+.vistaKCB .kcbDisable a.kcbA:hover .kcbIn
+{
+	background:none;
+	color:gray;
+}
+
+.vistaKCB .kcbLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.vistaKCB .kcbHeader,
+.vistaKCB .kcbFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+
+.vistaKCB .kcbOver .kcbArrow
+{
+	background:url(arrow.gif) -6px -2px;
+}
+
+.vistaKCB .kcbDown .kcbArrow
+{
+	background:url(arrow.gif) -6px -48px;
+}
+
+
+.vistaKCB .kcbCombobox .kcbInput
+{
+	border:none;
+	background:none;
+	width:100%;
+	cursor:default;
+	overflow:hidden;
+}
+
+.vistaKCB .kcbOpen .kcbBox 
+{
+	display:block;
+	overflow:hidden;
+}
+.vistaKCB .kcbOpen .kcbIframe
+{
+	display:block;
+}
+
+.vistaKCB .kcbIn
+{
+	display:block;
+}
+
+/*Textbox settings*/
+.vistaKCB .kcbTextbox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.vistaKCB .kcbTextbox .kcbInput
+{
+	width:100%;
+	border:none;
+	background:white;	
+	height:18px;
+}
+.vistaKCB a:focus 
+{
+	outline:none;
+}

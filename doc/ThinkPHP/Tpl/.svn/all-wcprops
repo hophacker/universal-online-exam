@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Tpl
+END
+dispatch_jump.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Tpl/dispatch_jump.tpl
+END
+page_trace.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Tpl/page_trace.tpl
+END
+default_index.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Tpl/default_index.tpl
+END
+think_exception.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Tpl/think_exception.tpl
+END

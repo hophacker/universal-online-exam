@@ -1,0 +1,231 @@
+.office2007KTV
+{
+	white-space:nowrap;
+}
+.office2007KTV *
+{
+}
+/*ktvLI: TreeNode*/
+.office2007KTV .ktvLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:16px;
+	font-size:11px;
+}
+/*ktvImage: Image in the node content*/
+.office2007KTV .ktvImage
+{
+	vertical-align:text-bottom;
+}
+
+/*ktvText: Text in the node content*/
+.office2007KTV .ktvText
+{
+	/*border:1px solid transparent;*/
+	color:#000000;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.273em;
+	padding:1px;
+	padding-left:2px;
+	padding-right:2px;		
+}
+
+/*ktvOver: Apply to treenode content when mouse is over*/
+.office2007KTV .ktvOver .ktvText
+{
+	cursor:default;
+	background:#316ac5;
+	color:#fff;
+}
+/*ktvOver: Apply to treenode content when mouse is selected*/
+.office2007KTV .ktvSelected .ktvText
+{
+	text-decoration:underline
+}
+
+/*ktvPM: PlusMinus button in general*/
+.office2007KTV .ktvPM
+{
+	height:9px;
+	width:9px;
+	margin:3px 8px 0pt -16px;
+	cursor:pointer;
+	display:inline-block;
+	font-size:0pt;
+	padding:0pt;
+	vertical-align:top;
+}
+html>body .office2007KTV .ktvPM
+{
+	display:-moz-inline-box;
+}
+
+/*ktvMinus: Minus button in detail*/
+.office2007KTV .ktvMinus
+{
+	background:url(pm.gif) no-repeat scroll 0pt -7pt;
+}
+
+/*ktvPlus: Plus button in detail*/
+.office2007KTV .ktvPlus
+{
+	background:url(pm.gif) no-repeat scroll 0pt 0pt;
+}
+
+/*ktvLoading: Ajax loading image*/
+.office2007KTV .ktvLoading
+{
+	width:16px;
+	height:16px;
+	background:url(loading.gif);
+	display:inline-block;
+	vertical-align:top;
+}
+html>body .office2007KTV .ktvLoading
+{
+	display:-moz-inline-box;
+}
+
+/*ktvEdit: Edit input when node is edited*/
+.office2007KTV .ktvEdit
+{
+	border:1px solid #6699cc;
+	background-color:#ccddee;
+	color:#000000;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+
+/*ktvEdit: Dump treenode when drag*/
+.office2007KTV .ktvDrag
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+}
+
+/*ktvDrop: Apply to treenode content when a node is selected to drop*/
+.office2007KTV .ktvDrop .ktvText
+{
+	border:1px solid #6699cc;
+	background-color:#ccddee;
+	cursor:pink;
+}
+
+
+/*ktvTop: Node on top*/
+/*ktvMid: Node in middle*/
+/*ktvBot: Node on bottom*/
+
+.office2007KTV .ktvMid, 
+.office2007KTV .ktvTop, 
+.office2007KTV .ktvBot
+{
+	padding-left:20px;
+}
+
+/*ktvUL: Node container*/
+.office2007KTV .ktvUL
+{
+	margin:0px;
+	padding-left:0px;
+	font-size:0pt;
+}
+
+
+.office2007KTV .ktvUL .ktvUL,
+.office2007KTV .ktvUL .ktvUL .ktvUL
+{
+	margin:0px;
+	padding-left:20px;
+}
+
+
+/*ktvNoPadding: When showplusminus=false or rootnode visible = false*/
+.office2007KTV .ktvNoPadding .ktvUL
+{
+	margin:0px;
+	padding-left:0px;
+}
+
+.office2007KTV .ktvNoPadding .ktvUL .ktvUL
+{
+	margin:0px;
+	padding-left:20px;
+}
+
+/*ktvInv: Make root node invisible*/
+.office2007KTV .ktvInv
+{
+	display:none;
+}
+
+/*ktvNoPM: Make root node does not show PlusMinus button*/
+.office2007KTV .ktvNoPM
+{
+	padding-left:0px;
+	background:none;
+}
+.office2007KTV .ktvNoPM .ktvPM
+{
+	display:none;
+}
+
+
+
+/*ktvLines: Render tree with lines---------------------*/
+
+.office2007KTV .ktvLines .ktvLI
+{
+	background:url(v.gif) no-repeat scroll 0pt;	
+}
+
+.office2007KTV .ktvLines .ktvUL
+{
+	background:url(v.gif) no-repeat scroll 0pt;
+}
+
+.office2007KTV .ktvLines .ktvLast .ktvBot
+{
+	background:url(L.gif) no-repeat scroll 0pt;
+}
+
+
+.office2007KTV .ktvLines .ktvLast,
+.office2007KTV .ktvLines .ktvLast .ktvUL
+{
+	background:none;
+}
+
+.office2007KTV .ktvLines .ktvTop,
+.office2007KTV .ktvLines .ktvMid,
+.office2007KTV .ktvLines .ktvBot
+{
+	background:url(mid.gif) no-repeat scroll 0pt;
+}
+
+.office2007KTV .ktvLines .ktvLast .ktvTop
+{
+	background:url(horizon.gif) no-repeat scroll 0pt;
+}
+
+.office2007KTV .ktvLines .ktvLast .ktvNoPM
+{
+	background:none;
+}
+/*-------------------------*/
+
+
+
+

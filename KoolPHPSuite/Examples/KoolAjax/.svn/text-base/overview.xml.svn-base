@@ -1,0 +1,20 @@
+<control>
+	<name>KoolAjax - Great PHP Ajax Framework</name>
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, 	php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<description>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</description>
+	<examples>
+		<example	name="Basic Ajax Callback" 
+					link="Callback/Basic_Ajax_Callback/index.php" 
+					image="Callback/Basic_Ajax_Callback/preview.gif"/>
+		<example	name="UpdatePanel With Database" 
+					link="UpdatePanel/With_Database/index.php" 
+					image="UpdatePanel/With_Database/preview.gif"/>
+		<example	name="UpdatePanel Client-side Event" 
+					link="UpdatePanel/Client_side_event/index.php" 
+					image="UpdatePanel/Client_side_event/preview.gif"/>
+		<example	name="Load And Parse XML" 
+					link="Utilities/Load_Parse_XML/index.php" 
+					image="Utilities/Load_Parse_XML/preview.gif"/>
+	</examples>			
+</control>

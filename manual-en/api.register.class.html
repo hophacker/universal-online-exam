@@ -1,0 +1,114 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>registerClass()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.register.cacheresource.html" title="registerCacheResource()">
+<link rel="next" href="api.register.default.plugin.handler.html" title="registerDefaultPluginHandler()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">registerClass()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.register.cacheresource.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.register.default.plugin.handler.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="registerClass()">
+<a name="api.register.class"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>registerClass() — register a class for use in the templates</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id436757"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">void </span><span class="methodname">registerClass</span>(<span class="methodparam"><span class="type">string </span><span class="parameter">class_name</span></span>,<br>                   <span class="methodparam"><span class="type">string </span><span class="parameter">class_impl</span></span>);</code><p>
+   Smarty allows you to access static classes from templates as long as the 
+   <a class="link" href="advanced.features.html#advanced.features.security" title="Security">Security Policy</a> does not
+   tell it otherwise. If security is enabled, classes registered with 
+   <code class="varname">registerClass()</code> are accessible to templates.
+  </p>
+<div class="example">
+<a name="id437068"></a><p class="title"><b>Example 14.36. Register class for use within a template</b></p>
+<div class="example-contents">
+<pre class="programlisting">
+
+&lt;?php
+
+class Bar {
+  $property = "hello world";
+}
+
+$smarty = new Smarty();
+$smarty-&gt;registerClass("Foo", "Bar");
+
+   </pre>
+<pre class="programlisting">
+
+{* Smarty will access this class as long as it's not prohibited by security *}
+{Bar::$property}
+{* Foo translates to the real class Bar *}
+{Foo::$property}
+
+   </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="id437092"></a><p class="title"><b>Example 14.37. Register namespaced class for use within a template</b></p>
+<div class="example-contents">
+<pre class="programlisting">
+
+&lt;?php
+namespace my\php\application {
+  class Bar {
+    $property = "hello world";
+  }
+}
+
+$smarty = new Smarty();
+$smarty-&gt;registerClass("Foo", "\my\php\application\Bar");
+
+   </pre>
+<pre class="programlisting">
+
+{* Foo translates to the real class \my\php\application\Bar *}
+{Foo::$property}
+
+   </pre>
+</div>
+</div>
+<br class="example-break"><p>
+   See also
+   <a class="link" href="api.register.object.html" title="registerObject()"><code class="varname">registerObject()</code></a>,
+   and
+   <a class="link" href="advanced.features.html#advanced.features.security" title="Security">Security</a>.
+  </p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.register.cacheresource.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.register.default.plugin.handler.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">registerCacheResource() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> registerDefaultPluginHandler()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

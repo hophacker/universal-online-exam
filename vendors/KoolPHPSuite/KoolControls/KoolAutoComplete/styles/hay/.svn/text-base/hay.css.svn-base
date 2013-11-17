@@ -1,0 +1,151 @@
+.hayKAC *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+
+.hayKAC table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.hayKAC .kacUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.hayKAC .kacLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.hayKAC .kacCombobox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.hayKAC .kacArrow
+{
+	border:none;
+	width:20px;
+	height:20px;
+	background:url(arrow.gif) 2px;
+}
+
+/*Box*/
+
+.hayKAC .kacBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #989785;
+	background-color:#f3f3e5;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.hayKAC .kacIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.hayKAC .kacItemBox
+{
+	overflow:auto;
+}
+
+.hayKAC .kacItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .hayKAC .kacItem
+{
+	display:block;
+}
+
+
+.hayKAC .kacOpen
+{
+	display:block;
+}
+
+
+.hayKAC .kacA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.hayKAC .kacItem .kacIn img
+{
+	border:0px;
+}
+
+
+.hayKAC .kacItem .kacIn
+{
+	color:#333;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:23px;
+	line-height:23px;
+}
+
+
+
+.hayKAC .kacSelectFocus .kacIn
+{
+	background:url(b.gif);
+	height:23px;
+	line-height:23px;
+	color:#333;
+}
+
+/*Disable Item*/
+.hayKAC .kacDisable .kacIn
+{
+	color:gray;
+}
+
+.hayKAC .kacDisable a.kacA:hover .kacIn
+{
+	background:none;
+	color:gray;
+}
+
+.hayKAC .kacLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.hayKAC .kacHeader,
+.hayKAC .kacFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+.hayKAC a:focus 
+{
+	outline:none;
+}

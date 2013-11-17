@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Expand_Collapse_All" usedb="false">
+	<title>Expand All and Collapse All </title>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+At client-side, you may use the <b>expandAll()</b> and <b>collapseAll</b> functions to make KoolSlideMenu expand/collapse all items.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolSlideMenu/koolslidemenu.php";	
+	$ksm = new KoolSlideMenu("ksm");
+	$ksm->scriptFolder =  $KoolControlsFolder."/KoolSlideMenu";	
+	$ksm->styleFolder = $KoolControlsFolder."KoolSlideMenu/styles/apple";
+	$ksm->addParent("root","company","Company");
+	$ksm->addChild("company","about","About Us");
+	$ksm->addChild("company","news","Company News");
+	$ksm->addChild("company","contact","Contact us");
+
+	$ksm->addParent("root","products","Products");
+	$ksm->addChild("products","koolajax","KoolAjax");
+	$ksm->addChild("products","kooltreeview","KoolTreeView");
+	$ksm->addChild("products","koolslidemenu","KoolSlideMenu");	
+	
+	$ksm->addParent("root","services","Services");
+	$ksm->addChild("services","outsourcing","Out-sourcing");
+	$ksm->addChild("services","freelancer","Free-lancer");	
+	
+	$ksm->width="200px";
+	$ksm->singleExpand = false;	
+?>
+<form id="form1" method="post">
+	<style type="text/css">
+		.box
+		{
+			float:left;
+			width:280px;
+			min-height:180px;
+			margin:10px;
+			padding:10px;
+		}
+		.focus
+		{
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;
+			text-align:center;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#eventlog
+		{
+			overflow:auto;
+			overflow-X:hidden;
+			height : 150px;
+		}	
+	</style>
+	
+	<div class="box">
+		<?php echo $ksm->Render();?>		
+	</div>
+	<div class="box focus">
+		<input type="button" value="Expand all" onclick="ksm.expandAll();" />
+		<input type="button" value="Collapse all" onclick="ksm.collapseAll();" />	
+	</div>
+	<div class="clear"></div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/Javascript/KoolSlideMenu_Class/index.php#expandAll">Javascript :: KoolSlideMenu :: expandAll()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/Javascript/KoolSlideMenu_Class/index.php#collapseAll">Javascript :: KoolSlideMenu :: collapseAll()</doc>
+	</docs>
+</example>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Styles" usedb="false">
+	<title>Styles</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolUploader supports changing appearance look. To change style, you need to set <b>styleFolder</b> property.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->handlePage = "handle.php";
+	$kul->allowedExtension = "txt,jpg,gif,doc,pdf";
+	$kul->maxFileSize = 512*1024; //500KB
+	$kul->progressTracking = true;
+		
+	$style_select = "default";
+	
+	if(isset($_POST["style_select"]))
+	{
+		$style_select = $_POST["style_select"];
+	}
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/$style_select";
+	
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<div style="padding-left:10px;">
+		Select style:
+		<select id="style_select" name="style_select" onchange="submit();">
+			<option value="default"		<?php if ($style_select=="default") echo "selected" ?> >Default</option>
+			<option value="black" 		<?php if ($style_select=="black") echo "selected" ?> >Black</option>
+			<option value="hay"			<?php if ($style_select=="hay") echo "selected" ?> >Hay</option>
+			<option value="silver" 		<?php if ($style_select=="silver") echo "selected" ?> >Silver</option>
+			<option value="inox" 		<?php if ($style_select=="inox") echo "selected" ?> >Inox</option>
+			<option value="office2007" 	<?php if ($style_select=="office2007") echo "selected" ?> >Office2007</option>
+			<option value="outlook" 	<?php if ($style_select=="outlook") echo "selected" ?> >Outlook</option>
+			<option value="vista" 		<?php if ($style_select=="vista") echo "selected" ?> >Vista</option>
+		</select>
+	</div>
+	
+	<div style="padding:10px;">
+		<?php echo $kul->Render();?>
+	</div>
+	<div style="padding-top:20px;">
+		<i>*Note:</i> Please test uploading with *.txt, *.doc, *.pdf, *.jpg, *.gif ( size &lt; 500KB )
+	</div>	
+	
+</form>
+
+			]]>			
+		</code>	
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/PHP/KoolUploader_Class/index.php#styleFolder">PHP :: KoolUploader :: styleFolder</doc>
+	</docs>
+</example>

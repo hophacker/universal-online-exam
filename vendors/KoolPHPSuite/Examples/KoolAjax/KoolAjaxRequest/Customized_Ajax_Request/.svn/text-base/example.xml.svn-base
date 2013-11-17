@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Customized_Ajax_Request" usedb="true">
+	<title>Customized Ajax Request</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. KoolAjax's Request class is used for advanced users who find that our built-in CallBack and UpdatePanel are not enough and want to build a custom ajax request.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+Request class is used for advanced users who find that our built-in callback and updatepanel are not enough and want to build a custom ajax request.
+</p>
+<p>
+In above example, upon selection of customer, the customerNumber will be sent to server. At server-side, the orders of that customer will be queried and sent back to client-side in table format. At client-side, on receiving the response from server, the <b>onDone</b> event handle will be called to display out the result.
+</p>
+			]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+	echo $koolajax->Render();
+?>
+<form is="form1" method="post">
+	Select customer to view order details:
+	<select id="cbbCustomer" onchange="select_customer()">
+		<option value="">--</option>
+		<?php
+			$result = mysql_query("select customerNumber,customerName from customers limit 0,10");
+			while($row= mysql_fetch_assoc($result))
+			{
+				echo "<option value='".$row["customerNumber"]."'>".$row["customerName"]."</option>";
+			}	
+		?>
+	</select>
+	<div id="orderSummary" style="padding-top:10px;width:300px;"></div>
+	<script type="text/javascript">
+		function select_customer()
+		{
+			var request = new KoolAjaxRequest({
+				method:"post",		
+				url:"Process.php",				
+				onDone:function(result){
+					//Show orders of customers
+					document.getElementById("orderSummary").innerHTML = result;
+				}			
+			});
+			var _customerNumner = document.getElementById("cbbCustomer").value;
+			if(_customerNumner!="")
+			{
+				request.addArg("customerNumber",_customerNumner);
+				koolajax.sendRequest(request);				
+			}
+		}
+	</script>	
+</form>	
+			]]>			
+		</code>	
+		<code header="Process.php">
+			<![CDATA[
+<?php 
+	require "../../../../Resources/config.php";	
+	$db_con = mysql_connect($dbhost,$dbuser,$dbpass);
+	mysql_select_db($dbname);
+	$customerNumber = $_POST["customerNumber"];
+
+	$result = mysql_query("select orderNumber,orderDate, status from orders where customerNumber=$customerNumber");
+
+	echo "<table border='1'>";
+	echo "<tr><th>Order Number</th><th>Order Date</th><th>Status</th></tr>";
+
+	while($row=mysql_fetch_assoc($result))
+	{
+		echo "<tr>";
+		echo "<td>".$row["orderNumber"]."</td>";
+		echo "<td>".$row["orderDate"]."</td>";
+		echo "<td>".$row["status"]."</td>";
+		echo "</tr>";				
+	}
+	echo "</table>";
+	mysql_close($db_con);
+?>
+			]]>			
+		</code>					
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/Request_Class/index.php#addArg">Javascript :: Request :: addArg()</doc>
+	</docs>
+</example>

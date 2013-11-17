@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Check missing images</title>
+		<style type="text/css">
+		div
+		{
+			border:1px solid black;
+			float:left;
+		}
+		img
+		{
+			border:1px solid black;
+			width:180px;
+			height:200px;
+			margin:10px;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<div id="imageContainer"></div>
+
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function ()
+			{
+				var images= ['himalaya.png', 'chaukori.png', 'tree.png',  'noSuchimage.png',  'anotheNonExistentImage.png'];
+				var html = '';
+				$.each(images,function(key, value)
+				{
+					html+= '<img src="'+value+'" />';
+				});
+				$('#imageContainer').html(html);
+
+				$('img').error(function()
+				{
+					$(this).replaceWith('<img src="missing.png" alt="Could not load image">');
+				});
+			});
+		</script>
+	</body>
+</html>

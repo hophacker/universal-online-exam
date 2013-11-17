@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Validation_First_Look">
+	<title>First Look</title>
+	<metakeywords>php input validation,php form validation, php textbox validation </metakeywords>	 
+	<metadescription>PHP Form Decoration and Validation</metadescription>
+	<description>
+		<![CDATA[ 
+<p>There are 4 types of validators:
+<ul>
+	<li>1. <b>KoolRequiredFieldValidator</b> : Check if a field is not empty</li>
+	<li>2. <b>KoolRangeValidator</b> : Check if value is within a defined range.</li>
+	<li>3. <b>KoolRegularExpressionValidator</b> : Check if field value is conformed to regular expression </li>
+	<li>4. <b>KoolCustomValidator</b> : Provide your own custom client-side validation.</li>
+</ul>
+</p>
+
+<p>
+To use <b>KoolRequiredFieldValidator</b>, you do as follow:
+
+<ul>
+	<li>1. <u>Create object and add to form:</u> <i>$txtName_RequiredFieldValidator = $myform_manager->AddControl(new KoolRequiredFieldValidator("txtName_RequiredFieldValidator"));</i></li>
+	<li>2. <u>Set which field to validate:</u> <i>$txtName_RequiredFieldValidator->TargetId = "txtName";</i></li>
+	<li>3. <u>Set error message which will be show when validation is failed:</u> <i>$txtName_RequiredFieldValidator->ErrorMessage = "The textbox can not be empty!";</i></li>	
+	<li>4. <u>Render the validator at your html place:</u> <br /> <i> &lt;?php echo $txtName_RequiredFieldValidator->Render();?&gt; </i></li>	
+</ul>
+
+</p>
+<p>
+* In the step 4, if you define the form with <b>$myform_manager->RenderWithExistingMarkup = true;</b>, you do not above render. Instead, you create a <b>span</b> in your html like this:
+<br />
+</p>
+<p>
+<b>&lt;span id="txtName_RequiredFieldValidator"&gt;&lt;span&gt;</b>
+</p>
+<p>
+The way of iniitiating <b>KoolRangeValidator, KoolRegularExpressionValidator</b> is the same. However,
+<ul>
+	<li>1. In the <b>KoolRangeValidator</b>, you provide value for <b>$MinValue</b> and <b>$MaxValue</b> properties.</li>
+	<li>2. In the <b>KoolRegularExpressionValidator</b>, you provide value for <b>$Expression</b> property.</li>
+</ul>
+</p>
+
+<p>
+if you are using <b>KoolCustomValidator</b>, you will provide the name of your custom client-side validator function for <b>$ClientValidationFunction</b> property.
+Your custome validation function is an javascript function which returns <b>true</b> if valid and returns <b>false</b> if not valid.
+</p>
+
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	require $KoolControlsFolder."/KoolForm/koolform.php";
+	
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+	
+	$myform_manager = new KoolForm("myform");
+	$myform_manager->scriptFolder = $KoolControlsFolder."/KoolForm";	
+	$myform_manager->DecorationEnabled = true;
+	$myform_manager->styleFolder = "sunset";
+
+	//Use the numeric textbox for Age
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge"));
+	//Use the masked textbox for phone
+	$txtPhone = $myform_manager->AddControl(new KoolMaskedTextBox("txtPhone"));
+	$txtPhone->Mask = "(###)-######";
+	$txtPhone->SelectionOnFocus = "CaretToBeginning";
+
+	//Create the required field validator for txtName
+	$txtName_RequiredFieldValidator = $myform_manager->AddControl(new KoolRequiredFieldValidator("txtName_RequiredFieldValidator"));
+	$txtName_RequiredFieldValidator->TargetId = "txtName";
+	$txtName_RequiredFieldValidator->ErrorMessage = "The textbox can not be empty!";
+	
+	
+	//Create the required field validator and range validator for txtName
+	$txtAge_RequiredFieldValidator = $myform_manager->AddControl(new KoolRequiredFieldValidator("txtAge_RequiredFieldValidator"));
+	$txtAge_RequiredFieldValidator->TargetId = "txtAge";
+	$txtAge_RequiredFieldValidator->ErrorMessage = "Please, select an year number!";
+	
+	$txtAge_RangeValidator = $myform_manager->AddControl(new KoolRangeValidator("txtAge_RangeValidator"));
+	$txtAge_RangeValidator->TargetId = "txtAge";
+	$txtAge_RangeValidator->ErrorMessage = "Year number should be a non negative less than 50.";
+	$txtAge_RangeValidator->MinValue=0;
+	$txtAge_RangeValidator->MaxValue=49;
+	
+	//Create the required field validator and regular expression validator for txtPhone
+	$txtPhone_RequiredFieldValidator = $myform_manager->AddControl(new KoolRequiredFieldValidator("txtPhone_RequiredFieldValidator"));
+	$txtPhone_RequiredFieldValidator->TargetId = "txtPhone";
+	$txtPhone_RequiredFieldValidator->ErrorMessage = "Please enter phone number!";
+	
+	$txtPhone_RegularExpressionValidator = $myform_manager->AddControl(new KoolRegularExpressionValidator("txtPhone_RegularExpressionValidator"));
+	$txtPhone_RegularExpressionValidator->TargetId = "txtPhone";
+	$txtPhone_RegularExpressionValidator->Expression = "/\d{9}/";
+	$txtPhone_RegularExpressionValidator->ErrorMessage = "Format is (###)-######";
+
+	
+	
+	//Create the required field validator and regular expression validator for txtEmail
+	$txtEmail_RequiredFieldValidator = $myform_manager->AddControl(new KoolRequiredFieldValidator("txtEmail_RequiredFieldValidator"));
+	$txtEmail_RequiredFieldValidator->TargetId = "txtEmail";
+	$txtEmail_RequiredFieldValidator->ErrorMessage = "Please, enter an e-mail!";		
+
+	$txtEmail_RegularExpressionValidator = $myform_manager->AddControl(new KoolRegularExpressionValidator("txtEmail_RegularExpressionValidator"));
+	$txtEmail_RegularExpressionValidator->TargetId = "txtEmail";
+	$txtEmail_RegularExpressionValidator->Expression = "/^[\w\.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]{1,})*(\.[a-zA-Z]{2,3}){1,2}$/";
+	$txtEmail_RegularExpressionValidator->ErrorMessage = "Please, enter valid e-mail address.";
+
+	
+	$myform_manager->Validate = true; //Validate form before post
+	$myform_manager->RenderWithExistingMarkup = true; //Use existing page layout
+	$myform_manager->StatePersistent = false;//Don't keep state persistent after postback.
+	$myform_manager->Init();
+?>
+
+<form id="myform" method="post">
+	
+	<fieldset style="width:600px;padding-left:5px;padding-bottom:5px;" class="decoration">
+		<legend>Please enter information</legend>
+			<table style="margin-top:5px;">
+				<tr>
+					<td style="height:25px;width:75px;">
+						Name:
+					</td>
+					<td>
+						<input id="txtName" name="txtName" type="text" />
+						<span id="txtName_RequiredFieldValidator"></span>
+						
+					</td>
+				</tr>
+	
+				<tr>
+					<td style="height:25px;">
+						Age:
+					</td>
+					<td>
+						<input id="txtAge" name="txtAge" type="text" />
+						<span id="txtAge_RequiredFieldValidator"></span>
+						<span id="txtAge_RangeValidator"></span>
+					</td>
+				</tr>
+	
+				<tr>
+					<td style="height:25px;">
+						Phone:
+					</td>
+					<td>
+						<input id="txtPhone" name="txtPhone" type="text" />
+						<span id="txtPhone_RequiredFieldValidator"></span>
+						<span id="txtPhone_RegularExpressionValidator"></span>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="height:25px;">
+						Email:
+					</td>
+					<td>
+						<input id="txtEmail" name="txtEmail" type="text" />
+						<span id="txtEmail_RequiredFieldValidator"></span>
+						<span id="txtEmail_RegularExpressionValidator"></span>
+					</td>
+				</tr>
+			</table>
+			<div style="margin-bottom:5px;margin-top:5px;">
+				<input type="submit" value="Submit">
+			</div>
+			
+			<?php
+				if($myform_manager->IsPostBack)
+				{
+					echo "<div style='margin-bottom:5px;font-size:bold;'>Form is posted sucessfully!</div>";
+				}
+			?>
+	</fieldset>
+	
+
+	<?php echo $myform_manager->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="">refresh()</doc>		
+	</docs>
+</example>

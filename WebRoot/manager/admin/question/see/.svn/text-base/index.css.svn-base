@@ -1,0 +1,18 @@
+/* 
+    Document   : index
+    Created on : Feb 23, 2013, 7:22:50 PM
+    Author     : you
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#q_type_radio{
+    margin-right: 3em;
+}
+
+#seePanel{
+    margin-top: 3em;
+}
+.queul{
+    margin: 0;
+}

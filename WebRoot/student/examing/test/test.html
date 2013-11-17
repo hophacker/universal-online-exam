@@ -1,0 +1,33 @@
+<html>
+  <head>
+  	<style type="text/css">
+
+
+*{margin:0;padding:0;font-size:12px;}
+.wrapper{width:80%;margin:0 auto;}
+/*通用样式--容器宽度值*/
+.sharp{width:30%;margin:20px auto 0;float:left;margin-right:2%;}
+.form div{padding:10px;text-indent:2em;}
+.form{height:180px;}
+h3{height:29px;line-height:29px;font-size:12px;text-indent:10px;}
+/*上圆角框通用设置样式，如果要运用多个不同颜色，以下6句不用重新变化--------------------------------*/
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.form {border-right:1px solid;border-left:1px solid;overflow:hidden;}
+ .b2, .b3, .b4, .b5, .b6, .b7, .form{border-color:#BBE1F1;}
+ .b1, .b8{background:#BBE1F1;}
+/*背景色*/
+ .b2, .b3, .b4, .b5, .b6, .b7, .form{background:#EEFAFF;}
+	</style>
+  </head>
+  <body>
+<div class="sharp">
+       <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b> 
+       <div class="form">文字内容</div>
+       <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>   
+</div>
+  </body>
+</html>

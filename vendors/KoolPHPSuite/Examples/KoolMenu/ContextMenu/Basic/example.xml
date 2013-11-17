@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ContextMenu_Basic" usedb="false">
+	<title>Basic ContextMenu</title>
+	<metakeywords>php menu,php drop down menu,javascript menu</metakeywords>	 
+	<metadescription>You can control the orientation of the menu by setting its Flow property either to Horizontal or Vertical. The default value of the Flow property is Horizontal. When Flow is set, its value determines the the flow of the root group. If set for a particular item, it will affect the item's children.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+You can control the expand direction of an item by settings the <b>$ExpandDirection</b> of <b>$GroupSettings</b> of that item
+</p>
+<p>
+	$item = $km->Add("root","edit","Edit");<br/>
+	$item->GroupSettings->ExpandDirection = "Up";
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolMenu/koolmenu.php";
+	
+	$km = new KoolMenu("km");
+	$context = new KoolContextMenu("context");
+	$context->scriptFolder = $KoolControlsFolder."/KoolMenu";
+	$context->styleFolder = "default";
+	$context->Add("root","blue","Blue","javascript:setColor(\"blue\")","images/star_blue.png");
+	$context->Add("root","yellow","Yellow","javascript:setColor(\"yellow\")","images/star_yellow.png");
+	$context->Add("root","green","Green","javascript:setColor(\"green\")","images/star_green.png");
+	$context->Add("root","red","Red","javascript:setColor(\"red\")","images/star_red.png");
+	$context->Add("root","grey","Grey","javascript:setColor(\"gray\")","images/star_grey.png");
+
+	$context->AttachTo = "myPanel";
+	
+?>
+
+<form id="form1" method="post">
+	<div style="padding-top:20px;padding-bottom:100px;width:650px;">
+		Right-click to open color menu:
+		<div id="myPanel" style="width:100px;height:100px;background:green;margin-top:10px;"></div>
+		<?php echo $context->Render();?>
+		<script>
+			function setColor(_color)
+			{
+				document.getElementById("myPanel").style.backgroundColor = _color;
+			}			
+		</script>
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolMenu/PHP/KoolMenu_Class/index.php#styleFolder">PHP :: KoolMenu :: styleFolder</doc>
+	</docs>
+</example>

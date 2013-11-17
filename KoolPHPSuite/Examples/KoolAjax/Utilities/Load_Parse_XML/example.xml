@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Load_Parse_XML" usedb="false">
+	<title>Load And Parse XML Data</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, 	php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. This example shows how to load and parse xml file on-demand.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolAjax supports loading any resource files at client-side. You just need to use the <b>load()</b> function and provide your path of resource file as parameter.
+</p>
+<p>
+KoolAjax also provides a cross-browsers XML parsing function. This will help transform text XML into object XML.
+</p>
+<p>
+Above example show how we can load an XML file and parse it to get data.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+	
+?>
+		<style type="text/css">
+            div.dataXml{ position:static; padding :0;margin:0;}
+			div .cl1, .cl2, .cl3, .cl4, .cl5 { float : left;  height :15px;}
+			div.cl1{ color:blue; width: 125px;} div.cl2{ color:red; width: 55px;}
+			div.cl3{ color:green; width: 95px;} div.cl4{ color:brown ;width: 55px;;}
+			div.cl5{ width: 130px;}             div.color2 {  height:10px;background: #f4f4f4;}
+			div.color1 { height:10px;}
+			#wrapper{ width : 500px;height:170px;}
+        </style>
+	<?php echo $koolajax->Render();?>
+		<div class="indent indent_right topspacing bottomspacing" id = "wrapper" >
+          <div id="info" class="  " >
+			<input type="button" id="btn1" onclick="loadXMLnow();" value="Load XML data" />
+			<input type="button" id="btn2" onclick="reload();" value="Unload" disabled />
+		  </div>
+		  <div id="dataXml" >	
+			Data will appear benath here :	  
+          </div>
+		</div>		
+        <script type="text/javascript">
+         	function loadXMLnow()
+			{
+				  var z = koolajax.load("Employees.xml");	
+				  var xmlDoc = koolajax.parseXml(z);	
+				  document.getElementById('dataXml').innerHTML = "";
+				  x = xmlDoc.getElementsByTagName("employee");
+				  var s = "<H3>Here is the result</H3><b><u><div class='cl1 '>Name</div><div class='cl2'>IDEm</div><div class='cl3'>Gender</div><div class='cl4'>Age</div><div class='cl5'>Dept.</div></u></b>";
+				  for(i = 0; i < x.length; i++)
+				  {
+					s +=  "<div class='cl1'>"  + x[i].childNodes[0].nodeValue + "</div>";
+					s += "<div class='cl2'>"  + x[i].attributes.getNamedItem("id").nodeValue + "</div>";
+					s += "<div class='cl3'> "  + x[i].attributes.getNamedItem("gender").nodeValue + "</div>";
+					s += "<div class='cl4'> "  + x[i].attributes.getNamedItem("age").nodeValue + "</div>";
+					s += "<div class='cl5'> "  + x[i].attributes.getNamedItem("dept").nodeValue + "</div></div>";
+				  
+				  }
+				  document.getElementById('dataXml').innerHTML += s ;
+				  document.getElementById('btn2').disabled = false;
+				  document.getElementById('btn1').disabled = true;
+			}
+			
+			function reload()
+			{
+				location.reload(true);
+			}
+        </script>
+		<div style="clear:both"></div>			
+			]]>			
+		</code>
+		<code header="Employees.xml">
+			<![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+	<employee id="0V1" gender="Male" age="19" dept="Technical support">Premshree Pillai</employee>
+	<employee id="J02" gender="Male" age="24" dept="Maketing">Kumar Singh</employee>
+	<employee id="C05" gender="Female" age="21" dept="Sales">Ranjit Kapoor</employee>
+	<employee id="BB4" gender="Female" age="31" dept="IT management">Anna Kapoor</employee>
+	<employee id="005" gender="Male" age="21" dept="Sales">Ran Jinemor</employee>
+</company>				
+			]]>			
+		</code>							
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/KoolAjax_Class/index.php#load">Javascript :: KoolAjax :: load()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/KoolAjax_Class/index.php#parseXML">Javascript :: KoolAjax :: parseXML()</doc>
+	</docs>
+</example>

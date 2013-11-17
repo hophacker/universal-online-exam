@@ -1,0 +1,221 @@
+.ksmenuKSM
+{
+	padding:1px;
+	padding-top:5px;
+	padding-left:12px;
+}
+.ksmenuKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.ksmenuKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:12px;
+}
+
+
+.ksmenuKSM .ksmIn,
+.ksmenuKSM .ksmLeft,
+.ksmenuKSM .ksmRight,
+.ksmenuKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.ksmenuKSM .ksmA
+{
+	text-decoration:none;
+	color:#a5a5a5;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:12px;
+}
+.ksmenuKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.ksmenuKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.ksmenuKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 
+}
+html>body .ksmenuKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.ksmenuKSM .ksmCollapse .ksmChildBox,
+.ksmenuKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.ksmenuKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.ksmenuKSM .ksmParent
+{
+	line-height:23px;
+	cursor:pointer;
+}
+.ksmenuKSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.ksmenuKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:none;
+	color:white;
+	line-height:23px;
+	height:25px;
+}
+.ksmenuKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+}
+
+
+.ksmenuKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:none;
+	color:#CCCCCC;	
+}
+.ksmenuKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.ksmenuKSM .ksmParent .ksmLeft
+{
+	float:left;
+	height:20px;
+	width:15px;
+	background-image:url(ex.gif);
+	background-position:bottom;
+	background-repeat:no-repeat;
+}
+.ksmenuKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:20px;
+	width:15px;
+	background-image:url(co.gif);
+	background-position:top;
+	background-repeat:no-repeat;
+}
+
+.ksmenuKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:23px;
+	height:23px;
+}
+
+
+
+
+/*Child*/
+.ksmenuKSM .ksmChild
+{
+	line-height:20px;
+	color:#CCCCCC;
+	font-size:12px;
+}
+
+.ksmenuKSM .ksmChild .ksmIn
+{
+	margin-bottom:1px;
+	padding-left:15px;
+}
+.ksmenuKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:0px;
+}
+
+.ksmenuKSM a.ksmChild:hover .ksmIn
+{
+	text-decoration:underline;
+}
+
+.ksmenuKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+
+}
+
+
+.ksmenuKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.ksmenuKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.ksmenuKSM .ksmChild .ksmBul
+{
+	float:left;
+}
+
+
+/*Child Selected*/
+.ksmenuKSM .ksmSelected .ksmIn
+{
+	text-decoration:underline;
+	color:white;
+}
+
+.ksmenuKSM .ksmSelected .ksmIn .ksmBul
+{
+
+}
+
+.ksmenuKSM a.ksmSelected:hover .ksmIn
+{
+	text-decoration:underline;
+	cursor:default;
+}
+
+/*Panel*/
+.ksmenuKSM .ksmPanel
+{
+	line-height:normal;
+}
+.ksmenuKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#3e770e;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:12px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}

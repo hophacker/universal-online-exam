@@ -1,0 +1,18 @@
+/* 
+    Document   : question
+    Created on : Mar 11, 2013, 11:57:29 AM
+    Author     : john
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+        
+        
+button{
+    margin-left : 20px;
+    margin-top : -4px;
+}
+.amount_text{
+    font-size: 16px;
+    width: 40px;
+}

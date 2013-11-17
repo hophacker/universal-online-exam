@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Model/Datasource
+END
+DataSourceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Model/Datasource/DataSourceTest.php
+END
+DboSourceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Model/Datasource/DboSourceTest.php
+END
+CakeSessionTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Model/Datasource/CakeSessionTest.php
+END

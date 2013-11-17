@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Manipulating user selected text.</title>
+		<style type="text/css">
+			p
+			{
+				color:red;
+				font-size:17px;
+				width:670px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="b" id="bold" class="button">
+		<input type="button" value="i" id="italics" class="button">
+		<input type="button" value="u" id="underline" class="button">
+		<input type="button" id="apply" value="Apply HTML">
+		<div>
+		<textarea id="selectable" rows="10" cols="80">I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose. A fool takes in all the lumber of every sort that he comes across, so that the knowledge which might be useful to him gets crowded out, or at best is jumbled up with a lot of other things, so that he has a difficulty in laying his hands upon it.</textarea>
+		</div>
+		<p id="container"></p>
+
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			function getPositions()
+			{
+				var startPosition = endPosition = 0;
+				var element = document.getElementById('selectable');
+				if (document.selection) 
+				{
+					//for Internet Explorer
+					var range = document.selection.createRange();
+					var dRange = range.duplicate();
+					dRange.moveToElementText(element);
+					dRange.setEndPoint("EndToEnd", range);
+					startPosition = dRange.text.length - range.text.length;
+					endPosition = startPosition  + range.text.length;
+				}
+				else if (window.getSelection) 
+				{
+					//For Firefox, Chrome, Safari etc
+					startPosition = element.selectionStart;
+					endPosition = element.selectionEnd;
+					
+				}
+				return {'start': startPosition, 'end': endPosition};
+			}
+
+			$('#apply').click(function()
+			{
+				var html = $('#container').html($('#selectable').val());
+			});
+
+			$('.button').click(function()
+			{
+				var positions = getPositions();
+				if(positions.start == positions.end)
+				{
+					return false;
+				}
+				var tag = $(this).val();
+				var textOnPage = $('#selectable').val();
+
+				var startString = textOnPage.substr(0, positions.start);
+				
+				var targetString = textOnPage.substr(positions.start, positions.end - positions.start);
+				var formattedString = "<" + tag +">" + targetString + "</" + tag +">";
+				
+				var endString = textOnPage.substr(positions.end);
+				$('#selectable').text(startString + formattedString + endString);
+			});
+			
+		</script>
+	</body>
+</html>

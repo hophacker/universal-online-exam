@@ -1,0 +1,23 @@
+<control>
+	<name>KoolInput</name>
+	<metadescription>KoolInput is advanced PHP TextBox. It is the must-have for restricting user input on numeric, datetime, credit card. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php input, php textbox, php numeric input, php numeric texbox, php masked input, php masked texbox, php datetime input, php datetime texbox, php password input, php password texbox, style input box, style textbox</metakeywords>	 
+	<description>
+
+	</description>
+	<examples>
+
+		<example	name="KoolMaskedTextBox" 
+					link="TextBox/KoolMaskedTextBox/index.php" 
+					image="TextBox/KoolMaskedTextBox/preview.gif"/>
+
+		<example	name="KoolNumericTextBox" 
+					link="TextBox/KoolNumericTextBox/index.php" 
+					image="TextBox/KoolNumericTextBox/preview.gif"/>
+
+		<example	name="KoolPasswordTextBox" 
+					link="TextBox/KoolPasswordTextBox/index.php" 
+					image="TextBox/KoolPasswordTextBox/preview.gif"/>
+
+	</examples>			
+</control>

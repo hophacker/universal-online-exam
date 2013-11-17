@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Resizing" usedb="true">
+	<title>Resizing</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolGrid support column resizing. To enable this feature you can set <b>$AllowResizing</b> property to <b>true</b>. You can set this property at KoolGrid level, GridTableView level or at Column level.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+		
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select orderNumber,orderDate,status,comments from orders";
+	$ds->UpdateCommand = "update orders set orderDate='@orderDate', status='@status' where orderNumber=@orderNumber";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+
+	$grid->AjaxEnabled = true;
+	$grid->DataSource = $ds;
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->Width = "655px";
+	$grid->AllowResizing = true;
+
+	$column = new GridBoundColumn();
+	$column->DataField = "orderNumber";
+	$column->HeaderText = "Order Number";
+	$column->ReadOnly = true;
+	$column->Align = "center";
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridDateTimeColumn();
+	$column->DataField = "orderDate";
+	$column->HeaderText = "Date";
+	$column->FormatString = "M d, Y";
+	$column->Align = "center";
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridDropDownColumn();
+	$column->DataField = "status";
+	$column->HeaderText = "Status";
+	$column->Align = "center";
+	$column->AddItem("In Process");
+	$column->AddItem("On Hold");
+	$column->AddItem("Disputed");
+	$column->AddItem("Resolved");	
+	$column->AddItem("Shipped");
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->DataField = "comments";
+	$column->HeaderText = "Comments";
+	$column->HeaderStyle->Align = "center";
+	$column->Wrap = true;
+	$grid->MasterTable->AddColumn($column);
+
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+
+	<div style="padding-top:10px;">
+		<?php echo $grid->Render();?>
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#AllowResizing">KoolGrid::AllowResizing</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#AllowResizing">GridTableView::AllowResizing</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridColumn/index.php#AllowResizing">GridColumn::AllowResizing</doc>
+	</docs>
+</example>

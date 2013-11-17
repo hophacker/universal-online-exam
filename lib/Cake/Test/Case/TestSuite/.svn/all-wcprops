@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/TestSuite
+END
+CakeTestFixtureTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/TestSuite/CakeTestFixtureTest.php
+END
+HtmlCoverageReportTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/TestSuite/HtmlCoverageReportTest.php
+END
+CakeTestSuiteTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/TestSuite/CakeTestSuiteTest.php
+END
+CakeTestCaseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/TestSuite/CakeTestCaseTest.php
+END
+ControllerTestCaseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/TestSuite/ControllerTestCaseTest.php
+END

@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>addPluginsDir()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.add.config.dir.html" title="addConfigDir()">
+<link rel="next" href="api.add.template.dir.html" title="addTemplateDir()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">addPluginsDir()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.add.config.dir.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.add.template.dir.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="addPluginsDir()">
+<a name="api.add.plugins.dir"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>addPluginsDir() — add a directory to the list of directories where plugins are stored</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id426026"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">Smarty </span><span class="methodname">addPluginsDir</span>(<span class="methodparam"><span class="type">string|array </span><span class="parameter">plugins_dir</span></span>);</code><div class="example">
+<a name="id426466"></a><p class="title"><b>Example 14.2. addPluginsDir()</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+// add directory where plugins are stored
+$smarty-&gt;addPluginsDir('./plugins_1');
+
+// add multiple directories where plugins are stored
+$smarty-&gt;setPluginsDir(array(
+    './plugins_2',
+    './plugins_3',
+));
+
+// view the plugins dir chain
+var_dump($smarty-&gt;getPluginsDir());
+
+// chaining of method calls
+$smarty-&gt;setPluginsDir('./plugins')
+       -&gt;addPluginsDir('./plugins_1')
+       -&gt;addPluginsDir('./plugins_2');
+
+?&gt;
+
+   </pre></div>
+</div>
+<br class="example-break"><p>
+   See also
+   <a class="link" href="api.get.plugins.dir.html" title="getPluginsDir()"><code class="varname">getPluginsDir()</code></a>,
+   <a class="link" href="api.set.plugins.dir.html" title="setPluginsDir()"><code class="varname">setPluginsDir()</code></a> and
+   <a class="link" href="variable.plugins.dir.html" title="$plugins_dir"><em class="parameter"><code>$plugins_dir</code></em></a>.
+  </p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.add.config.dir.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.add.template.dir.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">addConfigDir() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> addTemplateDir()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

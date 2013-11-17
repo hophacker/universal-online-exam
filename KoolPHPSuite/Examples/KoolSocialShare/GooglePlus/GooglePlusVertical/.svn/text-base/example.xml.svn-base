@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="GooglePlusVertical">
+	<title>GooglePlusVertical</title>
+	<metakeywords>php, facebook like, share on facebook, twitter button, linkedin button</metakeywords>	 
+	<metadescription>Show all available social buttons</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+Add Google+ button simply with:
+</p>
+<p>
+<b>	
+$socialshare->Add(new GooglePlusVertical());
+</b>
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	/*
+	 * This file is ready to run as standalone example. However, please do:
+	 * 1. Add tags <html><head><body> to make a complete page
+	 * 2. Change relative path in $KoolControlFolder variable to correctly point to KoolControls folder 
+	 */
+
+	$KoolControlsFolder = "../../../../KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+	
+	require $KoolControlsFolder."/KoolSocialShare/koolsocialshare.php";
+
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "none";
+	$socialshare->scriptFolder = $KoolControlsFolder."/KoolSocialShare";
+	
+	$socialshare->UrlToShare = "http://www.koolphp.net"; 
+
+	$socialshare->Add(new GooglePlusVertical());
+
+?>
+
+<form id="myform" method="post" class="decoration">
+	Share on Google+:
+	<?php echo $socialshare->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="">ShowAllShareButtons()</doc>		
+	</docs>
+</example>

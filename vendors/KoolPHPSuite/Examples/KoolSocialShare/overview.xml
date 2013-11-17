@@ -1,0 +1,13 @@
+<control>
+	<name>KoolSocialShare </name>
+	<metadescription>KoolSocialShare is the great tool to share your content on social network. VIEW DEMO NOW!</metadescription>
+	<metakeywords> php, facebook like, share on facebook, twitter button, linkedin button, </metakeywords>	 
+	<description>
+		KoolSocialShare is the great tool to share your content on different social networks.
+	</description>
+	<examples>
+		<example	name="First Look" 
+					link="Features/ShowAllShareButtons/index.php" 
+					image="Features/ShowAllShareButtons/preview.jpg"/>
+	</examples>			
+</control>

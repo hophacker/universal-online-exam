@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Scrolling" usedb="false">
+	<title>Scrolling</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+In case you have too many tabs, you can easily make the tabstrip scrollable by setting the <b>scroll</b>  property. There are 3 allowed values:
+<ul>
+	<li><b>left</b> - Scroll arrow buttons are on the left</li>
+	<li><b>right</b> - Scroll arrow buttons are on the right</li>
+	<li><b>middle</b> - One buttons is on the left, another is on the right</li>
+</ul>
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->styleFolder = "hay";
+	$kts->addTab("root","home","Home",null,true);	
+	$kts->addTab("root","products","Products");
+	$kts->addTab("root","services","Services");
+	$kts->addTab("root","company","Company");
+	$kts->addTab("root","testimonial","Testimonial");
+	$kts->addTab("root","customer","Customers");
+	$kts->addTab("root","planning","Planning");
+
+	$kts->addTab("root","contactus","Contact us");
+	$kts->width = "500px";
+	
+	$sel = "right";
+	if (isset($_POST["scrolling"]))
+	{
+		$sel = $_POST["scrolling"];
+	}
+	$kts->scroll = $sel;
+?>
+
+<form id="form1" method="post">
+
+	Select scroll buttons position :
+	<div style="border:dotted 1px gray;width:150px;height:70px;">
+		<input type="radio" name="scrolling" id="left" value="left" onclick="submit()" <? if($sel=="left") echo "checked='true'"?> /> <label for="left">Left</label><br />
+		<input type="radio" name="scrolling" id="right" value="right" onclick="submit()" <? if($sel=="right") echo "checked='true'"?> /> <label for="right">Right</label><br />
+		<input type="radio" name="scrolling" id="middle" value="middle" onclick="submit()" <? if($sel=="middle") echo "checked='true'"?> /> <label for="middle">Middle</label><br />		
+	</div>
+	
+	<div style="padding:10px;">
+		<?php echo $kts->Render();?>
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#scroll">PHP :: KoolTabs :: scroll</doc>
+	</docs>
+</example>

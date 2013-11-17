@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<koolslidemenu id="ksm" width="150" singleExpand="false" styleFolder="koolslidemenu/styles/bluearrow">
+<!--	<parent id="admin" text="管理" expand="true">-->
+        <parent id="message" text="通知">
+                <child id="view_message" text="通知查看" link="../../WebRoot/student/message/index.php" />
+        </parent>
+        <parent id="admin" text="管理">
+                <child id="view_perinfo" text="个人信息查看和修改" link="../../WebRoot/student/manage/account/profile/index.php" />
+	</parent>
+	<parent id="feedback" text="信息反馈">
+		<child id="toParty" text="给党校建议" link="../../suggestions/index/1" />
+		<child id="toSystem" text="给系统建议" link="../../suggestions/index/0" />		
+                <child id="viewReply" text="查看回复" link="../../suggestions/viewReply" />		
+                		
+	</parent>
+        <parent id="test" text="考试">
+                <child id="begin_exam" text="开始考试" link="../../exams/check"/>
+              <!--   <child id="begin_excercise" text="开始练习" link="../../exams/index/0"/> -->
+                <child id="view_grade" text="成绩查询" link="../../tryHistories/viewHistories"/>
+        </parent>
+	<parent id="logout" text="安全退出" link="../../Logins/exitSystem" >
+	</parent>			
+</koolslidemenu>
+
+

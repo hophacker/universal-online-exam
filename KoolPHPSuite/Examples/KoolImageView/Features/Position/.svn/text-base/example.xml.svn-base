@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Position" usedb="false">
+	<title>Position</title>
+	<metakeywords>php image view, php image zoom, zoom image script</metakeywords>	 
+	<metadescription>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</metadescription>
+	<description>
+		<![CDATA[ 
+KoolImageView support changing opening position. To use this feature, you need to set <b>position</b> property of KoolImageView's instance.
+		]]>
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolImageView/koolimageview.php";
+	
+	$kiv_screen_center = new KoolImageView("kiv_screen_center");
+	$kiv_screen_center->scriptFolder =  $KoolControlsFolder."/KoolImageView";
+	$kiv_screen_center->styleFolder =  $KoolControlsFolder."/KoolImageView/styles/simple";
+	$kiv_screen_center->imageUrl = "../../Images/nv.jpg";
+	$kiv_screen_center->bigImageUrl = "../../Images/niceview.jpg";
+	$kiv_screen_center->description = "Screen Center";
+	$kiv_screen_center->position = "SCREEN_CENTER";
+
+	$kiv_image_center = new KoolImageView("kiv_image_center");
+	$kiv_image_center->scriptFolder =  $KoolControlsFolder."/KoolImageView";
+	$kiv_image_center->styleFolder =  $KoolControlsFolder."/KoolImageView/styles/simple";
+	$kiv_image_center->imageUrl = "../../Images/nv.jpg";
+	$kiv_image_center->bigImageUrl = "../../Images/niceview.jpg";
+	$kiv_image_center->description = "Image Center";
+	$kiv_image_center->position = "IMAGE_CENTER";
+	
+?>
+<form id="form1" method="post">
+
+	<style type="text/css">
+		.box
+		{
+			float:left;
+			width:280px;
+			height:180px;
+			margin:10px;
+			padding:10px;
+		}
+		.focus
+		{
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;
+			height:140px;
+			width:195px;
+			padding-top:40px;
+			padding-left:85px;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#style_select
+		{
+			width:100px;	
+		}				
+		div.framepic { width:96px; height:69px; padding : 2px; vertical-align:middle;}
+		div.framepic1 { border : 2px  dotted gray; width:100px; }
+		div.framepic2 { border : 2px dotted black ;  width : 104px;}		
+		div.framepic3 { border : 2px solid gray ; padding : 1px ; width : 108px;}
+	</style>
+	
+	
+	<div class="box focus">
+		<div class="framepic3">		
+			<div class="framepic2">
+				<div class="framepic1">					
+					<div class="framepic">	
+						<?php echo $kiv_screen_center->Render();?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box focus">
+		<div class="framepic3">		
+			<div class="framepic2">
+				<div class="framepic1">					
+					<div class="framepic">	
+						<?php echo $kiv_image_center->Render();?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolImageView/PHP/KoolImageView_Class/index.php#position">PHP :: KoolImageView :: position</doc>
+	</docs>
+</example>

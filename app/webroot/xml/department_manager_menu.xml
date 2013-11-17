@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<koolslidemenu id="ksm" width="150" singleExpand="false" styleFolder="koolslidemenu/styles/bluearrow">
+<!--	<parent id="admin" text="管理" expand="true">-->
+        <parent id="admin" text="管理">
+                <parent id="test" text="考试设置">
+                    <child id="test1" text="学员考试分配" link="../../Assignments/assign" />
+                    <child id="test4" text="查看所有考试" link="../../departments/viewAllTime" />
+                    <child id="test5" text="确认晋级名单" link="../../TestTypes/confirmPromotion" />				
+                </parent>
+                
+                <parent id = "question" text="试题维护">
+                    <child id = "checkAns" text="批阅简答题" link="../../tryHistories/viewExamAnsHistories" />
+                    <child id="paper2" text="中级试卷下载" link="../../TestPapers/deptDownload" />
+                </parent>
+                
+                <parent id="manager" text="帐号查看管理">
+                    <child id="lookEditManagers" text="管理员帐号修改" link="../../managers/changeInfo" />				
+                    <child id="lookEditStudents" text="学生" link="../../accounts/student" />				
+                </parent>
+                <parent id="message" text="消息">
+                    <child id="post" text="发布" link="../../messages/newMessage" />	
+                    <child id="post" text="历史通知" link="../../messages/messageList" />				
+                </parent>
+                <parent id="departmentSetting" text="院系设置" >
+                    <child id="" text="院系增删合" link="../../departments/setting" />
+                </parent>
+	</parent>
+	<parent id="count" text="统计">
+        <child id="count1" text="注册人数统计" link="../../students/viewRegisterChartPerDepartment" />
+	</parent>
+        <parent id="logout" text="安全退出">
+	</parent>			
+</koolslidemenu>

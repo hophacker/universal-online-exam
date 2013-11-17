@@ -1,0 +1,139 @@
+﻿.darkZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.darkKIV
+{
+	display:inline;
+}
+
+.darkKIV .kivZoomPanel
+{
+    position:absolute;
+    background:transparent;
+	margin:0px;
+	padding:0px;
+}
+
+.darkKIV .kivZoomPanel *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.darkKIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:white;
+    border:solid 1px gray;
+}
+
+.darkKIV .kivBigImage
+{
+    border:solid 2px black;
+    border-bottom:solid 2px gray;
+	cursor:url(zoomout.cur),pointer !important;
+}
+
+
+.darkKIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+
+
+.darkKIV .kivEffectPanel
+{
+	background-color:black;
+}
+.darkKIV .kivEffectPanelTop
+{
+    font-size:0px;
+    height:3px;
+    background-color:Gray;
+}
+
+
+.darkKIV .kivEffectImage
+{
+    border:solid 2px black;
+}
+
+.darkKIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.darkKIV .kivDescriptionCover
+{
+    font-size:0pt;
+    padding-top:4px;
+    padding-bottom:1px;
+}
+
+.darkKIV .kivDescription
+{
+    color:White;
+    font-family:Arial;
+    font-size:12px;
+}
+
+.darkKIV .kivCloseButton
+{
+}
+
+.darkKIV .kivMoveButton
+{
+}
+
+.darkKIV .kivTopLeft
+{
+	background:url(topleft.png);
+	width:9px;
+	height:8px;
+}
+.darkKIV .kivTopCenter
+{
+	background:url(topcenter.png);
+	height:8px;
+}
+.darkKIV .kivTopRight
+{
+	background:url(topright.png);
+	width:9px;
+	height:8px;
+}
+.darkKIV .kivMiddleLeft
+{
+	background:url(middleleft.png);
+	width:9px;
+}
+.darkKIV .kivMiddleRight
+{
+	background:url(middleright.png);
+	width:9px;
+}
+.darkKIV .kivBottomLeft
+{
+	background:url(bottomleft.png);
+	width:9px;
+	height:8px;
+}
+.darkKIV .kivBottomCenter
+{
+	background:url(bottomcenter.png);
+	height:8px;
+}
+.darkKIV .kivBottomRight
+{
+	background:url(bottomright.png);
+	width:9px;
+	height:8px;
+}

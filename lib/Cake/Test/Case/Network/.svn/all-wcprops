@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network
+END
+CakeResponseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/CakeResponseTest.php
+END
+CakeRequestTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/CakeRequestTest.php
+END
+CakeSocketTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Network/CakeSocketTest.php
+END

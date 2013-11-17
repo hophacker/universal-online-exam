@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="UpdatePanel_Client_side_event" usedb="false">
+	<title>Client side event With UpdatePanel</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. This example show how to register event handle for KoolAjax's UpdatePanel.</metadescription>
+	<description>
+		<![CDATA[ 
+This example show how to register event handle for KoolAjax's UpdatePanel.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+    require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+	if ($koolajax->isCallback)
+	{
+		//If it is callback request, Slow down processing to see loading effect
+		sleep(1);
+	}	
+?>
+<div class="exampleContent" style="height:230px;width:650px;">
+	<?php echo $koolajax->Render();?>
+	<link rel="stylesheet" href="example.css" />	
+	<table ><tr><td width="50%">
+		<?php echo KoolScripting::Start();?>
+			<updatepanel id="myUpdate" class ="cssOrder">
+				<content>					
+					<input type="button" id="btnOrder" class="btn" name="btnOrder" value="Submit Order" />
+					<br/> <br/>
+					<div id="result" class="result" >
+						<?php
+							if( isset( $_POST['p']))
+							{
+								echo "Order succesfull.<br/> Your OrderID is ".rand(0,9999);
+							}							
+						?>
+					</div>
+					<input type="hidden" name="p" value="post" />					
+				</content>
+				<triggers>
+					<trigger elementid="btnOrder" event="onclick"/>				
+				</triggers>
+				<loading image="<?php echo $KoolControlsFolder;?>/KoolAjax/loading/5.gif"/>
+			</updatepanel>
+		<?php echo KoolScripting::End();?>	
+	</td><td>
+	<div class="block" >
+		<b>Client-side events:  </b>
+		<hr />
+		<div id="eventClient" />
+	</div>
+	</td></tr></table>
+	<br style="clear:both">
+	<script language="javascript">		
+		var startTime ;
+		function handleSendingRequest(sender,args)
+		{	
+			var currentTime = new Date();	
+			startTime = currentTime.getTime() ;
+			document.getElementById( "eventClient" ).innerHTML += "Start update Order... " + "<br/>";
+			document.getElementById( "eventClient" ).scrollTop = 9999;
+		}
+		function handleUpdate(sender,args)
+		{
+			var currentTime = new Date();
+			var afterTime = currentTime.getTime() - startTime;
+			document.getElementById( "eventClient" ).innerHTML += "Finish update Order after " + afterTime + " ms<br/>";
+			document.getElementById( "eventClient" ).scrollTop = 9999;
+		}
+		myUpdate.registerEvent("OnSendingRequest",handleSendingRequest); 		
+		myUpdate.registerEvent("OnUpdatePanel",handleUpdate); 		
+	</script>
+</div>
+			]]>			
+		</code>
+		<code header="Example.css">
+			<![CDATA[
+.cssOrder
+{	
+	padding :10px 0;
+	height:160px;
+}
+.block
+{
+	background :#DFF3FF;
+	width:90%;
+	height:160px;
+	padding :10px;
+}
+.btn
+{
+	background:transparent url(btn.gif) no-repeat scroll 0 0;
+	height:43px;
+	font-size:12px; 	
+	font-weight:bold;
+	border:0 none;	
+	color:#0391E2;
+	padding:0 0 0 34px;
+	width:170px; 
+}
+.result
+{
+	background:transparent url(inform.gif) no-repeat scroll 0 0;
+	height:103px; 
+	width:200px;
+	padding:35px 20px 0 124px;	
+}
+#eventClient
+{
+	overflow:auto;
+	overflow-X:hidden;
+	height : 130px;
+}			
+			]]>			
+		</code>						
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/KoolAjax_Class/index.php#registerEvent">Javascript :: KoolAjax :: registerEvent()</doc>
+	</docs>
+</example>

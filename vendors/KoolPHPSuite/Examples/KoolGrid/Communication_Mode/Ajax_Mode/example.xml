@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Ajax_Mode" usedb="true">
+	<title>Ajax Mode</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid support Ajax communication.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+To make KoolGrid working in Ajax mode, you need: Firstly, add <b>KoolAjax</b> to your page. Secondly, set <b>AjaxEnabled</b> property of KoolGrid to <b>true</b>
+</p>
+<p>
+Also, you can make KoolGrid disabled and showing ajax loading image when KoolGrid communicating with server. To do so, you simply set the <b>AjaxLoadingImage</b> property pointing to an image url. Please have a look at our code for more details.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+
+	//Enable Ajax Mode
+	$grid->AjaxEnabled = true;
+	//Add loading image
+	$grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/5.gif";
+
+	$grid->RowAlternative = true;
+	$grid->AutoGenerateColumns = true;		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#AjaxEnabled">PHP::KoolGrid::AjaxEnabled</doc>
+	</docs>
+</example>

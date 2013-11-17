@@ -1,0 +1,588 @@
+.outlookKTS
+{
+	background-color:transparent;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-decoration:none;
+	overflow:hidden;
+}
+.outlookKTS *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.outlookKTS .ktsUL
+{
+	width:auto;
+}
+
+.outlookKTS .ktsleftScroll .ktsUL,
+.outlookKTS .ktsrightScroll .ktsUL,
+.outlookKTS .ktsmiddleScroll .ktsUL
+{
+	width:1000px;
+}
+
+.outlookKTS .ktsright .ktsUL,
+.outlookKTS .ktscenter .ktsUL
+{
+	width:auto;
+}
+
+
+.outlookKTS .ktsLI
+{
+	float:left;
+	list-style-type:none;
+	overflow:hidden;	
+}
+.outlookKTS .ktsLevel
+{
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	position:relative;
+}
+
+
+/*Align Right*/
+.outlookKTS .ktsright .ktsUL
+{
+	float:right;
+}
+
+/*Align Center*/
+.outlookKTS .ktscenter
+{
+	text-align:center;
+}
+.outlookKTS .ktscenter .ktsUL
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	float:none;
+}
+
+/*Css for IE*/
+* html .outlookKTS .ktscenter .ktsUL { display: inline-block; }
+* html .outlookKTS .ktscenter .ktsUL { display: inline; }
+*+html .outlookKTS .ktscenter .ktsUL { display: inline-block; }
+*+html .outlookKTS .ktscenter .ktsUL { display: inline; }
+
+
+
+
+/*Align Justify*/
+.outlookKTS .ktsjustify .ktsUL
+{
+	float:none;
+}
+
+
+
+
+
+/*Scrolling*/
+
+.outlookKTS .ktsPrev,
+.outlookKTS .ktsNext,
+.outlookKTS .ktsNextDisable,
+.outlookKTS .ktsPrevDisable
+{
+	display:none;
+	position:absolute;
+	width:12px;
+	height:12px;
+	background-color:yellow;
+	font-size:0pt;
+	outline-style:none;
+	cursor:pointer;	
+}
+.outlookKTS .ktsPrev
+{
+	background:url(n.gif) 0 0;
+}
+.outlookKTS .ktsPrevDisable
+{
+	background:url(n.gif) 0 100%;
+}
+.outlookKTS .ktsNext
+{
+	background:url(n.gif) 100% 0;
+}
+
+.outlookKTS .ktsNextDisable
+{
+	background:url(n.gif) 100% 100%;
+}
+
+
+/* Right Scroll*/
+.outlookKTS .ktsrightScroll .ktsPrev,
+.outlookKTS .ktsrightScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:17px;	
+}
+
+.outlookKTS .ktsrightScroll .ktsNext,
+.outlookKTS .ktsrightScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;	
+}
+
+/* Left Scroll*/
+.outlookKTS .ktsleftScroll .ktsPrev,
+.outlookKTS .ktsleftScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.outlookKTS .ktsleftScroll .ktsNext,
+.outlookKTS .ktsleftScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:17px;	
+}
+
+/* Middle Scroll*/
+.outlookKTS .ktsmiddleScroll .ktsPrev,
+.outlookKTS .ktsmiddleScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.outlookKTS .ktsmiddleScroll .ktsNext,
+.outlookKTS .ktsmiddleScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;
+}
+
+
+/*Normal display*/
+.outlookKTS .ktsLI .ktsA
+{
+	display:block;
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px 3px;
+	cursor:pointer;
+	text-decoration:none;
+	color:#333;	
+	text-align:center;
+}
+
+
+/*When mouse hover*/
+.outlookKTS .ktsLI .ktsA:hover
+{
+	color:#819cbf;
+}
+
+
+/*Normal display for unselected first link*/
+.outlookKTS .ktsFirst .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px 3px;
+	
+}
+
+.outlookKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -19px;
+	
+	
+}
+.outlookKTS .ktsLI .ktsSelected .ktsText
+{
+	color:#333;
+}
+/*Normal display for selected first link*/
+.outlookKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -19px;
+}
+
+
+.outlookKTS .ktsLast .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px 3px;
+}
+.outlookKTS .ktsLast .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -19px;
+}
+/*Normal display for tail*/
+.outlookKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% 2pt;
+}
+/*Normal display for tail when selected*/
+.outlookKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% -19px;
+}
+
+.outlookKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% 3px;	
+}
+
+
+/*both*/
+.outlookKTS .ktsA .ktsIn
+{
+	padding:6px 15px 2px 9px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .outlookKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .outlookKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+
+
+.outlookKTS .ktsText
+{
+	padding-left:2px;
+	padding-right:2px;	
+}
+
+.outlookKTS .ktsBreak
+{
+	clear:both;
+	line-height:0px;
+	height:0px;
+	width:0px;
+	border:0px;
+	font-size:0px;
+}
+/*Disable*/
+.outlookKTS .ktsDisable .ktsA
+{
+	cursor:default;	
+}
+.outlookKTS .ktsDisable .ktsA .ktsText,
+.outlookKTS .ktsDisable .ktsA:hover .ktsText
+{
+	color:gray;
+}
+
+
+/*----Default Level 1&2-------------------------------*/
+
+.outlookKTS .ktsLevel1,
+.outlookKTS .ktsLevel2
+{
+	background-color:#fcfcfe;
+}
+.outlookKTS .ktsLevel1 .ktsA,
+.outlookKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.outlookKTS .ktsLevel1 .ktsA,
+.outlookKTS .ktsLevel1 .ktsOut,
+.outlookKTS .ktsLevel2 .ktsA,
+.outlookKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.outlookKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.outlookKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:underline;
+}
+
+.outlookKTS .ktsLevel1 .ktsSelected .ktsText,
+.outlookKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}
+
+/*-----For Left Position-------------------*/
+.outlookleftKTS
+{
+	line-height:16px;
+	background:url(v_bg.gif) no-repeat 3px 0px;;
+	
+}
+
+.outlookleftKTS .ktsLI
+{
+	float:none;
+}
+
+.outlookleftKTS .ktsLI .ktsA
+{
+	background:none;
+	padding-left:0px;
+	border-right:1px #91a7b4 solid;
+}
+.outlookleftKTS .ktsA .ktsOut
+{
+	background:none;
+	
+}
+
+.outlookleftKTS .ktsFirst .ktsA
+{
+}
+
+
+.outlookleftKTS .ktsLast .ktsOut
+{
+	
+}
+
+.outlookleftKTS .ktsLI .ktsSelected
+{
+	background:transparent url(v.gif) 0px 0px;
+	border-right:1px #fff solid;
+}
+
+.outlookleftKTS .ktsSelected .ktsOut
+{
+	border-right:none;
+}
+
+.outlookleftKTS .ktsA .ktsIn
+{
+	padding:7px 20px 7px 5px;
+	display:block;
+	text-align:right;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.outlookleftKTS .ktsLevel1,
+.outlookleftKTS .ktsLevel2
+{
+	background-color:#fcfcfe;
+}
+
+.outlookleftKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.outlookleftKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:none;
+}
+
+.outlookleftKTS .ktsLevel1 .ktsSelected .ktsText,
+.outlookleftKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Right Position-------------------*/
+/*-----For Right Position-------------------*/
+.outlookrightKTS
+{
+	line-height:16px;
+	background:url(v_bg.gif) no-repeat 100% 0px;;
+}
+
+.outlookrightKTS .ktsLI
+{
+	float:none;
+}
+
+.outlookrightKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:none;
+	border-left:1px #91a7b4 solid;
+}
+.outlookrightKTS .ktsA .ktsOut
+{
+	background:none;	
+}
+
+.outlookrightKTS .ktsFirst .ktsA
+{
+
+}
+
+
+.outlookrightKTS .ktsLast .ktsOut
+{
+}
+
+.outlookrightKTS .ktsLI .ktsSelected
+{
+	background:transparent url(v.gif) no-repeat 100% 0px;
+	border-left:1px #fff solid;
+}
+
+.outlookrightKTS .ktsFirst .ktsSelected
+{
+}
+
+
+.outlookrightKTS .ktsSelected .ktsOut
+{
+}
+
+.outlookrightKTS .ktsA .ktsIn
+{
+	padding:7px 5px 7px 20px;
+	display:block;
+	text-align:left;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.outlookrightKTS .ktsLevel1,
+.outlookrightKTS .ktsLevel2
+{
+	background-color:#fcfcfe;
+}
+
+.outlookrightKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.outlookrightKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:none;
+}
+
+.outlookrightKTS .ktsLevel1 .ktsSelected .ktsText,
+.outlookrightKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Bottom Position-------------------*/
+/*-----For Bottom Position-------------------*/
+
+
+/*Normal display*/
+.outlookbottomKTS .ktsLI .ktsA
+{
+	background:transparent url(t.gif) no-repeat 0px -66px;
+}
+
+
+/*Normal display for unselected first link*/
+.outlookbottomKTS .ktsFirst .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0 -66px;
+}
+
+.outlookbottomKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -46px;
+}
+
+/*Normal display for selected first link*/
+.outlookbottomKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat scroll 0 -46px;
+}
+
+
+/*Normal display for tail*/
+.outlookbottomKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% -66px;
+}
+/*Normal display for tail when selected*/
+.outlookbottomKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -46px;
+}
+
+.outlookbottomKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -66px;	
+}
+
+/*both*/
+.outlookbottomKTS .ktsA .ktsIn
+{
+	padding:3px 15px 3px 5px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .outlookbottomKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .outlookKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+/*----Default Bottom 1&2-------------------------------*/
+
+.outlookbottomKTS .ktsLevel1,
+.outlookbottomKTS .ktsLevel2
+{
+	background-color:#fcfcfe;
+}
+.outlookbottomKTS .ktsLevel1 .ktsA,
+.outlookbottomKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.outlookbottomKTS .ktsLevel1 .ktsA,
+.outlookbottomKTS .ktsLevel1 .ktsOut,
+.outlookbottomKTS .ktsLevel2 .ktsA,
+.outlookbottomKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.outlookbottomKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.outlookbottomKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:underline;
+}
+
+.outlookbottomKTS .ktsLevel1 .ktsSelected .ktsText,
+.outlookbottomKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}

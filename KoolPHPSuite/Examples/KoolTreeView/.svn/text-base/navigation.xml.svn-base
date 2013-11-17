@@ -1,0 +1,91 @@
+<navigation id="KoolTreeView" title="PHP TreeView Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>
+			
+		</category>		
+		<category id="Features" text="Features">
+			<link 	id="Link_Node" 
+					text="Add link to tree node"
+					link="Features/Link_Node/index.php" 
+					new="false"/>
+					
+			<link 	id="Node_Selection" 
+					text="Node selection"
+					link="Features/Node_Selection/index.php" 
+					new="false"/>
+					
+			<link 	id="Node_Text_Editing" 
+					text="Node Text Editing"
+					link="Features/Node_Text_Editing/index.php" 
+					new="false"/>
+					
+			<link 	id="Drag_And_Drop" 
+					text="Drag And Drop"
+					link="Features/Drag_And_Drop/index.php" 
+					new="true"/>
+
+			<link 	id="Dynamic_Loading" 
+					text="Dynamic Loading"
+					link="Features/Dynamic_Loading/index.php" 
+					new="true"/>
+					
+			<link 	id="Node_Data" 
+					text="Attach Data To TreeNode"
+					link="Features/Node_Data/index.php" 
+					new="false"/>
+					
+			<link 	id="ShowLines" 
+					text="Show Lines"
+					link="Features/ShowLines/index.php" 
+					new="false"/>
+					
+			<link 	id="SingleExpand" 
+					text="Single Expand"
+					link="Features/SingleExpand/index.php" 
+					new="false"/>
+					
+			<link 	id="State_Persistence" 
+					text="State persistence"
+					link="Features/State_Persistence/index.php" 
+					new="true"/>
+					
+		</category>
+		
+		<category id="Client_Side_API" text="Client-Side API">
+			<link 	id="RegisterEvent" 
+					text="Register Event"
+					link="Client_Side_API/RegisterEvent/index.php" 
+					new="false"/>		
+						
+			<link 	id="Add_Remove_Expand_Collapse_Node" 
+					text="Add/Remove/Expand/Collapse Node"
+					link="Client_Side_API/Add_Remove_Expand_Collapse_Node/index.php" 
+					new="true"/>	
+									
+		</category>
+		<category id="Advances" text="Advances">
+			<link 	id="Reorder_By_Drag_And_Drop" 
+					text="Reorder By Drag And Drop"
+					link="Advances/Reorder_By_Drag_And_Drop/index.php" 
+					new="false"/>
+					
+			<link 	id="TreeView_With_CheckBox" 
+					text="TreeView With CheckBox"
+					link="Advances/TreeView_With_CheckBox/index.php" 
+					new="true"/>	
+												
+			<link 	id="State_Persistent_With_Database" 
+					text="State Persistent With Database"
+					link="Advances/State_Persistent_With_Database/index.php" 
+					new="true"/>								
+		</category>
+		
+		
+	</category>
+</navigation>

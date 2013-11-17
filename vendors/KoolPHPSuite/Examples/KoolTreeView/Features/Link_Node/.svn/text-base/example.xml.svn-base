@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Link_Node" usedb="false">
+	<title>Add link to tree node</title>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview, treeview drag and drop, php treeview mysql, kooltreeview</metakeywords>	 
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<description>
+		<![CDATA[ 
+This example shows you how to add link to a tree node.
+Basically you can put any HTML string to tree node with single powerful Add() function.
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTreeView/kooltreeview.php";
+		
+	$treeview = new KoolTreeView("treeview");
+	$treeview->scriptFolder = $KoolControlsFolder."/KoolTreeView";
+	$treeview->imageFolder=$KoolControlsFolder."/KoolTreeView/icons";
+	$treeview->styleFolder="default";
+	$treeview->showLines = true;
+	
+	
+	$root = $treeview->getRootNode();
+	$root->text = "Link Node";
+	$root->expand=true;
+	$root->image="xpNetwork.gif";
+	$treeview->Add("root","links","Links",true,"square_blueS.gif","");
+
+	$treeview->Add("links","google","<a href='http://www.google.com' target='_blank'>Google.Com</a>",true,"ball_glass_redS.gif","");
+	$treeview->Add("links","php","<a href='http://www.php.net' target='_blank'>PHP.Net</a>",true,"ball_glass_redS.gif","");
+	$treeview->Add("links","koolphp","<a href='http://www.koolphp.net' target='_blank'>KoolPHP HomePage</a>",true,"ball_glass_redS.gif","");
+	
+	
+	$treeview->Add("root","javascript","Javascript",true,"square_greenS.gif","");
+	$treeview->Add("javascript","sayhello","<a href=\"javascript:alert('Hello world!')\">Say Hello</a>",true,"triangle_redS.gif","");
+	
+		
+	
+?>
+
+	
+<div style="padding:10px;">
+	<?php echo $treeview->Render();?>
+</div>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/PHP/KoolTreeView_Class/index.php#Add">KoolTreeView :: Add()</doc>
+	</docs>
+</example>

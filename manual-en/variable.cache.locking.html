@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$cache_locking</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.variables.html" title="Chapter 13. Smarty Class Variables">
+<link rel="prev" href="variable.cache.lifetime.html" title="$cache_lifetime">
+<link rel="next" href="variable.cache.modified.check.html" title="$cache_modified_check">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">$cache_locking</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="variable.cache.lifetime.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 13. Smarty Class Variables</th>
+<td width="20%" align="right"> <a accesskey="n" href="variable.cache.modified.check.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="$cache_locking">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="variable.cache.locking"></a>$cache_locking</h2></div></div></div>
+<p>
+        Cache locking avoids concurrent cache generation. This means resource intensive pages can be generated only once, 
+        even if they've been requested multiple times in the same moment.
+       </p>
+<p>
+        Cache locking is disabled by default. To enable it set <code class="varname">$cache_locking</code> to <code class="constant">TRUE</code>. 
+       </p>
+<p>
+       See also
+       <a class="link" href="variable.locking.timeout.html" title="$locking_timeout"><code class="varname">$locking_timeout</code></a>
+      </p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="variable.cache.lifetime.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.variables.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="variable.cache.modified.check.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">$cache_lifetime </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> $cache_modified_check</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

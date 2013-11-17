@@ -1,0 +1,417 @@
+.office2010silverKLB
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;	
+}
+
+
+.office2010silverKLB_Scrollable .klbGroup
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #9AA0A6;
+	overflow: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.office2010silverKLB .klbList
+{
+    height: 100%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.office2010silverKLB .klbItem
+{
+	line-height: 18px;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    cursor: default;
+    padding: 2px 5px;
+    white-space: nowrap;	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 		
+}
+
+.office2010silverKLB .klbDisabledItem 
+{
+	color: #AAAAAA;
+}
+.office2010silverKLB .klbGroup .klbHovered
+{
+    background: none repeat scroll 0 0 #FAE185;
+    color: #000000;
+}
+
+.office2010silverKLB .klbGroup .klbSelected {
+    background: none repeat scroll 0 0 #FFD86B;
+    color: #000000;
+}
+
+.office2010silverKLB .klbGroup .klbActive {
+    border: 1px dotted #555555;
+    padding: 1px 4px;
+}
+
+.office2010silverKLB .klbItem .klbText,
+.office2010silverKLB .klbItem .klbCheck,
+.office2010silverKLB .klbItem .klbImage
+{
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.office2010silverKLB .klbItem .klbImage
+{
+	padding-right:2px;
+}
+
+.office2010silverKLB .klbButtonAreaRight
+{
+	float:right;
+	width:30px;
+	height:100%;
+}
+
+.office2010silverKLB .klbButtonAreaLeft
+{
+	float:left;
+	width:30px;
+	height:100%;
+}
+
+.office2010silverKLB .klbButtonAreaTop,
+.office2010silverKLB .klbButtonAreaBottom
+{
+	float:left;
+	width:100%;
+	height:30px;
+}
+.office2010silverKLB .klbAlignLeft
+{
+	text-align:left;
+}
+.office2010silverKLB .klbAlignRight
+{
+	text-align:right;
+}
+.office2010silverKLB .klbAlignCenter
+{
+	text-align:center;
+}
+
+.office2010silverKLB .klbAlignTop td
+{
+	vertical-align:top;
+}
+.office2010silverKLB .klbAlignBottom td
+{
+	vertical-align:bottom;
+}
+.office2010silverKLB .klbAlignMiddle td
+{
+	vertical-align:middle;
+}
+
+
+
+
+.office2010silverKLB .klbButton
+{
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    line-height: 15px;
+    margin: 0 0 5px 6px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+.office2010silverKLB .klbButtonAreaLeft .klbButton
+{
+	margin: 0 6px 5px 0;
+}
+.office2010silverKLB .klbButtonAreaTop .klbButton
+{
+	display:inline-block;	
+	margin: 0 8px 6px 0;
+}
+.office2010silverKLB .klbButtonAreaBottom .klbButton
+{
+	display:inline-block;
+	margin: 6px 8px 0 0;
+}
+
+.office2010silverKLB .klbAlignBottom .klbButton
+{
+	margin-bottom:2px;
+	margin-top:5px;
+}
+.office2010silverKLB .klbAlignRight .klbButton
+{
+	margin-left:4px;
+	margin-right:4px;
+}
+
+
+
+.office2010silverKLB .klbButton .klbButtonBL,
+.office2010silverKLB .klbButton .klbButtonBR,
+.office2010silverKLB .klbButton .klbButtonTR,
+.office2010silverKLB .klbButton .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	display: inline-block;
+	position: relative;
+	width: auto;	
+}
+
+.office2010silverKLB .klbButton:hover .klbButtonBL,
+.office2010silverKLB .klbButton:hover .klbButtonBR,
+.office2010silverKLB .klbButton:hover .klbButtonTR,
+.office2010silverKLB .klbButton:hover .klbButtonTL
+{
+	background-image: url(ButtonHover.png);
+}
+
+.office2010silverKLB .klbDisabled:hover .klbButtonBL,
+.office2010silverKLB .klbDisabled:hover .klbButtonBR,
+.office2010silverKLB .klbDisabled:hover .klbButtonTR,
+.office2010silverKLB .klbDisabled:hover .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	cursor:default;
+}
+
+.office2010silverKLB .klbButton .klbButtonBL
+{
+    background-position: 0 100%;
+    right: 0;
+    top: 4px;	
+}
+
+.office2010silverKLB .klbButton .klbButtonBR
+{
+    background-position: 100% 100%;
+    display: inline-block;
+    right: -4px;
+}
+.office2010silverKLB .klbButton .klbButtonTR
+{
+    background-position: 100% 0;
+    bottom: 4px;
+    overflow: visible;
+    right: 0;	
+}
+.office2010silverKLB .klbButton .klbButtonTL
+{
+    background-position: 0 0;
+    left: -4px;
+}
+
+
+.office2010silverKLB .klbButton .klbButtonText
+{
+    background: url(Sprite.png) no-repeat;
+    display: inline-block;
+	position: relative;
+    width: 0px;
+    padding-left: 18px;
+	height:13px;
+	padding-top: 3px;
+    text-align: left;
+    z-index: 1;
+	font-size: 0;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;	   
+}
+
+/*Default and right*/
+.office2010silverKLB .klbDelete .klbButtonText
+{
+   background-position: 0 -50px;
+}
+.office2010silverKLB .klbMoveUp .klbButtonText
+{
+  background-position: 0 0;
+}
+.office2010silverKLB .klbMoveDown .klbButtonText
+{
+  background-position: 0 -25px;
+}
+
+.office2010silverKLB .klbTransferOut .klbButtonText
+{
+  background-position: 0 -75px;
+}
+.office2010silverKLB .klbTransferIn .klbButtonText
+{
+  background-position: 0px -100px;
+}
+
+.office2010silverKLB .klbTransferAllOut .klbButtonText
+{
+  background-position: 0 -125px;
+}
+.office2010silverKLB .klbTransferAllIn .klbButtonText
+{
+  background-position: 0px -150px;
+}
+
+
+
+.office2010silverKLB .klbDeleteDisabled .klbButtonText
+{
+   background-position: -200px -50px;
+}
+.office2010silverKLB .klbMoveUpDisabled .klbButtonText
+{
+  background-position: -200px 0;
+}
+.office2010silverKLB .klbMoveDownDisabled .klbButtonText
+{
+  background-position: -200px -25px;
+}
+
+.office2010silverKLB .klbTransferOutDisabled .klbButtonText
+{
+  background-position: -200px -75px;
+}
+.office2010silverKLB .klbTransferInDisabled .klbButtonText
+{
+  background-position: -200px -100px;
+}
+
+.office2010silverKLB .klbTransferAllOutDisabled .klbButtonText
+{
+  background-position: -200px -125px;
+}
+.office2010silverKLB .klbTransferAllInDisabled .klbButtonText
+{
+  background-position: -200px -150px;
+}
+
+/*Left*/
+.office2010silverKLB .klbButtonAreaLeft .klbTransferOut .klbButtonText
+{
+	background-position: 0px -100px;
+  
+}
+.office2010silverKLB .klbButtonAreaLeft .klbTransferIn .klbButtonText
+{
+	background-position: 0 -75px;
+}
+.office2010silverKLB .klbButtonAreaLeft .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -150px;
+}
+.office2010silverKLB .klbButtonAreaLeft .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -125px;
+}
+
+
+.office2010silverKLB .klbButtonAreaLeft .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -100px;
+}
+.office2010silverKLB .klbButtonAreaLeft .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -75px;
+}
+
+.office2010silverKLB .klbButtonAreaLeft .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -150px;
+}
+.office2010silverKLB .klbButtonAreaLeft .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -125px;
+}
+
+/*Top*/
+.office2010silverKLB .klbButtonAreaTop .klbTransferOut .klbButtonText
+{
+	background-position: 0px -200px;
+  
+}
+.office2010silverKLB .klbButtonAreaTop .klbTransferIn .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.office2010silverKLB .klbButtonAreaTop .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -250px;
+}
+.office2010silverKLB .klbButtonAreaTop .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -225px;
+}
+
+
+.office2010silverKLB .klbButtonAreaTop .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+.office2010silverKLB .klbButtonAreaTop .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+
+.office2010silverKLB .klbButtonAreaTop .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}
+.office2010silverKLB .klbButtonAreaTop .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+
+
+/*Bottom*/
+.office2010silverKLB .klbButtonAreaBottom .klbTransferOut .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.office2010silverKLB .klbButtonAreaBottom .klbTransferIn .klbButtonText
+{
+	background-position: 0px -200px;
+}
+.office2010silverKLB .klbButtonAreaBottom .klbTransferAllOut .klbButtonText
+{
+	background-position: 0 -225px;
+}
+.office2010silverKLB .klbButtonAreaBottom .klbTransferAllIn .klbButtonText
+{
+	background-position: 0px -250px;
+}
+
+
+.office2010silverKLB .klbButtonAreaBottom .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+.office2010silverKLB .klbButtonAreaBottom .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+
+.office2010silverKLB .klbButtonAreaBottom .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+.office2010silverKLB .klbButtonAreaBottom .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}

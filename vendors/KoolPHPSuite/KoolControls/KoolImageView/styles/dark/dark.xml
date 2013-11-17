@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<template>
+  <zoompanel>
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td>
+          <div class="kivTopLeft"> </div>
+        </td>
+        <td>
+          <div class="kivTopCenter"> </div>
+        </td>
+        <td>
+          <div class="kivTopRight"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="kivMiddleLeft"></td>
+        <td style="background:black;" align="left">
+          <div>
+            {BigImage}
+          </div>
+          <div class="kivDescriptionCover">
+            <span class="kivOpacityRender">{Description} </span>
+          </div>
+        </td>
+        <td class="kivMiddleRight"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="kivBottomLeft"> </div>
+        </td>
+        <td>
+          <div class="kivBottomCenter"> </div>
+        </td>
+        <td>
+          <div class="kivBottomRight"> </div>
+        </td>
+      </tr>
+    </table>
+  </zoompanel>
+  <loading>
+    Loading...
+  </loading>
+  <effectpanel>
+    <div class="kivEffectPanelTop"> </div>
+  </effectpanel>
+  <background></background>
+</template>

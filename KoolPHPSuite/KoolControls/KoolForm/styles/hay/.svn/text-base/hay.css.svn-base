@@ -1,0 +1,633 @@
+.hayKFR,
+.hayKFR input,
+.hayKFR select
+
+{
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color: #000000;
+}
+
+
+.kfrRoundCorner
+{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+	border-radius:4px;	
+}
+
+/*Headings*/
+.hayKFR h1.kfrH1
+{
+	font-size:16px;
+}
+.hayKFR h2.kfrH2
+{
+	font-size:15px;
+}
+.hayKFR h3.kfrH3
+{
+	font-size:14px;
+}
+.hayKFR h4.kfrH4
+{
+	font-size:13px;
+}
+.hayKFR h5.kfrH5
+{
+	font-size:12px;
+}
+/*FieldSet*/
+.hayKFR .kfrFieldSet
+{
+    background-image: url(FieldsetBgr.png);
+    border: 1px solid #E0E0E0;
+	background-repeat:no-repeat;
+}
+.hayKFR .kfrFieldSet legend
+{
+	padding-left:3px;
+	padding-right:3px;
+	color: #000000;
+}
+
+/*Start:------FieldSet in IE*/
+.hayKFR table.kfrRoundedWrapper_FieldSet
+{
+	display:inline-block;
+	_display:inline;
+}
+.hayKFR table.kfrRoundedWrapper_FieldSet td
+{
+	vertical-align:middle;
+}
+.hayKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;	
+	background-color:#E0E0E0;
+}
+.hayKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;	
+	background-image: url(FieldsetBgr.png);
+	border-top:1px solid #E0E0E0;
+	border-bottom:1px solid #E0E0E0;
+}
+.hayKFR table.kfrRoundedWrapper_FieldSet .kfrFieldSet
+{
+	background-position:0px 7px;	
+}
+/*End:------FieldSet in IE*/
+
+/*Label*/
+.hayKFR .kfrLabel
+{
+	margin-left:2px;
+	margin-right:2px;	
+}
+.hayKFR .kfrDisabled
+{
+	color:#9F9F9F;
+}
+
+/*Validator*/
+.hayKFR .kfrValidator
+{
+	margin-left:5px;
+	margin-right:5px;	
+	color:red;
+}
+
+
+/*KoolTextBox*/
+.hayKFR .kfrTextBox
+{
+    background-color: #FFFFFF;
+    border: 1px solid #ABADB3;
+    height: auto;
+    line-height: normal;
+    padding: 2px 2px 3px;	
+}
+
+.hayKFR .kfrTextBox:hover,
+.hayKFR .kfrTextBox:focus
+{
+    border: 1px solid #44A41F;
+}
+
+
+.hayKFR .kfrEmpty .kfrTextBox
+{
+	color:#9F9F9F;
+}
+
+.hayKFR .kfrTable
+{
+	vertical-align: bottom;
+    border-collapse: collapse;
+    border-width: 0;	
+}
+
+
+.hayKFR .kfrTextBoxWrapper
+{
+	display:inline-block;
+	vertical-align:middle;	
+}
+
+
+
+
+/*Start:----------------------------TextBox in IE*/
+.hayKFR .kfrRoundedWrapper
+{
+	border:0px !important;
+	display:inline-block;
+	vertical-align:middle;
+	vertical-align: bottom;
+    border-collapse: collapse;
+	_display:inline;
+}
+
+.hayKFR .kfrRoundedWrapper td
+{
+	border:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+
+
+.hayKFR table.kfrRoundedWrapper div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;
+	background-color:#ABADB3;
+}
+.hayKFR table.kfrRoundedWrapper div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;
+	background-color:#FFFFFF;
+	border-top:1px solid #ABADB3;
+	border-bottom:1px solid #ABADB3;
+	background-image:none;
+}
+
+.hayKFR table.kfrRoundedWrapper:hover div.kfrRoundedOuter,
+.hayKFR table.kfrFocus div.kfrRoundedOuter
+{
+	background-color:#44A41F !important;
+}
+.hayKFR table.kfrRoundedWrapper:hover div.kfrRoundedInner,
+.hayKFR table.kfrFocus div.kfrRoundedInner
+{
+	border-top-color:#44A41F !important;
+	border-bottom-color:#44A41F !important;
+}
+/*End:----------------------------TextBox in IE*/
+
+
+/*KoolNumericTextBox*/
+.hayKFR .kfrTable .kfrSpinUp,
+.hayKFR .kfrTable .kfrSpinDown
+{
+    height: 7px;
+    line-height: 7px;
+    width: 15px;
+    display: block;
+    outline: medium none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -2222px;
+    z-index: 2;
+	cursor:pointer;
+}
+
+
+
+.hayKFR .kfrTable .kfrSpinUp
+{
+	background-position: 4px -98px;
+	background-image:url(sprite.gif);
+}
+.hayKFR .kfrTable .kfrSpinUp:hover
+{
+	background-position: 4px -148px;
+}
+
+.hayKFR .kfrTable .kfrSpinDown
+{
+	margin-top: 3px;
+	background-position: 4px -199px;
+	background-image:url(sprite.gif);
+}
+.hayKFR .kfrTable .kfrSpinDown:hover
+{
+	background-position: 4px -249px;
+}
+
+/*KoolPasswordTextBox*/
+.hayKFR .kfrIndicator
+{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+	margin:0px 10px 0px 10px;
+	padding:3px 5px 3px 5px;
+	border-radius:4px;
+}
+.hayKFR .kfrIndicator_Score_0
+{
+	display:none;
+}
+.hayKFR .kfrIndicator_Score_1
+{
+	background:#FF7553;
+}
+.hayKFR .kfrIndicator_Score_2
+{
+	background:#FFEDA4;
+}
+.hayKFR .kfrIndicator_Score_3
+{
+	background:#93C9FF;
+}
+.hayKFR .kfrIndicator_Score_4
+{
+	background:#6CFF92;
+}
+.hayKFR .kfrIndicator_Score_5
+{
+	background:#20FF58;
+}
+
+
+
+/*KoolCheckBox*/
+.hayKFR .kfrHide
+{
+	position:absolute;
+	left:-9999px;
+}
+.hayKFR .kfrCheckBox .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(CheckBoxSprites.gif);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.hayKFR .kfrCheckBox .kfrOver
+{
+	background-position:-3px -203px;
+}
+.hayKFR .kfrCheckBoxSelected .kfrSub
+{
+	background-position:-3px -423px;
+}
+.hayKFR .kfrCheckBoxSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.hayKFR .kfrCheckBox .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.hayKFR .kfrCheckBoxSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolRadioButton*/
+.hayKFR .kfrRadio .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(RadioSprites.png);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.hayKFR .kfrRadio .kfrOver
+{
+	background-position:-3px -223px;
+}
+.hayKFR .kfrRadioSelected .kfrSub
+{
+	background-position:-3px -443px;
+}
+.hayKFR .kfrRadioSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.hayKFR .kfrRadio .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.hayKFR .kfrRadioSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolDropDownList*/
+.hayKFR .kfrRealDropDown
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+	height:22px;
+	position:relative;
+}
+/*Safari*/
+body:nth-of-type(1) .hayKFR .kfrRealDropDown
+{
+	line-height:18px;
+}
+.hayKFR .kfrDropDownList
+{
+	display:inline-block;
+	padding-right:1px;
+	cursor:default;
+	overflow:hidden;
+	vertical-align:middle;
+}
+
+.hayKFR .kfrOut
+{
+	display:inline-block;
+	position:relative;
+	background-image:url(ComboSprites.gif);
+	height:22px;
+}
+
+
+
+.hayKFR .kfrDropDownList .kfrSub
+{
+	position:absolute;
+	float:left;
+	left:0px;
+	height:22px;
+	padding-left:4px;
+	overflow:hidden;
+	line-height:22px;
+}
+.hayKFR .kfrDropDownList .kfrArrow
+{
+	position:absolute;
+	display:inline-block;
+	float:right;
+	height:22px;
+	width:22px;
+	height:22px;
+	background-image:url(ComboSprites.gif);
+ 	background-position: right -22px;
+	right:-1px;
+}
+.hayKFR .kfrDropDownList:hover .kfrOut
+{
+ 	background-position: 0 -44px;
+}
+
+.hayKFR .kfrDropDownList:hover .kfrArrow
+{
+ 	background-position: right -66px;
+}
+
+.hayKFR .kfrDropDownList .kfrDisabled
+{
+	background-position: 0 -176px !important;
+}
+.hayKFR .kfrDropDownList .kfrDisabled .kfrArrow
+{
+	background-position: right -198px;
+}
+.hayKFR .kfrDropDownList .kfrDisabled .kfrSub
+{
+	color:#9F9F9F;
+}
+
+
+
+/*KoolButton*/
+.hayKFR a.kfrButtonWrapper
+{
+	background-image: url(ButtonSprites.gif);	
+    background-color: transparent;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; 
+	vertical-align:middle;
+	cursor:pointer;     
+}
+
+.hayKFR a.kfrButtonWrapper span.kfrOut 
+{
+	background-image: url(ButtonSprites.gif);
+    background-color: transparent;
+    background-position: left -22px;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;    
+	margin-right:4px;
+}
+
+
+.hayKFR a.kfrButtonWrapper input.kfrButton
+{
+	background:none;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    outline: medium none;
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 6px;
+   	padding-bottom:1px;
+    text-align: center;
+	vertical-align:middle;
+	color: #045100;
+}
+
+.hayKFR a.kfrButtonWrapper:hover
+{
+	background-position: right -44px;
+}
+.hayKFR a.kfrButtonWrapper:hover span.kfrOut
+{
+	background-position: left -66px;
+}
+
+.hayKFR a.kfrButtonDown:hover 
+{
+	background-position: right -88px;
+}
+.hayKFR a.kfrButtonDown:hover span.kfrOut
+{
+	background-position: left -110px;
+}
+
+.hayKFR a.kfrButtonWrapper span.kfrLeftImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	left:5px;
+}
+
+.hayKFR a.kfrButtonWrapper span.kfrSpaceLeft .kfrButton
+{
+	padding-left:22px;
+}
+
+.hayKFR a.kfrButtonWrapper span.kfrRightImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	right:2px;
+}
+
+.hayKFR a.kfrButtonWrapper span.kfrSpaceRight .kfrButton
+{
+	padding-right:22px;
+}
+.hayKFR a.kfrButtonWrapper span.kfrSpaceBoth .kfrButton
+{
+	padding-left:22px;
+	padding-right:22px;
+}
+/*KoolLinkButton*/
+.hayKFR span.kfrButton
+{
+    line-height: 22px;
+}
+.hayKFR a.kfrButtonWrapper
+{
+	outline:none;
+}
+.hayKFR  a.kfrButtonLink
+{
+	background-image:none;
+    border: 1px solid #EEEEEE;
+    color: #045100;
+    text-decoration: none;	
+}
+.hayKFR a.kfrButtonLink:hover
+{
+	background-color:#D7FABC;
+}
+.hayKFR  a.kfrButtonLink span.kfrOut
+{
+	background-image:none;	
+}
+.hayKFR a.kfrButtonLink:active
+{
+	background-color:#D7FABC;
+}
+
+/*KoolSplitButton*/
+.hayKFR a.kfrSplitButton span.kfrOut
+{
+	margin-right:18px;
+}
+.hayKFR a.kfrSplitButton span.kfrSplitRight
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -137px;
+    right: 0;
+	top:0;	
+	height: 100%;
+	width:18px;
+	display:block;
+	position:absolute;
+}
+.hayKFR a.kfrSplitButton span.kfrSplitRight:hover
+{
+    background-position: -18px -137px;
+}
+
+.hayKFR a.kfrSplitArrowDown span.kfrSplitRight:hover
+{
+	background-position: -36px -137px;
+}
+
+
+.hayKFR a.kfrSplitButton div.kfrSplitButtonContainer
+{
+	position:absolute;
+	top:22px;
+	left:0px;
+}
+.hayKFR div.kfrSplitButtonContainer div.kfrContainerInner
+{
+	border-radius:3px;
+	border:solid 1px #898772;
+	background-color:#EEEEDD;
+}
+
+
+
+.hayKFR div.kfrSplitButtonContainer div.kfrOutter
+{
+	margin:1px;
+}
+.hayKFR div.kfrSplitButtonContainer div.kfrOutter:hover
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 100% -44px;
+	background-repeat:no-repeat;
+}
+
+.hayKFR div.kfrSplitButtonContainer div.kfrInner
+{
+	position:relative;
+	text-align:left;
+	margin-right:4px;
+}
+.hayKFR div.kfrOutter:hover div.kfrInner
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -66px;
+	background-repeat:no-repeat;
+}
+
+.hayKFR div.kfrSplitButtonContainer span.kfrLeftImage
+{
+	left:4px;
+}
+
+
+.hayKFR div.kfrInner span.kfrText
+{
+	color: #3B3B3B;
+	background:none;
+    border: 0 none;
+    line-height: 22px;
+    margin-left: 24px;
+	padding-right:20px;
+}
+
+

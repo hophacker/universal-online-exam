@@ -1,0 +1,15 @@
+<control>
+	<name>KoolImageView - PHP Image View</name>
+	<metadescription>KoolImageView provides FREE and PERFECT solution for image detail view in your PHP online store or images collection. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php image view, php image zoom</metakeywords>	 
+	<description>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</description>
+	<examples>
+		<example	name="With Database" 
+					link="Advances/With_Database/index.php" 
+					image="Advances/With_Database/preview.gif"/>
+
+		<example	name="ImageView Effects" 
+					link="Features/Effects/index.php" 
+					image="Features/Effects/preview.gif"/>
+	</examples>			
+</control>

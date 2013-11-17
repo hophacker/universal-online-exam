@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache
+END
+CacheXcache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheXcache.class.php
+END
+CacheSqlite.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheSqlite.class.php
+END
+CacheWincache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheWincache.class.php
+END
+CacheMemcache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheMemcache.class.php
+END
+CacheApc.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheApc.class.php
+END
+CacheDb.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheDb.class.php
+END
+CacheRedis.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheRedis.class.php
+END
+CacheShmop.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheShmop.class.php
+END
+CacheApachenote.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheApachenote.class.php
+END
+CacheEaccelerator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/dxks/!svn/ver/130/yangda/doc/ThinkPHP/Extend/Driver/Cache/CacheEaccelerator.class.php
+END

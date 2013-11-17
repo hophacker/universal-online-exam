@@ -1,0 +1,204 @@
+.defaultKCB *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+	text-align:left;	
+}
+.defaultKCB table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.defaultKCB .kcbUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.defaultKCB .kcbLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.defaultKCB .kcbCombobox
+{
+	border:solid 1px #7F9DB9;
+	background:white;
+}
+
+.defaultKCB .kcbArrow
+{
+	border:none;
+	width:20px;
+	height:20px;
+	background:url(arrow.gif) 2px;
+}
+
+.defaultKCB .kcbOver .kcbArrow
+{
+	background:url(arrow_over.gif) 2px;
+}
+
+.defaultKCB .kcbDown .kcbArrow
+{
+	background:url(arrow_down.gif) 2px;
+}
+
+
+.defaultKCB .kcbCombobox .kcbInput
+{
+	border:none;
+	background:white;
+	width:100%;
+	cursor:default;
+	overflow:hidden;
+}
+
+/*Box*/
+
+
+.defaultKCB .kcbBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border-top:solid 1px #7F9DB9;
+	border-left:solid 1px #7F9DB9;	
+	border-bottom:solid 1px black;
+	border-right:solid 1px black;
+	background-color:white;
+	z-index:9999;
+}
+
+.defaultKCB .kcbIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.defaultKCB .kcbItemBox
+{
+	overflow:auto;
+}
+
+.defaultKCB .kcbItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .defaultKCB .kcbItem
+{
+	display:block;
+}
+
+
+.defaultKCB .kcbOpen .kcbBox
+{
+	display:block;
+	overflow:hidden;
+}
+
+.defaultKCB .kcbOpen .kcbIframe
+{
+	display:block;
+}
+
+.defaultKCB .kcbIn
+{
+	display:block;
+}
+
+.defaultKCB .kcbA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.defaultKCB .kcbA:focus
+{
+	outline:none;
+}
+
+
+.defaultKCB .kcbItem .kcbIn img
+{
+	border:0px;
+}
+
+
+.defaultKCB .kcbItem .kcbIn
+{
+	color:black;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+}
+
+
+
+.defaultKCB .kcbSelectFocus .kcbIn
+{
+	background-color:#316AC5;
+	color:white;
+}
+
+/*Disable Item*/
+.defaultKCB .kcbDisable .kcbIn
+{
+	color:gray;
+}
+
+.defaultKCB .kcbDisable a.kcbA:hover .kcbIn
+{
+	background:none;
+	color:gray;
+}
+
+.defaultKCB .kcbDisable a.kcbA:focus
+{
+	outline: none;
+}
+
+
+.defaultKCB .kcbLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.defaultKCB .kcbHeader,
+.defaultKCB .kcbFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+
+
+/*Textbox settings*/
+.defaultKCB .kcbTextbox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.defaultKCB .kcbTextbox .kcbInput
+{
+	width:100%;
+	border:none;
+	background:white;	
+	height:18px;
+}

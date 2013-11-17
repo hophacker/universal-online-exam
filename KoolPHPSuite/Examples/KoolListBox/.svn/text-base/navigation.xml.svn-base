@@ -1,0 +1,54 @@
+<navigation id="KoolListBox" title="Advanced PHP ListBox">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>
+		</category>		
+
+		<category id="Features" text="Features">
+			<link 	id="AllowMultiSelect" 
+					text="AllowMultiSelect"
+					link="Features/AllowMultiSelect/index.php" 
+					new="false"/>
+
+			<link 	id="CheckBoxes" 
+					text="CheckBoxes"
+					link="Features/CheckBoxes/index.php" 
+					new="false"/>
+			<link 	id="ButtonSettings" 
+					text="Button Settings"
+					link="Features/ButtonSettings/index.php" 
+					new="false"/>
+			<link 	id="TextWithIcon" 
+					text="TextWithIcon"
+					link="Features/TextWithIcon/index.php" 
+					new="false"/>
+			<link 	id="Transfer" 
+					text="Transfer"
+					link="Features/Transfer/index.php" 
+					new="false"/>
+
+			<link 	id="Reorder" 
+					text="Reorder"
+					link="Features/Reorder/index.php" 
+					new="false"/>
+
+			<link 	id="ItemTemplate" 
+					text="ItemTemplate"
+					link="Features/ItemTemplate/index.php" 
+					new="false"/>
+		</category>		
+
+		<category id="Client_Side" text="Client-Side">
+			<link 	id="Client_Side_Events" 
+					text="Client-Side Events"
+					link="Client_Side/Client_Side_Events/index.php" 
+					new="false"/>
+		</category>	
+
+
+	</category>
+</navigation>

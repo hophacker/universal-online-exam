@@ -1,0 +1,27 @@
+$(document).ready(function() {
+    $("#postMessage").click(function() {
+    	var title = $("#msgSubject").val();
+    	var type = $("#msgType").val();
+    	var info = CKEDITOR.instances.msgInfo.getData();
+    	if(!checkVar(title)){
+    		artError("请输入通知主题！",function(){
+    			$("#msgSubject").focus();
+    		});
+    		return false;
+    	}
+    	if(!checkVar(info)){
+    		artError("请输入通知内容！");
+    	}
+    	artConfirm("您确认发布这条通知吗？",function(){
+    		$.post($("#form").attr("action"),{"title":title,"info":info,"type":type},function(e){
+    	    	if(e.status==1){
+    	    		artSuccess(e.info,0,function(){
+    	    			location.reload();
+    	    		});
+    	    	}else{
+    	    		artError(e.info);
+    	    	}
+    	    }, 'json');
+    	},function(){})
+    });
+});

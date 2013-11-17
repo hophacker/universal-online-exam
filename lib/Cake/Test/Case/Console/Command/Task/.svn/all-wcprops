@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task
+END
+FixtureTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/FixtureTaskTest.php
+END
+ProjectTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/ProjectTaskTest.php
+END
+ExtractTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/ExtractTaskTest.php
+END
+ViewTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/ViewTaskTest.php
+END
+DbConfigTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/DbConfigTaskTest.php
+END
+TemplateTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/TemplateTaskTest.php
+END
+PluginTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/PluginTaskTest.php
+END
+TestTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/TestTaskTest.php
+END
+ModelTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/ModelTaskTest.php
+END
+ControllerTaskTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/Task/ControllerTaskTest.php
+END

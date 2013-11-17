@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Network/Http
+END
+HttpSocketResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Network/Http/HttpSocketResponse.php
+END
+HttpSocket.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Network/Http/HttpSocket.php
+END
+HttpResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Network/Http/HttpResponse.php
+END
+DigestAuthentication.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Network/Http/DigestAuthentication.php
+END
+BasicAuthentication.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Network/Http/BasicAuthentication.php
+END

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Using_Database" usedb="true">
+	<title>Using Database</title>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+The example shows how to build KoolSlideMenu from mySQL data.
+</p>
+<p>
+Below is the sample datatable:
+</p>
+<pre>
+-------------------------------------------------------------------------------------
+|         ID         |      ParentID      |      IsChild       |        Text        |
+-------------------------------------------------------------------------------------
+| addprograms        | systemtasks        | 1                  | Add programs       |
+-------------------------------------------------------------------------------------
+| addusers           | systemtasks        | 1                  | Add Users          |
+-------------------------------------------------------------------------------------
+| Business           | exploresite        | 1                  | Business           |
+-------------------------------------------------------------------------------------
+| buytickets         | exploresite        | 1                  | Buy Tickets        |
+-------------------------------------------------------------------------------------
+| careers            | exploresite        | 1                  | Careers            |
+-------------------------------------------------------------------------------------
+| changesettings     | systemtasks        | 1                  | Change settings    |
+-------------------------------------------------------------------------------------
+| companyhome        | root               | 0                  | Company Home       |
+-------------------------------------------------------------------------------------
+| ControlPanel       | otherplaces        | 1                  | Control Panel      |
+-------------------------------------------------------------------------------------
+| DiscussionCent     | resources          | 1                  | Discussion Center  |
+-------------------------------------------------------------------------------------
+| downloads          | companyhome        | 1                  | Downloads          |
+-------------------------------------------------------------------------------------
+| Enewsletters       | resources          | 1                  | E-Newsletters      |
+-------------------------------------------------------------------------------------
+| entertainment      | companyhome        | 1                  | Entertainment      |
+-------------------------------------------------------------------------------------
+| exploresite        | root               | 0                  | Explore Site       |
+-------------------------------------------------------------------------------------
+| games              | companyhome        | 1                  | Games              |
+-------------------------------------------------------------------------------------
+| greetingcards      | companyhome        | 1                  | Greeting Cards     |
+-------------------------------------------------------------------------------------
+| MyDocuments        | otherplaces        | 1                  | My Documents       |
+-------------------------------------------------------------------------------------
+| MyNetworkPlaces    | otherplaces        | 1                  | My Network Places  |
+-------------------------------------------------------------------------------------
+| newcars            | companyhome        | 1                  | New cars           |
+-------------------------------------------------------------------------------------
+| OnlineBookLib      | resources          | 1                  | Online Book        |
+-------------------------------------------------------------------------------------
+| OnlineCourses      | resources          | 1                  | Online Courses     |
+-------------------------------------------------------------------------------------
+| otherplaces        | root               | 0                  | Other Places       |
+-------------------------------------------------------------------------------------
+| resources          | root               | 0                  | Resources          |
+-------------------------------------------------------------------------------------
+| SharedDocuments    | otherplaces        | 1                  | Shared Documents   |
+-------------------------------------------------------------------------------------
+| smartstuff         | companyhome        | 1                  | Smart Stuff        |
+-------------------------------------------------------------------------------------
+| systemtasks        | root               | 0                  | System Tasks       |
+-------------------------------------------------------------------------------------
+| viewsysteminfo     | systemtasks        | 1                  | View System info   |
+-------------------------------------------------------------------------------------
+| WhitePapers        | resources          | 1                  | White Papers       |
+-------------------------------------------------------------------------------------
+</pre>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolSlideMenu/koolslidemenu.php";	
+	$ksm = new KoolSlideMenu("ksm");
+	$ksm->scriptFolder =  $KoolControlsFolder."/KoolSlideMenu";	
+	$ksm->styleFolder = $KoolControlsFolder."KoolSlideMenu/styles/bluearrow";
+	$ksm->width="200px";
+	$ksm->singleExpand = true;
+	$ksm->boxHeight = 140;
+	$result = mysql_query("select ID,ParentID,IsChild,Text from tb_SlideMenu");
+	while($row = mysql_fetch_assoc($result))
+	{
+		if($row["IsChild"]==1)
+		{
+			$ksm->addChild($row["ParentID"],$row["ID"],$row["Text"]);
+		}
+		else
+		{
+			$ksm->addParent($row["ParentID"],$row["ID"],$row["Text"]);
+		}
+	}	
+?>
+<form id="form1" method="post">
+	<div style="padding-left:10px;">
+		<?php echo $ksm->Render();?>
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/PHP/KoolSlideMenu_Class/index.php#addParent">PHP :: KoolSlideMenu :: addParent()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/PHP/KoolSlideMenu_Class/index.php#addChild">PHP :: KoolSlideMenu :: addChild()</doc>
+	</docs>		
+</example>

@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>addConfigDir()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="next" href="api.add.plugins.dir.html" title="addPluginsDir()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">addConfigDir()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.functions.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.add.plugins.dir.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="addConfigDir()">
+<a name="api.add.config.dir"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>addConfigDir() — add a directory to the list of directories where config files are stored</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id425884"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">Smarty </span><span class="methodname">addConfigDir</span>(<span class="methodparam"><span class="type">string|array </span><span class="parameter">config_dir</span></span>,<br>                    <span class="methodparam"><span class="type">string </span><span class="parameter">key</span></span>);</code><div class="example">
+<a name="id426235"></a><p class="title"><b>Example 14.1. addConfigDir()</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+// add directory where config files are stored
+$smarty-&gt;addConigDir('./config_1');
+
+// add directory where config files are stored and specify array-key
+$smarty-&gt;addConfigDir('./config_1', 'one');
+
+// add multiple directories where config files are stored and specify array-keys
+$smarty-&gt;addTemplateDir(array(
+    'two' =&gt; './config_2',
+    'three' =&gt; './config_3',
+));
+
+// view the template dir chain
+var_dump($smarty-&gt;getConfigDir());
+
+// chaining of method calls
+$smarty-&gt;setConfigDir('./config')
+       -&gt;addConfigDir('./config_1', 'one')
+       -&gt;addConfigDir('./config_2', 'two');
+
+?&gt;
+
+   </pre></div>
+</div>
+<br class="example-break"><p>
+   See also
+   <a class="link" href="api.get.config.dir.html" title="getConfigDir()"><code class="varname">getConfigDir()</code></a>,
+   <a class="link" href="api.set.config.dir.html" title="setConfigDir()"><code class="varname">setConfigDir()</code></a> and
+   <a class="link" href="variable.config.dir.html" title="$config_dir"><em class="parameter"><code>$config_dir</code></em></a>.
+  </p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.functions.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.add.plugins.dir.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Chapter 14. Smarty Class Methods </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> addPluginsDir()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

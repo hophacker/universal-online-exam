@@ -1,0 +1,492 @@
+ var post_url = 'LoadAndCheck.php';
+$(document).ready(function() {
+    $.ajaxSetup({
+        async: false
+    });
+    var wrong_attention= new Array("您必须同意使用条款","该用户名已存在","邮箱已经被注册，请选择您未注册过的邮箱","请填写完整再提交");
+    // 设置年级的下拉框
+    var option='<option value="-1" selected="selected">无</option>';
+    for(var i = 2002; i <= 2020; i++) {
+        option += '<option value="'+i+'">'+i+'级</option>';
+    }
+    $("#st_grade").html(option);
+        
+    
+    
+    // 用户名输入框失去焦点时
+    $("#st_account").blur(function(){    
+        CheckUser();
+    });
+    // 密码输入框失去焦点时
+    $("#st_pwd").blur(function(){
+        CheckPwd();
+    });
+    // 确认密码框失去焦点时
+    $("#st_re_pwd").blur(function(){
+        CheckRePwd();
+    });
+    //　填写电子邮箱的输入框失去焦点
+    $("#st_mail").blur(function(){
+        CheckMail();
+    });
+    // 填写手机的输入框失去焦点
+    $("#st_phone").blur(function() {
+       CheckPhone(); 
+    });
+    // 用户姓名的输入框失去焦点的时候
+    $("#st_name").blur(function(){
+        CheckName();
+    });   
+    // 学号输入框失去焦点的时候
+    $("#st_No").blur(function(){
+        CheckNum();
+    });   
+
+
+    $(".input_blank input").click(function(){
+        if($(this).parent().attr("class").indexOf("input_blank_alert")==-1){
+            $(this).parent().removeClass("input_blank_de");
+            $(this).parent().addClass("input_blank_click");
+        }
+    });
+
+    $(".input_blank input").blur(function(){
+        if($(this).parent().attr("class").indexOf("input_blank_click")==-1){
+            $(this).parent().removeClass("input_blank_click");
+            $(this).parent().addClass("input_blank_de");
+        }
+    });
+
+    $("#term_service_radio").click(function(){
+        $(this).toggleClass("term_service_radio_de");
+        $(this).toggleClass("term_service_radio_cho");
+    });
+
+    $("#st_depart").change(function() {
+        $("#st_major").html('<option value="-1" selected="selected">无</option>');
+        $("#st_class").html('<option value="-1" selected="selected">无</option>');
+        if($(this).val() != -1) {
+            $.post(post_url,{oper:'LoadMajor', dept_id:$(this).val()}, 
+                function(data) {
+                var option = "";
+                for(var i = 0; i < data.length; i++) {
+                    option += '<option value="'+data[i].major_id+'">'+data[i].major_name+'</option>';
+                    $("#st_major").append(option);
+                }
+            }, 'json');
+        }
+    });
+
+    $("#st_major").change(function() {
+        $("#st_class").html('<option value="-1" selected="selected">无</option>');
+        if($(this).val() != -1) {
+            $.post(post_url,{
+                oper:'LoadClass',
+                major_id:$(this).val()
+                }, function(data) {
+                var option="";
+                for(var i = 0; i < data.length; i++) {
+                    if(i==0) {
+                        option += '<option value="'+data[i].class_id+'" selected="selected">'+data[i].class_name+'</option>';
+                    } else {
+                        option += '<option value="'+data[i].class_id+'">'+data[i].class_name+'</option>';
+                    }
+                }
+                $("#st_class").append(option);
+            },'json');
+        }
+    });
+
+    $("#submit_bt").click(function(){
+        var st_user,st_pwd,st_name,st_depart,st_major,st_class,st_no,st_mail,st_phone,st_grade,st_birth,st_edu;
+    //实现AJAX 注册，暂时未写;
+        check_flag = true;
+        CheckUser();
+        CheckPwd();
+        CheckRePwd();
+        CheckName();
+        CheckNum();
+        CheckMail();
+        CheckPhone();
+        CheckDepart();
+        CheckMajor();
+        CheckClass();
+        CheckGrade();
+        CheckBirth();
+        
+        if(check_flag == true) {
+            // 报名
+            st_user = $("#st_account").val(); st_pwd = $("#st_account").val();
+            st_name = $("#st_name").val(); st_depart = $("#st_depart").val();
+            st_major = $("#st_major").val(); st_class = $("#st_class").val();
+            st_no = $("#st_No").val(); st_mail = $("#st_mail").val();st_phone = $("#st_phone").val();
+            st_grade = $("#st_grade").val(); st_birth = $("#datepicker").val();
+            st_edu = $("#st_edu").val();
+            $.post(post_url, {oper:'Register', st_user:st_user, st_pwd:st_pwd, 
+                st_name:st_name, st_depart:st_depart, st_major:st_major, st_class:st_class, 
+            st_no:st_no, st_mail:st_mail, st_phone:st_phone, st_grade:st_grade, st_birth:st_birth, st_edu:st_edu}, function(data){
+                if(data.flag==1) {
+                    alert('注册成功,前往登陆页面！');
+                    window.location.href='../../../../Login.php';
+                } else {
+                    alert('注册失败，请再次尝试');
+                }
+            },'json');
+        } else {
+            alert('请将信息完善之后再点击报名');
+        }
+        
+    });
+    $("#alert_bt").click(function(){
+        $("#alert_win").hide();
+        $("#shadow_bg").hide();
+    })
+});
+
+
+function next2Step_2() {
+    check_flag = true;
+        CheckUser();
+        CheckPwd();
+        CheckRePwd();
+        if(check_flag == false){
+                alert("请先完成第一步在继续第二步");
+                return false;				
+        } else {
+                return true;			
+        }
+}
+
+function next2Step_3() {
+    check_flag = true;
+        CheckUser();
+        CheckPwd();
+        CheckRePwd();
+        CheckName();
+        CheckNum();
+        CheckMail();
+        CheckPhone();
+        if(check_flag == false) {
+            alert("请先完成前两步再继续第三步");
+            return false;
+        } else {
+            return true;
+        }
+}
+
+var radio_cho=false;
+/*检查输入字符串是否为空或者全部都是空格 */
+function isNotNull( str ){ 
+    if ( str == "" ) 
+        return false; 
+    var regu = "^[ ]+$"; 
+    var re = new RegExp(regu); 
+    return !re.test(str); 
+} 
+/*检查是否含有空格*/
+function isHasSpace (str){
+    var regu="[ ]";
+    var re= new RegExp(regu);
+    return re.test(str);
+}
+
+/*检查输入对象的值是否符合E-Mail格式 */
+function isEmail( str ){ 
+    var myReg = /^[-\._A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
+    if(myReg.test(str)) return true; 
+    return false; 
+}
+//检查名字 
+function checkName(str){
+    var reg = /^[\u4E00-\u9FA5]+$/;
+    return reg.test(str);
+}
+//检查学号
+function checkNo(str){
+    var reg = /^[0-9a-zA-Z]{6,20}$/;
+    return reg.test(str);
+}
+//检查手机
+function checkPhone(str) {
+    var reg = /^[0-9]{8,12}$/;
+    return reg.test(str);
+}
+/*检查输入字符串是否只由英文字母和数字和下划线组成 */
+function isNumberOr_Letter( str ){//判断是否是数字或字母 
+    var regu = "^[0-9a-zA-Z]+$"; 
+    var re = new RegExp( regu ); 
+    if ( re.test( str )) { 
+        return true; 
+    }else{ 
+        return false; 
+    } 
+} 
+
+/*检查输入的Email信箱格式是否正确 */
+function checkEmail(strEmail) { 
+    //var emailReg = /^[_a-z0-9]+@([_a-z0-9]+\.)+[a-z0-9]{2,3}$/; 
+    var emailReg = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/; 
+    if( emailReg.test(strEmail) ){ 
+        return true; 
+    }else{ 
+        return false; 
+    } 
+} 
+
+/*检查输入字符串是否符合正整数格式 */
+function isNumber( s ){ 
+    var regu = "^[0-9]+$"; 
+    var re = new RegExp(regu); 
+    if (s.search(re) != -1) { 
+        return true; 
+    } else { 
+        return false; 
+    } 
+} 
+function setBool(str,bool){
+    if(str=="userName")
+        userNameRight=bool;
+    else if(str=="password")
+        passwordRight=bool;
+    else if(str=="rePassword")
+        rePasswordRight=bool;
+    else if(str=="mail")
+        mailRight=bool;
+    else if(str=="tel")
+        telRight=bool;
+}
+function blankAddDe( dom ){
+    setBool(dom.attr("id"),true);
+    dom.parent().removeClass("input_blank_alert");
+    dom.parent().removeClass("input_blank_click");
+    dom.parent().addClass("input_blank_de");
+}
+function blankAddAlert( dom ){
+    setBool(dom.attr("id"),false);
+    dom.parent().removeClass("input_blank_de");
+    dom.parent().removeClass("input_blank_click");
+    dom.parent().addClass("input_blank_alert");
+   
+}
+function  addRed(dom){
+    dom.removeClass("gray");
+    dom.addClass("red");
+    check_flag = false;
+} 
+
+function addGray(dom){
+    dom.removeClass("red");
+    dom.addClass("gray");
+   
+}
+var actionInited=false;
+var  wrong_attention;
+var userNameRight=passwordRight=rePasswordRight=mailRight=telRight=false;
+function changeLang(localize,lang){
+ 
+         
+}
+function showAlert(content){
+    $("#alert_content").html(content);
+    $("#shadow_bg").show();
+    $("#alert_win").show();
+}
+
+// 检查用户名
+function CheckUser() {
+    var  str=$("#st_account").val();
+    if(!isNotNull(str)){
+        $("#st_account_aten").html("用户名不能为空");
+        addRed($("#st_account_aten"));
+        blankAddAlert($("#st_account"));
+    }else if(isHasSpace(str)){
+        $("#st_account_aten").html("用户名不能含有空格");
+        addRed($("#st_account_aten"));
+        blankAddAlert($("#st_account"));
+    }else if(str.length<6||str.length>18){
+        $("#st_account_aten").html("用户名为6-18个字母和数字的组合，区分大小写");
+        addRed($("#st_account_aten"));
+        blankAddAlert($("#st_account"));
+    }else　if(!isNumberOr_Letter(str)) {
+        $("#st_account_aten").html("用户名为6-18个字母和数字的组合，区分大小写，不要出现非法字符");
+        addRed($("#st_account_aten"));
+        blankAddAlert($("#st_account"));
+    } else {
+        var flag=true;
+        // 检查用户名有没有在数据库中存在
+        $.post(post_url, {oper:'CheckUser',st_user:str}, function(data) {
+            if(data.isUsed == true) {
+                $("#st_account_aten").html("该用户名已经存在，请重新输入一个用户名");
+                addRed($("#st_account_aten"));
+                blankAddAlert($("#st_account"));
+            } else {
+                $("#st_account_aten").html("");
+                addGray($("#st_account_aten"));
+                blankAddDe($("#st_account"));
+            }
+        }, 'json');          
+    }      
+}
+// 检查密码
+function CheckPwd() {
+    var str=$("#st_pwd").val();
+    if(!isNotNull(str)){
+        $("#st_pwd_aten").html("密码不能为空");
+        addRed($("#st_pwd_aten"));
+        blankAddAlert($("#st_pwd"));
+    }else if(isHasSpace(str)){
+        $("#st_pwd_aten").html("密码不能含有空格");
+        addRed($("#st_pwd_aten"));
+        blankAddAlert($("#st_pwd"));
+    }else if(str.length<6||str.length>16){
+        $("#st_pwd_aten").html("密码长度为6-16个字符");
+        addRed($("#st_pwd_aten"));
+        blankAddAlert($("#st_pwd"));
+    }else{
+            if(!isNumberOr_Letter(str)) {
+            $("#st_account_aten").html("密码为6-18个字母和数字的组合，区分大小写，不要出现非法字符");
+            addRed($("#st_account_aten"));
+            blankAddAlert($("#st_pwd"));
+        } else {
+            $("#st_pwd_aten").html("");
+            addGray($("#st_pwd_aten"));
+            blankAddDe($("#st_pwd"));
+        }
+    }
+}
+// 检查密码确认
+function CheckRePwd() {
+    var str1=$("#st_re_pwd").val();
+    var str2=$("#st_pwd").val();
+    if(str1==""){
+        blankAddDe($("#st_re_pwd"));
+        return;
+    }
+    if(str1==str2){
+        $("#st_re_pwd_aten").html("");
+        addGray($("#st_re_pwd_aten"));
+        blankAddDe($("#st_re_pwd"));
+    } else{
+        $("#st_re_pwd_aten").html("密码不一致");
+        addRed($("#st_re_pwd_aten"));
+        blankAddAlert($("#st_re_pwd"));
+    }
+}
+// 检查姓名
+function CheckName() {
+    if(!checkName($("#st_name").val())) {
+        $("#st_name_aten").html("姓名格式不正确");
+        addRed($("#st_name_aten"));
+        blankAddAlert($("#st_name"));
+    } else{
+        $("#st_name_aten").html("");
+        addGray($("#st_name_aten"));
+        blankAddDe($("#st_name"));
+    }
+}
+// 检查学号
+function CheckNum() {
+    if(!checkNo($("#st_No").val())) {
+        $("#st_No_aten").html("学号格式不正确");
+        addRed($("#st_No_aten"));
+        blankAddAlert($("#st_No"));
+    }else{
+        $("#st_No_aten").html("");
+        addGray($("#st_No_aten"));
+        blankAddDe($("#st_No"));
+    }
+}
+// 检查邮箱
+function CheckMail() {
+    if(!isEmail($("#st_mail").val())){
+        $("#st_mail_aten").html("邮箱格式不正确");
+        addRed($("#st_mail_aten"));
+        blankAddAlert($("#st_mail"));
+    }else{
+        var flag=true;
+        // 检查邮箱有没有在数据库中存在
+        $.post(post_url, {oper:'CheckMail',st_mail:$("#st_mail").val()}, function(data) {
+            if(data.isUsed == true) {
+                $("#st_mail_aten").html("该邮箱已经被使用过，请重新输入一个邮箱地址");
+                addRed($("#st_mail_aten"));
+                blankAddAlert($("#st_mail"));
+            } else {
+                $("#st_mail_aten").html("");
+                addGray($("#st_mail_aten"));
+                blankAddDe($("#st_mail"));
+            }
+        }, 'json'); 
+    }
+}
+// 检查手机号
+function CheckPhone() {
+    var str = $("#st_phone").val();
+    if(!checkPhone(str)) {
+        $("#st_phone_aten").html("手机号格式不正确");
+        addRed($("#st_phone_aten"));
+        blankAddAlert($("#st_phone"));
+    } else {
+        $("#st_phone_aten").html("");
+        addGray($("#st_phone_aten"));
+        blankAddDe($("#st_phone"));
+    }
+}
+// 检查学院
+function CheckDepart() {
+    if($("#st_depart").val() != -1) {
+        $("#st_depart_aten").html("");
+        addGray($("#st_depart_aten"));
+      //  blankAddAlert($("#st_depart"));
+    } else {
+        $("#st_depart_aten").html("请选择院系");
+        addRed($("#st_depart_aten"));
+       // blankAddAlert($("#st_depart"));
+    }
+}
+// 检查专业
+function CheckMajor() {
+    if($("#st_major").val() != -1) {
+        $("#st_major_aten").html("");
+        addGray($("#st_major_aten"));
+       // blankAddAlert($("#st_major"));
+    } else {
+        $("#st_major_aten").html("请选择专业");
+        addRed($("#st_major_aten"));
+       // blankAddAlert($("#st_major"));
+    }
+}
+// 检查班级
+function CheckClass() {
+    if($("#st_class").val() != -1) {
+        $("#st_class_aten").html("");
+        addGray($("#st_class_aten"));
+       // blankAddAlert($("#st_class"));
+    } else {
+        $("#st_class_aten").html("请选择班级");
+        addRed($("#st_class_aten"));
+        //blankAddAlert($("#st_class"));
+    }
+}
+// 检查入学年份
+function CheckGrade() {
+    if($("#st_grade").val() != -1) {
+        $("#st_grade_aten").html("");
+        addGray($("#st_grade_aten"));
+       // blankAddAlert($("#st_grade"));
+    } else {
+        $("#st_grade_aten").html("请选择入学年份");
+        addRed($("#st_grade_aten"));
+       // blankAddAlert($("#st_grade"));
+    }
+}
+// 检查出生日期
+function CheckBirth() {
+    if($("#datepicker").val() == "" || $("#datepicker").val() == null) {
+        $("#st_birth_aten").html("请选择出生日期");
+        addRed($("#st_birth_aten"));
+    } else {
+        $("#st_birth_aten").html("");
+        addGray($("#st_birth_aten"));
+    }
+}
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="AddLineBreak">
+	<title>Add Break Line</title>
+	<metakeywords>php, facebook like, share on facebook, twitter button, linkedin button</metakeywords>	 
+	<metadescription>Show all available social buttons</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+To make a line break, you do:
+</p>
+<p>
+<b>
+	$socialshare->Add(new SocialLineBreak());
+</b>
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	/*
+	 * This file is ready to run as standalone example. However, please do:
+	 * 1. Add tags <html><head><body> to make a complete page
+	 * 2. Change relative path in $KoolControlFolder variable to correctly point to KoolControls folder 
+	 */
+
+	$KoolControlsFolder = "../../../../KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+	
+	require $KoolControlsFolder."/KoolSocialShare/koolsocialshare.php";
+
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "default";
+	$socialshare->scriptFolder = $KoolControlsFolder."/KoolSocialShare";
+	
+		$socialshare->Add(new SocialButton("Facebook"));
+		$socialshare->Add(new SocialButton("Twitter"));
+		$socialshare->Add(new SocialLineBreak());
+		$socialshare->Add(new SocialButton("Blogger"));
+		$socialshare->Add(new SocialButton("Delicious"));
+		$socialshare->Add(new SocialLineBreak());
+		$socialshare->Add(new SocialButton("LinkedIn"));
+		$socialshare->Add(new SocialButton("MySpace"));
+		$socialshare->Add(new SocialLineBreak());
+		$socialshare->Add(new SocialButton("Reddit"));
+		$socialshare->Add(new SocialButton("StumbleUpon"));
+		$socialshare->Add(new SocialLineBreak());
+		$socialshare->Add(new SocialButton("Tumblr"));
+		$socialshare->Add(new SocialButton("MailTo"));
+
+?>
+
+<form id="myform" method="post" class="decoration">
+	Make line break:
+	<br/><br/>
+	<?php echo $socialshare->Render();?>
+</form>]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="">ShowAllShareButtons()</doc>		
+	</docs>
+</example>

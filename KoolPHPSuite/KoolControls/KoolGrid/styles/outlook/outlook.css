@@ -1,0 +1,716 @@
+.outlookKGR,
+.outlookKGR *
+{
+	margin:0px;
+	padding:0px;
+}
+.outlookKGR,
+.outlookKGR_UpdatePanel
+{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+.outlookKGR *,
+.outlookKGR input,
+.outlookKGR select,
+.outlookKGR textarea
+{
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:11px;	
+}
+
+.outlookKGR input,
+.outlookKGR select,
+.outlookKGR textarea
+{
+	border:1px solid #808080;
+}
+
+.outlookKGR input[type=checkbox]
+{
+	border:none;
+}
+
+/*TableView*/
+.outlookKGR .kgrTableView
+{
+	/*overflow:hidden;*/
+	background:window none repeat scroll 0 0;
+	border:1px solid #002D96;
+	color:windowtext;
+}
+
+.outlookKGR .kgrTable
+{
+	border-collapse:separate;
+}
+.outlookKGR .kgrDesc
+{
+	color:green;
+	padding-top:3px;
+	padding-bottom:3px;	
+}
+
+.outlookKGR .kgrDetailTablesPanel
+{
+	border-bottom:1px solid #EAE9E1;
+	padding-right:1px;
+}
+
+/*Header*/
+.outlookKGR .kgrHeader
+{
+	background:buttonface none repeat scroll 0 0;
+	border-color:#F2F0EE #75736E #75736E #F2F0EE;
+	border-style:solid;
+	border-width:1px;
+	font-weight:normal;
+	text-align:left;	
+}
+
+.outlookKGR .kgrSortHeaderText,
+.outlookDummyHeader .kgrSortHeaderText
+{
+	color:windowtext;
+	text-decoration:none;
+}
+
+.outlookKGR .kgrIn,
+.outlookDummyHeader .kgrIn
+{
+	margin:3px;
+	overflow:hidden;
+}
+
+.outlookKGR .kgrHeader .kgrIn
+{
+	cursor:default;
+}
+
+.outlookKGR .kgrEditIn
+{
+	padding-right:2px;
+}
+
+.outlookKGR .kgrFilterCell
+{
+	border-bottom:1px solid #EAE9E1;
+	background:#F6F6F6;
+}
+
+.outlookKGR .kgrFilterCell .kgrIn div
+{
+	padding-bottom:1px;	
+}
+
+
+/*Data*/
+
+.outlookKGR .kgrRow
+{
+	border-collapse:collapse;
+
+}
+
+.outlookKGR .kgrCell
+{
+	border-bottom:1px solid #EAE9E1;
+	border-top:1px solid #FFFFFF;
+}
+
+
+.outlookKGR .kgrRow .kgrCell .kgrIn
+{
+	margin:3px;
+}
+
+.outlookKGR .kgrAltRow
+{
+	background:#FAFAF8 none repeat scroll 0 0;
+}
+
+
+
+.outlookKGR .kgrRowEdit,
+.outlookKGR tr.kgrValidator
+{
+	background:menu none repeat scroll 0 0;
+	color:menutext;
+}
+
+.outlookKGR .kgrRowOver
+{
+	background:infobackground none repeat scroll 0 0;
+	color:infotext;
+}
+
+
+.outlookKGR .kgrRowSelected,
+.outlookKGR .kgrRowSelected a
+{
+	background:highlight none repeat scroll 0 0;
+	color:highlighttext;
+}
+.outlookKGR .kgrRowSelected .kgrCell
+{
+	border-color:highlight;
+}
+
+.outlookKGR tr.kgrValidator .kgrIn
+{
+	color:red;
+}
+
+/*Grouping*/
+.outlookKGR .kgrGroup
+{
+	background-color:#FFFFFF;
+}
+.outlookKGR .kgrGroup .kgrCell
+{
+	border-bottom:2px solid #7BA4E0;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.outlookKGR .kgrGroup .kgrHeaderText
+{
+	color:#3768B9;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:normal;
+	cursor:pointer;
+}
+
+
+
+.outlookKGR .kgrGroupPanel
+{
+	background:#9EBDE5 url(sprite.gif) repeat-x scroll 0 0;
+	border-bottom:1px solid #688CAF;
+	color:#FFFFFF;
+	padding:2px 3px 3px 3px;
+	cursor:default;
+	min-height:16px;
+}
+.outlookKGR .kgrGroupItem,
+.outlookDummyGroupItem
+{
+	cursor:move;
+}
+.outlookKGR .kgrGroupItem .kgrIn,
+.outlookDummyGroupItem .kgrIn
+{
+	white-space:nowrap;
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin:1px 1px 2px 4px;	
+	color:#FFFFFF;
+}
+.outlookDummyGroupItem
+{
+	border:1px solid #688CAF;
+	background:#9EBDE5 url(sprite.gif) repeat-x scroll 0 0;
+	color:#DDDDDD;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;	
+}
+
+
+.outlookKGR .kgrTopIndicator,
+.outlookKGR .kgrBottomIndicator
+{
+	width:9px;
+	height:12px;
+	background:url(sprite.gif) 0 -300px no-repeat;
+}
+.outlookKGR .kgrBottomIndicator
+{
+	background-position:-23px -300px;
+}
+
+.outlookDummyHeader
+{
+	background:buttonface none repeat scroll 0 0;
+	border-color:#F2F0EE #75736E #75736E #F2F0EE;
+	border-style:solid;
+	border-width:1px;
+	font-weight:normal;
+	text-align:left;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+		
+}
+.outlookDummyHeader .kgrIn
+{
+	color:#27413E;
+	font-size:11px;
+	margin:3px 4px;
+	overflow:hidden;
+	font-family:tahoma,verdana,arial,sans-serif;
+}
+.outlookDummyHeader .kgrSortHeaderText 
+{
+	color:#27413E;
+	font-size:11px;
+	text-decoration:none;
+}
+
+
+
+/*Footer*/
+.outlookKGR .kgrFooter
+{
+	border-bottom:1px solid #EAE9E1;
+	border-top:1px solid #FFFFFF;
+	background:#F6F6F6 none repeat scroll 0 0;
+	color:#333333;	
+}
+
+/*Status*/
+.outlookKGR .kgrStatus
+{
+	background:buttonface none repeat scroll 0 0;
+	line-height:20px;
+	border-top:1px solid #808080;
+	padding:3px 5px;
+	color:#666666;	
+}
+
+
+/*Pager*/
+.outlookKGR .kgrPager
+{
+	background:buttonface none repeat scroll 0 0;
+	line-height:20px;
+	border-top:1px solid #808080;
+	padding:3px 5px;
+}
+
+.outlookKGR .kgrPager .kgrPageSize,
+.outlookKGR .kgrPager .kgrNav
+{
+	float:left;
+}
+.outlookKGR .kgrPager .kgrInfo
+{
+	float:right;
+}
+
+.outlookKGR .kgrPager .kgrPrev input,
+.outlookKGR .kgrPager .kgrNext input,
+.outlookKGR .kgrPager .kgrFirst input,
+.outlookKGR .kgrPager .kgrLast input
+{
+	background :transparent url(sprite.gif) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:16px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;
+}
+.outlookKGR .kgrPager .kgrPrev input
+{
+	background-position:5px -393px;
+}
+.outlookKGR .kgrPager .kgrNext input
+{
+	background-position:-21px -393px;
+}
+
+.outlookKGR .kgrPager .kgrFirst input
+{
+	background-position:5px -361px;
+}
+.outlookKGR .kgrPager .kgrLast input
+{
+	background-position:-21px -361px;
+}
+
+
+
+.outlookKGR .kgrPager .kgrPrev a,
+.outlookKGR .kgrPager .kgrNext a,
+.outlookKGR .kgrPager .kgrFirst a,
+.outlookKGR .kgrPager .kgrLast a,
+.outlookKGR .kgrPager a.kgrNum
+{
+	color:windowtext;
+	text-decoration:underline;	
+}
+.outlookKGR .kgrPager a.kgrNumSelected
+{
+	text-decoration:none;
+}
+
+.outlookKGR .kgrPager .kgrPageSize select
+{
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+}
+
+.outlookKGR .kgrPager .kgrPageSize
+{
+	margin-right:4px;
+}
+
+/*FunctionPanel*/
+.outlookKGR .kgrFunctionPanel
+{
+	background:#F6F6F6 none repeat scroll 0 0;
+	line-height:20px;
+	border-bottom:1px solid #FFFFFF;
+	padding:1px 4px 2px;
+	text-align:right;	
+}
+
+.outlookKGR .kgrRefresh input,
+.outlookKGR .kgrInsert input
+{
+	height:16px;
+	width:16px;
+	background:transparent url(sprite.gif) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+}
+
+.outlookKGR .kgrRefresh input
+{
+	background-position:5px -521px;
+}
+.outlookKGR .kgrInsert input
+{
+	background-position:2px -683px;
+}
+
+.outlookKGR .kgrRefresh a,
+.outlookKGR .kgrInsert a
+{
+	color:windowtext;
+	text-decoration:underline;	
+}
+
+
+
+/*Insert/Edit Form */
+.outlookKGR .kgrEditForm,
+.outlookKGR .kgrInsertForm
+{
+	padding:4px;
+	border-bottom:1px solid #EAE9E1;
+	background:#F6F6F6;
+}
+.outlookKGR label.kgrCaption
+{
+	padding-right:5px;
+}
+
+
+.outlookKGR .kgrFormHeader
+{
+	color:#0066CC;
+	font-size:14px;
+	padding:4px;
+}
+.outlookKGR .kgrFormFooter
+{
+	text-align:right;
+}
+
+.outlookKGR .kgrCancel,
+.outlookKGR .kgrConfirm
+{
+	margin-left:1px;
+	margin-right:1px;
+}
+
+.outlookKGR ul.kgrValidator
+{
+	padding:3px 5px 5px 4px;	
+	color:red;
+	list-style-type:decimal;
+}
+.outlookKGR ul.kgrValidator li
+{
+	margin-left:16px;	
+}
+
+
+
+.outlookKGR .kgrCancel input,
+.outlookKGR .kgrConfirm input
+{
+	height:16px;
+	width:16px;
+	background:transparent url(sprite.gif) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+}
+.outlookKGR .kgrCancel input
+{
+	background-position:2px -650px;
+}
+.outlookKGR .kgrConfirm input
+{
+	background-position:2px -618px;
+}
+
+.outlookKGR .kgrConfirm a,
+.outlookKGR .kgrCancel a
+{
+	color:windowtext;
+	text-decoration:underline;	
+}
+
+/*Columns*/
+/*
+.outlookKGR .kgrSortNone,
+.outlookKGR .kgrSortAsc,
+.outlookKGR .kgrSortDesc
+{
+	background-color:transparent;
+	background-image:url(sprite.gif);
+	background-repeat:no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:10px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;	
+}
+
+.outlookKGR .kgrSortNone
+{
+	width:0px;
+	height:0px;
+}
+.outlookKGR .kgrSortAsc
+{
+	background-position: -21px -330px;
+}
+
+.outlookKGR .kgrSortDesc
+{
+	background-position: 5px -330px;
+}
+
+*/
+
+
+.outlookKGR .kgrSortNone,
+.outlookKGR .kgrSortAsc,
+.outlookKGR .kgrSortDesc,
+.outlookDummyHeader .kgrSortNone,
+.outlookDummyHeader .kgrSortAsc,
+.outlookDummyHeader .kgrSortDesc,
+.outlookDummyGroupItem .kgrSortNone,
+.outlookDummyGroupItem .kgrSortAsc,
+.outlookDummyGroupItem .kgrSortDesc
+{
+	background-color:transparent;
+	background-image:url(sprite.gif);
+	background-repeat:no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:10px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;	
+}
+
+.outlookKGR .kgrSortNone,
+.outlookDummyHeader .kgrSortNone,
+.outlookDummyGroupItem .kgrSortNone
+{
+	width:0px;
+	height:0px;
+}
+.outlookKGR .kgrSortAsc,
+.outlookDummyHeader .kgrSortAsc,
+.outlookDummyGroupItem .kgrSortAsc
+{
+	background-position: -21px -330px;
+}
+
+.outlookKGR .kgrSortDesc,
+.outlookDummyHeader .kgrSortDesc,
+.outlookDummyGroupItem .kgrSortDesc
+{
+	background-position: 5px -330px;
+}
+
+/*IE7 only*/
+*+html .outlookKGR .kgrSortAsc,
+*+html .outlookDummyHeader .kgrSortAsc,
+*+html .outlookDummyGroupItem .kgrSortAsc
+{
+	background-position: -21px -328px;
+}
+*+html .outlookKGR .kgrSortDesc,
+*+html .outlookDummyHeader .kgrSortDesc,
+*+html .outlookDummyGroupItem .kgrSortDesc
+{
+	background-position: 5px -328px;
+}
+/*IE7 only*/
+
+/*IE6 only*/
+* html .outlookKGR .kgrSortAsc,
+* html .outlookDummyHeader .kgrSortAsc,
+* html .outlookDummyGroupItem .kgrSortAsc
+{
+	background-position: -21px -328px;
+}
+* html .outlookKGR .kgrSortDesc,
+* html .outlookDummyHeader .kgrSortDesc,
+* html .outlookDummyGroupItem .kgrSortDesc
+{
+	background-position: 5px -328px;
+}
+/*IE6 only*/
+
+
+.outlookKGR col.kgrColumnExpand,
+.outlookKGR col.kgrColumnGroup
+{
+	width:24px;
+}
+.outlookKGR col.kgrColumnSelect
+{
+	width:30px;
+}
+
+.outlookKGR .kgrExpand,
+.outlookKGR .kgrCollapse
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(sprite.gif) 2px -1290px;
+	cursor:pointer;
+}
+
+.outlookKGR .kgrCollapse
+{
+	background-position:2px -1258px;
+}
+
+
+.outlookKGR .kgrPartHeader
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+
+
+.outlookKGR .kgrPartData
+{
+	overflow:scroll;
+}
+
+
+.outlookKGR .kgrFrozenScroller
+{
+	height:17px;
+	margin-right:17px;
+	overflow-y:hidden;
+	overflow-x:scroll;
+}
+.outlookKGR .kgrFrozenScroller div
+{
+	height:17px;
+}
+
+.outlookKGR .kgrScrollingIndicator
+{
+	border-radius:4px;
+	background:#AAAAAA;
+	border-color:#555555;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+	color:#555555;
+	display:inline-block;
+	position:absolute;
+	padding:3px;
+	font-weight:bold;
+}
+
+.outlookKGR .kgrPartFooter
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+
+.outlookKGR .kgrHidden
+{
+	display:none;
+}
+
+.outlookKGR .kgrHidden select
+{
+	display:none;
+}
+
+
+.outlookKGR .kgrStatus .kgrLoadingText
+{
+	display:none;
+}
+.outlookKGR .kgrLoading .kgrLoadingText
+{
+	display:inline;
+}
+.outlookKGR .kgrLoading .kgrDoneText
+{
+	display:none;
+}
+
+.outlookKGR .kgrHideGrid
+{
+	border:1px solid #002D96;
+}
+
+.outlookKGR .kgrFilterCell .kgrIn .kgrDateTimePickerOut,
+.outlookKGR .kgrFilterCell .kgrIn .kgrDateTimePickerIn
+{
+	padding:0px;	
+	margin:0px;
+	border:0px;
+	margin-bottom:-2px;
+}
+
+
+.outlookKGR .kgrDateTimePickerOpening
+{
+	height:19px;
+}
+
+.outlookKGR .kgrCell .kgrDateTimePickerOpening
+{
+	height:17px;
+}
+
+.outlookKGR .kgrIn .kgrDateTimePickerOpening .kgrDateTimePickerIn
+{
+	position:absolute;
+}

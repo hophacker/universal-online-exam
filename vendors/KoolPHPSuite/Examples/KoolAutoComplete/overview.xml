@@ -1,0 +1,14 @@
+<control>
+	<name>KoolAutoComplete - Great PHP Ajax AutoComplete</name>
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete featuring with flexible rendering, elegant behavior and Ajax Load On-Demand. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php ajax autocomplete,ajax autocomplete php, php autocomplete, php ajax autosuggest, php autosuggest, php mysql autocomplete, ajax autocomplete textbox, ajax autocomplete mysql, ajax autocomplete example, php autocomplete dropdown</metakeywords>	 
+	<description>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</description>
+	<examples>
+		<example	name="Google AutoSuggest" 
+					link="Features/Google_AutoSuggest/index.php" 
+					image="Features/Google_AutoSuggest/preview.gif"/>
+		<example	name="Gmail AutoSuggest" 
+					link="Features/Gmail_AutoSuggest/index.php" 
+					image="Features/Gmail_AutoSuggest/preview.gif"/>
+	</examples>			
+</control>

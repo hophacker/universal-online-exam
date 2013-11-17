@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/Fixture
+END
+CakeFixtureManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php
+END
+CakeTestFixture.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/Fixture/CakeTestFixture.php
+END
+CakeTestModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/Fixture/CakeTestModel.php
+END

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Outlook_Style_Grouping" usedb="true">
+	<title>Outlook-style Grouping</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid support data filtering feature. To enable this feature, you simply set AllowFiltering property to true.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolGrid support data grouping feature. To enable this feature, you simply set <b>AllowGrouping</b> property to <b>true</b>. You can set this property in KoolGrid's instance, GridTableView's instance or in Column's instance.
+</p>
+<p>
+- If you set the property in KoolGrid's instance, all columns in grid will enable grouping feature.
+</p>
+<p>
+- If you set the property in GridTableView's instance, only columns in that table will enable grouping feature.
+</p>
+<p>
+- If you set the property in Column's instance, only that column will enable grouping feature.
+</p>
+
+<p>
+KoolGrid also has the GroupPanel which user can drag and drop the column header into in order to group. To show the group panel, you set <b>ShowGroupPanel</b> property of <b>GridTableView</b> to <b>true</b>
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select CONCAT(employees.firstName,' ',employees.lastName) as employee_name,addressLine1,CONCAT(reportsTo_employees.firstName,' ',reportsTo_employees.lastName) as supervisor_name,employees.jobTitle from employees,offices,employees as reportsTo_employees where reportsTo_employees.employeeNumber=employees.reportsTo and employees.officeCode=offices.officeCode";
+	
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="outlook";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+	$grid->DataSource = $ds;
+	
+	$grid->AjaxEnabled = true;
+	$grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/2.gif";
+
+	$column = new GridBoundColumn();
+	$column->DataField = "employee_name";
+	$column->HeaderText = "Name";	
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->DataField = "jobTitle";
+	$column->HeaderText = "Title";	
+	$grid->MasterTable->AddColumn($column);
+
+	
+	$column = new GridBoundColumn();
+	$column->DataField = "supervisor_name";
+	$column->HeaderText = "Supervisor";	
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->DataField = "addressLine1";
+	$column->HeaderText = "Office Address";	
+	$grid->MasterTable->AddColumn($column);
+
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	
+	$grid->AllowGrouping = true; //Allow Grouping
+	$grid->MasterTable->ShowGroupPanel = true; //Show Group Panel
+		
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#AllowGrouping">KoolGrid::AllowGrouping</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#AllowGrouping">GridTableView::AllowGrouping</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridColumn/index.php#AllowGrouping">GridColumn::AllowGrouping</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#ShowGroupPanel">GridTableView::ShowGroupPanel</doc>
+	</docs>
+</example>

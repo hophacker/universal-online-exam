@@ -1,0 +1,49 @@
+body{background: #F5F6F7;margin:0;padding: 0; border: 0; font-family: "微软雅黑",Tahoma, Verdana, Arial, Helvetica, sans-serif; }
+.container{width: 1024px;height: auto; margin: 60px auto 0 auto; border:3px solid #2ab7e5;}
+.container_top{width: 1024px; height:954px; }
+#fill_blank{float:left;  width: 460px; height: auto; margin:60px 0 0 40px; padding:50px;}
+#sub_title .content{ font-size: 26px;  margin: -66px 0 0 100px; color: gray;}
+#form{margin:50px 0 0 0 ;}
+.red_aten{float:left;margin: 2px 0 0 0;}
+.label_aten{float:left;}
+.label_aten label{letter-spacing:3px;}
+.label_title{float:left;margin:12px 0 0 0; font-size: 20px;vertical-align:middle;  width:144px;}
+.label_title font{color:red; font-size: 25px;}
+.blank_cell{height: 50px; width: 480px; margin: 20px 0 0 0;	}
+.blank_cell  .input_blank{float:right;  height:52px;width: 307px; }
+.input_blank_de{background: url(../images/sign_blank_bg.png) -7px -6px no-repeat;}
+.input_blank_click{ background: url(../images/sign_blank_bg.png) -7px -69px no-repeat;}
+.input_blank_alert{ background: url(../images/sign_blank_bg.png) -7px -133px no-repeat;}
+.blank_cell  .input_blank input {margin: 16px 0 0 3px;width: 290px; border: 0; text-decoration: none;outline:none; font-size:18px; background: transparent; } 
+#datepicker{margin: 16px 0 0 3px;width: 290px; border: 0; text-decoration: none;outline:none; font-size:18px;} 
+.alert_blank{float:right;width: 300px;height: 300px;margin: 98px 118px 0 0;}
+.aten_style{ margin:40px 0 0 0; width: 300px; height:30px; font-size:13px; line-height: 16px;}
+.gray{color:gray;}
+.red{color:red;}
+#verify_content{ width: 310px; height: 50px; margin:30px 0 0 275px; }
+#verify_img{ width: 60px; height: 23px;float: right; margin: -3px 0 0 0;}
+#verify_info{ float: right; width: 225px; margin: -3px 10px 0 0}
+#verify_content img{cursor: pointer;width: 70px; height: 30px;}
+#verifycode_label{ font-size: 18px; font-family: inherit;}
+#verifycode{width: 60px;}
+#term_service{width: 300px; height: 50px;margin: 5px 0 0 280px;}
+#term_service_radio{float:left;display: block; width: 36px; height: 37px;}
+.term_service_radio_de{background: url(../images/comp_radio.png) -4px -5px no-repeat ;}
+.term_service_radio_cho{background: url(../images/comp_radio.png) -4px -50px no-repeat ;}
+#term_service_decr{ line-height: 36px;}
+#submit_part{width: 300px;}
+#submit_part a{display: block;width: 292px; height:65px; margin: 20px 0 50px 330px; }
+#submit_bt{background: url(../images/submit_bt.png)  -4px -5px no-repeat; }
+#submit_bt:hover{background: url(../images/submit_bt.png) -4px -79px no-repeat;}
+#shadow_bg{display: none; width: 100%;height:100%; background: black; position: fixed; left:0px;top:0px;opacity: 0.5;filter:alpha(opacity=50); z-index: 998;}
+.white_area{height: 100px;}
+#alert_win{ display: none; width: 400px;  height: 180px; position: fixed; top:30%; right: 40%; background:url(../images/alert_win_bg.png); z-index: 999; }
+#alert_content{width: 350px; height: 64px;  margin: 60px auto 0 auto; font-size: 16px;text-align:center;}
+#alert_bt{display: block; width: 124px;height:50px; background:url(../images/zh_cn/alert_conf.png); margin:  0px auto 0 auto;}
+select{position:relative;
+       vertical-align:middle;
+       font-size:100%;
+       width:180px !important;
+       height:35px !important;
+       line-height:26px;}
+

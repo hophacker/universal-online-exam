@@ -1,0 +1,679 @@
+.redbrownKGR,
+.redbrownKGR *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.redbrownKGR,
+.redbrownKGR_UpdatePanel
+{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+.redbrownKGR *,
+.redbrownKGR input,
+.redbrownKGR select,
+.redbrownKGR textarea
+{
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:11px;	
+}
+
+/*TableView*/
+.redbrownKGR .kgrTableView
+{
+	/*overflow:hidden;*/
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #6B161B;
+	color:#310B0D;
+
+}
+
+
+.redbrownKGR .kgrTable
+{
+	border-collapse:collapse;
+}
+
+.redbrownKGR .kgrTable tr .kgrCell:first-child,
+.redbrownKGR .kgrTable tr .kgrFilterCell:first-child,
+.redbrownKGR .kgrTable tr .kgrHeader:first-child,
+.redbrownKGR .kgrTable tr .kgrFooter:first-child
+{
+	border-left-style:none;
+}
+
+
+.redbrownKGR .kgrDesc
+{
+	color:green;
+	padding-top:3px;
+	padding-bottom:3px;	
+}
+
+.redbrownKGR .kgrDetailTablesPanel
+{
+	border-bottom:solid 1px #DDBFC0;
+	padding-right:1px;
+}
+
+
+
+
+/*Header*/
+.redbrownKGR .kgrHeader
+{
+	background:#C99A9B url(sprite.png) repeat-x scroll 0 -200px;
+	border-bottom:1px solid #C99A9B;
+	border-left:1px solid #C99A9B;
+	font-weight:normal;
+	text-align:left;
+}
+
+.redbrownKGR .kgrFilterCell
+{
+	background:#FAFAFA none repeat scroll 0 0;
+	border-style:none none solid solid;
+	border-width:1px;
+	border-color:#DDBFC0;
+}
+.redbrownKGR .kgrSortHeaderText,
+.redbrownDummyHeader .kgrSortHeaderText
+{
+	color:#310B0D;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.redbrownKGR .kgrIn,
+.redbrownDummyHeader .kgrIn
+{
+	overflow:hidden;
+	margin:3px 4px 3px 4px;
+}
+
+
+.redbrownKGR .kgrHeader .kgrIn,
+.redbrownDummyHeader .kgrIn
+{
+	color:#310B0D;
+	font-size:12px;
+	cursor:default;	
+}
+
+.redbrownKGR .kgrEditIn
+{
+	padding-right:4px;
+}
+
+.redbrownKGR .kgrFilterCell .kgrIn div
+{
+	padding-bottom:1px;	
+}
+
+/*Data*/
+.redbrownKGR .kgrCell
+{
+	border-style:none none solid solid;
+	border-width:1px;
+	border-color:#DDBFC0;
+}
+
+
+.redbrownKGR .kgrRow .kgrCell .kgrIn
+{
+	margin:4px 4px 4px 4px;
+}
+
+.redbrownKGR .kgrAltRow
+{
+	background:#FCEFF0 none repeat scroll 0 0;
+}
+
+
+.redbrownKGR .kgrRowEdit,
+.redbrownKGR tr.kgrValidator
+{
+	background:#FFFFE1 none repeat scroll 0 0;	
+}
+
+.redbrownKGR .kgrRowOver
+{
+	background:#F9D99F none repeat scroll 0 0;
+}
+
+
+.redbrownKGR .kgrRowSelected
+{
+	background:#F1C15F url(sprite.png) repeat-x scroll 0 -800px;	
+}
+
+.redbrownKGR .kgrRowEdit input[type=text],
+.redbrownKGR .kgrRowEdit select,
+.redbrownKGR .kgrRowEdit textarea
+{
+	color:green;
+}
+
+
+.redbrownKGR tr.kgrValidator .kgrIn
+{
+	color:red;
+}
+
+
+/*Grouping*/
+.redbrownKGR .kgrGroup
+{
+	background-color:#FAE2E3;
+}
+.redbrownKGR .kgrGroup .kgrCell
+{
+	border-style:none none solid none;
+}
+.redbrownKGR .kgrGroup .kgrHeaderText
+{
+	color:#7E2024;
+	font-family:verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:normal;
+	cursor:pointer;
+}
+
+
+
+.redbrownKGR .kgrGroupPanel
+{
+	background:#964146 url(sprite.png) repeat-x scroll 0 0;
+	border-bottom:1px solid #6B161B;
+	color:#FFFFFF;
+	padding:3px 3px 2px 3px;
+	min-height:17px;
+	cursor:default;
+}
+.redbrownKGR .kgrGroupItem,
+.redbrownDummyGroupItem
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #325373;
+	cursor:move;
+}
+.redbrownKGR .kgrGroupItem .kgrIn,
+.redbrownDummyGroupItem .kgrIn
+{
+	white-space:nowrap;
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin:1px 1px 2px 4px;	
+	color:#000000;
+}
+.redbrownDummyGroupItem
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;	
+}
+
+
+.redbrownKGR .kgrTopIndicator,
+.redbrownKGR .kgrBottomIndicator
+{
+	width:9px;
+	height:12px;
+	background:url(sprite.png) 0 -1232px no-repeat;
+}
+.redbrownKGR .kgrBottomIndicator
+{
+	background-position:-23px -1232px;
+}
+
+.redbrownDummyHeader
+{
+	background:#D3DBE9 url(sprite.png) repeat-x scroll 0 -200px;
+	border:1px solid #9EB6CE;
+	font-weight:normal;
+	text-align:left;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+		
+}
+.redbrownDummyHeader .kgrIn
+{
+	color:#310B0D;
+	font-size:12px;
+	margin:3px 4px;
+	overflow:hidden;
+	font-family:tahoma,verdana,arial,sans-serif;
+}
+.redbrownDummyHeader .kgrSortHeaderText 
+{
+	color:#310B0D;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+/*Footer*/
+.redbrownKGR .kgrFooter
+{
+	border-style:none none solid solid;
+	border-width:1px;
+	cursor:redbrown;
+	border-color:#DDBFC0;
+}
+
+
+
+
+/*Status*/
+.redbrownKGR .kgrStatus,
+.redbrownKGR .kgrPager
+{
+	background:#DEC1C3 url(sprite.png) repeat-x scroll 0 -600px;
+	line-height:20px;
+	border-bottom:1px solid #FFFFFF;
+	border-top:1px solid #7E2024;
+	padding:1px 4px 2px;
+}
+.redbrownKGR .kgrTop .kgrPager
+{
+	border-bottom:1px solid #7E2024;
+	border-top:1px solid #FFFFFF;
+}
+
+
+/*Pager*/
+
+.redbrownKGR .kgrPager .kgrPageSize,
+.redbrownKGR .kgrPager .kgrNav
+{
+	float:left;
+}
+.redbrownKGR .kgrPager .kgrInfo
+{
+	float:right;
+}
+
+.redbrownKGR .kgrPager .kgrPrev input,
+.redbrownKGR .kgrPager .kgrNext input
+{
+	background :transparent url(sprite.png) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:16px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;
+}
+.redbrownKGR .kgrPager .kgrPrev input
+{
+	background-position:6px -1388px;
+}
+.redbrownKGR .kgrPager .kgrNext input
+{
+	background-position:-22px -1388px;
+}
+
+.redbrownKGR .kgrPager .kgrPrev a,
+.redbrownKGR .kgrPager .kgrNext a,
+.redbrownKGR .kgrPager a.kgrNum
+{
+	color:#310B0D;
+	text-decoration:underline;	
+}
+.redbrownKGR .kgrPager a.kgrNumSelected
+{
+	text-decoration:none;
+}
+
+.redbrownKGR .kgrPager .kgrPageSize select
+{
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+}
+
+.redbrownKGR .kgrPager .kgrPageSize
+{
+	margin-right:4px;
+}
+
+/*FunctionPanel*/
+.redbrownKGR .kgrFunctionPanel
+{
+	background:#FAFAFA none repeat scroll 0 0;
+	line-height:20px;
+	border-bottom:1px solid #FFFFFF;
+	padding:1px 4px 2px;
+	text-align:right;	
+}
+.redbrownKGR .kgrTop .kgrFunctionPanel
+{
+	border-bottom:1px solid #DDBFC0;
+}
+
+/*For Chrome and Safari*/
+body:nth-of-type(1) .redbrownKGR .kgrFunctionPanel
+{
+	border-top:1px solid #DDBFC0;
+}
+body:nth-of-type(1) .redbrownKGR .kgrTop .kgrFunctionPanel
+{
+	border-top:1px solid #FFFFFF;
+}
+
+
+
+
+.redbrownKGR .kgrRefresh input,
+.redbrownKGR .kgrInsert input
+{
+	height:16px;
+	width:16px;
+	background:transparent url(sprite.png) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+}
+
+.redbrownKGR .kgrRefresh input
+{
+	background-position:5px -1453px;
+}
+.redbrownKGR .kgrInsert input
+{
+	background-position:1px -1424px;
+}
+
+.redbrownKGR .kgrRefresh a,
+.redbrownKGR .kgrInsert a
+{
+	color:#310B0D;
+	text-decoration:underline;
+}
+
+
+
+/*Insert/Edit Form */
+.redbrownKGR .kgrEditForm,
+.redbrownKGR .kgrInsertForm
+{
+	padding:4px;
+	border-bottom:solid 1px #DDBFC0;
+	background:#FAFAFA;
+}
+
+.redbrownKGR label.kgrCaption
+{
+	padding-right:5px;
+}
+
+.redbrownKGR ul.kgrValidator
+{
+	padding:3px 5px 5px 4px;	
+	color:red;
+	list-style-type:decimal;
+}
+.redbrownKGR ul.kgrValidator li
+{
+	margin-left:16px;	
+}
+
+.redbrownKGR .kgrFormHeader
+{
+	color:#6B161B;
+	font-size:14px;
+	padding:4px;
+}
+.redbrownKGR .kgrFormFooter
+{
+	text-align:right;
+}
+
+.redbrownKGR .kgrCancel,
+.redbrownKGR .kgrConfirm
+{
+	margin-left:1px;
+	margin-right:1px;
+}
+
+
+.redbrownKGR .kgrCancel input,
+.redbrownKGR .kgrConfirm input
+{
+	height:16px;
+	width:16px;
+	background:transparent url(sprite.png) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+}
+.redbrownKGR .kgrCancel input
+{
+	background-position:2px -1582px;
+}
+.redbrownKGR .kgrConfirm input
+{
+	background-position:2px -1550px;
+}
+
+.redbrownKGR .kgrConfirm a,
+.redbrownKGR .kgrCancel a
+{
+	color:#310B0D;
+	text-decoration:underline;
+}
+
+/*Columns*/
+
+.redbrownKGR .kgrSortNone,
+.redbrownKGR .kgrSortAsc,
+.redbrownKGR .kgrSortDesc,
+.redbrownDummyHeader .kgrSortNone,
+.redbrownDummyHeader .kgrSortAsc,
+.redbrownDummyHeader .kgrSortDesc,
+.redbrownDummyGroupItem .kgrSortNone,
+.redbrownDummyGroupItem .kgrSortAsc,
+.redbrownDummyGroupItem .kgrSortDesc
+{
+	background-color:transparent;
+	background-image:url(sprite.png);
+	background-repeat:no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:10px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;	
+}
+
+.redbrownKGR .kgrSortNone,
+.redbrownDummyHeader .kgrSortNone,
+.redbrownDummyGroupItem .kgrSortNone
+{
+	width:0px;
+	height:0px;
+}
+.redbrownKGR .kgrSortAsc,
+.redbrownDummyHeader .kgrSortAsc,
+.redbrownDummyGroupItem .kgrSortAsc
+{
+	background-position: -21px -1262px;
+}
+
+.redbrownKGR .kgrSortDesc,
+.redbrownDummyHeader .kgrSortDesc,
+.redbrownDummyGroupItem .kgrSortDesc
+{
+	background-position: 4px -1262px;
+}
+
+/*IE7 only*/
+*+html .redbrownKGR .kgrSortAsc,
+*+html .redbrownDummyHeader .kgrSortAsc,
+*+html .redbrownDummyGroupItem .kgrSortAsc
+{
+	background-position: -21px -1260px;
+}
+*+html .redbrownKGR .kgrSortDesc,
+*+html .redbrownDummyHeader .kgrSortDesc,
+*+html .redbrownDummyGroupItem .kgrSortDesc
+{
+	background-position: 4px -1260px;
+}
+/*IE7 only*/
+
+/*IE6 only*/
+* html .redbrownKGR .kgrSortAsc,
+* html .redbrownDummyHeader .kgrSortAsc,
+* html .redbrownDummyGroupItem .kgrSortAsc
+{
+	background-position: -21px -1260px;
+}
+* html .redbrownKGR .kgrSortDesc,
+* html .redbrownDummyHeader .kgrSortDesc,
+* html .redbrownDummyGroupItem .kgrSortDesc
+{
+	background-position: 4px -1260px;
+}
+/*IE6 only*/
+
+
+
+.redbrownKGR col.kgrColumnExpand,
+.redbrownKGR col.kgrColumnGroup
+{
+	width:24px;
+}
+.redbrownKGR col.kgrColumnSelect
+{
+	width:30px;
+}
+
+
+
+.redbrownKGR .kgrExpand,
+.redbrownKGR .kgrCollapse
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(sprite.png) 2px -1326px;
+	cursor:pointer;
+}
+
+.redbrownKGR .kgrCollapse
+{
+	background-position:2px -1294px;
+}
+
+
+.redbrownKGR .kgrPartHeader
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+.redbrownKGR .kgrPartData
+{
+	overflow:scroll;
+}
+
+
+.redbrownKGR .kgrFrozenScroller
+{
+	height:17px;
+	margin-right:17px;
+	overflow-y:hidden;
+	overflow-x:scroll;
+}
+.redbrownKGR .kgrFrozenScroller div
+{
+	height:17px;
+}
+
+.redbrownKGR .kgrScrollingIndicator
+{
+	border-radius:4px;
+	background:#AAAAAA;
+	border-color:#555555;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+	color:#555555;
+	display:inline-block;
+	position:absolute;
+	padding:3px;
+	font-weight:bold;
+}
+
+.redbrownKGR .kgrPartFooter
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+
+.redbrownKGR .kgrHidden
+{
+	display:none;
+}
+
+
+.redbrownKGR .kgrStatus .kgrLoadingText
+{
+	display:none;
+}
+.redbrownKGR .kgrLoading .kgrLoadingText
+{
+	display:inline;
+}
+.redbrownKGR .kgrLoading .kgrDoneText
+{
+	display:none;
+}
+
+
+.redbrownKGR .kgrHideGrid
+{
+	border:1px solid #3B5A82;
+}
+
+.redbrownKGR .kgrFilterCell .kgrIn .kgrDateTimePickerOut,
+.redbrownKGR .kgrFilterCell .kgrIn .kgrDateTimePickerIn
+{
+	padding:0px;	
+	margin:0px;
+	border:0px;
+	margin-bottom:-2px;
+}
+
+
+.redbrownKGR .kgrDateTimePickerOpening
+{
+	height:21px;
+}
+
+.redbrownKGR .kgrCell .kgrDateTimePickerOpening
+{
+	height:19px;
+}
+
+.redbrownKGR .kgrIn .kgrDateTimePickerOpening .kgrDateTimePickerIn
+{
+	position:absolute;
+}

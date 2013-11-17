@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Ajax_Progress_Tracking" usedb="false">
+	<title>Ajax Progress Tracking</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolUploader supports upload progress tracking.
+When this feature is enabled, KoolUploader will use ajax to keep track of uploading status of each files.
+</p>
+<p>
+To enable this feature, you need to add <b>KoolAjax</b> to the page and set <b>progresTracking</b> property of KoolUploader's instance to <b>true</b>. 
+</p>
+<p>
+<i>*Note:</i> Tracking progress of uploading file is not default feature of PHP, you need to add an extension called PECL UploadProgress. You may find the installation guide in KoolUploader's documentation.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->handlePage = "handle.php";	
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul->allowedExtension = "txt,jpg,gif,doc,pdf";
+	$kul->maxFileSize = 512*1024; //500KB
+
+	$kul_with_progress = new KoolUploader("kul_with_progress");
+	$kul_with_progress->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul_with_progress->handlePage = "handle.php";	
+	$kul_with_progress->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul_with_progress->allowedExtension = "txt,jpg,gif,doc,pdf";
+	$kul_with_progress->maxFileSize = 512*1024; //500KB
+	$kul_with_progress->progressTracking = true;
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	
+	<table style="width:650px;">
+		<tr>
+			<td style="color:gray">No Progress Tracking</td>
+			<td style="color:green">With Progress Tracking</td>
+		</tr>
+		<tr>
+			<td>
+				<?php echo $kul->Render();?>		
+			</td>
+			<td>
+				<?php echo $kul_with_progress->Render();?>
+			</td>
+		</tr>
+	</table>	
+	<div style="padding-top:20px;">
+		<i>*Note:</i> Please test uploading with *.txt, *.doc, *.pdf, *.jpg, *.gif ( size &lt; 500KB )
+	</div>	
+
+</form>
+			]]>			
+		</code>	
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	$kulhandle->allowedExtension = "gif,jpg,doc,pdf,txt";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Install/PECL_UploadProgress/index.php">Install PECL UploadProgress</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/PHP/KoolUploader_Class/index.php#progressTracking">PHP :: KoolUploader :: progressTracking</doc>
+	</docs>
+</example>

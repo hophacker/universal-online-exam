@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="AutoComplete" usedb="true">
+	<title>AutoComplete</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+
+	<description>
+		<![CDATA[ 
+This advanced example show you how to apply autocomplete to KoolComboBox for selecting email address.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->styleFolder= "default";
+	$kcb->width = "630px";
+	$kcb->inputValidate = false;
+	$kcb->itemTemplate = "{html}";
+	
+	
+	$result = mysql_query("select firstName, lastName, email from employees order by email;");
+	while($row = mysql_fetch_assoc($result))
+	{
+		$value = $row["email"];
+		$text = '"'.$row["firstName"]." ".$row["lastName"].'"'."<".$row["email"].">";
+		$html = '"'.$row["firstName"]." ".$row["lastName"].'"'."&lt;".$row["email"]."&gt;";
+		$kcb->addItem($text,$value,array("html"=>$html));
+	}
+	
+	function service($text)
+	{
+		$text = str_replace("\\\"","\"",$text);
+		$token = explode(";",$text);
+		$last_token = $token[sizeof($token)-1];
+		$last_token = trim($last_token);
+		$items = array();		
+		$result = mysql_query("select firstName, lastName, email from employees where CONCAT(firstName,' ',lastName,' ', email) like '%$last_token%' order by email;");
+		
+		while($row = mysql_fetch_assoc($result))
+		{
+			$value = $row["email"];
+
+			$text = '"'.$row["firstName"]." ".$row["lastName"].'"'."<".$row["email"].">";
+			$text_array = $token;
+			$text_array[sizeof($text_array)-1] = $text;
+			$text = join(";",$text_array);			
+			
+			$html = '"'.$row["firstName"]." ".$row["lastName"].'"'."[".$row["email"]."]";
+			
+			$html = preg_replace("/".$last_token."/i","<b>$last_token</b>",$html);
+			$html = str_replace("[","&lt;",$html);
+			$html = str_replace("]","&gt;",$html);
+			
+			$item = array("text"=>$text,"value"=>$value,"html"=>$html);
+			array_push($items,$item);
+		}
+		return $items;
+	}
+	$kcb->serviceFunction = "service";
+	$koolajax->enableFunction("service");
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<table>
+		<tr>
+			<td>To:</td>
+			<td><?php echo $kcb->Render();?></td>
+		</tr>			
+	</table>		
+	<div style="padding-top:10px;">
+	<i>*Note:</i> You can add many emails seperated by semicolon (;)
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#addItem">PHP :: KoolComboBox :: addItem()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#serviceFunction">PHP :: KoolComboBox :: serviceFunction</doc>
+	</docs>
+</example>

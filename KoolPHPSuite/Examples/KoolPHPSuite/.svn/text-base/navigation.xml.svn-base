@@ -1,0 +1,5 @@
+<navigation id="KoolPHPSuite" title="PHP Controls Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+	</category>
+</navigation>

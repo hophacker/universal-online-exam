@@ -1,0 +1,973 @@
+.sunsetKGR,
+.sunsetKGR *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.sunsetKGR,
+.sunsetKGR_UpdatePanel
+{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+.sunsetKGR *,
+.sunsetKGR input,
+.sunsetKGR select,
+.sunsetKGR textarea
+{
+	font-family:arial,sans-serif;
+}
+
+/*TableView*/
+.sunsetKGR .kgrTableView
+{
+	/*overflow:hidden;*/
+	font-family:arial,sans-serif;
+	font-size:12px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBB99D;
+    color: #272522;
+}
+
+
+.sunsetKGR .kgrTable
+{
+	border-collapse: separate;
+    border-spacing: 0;
+}
+
+.sunsetKGR .kgrTable tr .kgrCell:first-child,
+.sunsetKGR .kgrTable tr .kgrFilterCell:first-child,
+.sunsetKGR .kgrTable tr .kgrHeader:first-child,
+.sunsetKGR .kgrTable tr .kgrFooter:first-child
+{
+	border-left-style:none;
+	padding-left:1px;
+}
+.sunsetKGR .kgrTable tr .kgrCell:last-child,
+.sunsetKGR .kgrTable tr .kgrFilterCell:last-child,
+.sunsetKGR .kgrTable tr .kgrHeader:last-child,
+.sunsetKGR .kgrTable tr .kgrFooter:last-child
+{
+	border-right-style:none;
+	padding-right:1px;
+}
+
+
+
+.sunsetKGR .kgrDesc
+{
+	color:green;
+	padding-top:3px;
+	padding-bottom:3px;	
+}
+
+.sunsetKGR .kgrDetailTablesPanel
+{
+	border-bottom:solid 1px #D0D7E5;
+	padding-right:1px;
+}
+
+
+
+
+/*Header*/
+.sunsetKGR .kgrHeader
+{
+	background:url(sprite.gif) repeat-x scroll 0 -2300px #B94D0A;
+	border-bottom:1px solid #71250A;
+	border-left:1px solid #872B07;
+	border-right:1px solid #CD6A3F;
+	font-weight:normal;
+	text-align:left;
+	color: #FFFFFF;
+}
+.sunsetKGR th.kgrSorted
+{
+	background-position:0 -2600px;
+	background-color: #C36624;
+	border-color: #EC9883 #CD6A3F #854324 #8B3312;
+}
+
+
+.sunsetKGR .kgrFilterCell
+{
+	background: none repeat scroll 0 0 #E1DAC7;
+	border-style:none none solid solid;
+	border-width:1px;
+	border-color:#FFFFFF #FFFFFF #FFFFFF #CABAAB;	
+}
+.sunsetKGR .kgrSortHeaderText,
+.sunsetDummyHeader .kgrSortHeaderText
+{
+	color:#FFFFFF;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.sunsetKGR .kgrIn,
+.sunsetDummyHeader .kgrIn
+{
+	overflow:hidden;
+	margin:4px 7px 3px 7px;
+}
+.sunsetKGR .kgrGroup .kgrIn
+{
+	margin:0px 3px 0px 3px;
+}
+
+.sunsetKGR .kgrHeader .kgrIn,
+.sunsetDummyHeader .kgrIn
+{
+	color: #FFFFFF;
+	font-size:12px;
+	cursor:default;	
+}
+
+.sunsetKGR .kgrEditIn
+{
+	padding-right:4px;
+}
+
+.sunsetKGR .kgrFilterCell .kgrIn div
+{
+	padding-bottom:1px;	
+}
+
+
+/*Data*/
+.sunsetKGR .kgrCell
+{
+	border-width:1px;
+	border-style:none none none solid;		
+	border-left-color:#CABAAB;
+	padding-top:1px;
+	padding-bottom:1px;
+}
+
+
+.sunsetKGR .kgrRow .kgrCell .kgrIn
+{
+	margin:4px 8px 3px 8px;
+	cursor: default;
+}
+
+.sunsetKGR .kgrAltRow
+{
+	background: none repeat scroll 0 0 #F1E9DC;
+}
+.sunsetKGR .kgrAltRow .kgrCell
+{
+	border-color: #F1E9DC #F1E9DC #F1E9DC #CABAAB;
+}
+
+.sunsetKGR .kgrRow .kgrSorted
+{
+	background-color: #F6F1E8;
+    border-bottom-color: #F6F1E8;	
+}
+.sunsetKGR .kgrAltRow .kgrSorted
+{
+	background-color: #F1E9DC;
+	border-bottom-color: #F1E9DC;
+}
+
+
+.sunsetKGR .kgrRowEdit,
+.sunsetKGR tr.kgrValidator
+{
+	background:none repeat scroll 0 0 #E1DAC7;
+}
+
+
+.sunsetKGR .kgrRowOver
+{
+	background:url(sprite.gif) repeat-x scroll 0 -2901px #F2D328;
+}
+.sunsetKGR .kgrRowOver .kgrCell
+{
+	border-style:solid none solid none;
+	border-top-color:#CA9A3E;
+	border-bottom-color:#CA9A3E;	
+	padding: 0px 0px 0px 1px;
+}
+
+
+.sunsetKGR .kgrRowSelected
+{
+	background:url(sprite.gif) repeat-x scroll 0 -3901px #E38443;	
+}
+.sunsetKGR .kgrRowSelected .kgrCell
+{
+	border-top-color:#AD5E2F;
+	border-bottom-color:#AD5E2F;
+	border-style:solid none solid none;
+	padding: 0px 0px 0px 1px;		
+}
+.sunsetKGR .kgrGroupCol
+{
+	background-color: #A39787;
+	border-color: #A39787 #A39787 #A39787 #A39787 !important;
+}
+
+
+.sunsetKGR .kgrRowSelected .kgrSorted,
+.sunsetKGR .kgrRowOver .kgrSorted
+{
+	background-color: transparent;
+}
+
+
+
+.sunsetKGR .kgrRowEdit input[type=text],
+.sunsetKGR .kgrRowEdit select,
+.sunsetKGR .kgrRowEdit textarea
+{
+	color:green;
+}
+
+
+.sunsetKGR tr.kgrValidator .kgrIn
+{
+	color:red;
+}
+
+
+/*Grouping*/
+.sunsetKGR .kgrGroup
+{
+    background: none repeat scroll 0 0 #A39787;
+}
+.sunsetKGR .kgrGroup .kgrCell
+{
+    border-color: #A39787;	
+}
+.sunsetKGR .kgrGroup .kgrHeaderText
+{
+	color: #FFFFFF;
+	font-family:arial,sans-serif;
+	font-size:12px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	line-height:18px;
+	cursor:pointer;
+}
+
+
+
+.sunsetKGR .kgrGroupPanel
+{
+	background:url(sprite.gif) repeat-x scroll 0 -1900px #AFA79A;
+	border-bottom:1px solid #504B41;
+	color:#FFFFFF;
+	padding:3px 3px 2px 3px;
+	min-height:17px;
+	cursor:default;
+}
+.sunsetKGR .kgrGroupItem,
+.sunsetDummyGroupItem
+{
+	background: url(sprite.gif) repeat-x scroll 0 -6500px #E38443;
+    border: 1px solid #904C23;
+	cursor:move;
+}
+.sunsetDummyGroupItem
+{
+	cursor:default;
+}
+
+.sunsetKGR .kgrGroupItem .kgrIn,
+.sunsetDummyGroupItem .kgrIn
+{
+	white-space:nowrap;
+	font-family:arial,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	margin:1px 1px 2px 4px;	
+	color: #5D1F00;
+	line-height:17px;
+}
+.sunsetDummyGroupItem
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;	
+}
+
+
+.sunsetKGR .kgrTopIndicator,
+.sunsetKGR .kgrBottomIndicator
+{
+	width:9px;
+	height:12px;
+	background:url(sprite.gif) 0 1px no-repeat;
+}
+.sunsetKGR .kgrBottomIndicator
+{
+	background-position:0px -49px;
+}
+
+.sunsetDummyHeader
+{
+	background:url(sprite.gif) repeat-x scroll 0 -2300px #B94D0A;
+    border-bottom: 1px solid #71250A;
+    border-left: 1px solid #872B07;
+    border-right: 1px solid #CD6A3F;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-align: left;	
+	
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+		
+}
+.sunsetDummyHeader .kgrIn
+{
+	color: #FFFFFF;
+	font-size:12px;
+	margin:3px 4px;
+	overflow:hidden;
+	font-family:arial,sans-serif;
+}
+.sunsetDummyHeader .kgrSortHeaderText 
+{
+	color:#27413E;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+/*Footer*/
+.sunsetKGR .kgrFooter
+{
+	border-width:1px;
+	border-style:none none none solid;		
+	border-left-color:#CABAAB;
+	padding-top:1px;
+	padding-bottom:1px;
+}
+
+
+
+
+/*Status*/
+.sunsetKGR .kgrStatus,
+.sunsetKGR .kgrPager
+{
+	background-color:#E1DAC7;
+	line-height:20px;
+	padding: 5px 0 4px;
+    border-color: #CABAAB #F1E9DC #F1E9DC;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+}
+.sunsetKGR .kgrStatus
+{
+	padding-left:10px;
+}
+.sunsetKGR .kgrTop .kgrPager
+{
+	border-bottom:1px solid #567DB0;
+	border-top:1px solid #FFFFFF;
+}
+
+
+/*Pager*/
+
+.sunsetKGR .kgrPager .kgrPageSize,
+.sunsetKGR .kgrPager .kgrNav
+{
+	float:left;
+	padding: 0 10px;
+	line-height: 22px;
+}
+.sunsetKGR .kgrPager .kgrInfo
+{
+	float:right;
+	color: #676462;
+	line-height: 22px;
+    padding: 0 10px;
+    white-space: nowrap;
+	cursor: default;
+}
+
+.sunsetKGR .kgrPager .kgrPrev,
+.sunsetKGR .kgrPager .kgrNext,
+.sunsetKGR .kgrPager .kgrFirst,
+.sunsetKGR .kgrPager .kgrLast
+{
+	line-height:22px;
+	float:left;
+	margin:0px 1px 0px 1px;
+}
+
+.sunsetKGR .kgrPager .kgrPrev input,
+.sunsetKGR .kgrPager .kgrNext input,
+.sunsetKGR .kgrPager .kgrFirst input,
+.sunsetKGR .kgrPager .kgrLast input
+{
+	background :transparent url(sprite.gif) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:22px;
+	padding:0;
+	vertical-align:top;
+	width:22px;
+}
+
+
+.sunsetKGR .kgrPager .kgrFirst input
+{
+	background-position: 0 -550px;
+}
+.sunsetKGR .kgrPager .kgrFirst:hover input
+{
+	background-position: 0 -600px;
+}
+
+.sunsetKGR .kgrPager .kgrLast input
+{
+	background-position: 0 -1000px;
+}
+.sunsetKGR .kgrPager .kgrLast:hover input
+{
+	background-position: 0 -1050px;
+}
+
+.sunsetKGR .kgrPager .kgrPrev input
+{
+	background-position: 0 -700px;
+}
+.sunsetKGR .kgrPager .kgrPrev:hover input
+{
+	background-position: 0 -750px;
+}
+
+.sunsetKGR .kgrPager .kgrNext input
+{
+	background-position: 0 -850px;
+}
+.sunsetKGR .kgrPager .kgrNext:hover input
+{
+	background-position: 0 -900px;
+}
+
+
+
+.sunsetKGR .kgrPager .kgrPrev a,
+.sunsetKGR .kgrPager .kgrNext a,
+.sunsetKGR .kgrPager .kgrFirst a,
+.sunsetKGR .kgrPager .kgrLast a
+{
+	display:none;	
+}
+
+.sunsetKGR .kgrPager a.kgrNum
+{
+	color: #272522;
+    float: left;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    text-decoration: none;
+}
+.sunsetKGR .kgrPager a.kgrNum:hover
+{
+	background-image:url(sprite.gif);
+	background-position: 100% -1250px;
+	color:#863D02;
+}
+
+
+.sunsetKGR .kgrPager a.kgrNum span
+{
+    float: left;
+    padding: 0 0 0 5px;
+	line-height: 22px;
+}
+
+.sunsetKGR .kgrPager a.kgrNum:hover span
+{
+	background-image:url(sprite.gif);
+	background-position: 0 -1150px;
+}
+
+
+
+.sunsetKGR .kgrPager a.kgrNumSelected,
+.sunsetKGR .kgrPager a.kgrNumSelected:hover
+{
+	background-image:url(sprite.gif);
+	background-position: 100% -1450px;
+    color: #5D1F00;
+}
+.sunsetKGR .kgrPager a.kgrNumSelected:hover
+{
+	cursor:default;
+}
+
+.sunsetKGR .kgrPager a.kgrNumSelected span,
+.sunsetKGR .kgrPager a.kgrNumSelected:hover span
+{
+	background-image:url(sprite.gif);
+	background-position: 0 -1350px;
+}
+
+
+
+.sunsetKGR .kgrPager .kgrPageSize select
+{
+	font-family:arial,sans-serif;
+	font-size:12px;
+}
+
+.sunsetKGR .kgrPager .kgrPageSize
+{
+	padding:0 10px;
+}
+.sunsetKGR .kgrPager .kgrPageSize select
+{
+	margin-left:5px;
+}
+
+
+
+/*FunctionPanel*/
+.sunsetKGR .kgrFunctionPanel
+{
+	background:url(function_panel.gif) repeat-x scroll 0 1px #968E7C;
+	line-height:22px;
+	color:#FFFFFF;
+	border-top:1px solid #36332C;
+	padding:1px 7px 3px 7px;
+}
+.sunsetKGR .kgrTop .kgrFunctionPanel
+{
+
+}
+
+/*For Chrome and Safari*/
+body:nth-of-type(1) .sunsetKGR .kgrFunctionPanel
+{
+	border-top:1px solid #36332C;
+}
+body:nth-of-type(1) .sunsetKGR .kgrTop .kgrFunctionPanel
+{
+	border-top:none;	
+}
+
+
+
+
+.sunsetKGR .kgrRefresh input,
+.sunsetKGR .kgrInsert input
+{
+	height:18px;
+	width:18px;
+	background:transparent url(sprite.gif) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+	margin-right:3px;
+}
+
+.sunsetKGR .kgrRefresh
+{
+	float:right;
+	clear:both;	
+}
+
+
+.sunsetKGR .kgrRefresh input
+{
+	background-position:0px -1600px;
+}
+.sunsetKGR .kgrInsert input
+{
+	background-position:0 -1650px;	
+}
+
+.sunsetKGR .kgrRefresh a,
+.sunsetKGR .kgrInsert a
+{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+/*Auto button in Edit/Delete column */
+
+.sunsetKGR .kgrLinkEdit,
+.sunsetKGR .kgrLinkDelete,
+.sunsetKGR .kgrLinkConfirm,
+.sunsetKGR .kgrLinkCancel
+{
+	font-size:1px;
+	text-indent:-4000px;
+	display:inline-block;
+	height:18px;
+	width:18px;
+	background:transparent url(sprite.gif) no-repeat;
+	margin-left:1px;
+	margin-right:1px;
+}
+
+.sunsetKGR .kgrLinkEdit
+{
+	background-position:0px -1700px;
+}
+
+.sunsetKGR .kgrLinkDelete
+{
+	background-position:0px -1750px;
+}
+
+
+.sunsetKGR .kgrLinkConfirm
+{
+	background-position:0px -1800px;
+}
+
+.sunsetKGR .kgrLinkCancel
+{
+	background-position:0px -1850px;
+}
+
+
+/*Insert/Edit Form */
+.sunsetKGR .kgrEditForm,
+.sunsetKGR .kgrInsertForm
+{
+	padding:4px;
+	border-bottom:1px solid #CABAAB;
+	background-color:#EAE5D7;
+}
+
+.sunsetKGR label.kgrCaption
+{
+	padding-right:5px;
+}
+
+.sunsetKGR ul.kgrValidator
+{
+	padding:3px 5px 5px 4px;	
+	color:red;
+	list-style-type:decimal;
+}
+.sunsetKGR ul.kgrValidator li
+{
+	margin-left:16px;	
+}
+
+.sunsetKGR .kgrFormHeader
+{
+	color:#0066CC;
+	font-size:14px;
+	padding:4px;
+}
+.sunsetKGR .kgrFormFooter
+{
+	text-align:right;
+}
+
+.sunsetKGR .kgrCancel,
+.sunsetKGR .kgrConfirm
+{
+	margin-left:1px;
+	margin-right:1px;
+}
+
+
+.sunsetKGR .kgrCancel input,
+.sunsetKGR .kgrConfirm input
+{
+	height:18px;
+	width:18px;
+	background:transparent url(sprite.gif) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+}
+
+.sunsetKGR .kgrCancel input
+{
+	background-position:0px -1850px;
+}
+.sunsetKGR .kgrConfirm input
+{
+	background-position:0px -1800px;
+}
+
+.sunsetKGR .kgrConfirm a,
+.sunsetKGR .kgrCancel a
+{
+	display:none;
+	color:#27413E;
+	text-decoration:underline;	
+}
+
+/*Columns*/
+
+.sunsetKGR .kgrSortNone,
+.sunsetKGR .kgrSortAsc,
+.sunsetKGR .kgrSortDesc,
+.sunsetDummyHeader .kgrSortNone,
+.sunsetDummyHeader .kgrSortAsc,
+.sunsetDummyHeader .kgrSortDesc,
+.sunsetDummyGroupItem .kgrSortNone,
+.sunsetDummyGroupItem .kgrSortAsc,
+.sunsetDummyGroupItem .kgrSortDesc
+{
+	background-color:transparent;
+	background-image:url(sprite.gif);
+	background-repeat:no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:10px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;	
+}
+.sunsetKGR .kgrSortNone,
+.sunsetDummyHeader .kgrSortNone,
+.sunsetDummyGroupItem .kgrSortNone
+{
+	background-image:url(sort_none.gif);
+}
+
+.sunsetKGR .kgrSortNone,
+.sunsetDummyHeader .kgrSortNone,
+.sunsetDummyGroupItem .kgrSortNone
+{
+	height:11px;
+	background-position: 3px 0px;
+}
+
+.sunsetKGR .kgrSortAsc,
+.sunsetDummyHeader .kgrSortAsc,
+.sunsetDummyGroupItem .kgrSortAsc
+{
+	background-position: 3px -247px;
+}
+.sunsetKGR .kgrGroupItem .kgrSortAsc
+{
+	background-position: 3px -97px;
+}
+
+.sunsetKGR .kgrSortDesc,
+.sunsetDummyHeader .kgrSortDesc,
+.sunsetDummyGroupItem .kgrSortDesc
+{
+	background-position: 3px -197px;
+}
+.sunsetKGR .kgrGroupItem .kgrSortDesc
+{
+	background-position: 4px -147px;
+}
+/*IE7 only*/
+
+*+html .sunsetKGR .kgrSortNone,
+*+html .sunsetDummyHeader .kgrSortNone,
+*+html .sunsetDummyGroupItem .kgrSortNone
+{
+	height:11px;
+}
+
+
+*+html .sunsetKGR .kgrSortAsc,
+*+html .sunsetDummyHeader .kgrSortAsc,
+*+html .sunsetDummyGroupItem .kgrSortAsc
+{
+	background-position: 3px -245px;
+}
+*+html .sunsetKGR .kgrGroupItem .kgrSortAsc
+{
+	background-position: 3px -95px;
+}
+
+
+*+html .sunsetKGR .kgrSortDesc,
+*+html .sunsetDummyHeader .kgrSortDesc,
+*+html .sunsetDummyGroupItem .kgrSortDesc
+{
+	background-position: 3px -195px;
+}
+*+html .sunsetKGR .kgrGroupItem .kgrSortDesc
+{
+	background-position: 4px -145px;
+}
+/*IE7 only*/
+
+/*IE6 only*/
+
+* html .sunsetKGR .kgrSortNone,
+* html .sunsetDummyHeader .kgrSortNone,
+* html .sunsetDummyGroupItem .kgrSortNone
+{
+	height:11px;
+	background-position: 4px 0px;
+}
+
+* html .sunsetKGR .kgrSortAsc,
+* html .sunsetDummyHeader .kgrSortAsc,
+* html .sunsetDummyGroupItem .kgrSortAsc
+{
+	background-position: 3px -245px;
+}
+* html .sunsetKGR .kgrGroupItem .kgrSortAsc
+{
+	background-position: 3px -95px;
+}
+
+* html .sunsetKGR .kgrSortDesc,
+* html .sunsetDummyHeader .kgrSortDesc,
+* html .sunsetDummyGroupItem .kgrSortDesc
+{
+	background-position:  3px -195px;
+}
+* html .sunsetKGR .kgrGroupItem .kgrSortDesc
+{
+	background-position: 4px -145px;
+}
+/*IE6 only*/
+
+
+
+.sunsetKGR col.kgrColumnExpand,
+.sunsetKGR col.kgrColumnGroup
+{
+	width:20px;
+}
+.sunsetKGR col.kgrColumnSelect
+{
+	width:30px;
+}
+
+.sunsetKGR .kgrSelectAllRows
+{
+	margin:3px 0px 0px 4px;
+}
+
+.sunsetKGR .kgrExpand,
+.sunsetKGR .kgrCollapse
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(sprite.gif) no-repeat 3px -444px;
+	cursor:pointer;
+}
+
+.sunsetKGR .kgrCollapse
+{
+	background-position: 5px -497px;
+}
+
+
+.sunsetKGR .kgrPartHeader
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+.sunsetKGR .kgrPartData
+{
+	overflow:scroll;
+}
+
+.sunsetKGR .kgrFrozenScroller
+{
+	height:17px;
+	margin-right:17px;
+	overflow-y:hidden;
+	overflow-x:scroll;
+}
+
+.sunsetKGR .kgrFrozenScroller div
+{
+	height:17px;
+}
+
+
+
+.sunsetKGR .kgrScrollingIndicator
+{
+	border-radius:4px;
+	background:#AAAAAA;
+	border-color:#555555;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+	color:#555555;
+	display:inline-block;
+	position:absolute;
+	padding:3px;
+	font-weight:bold;
+}
+
+
+.sunsetKGR .kgrPartFooter
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+
+.sunsetKGR .kgrHidden
+{
+	display:none;
+}
+
+
+.sunsetKGR .kgrStatus .kgrLoadingText
+{
+	display:none;
+}
+.sunsetKGR .kgrLoading .kgrLoadingText
+{
+	display:inline;
+}
+.sunsetKGR .kgrLoading .kgrDoneText
+{
+	display:none;
+}
+
+
+.sunsetKGR .kgrHideGrid
+{
+	border:1px solid #3B5A82;
+}
+
+.sunsetKGR .kgrFilterCell .kgrIn .kgrDateTimePickerOut,
+.sunsetKGR .kgrFilterCell .kgrIn .kgrDateTimePickerIn
+{
+	padding:0px;	
+	margin:0px;
+	border:0px;
+	margin-bottom:-2px;
+}
+
+
+.sunsetKGR .kgrDateTimePickerOpening
+{
+	height:21px;
+}
+
+.sunsetKGR .kgrCell .kgrDateTimePickerOpening
+{
+	height:19px;
+}
+
+.sunsetKGR .kgrIn .kgrDateTimePickerOpening .kgrDateTimePickerIn
+{
+	position:absolute;
+}

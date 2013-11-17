@@ -1,0 +1,94 @@
+.cssRegisForm{
+	width : 520px;
+	height :auto;
+}
+.formList{
+	width: 496px;
+	list-style: none;
+	padding: 0 0 0 20px;
+	line-height : 1.8em;
+	color : #333;
+}
+.textInput,textarea{
+	border: 1px solid;
+	border-color: #abadb3 #dbdfe6 #e3e9ef #e2e3ea;
+	background: #fff;
+}
+.nextButton{
+	background: transparent url( btn.png ) no-repeat 0 3px;
+	border: none;
+	width: 99px;
+	height: 25px;
+	margin-left:360px;
+	font: normal 12px Arial, sans-serif;
+	color: #333 ; 
+}
+#my-tit{
+	width: 500px;	
+	color: #333;
+	font-weight :bold;
+	font-size :1.4em;
+	text-align:center;
+}
+.my-bg {
+	background-color: #fbefdb;
+	padding : 5px;
+}
+#news{
+	padding-top: 15px;
+}
+.frm-height{
+	height :135px;
+}
+.padd-top{
+	padding-top: 15px;
+}
+.li1 input{
+	margin-left: 27px;
+}
+.li2 input{
+	margin-left: 50px;
+}
+.li3 input{
+	margin-left: 10px;
+}
+.li4 input{
+	margin-left: 72px;
+}
+
+#news input{
+	margin-left: 50px;
+}
+.checkboxLabel
+{
+	margin-top: 4px;
+	float:none;
+	width:120px;
+	color: #333;
+}
+.my-dimension{
+	width : 478px;
+	height :200px;;
+}
+.sucess{	
+	
+	color : brown;
+	font-size : 1.2em;
+	margin-left : 30px;
+}
+#accNoteWord, #passNoteWord , #repassNoteWord, #mailNoteWord{	
+	font-size : 0.9em;
+}
+.my-padd-suc{
+	padding : 15px 10px 10px 10px;
+	background-color: #fbefdb;
+}
+#my-sucess{
+	width : 498px;
+	height :auto;
+	border : 3px solid black; 
+}
+.hid { color : #555;}
+.showw { color : #A5A5A5 ;}
+
+

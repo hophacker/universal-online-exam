@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="RegisterEvent" usedb="true">
+	<title>RegisterEvent</title>
+	<metakeywords>php ajax autocomplete,ajax autocomplete php, php autocomplete, php ajax autosuggest, php autosuggest, php mysql autocomplete, ajax autocomplete textbox, ajax autocomplete mysql, ajax autocomplete example, php autocomplete dropdown</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolAutoComplete supports rich client-side event handling. With the use of <b>registerEvent()</b> , you can bind your function to an event. 
+</p>
+
+<p>
+You may have a look at our code section and documentation for more details.
+</p>
+
+<p>
+<i>*Note:</i> Returning false in "OnBefore..." handle function will result in cancelling user action. 
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAutoComplete/koolautocomplete.php";
+
+	$kac = new KoolAutoComplete("kac");
+	$kac->scriptFolder = $KoolControlsFolder."/KoolAutoComplete";
+	$kac->attachTo = "txtRegion";
+	$kac->styleFolder="default";
+
+
+	$result = mysql_query("select CountryName from kcb_tbcountries");
+	while($row = mysql_fetch_assoc($result))
+	{
+		$kac->addItem($row["CountryName"]);	
+	}
+?>
+
+<form id="form1" method="post">
+	<style type="text/css">
+		.box
+		{
+			float:left;
+			width:280px;
+			height:180px;
+			margin:10px;
+			padding:10px;
+		}
+		.focus
+		{
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#eventlog
+		{
+			overflow:auto;
+			overflow-x:hidden;
+			height : 150px;
+			width : 280px;
+		}	
+	</style>
+
+	<div class="box">
+		Enter your country name:<br/>
+		<input type="text" id="txtRegion" autocomplete='off' style="width:240px;" />
+		<?php echo $kac->Render();?>	
+	</div>
+	<div class="box focus">
+		<b>Client-side events:  </b><hr/>
+		<div id="eventlog"></div>	
+	</div>
+	<div class="clear"></div>
+
+	<script type="text/javascript">
+		kac.registerEvent("OnBeforeSelect",function(sender,arg){
+			var _item_data = arg.Item.getData();
+			if(confirm("Select item '"+_item_data["text"]+"' ?"))
+			{
+				writelog("<b>OnBeforeSelect</b>: Approve selection.");
+				return true; //Approve selection
+			}
+			else
+			{
+				writelog("<b>OnBeforeSelect</b>: Cancel selection.");
+				return false;//Cancel selection
+			}
+		});
+		kac.registerEvent("OnSelect",function(sender,arg){
+			var _item = arg.Item;
+			writelog("<b>OnSelect</b>: '"+_item.getData()["text"] + "' was selected.");
+		});
+				
+		kac.registerEvent("OnOpen",function(sender,arg){
+			var _item = arg.Item;
+			writelog("<b>OnOpen</b>: AutoComplete was opened. ");
+		});
+		kac.registerEvent("OnClose",function(sender,arg){
+			var _item = arg.Item;
+			writelog("<b>OnClose</b>: AutoComplete was closed. ");
+		});
+		function writelog(_text)
+		{
+			var _eventlog = document.getElementById("eventlog");
+			_eventlog.innerHTML +="<div style='white-space:nowrap;'>"+_text+"</div>";
+			_eventlog.scrollTop = 9999;
+		}
+	</script>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAutoComplete/PHP/KoolAutoComplete_Class/index.php#itemTemplate">PHP :: KoolAutoComplete :: itemTemplate</doc>
+	</docs>
+</example>

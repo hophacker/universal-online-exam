@@ -1,0 +1,634 @@
+.outlookKFR,
+.outlookKFR input,
+.outlookKFR select
+
+{
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color: #000000;
+}
+
+
+.kfrRoundCorner
+{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+	border-radius:4px;	
+}
+
+/*Headings*/
+.outlookKFR h1.kfrH1
+{
+	font-size:16px;
+}
+.outlookKFR h2.kfrH2
+{
+	font-size:15px;
+}
+.outlookKFR h3.kfrH3
+{
+	font-size:14px;
+}
+.outlookKFR h4.kfrH4
+{
+	font-size:13px;
+}
+.outlookKFR h5.kfrH5
+{
+	font-size:12px;
+}
+/*FieldSet*/
+.outlookKFR .kfrFieldSet
+{
+    background-image: url(FieldsetBgr.png);
+    border: 1px solid #9EBFDB;	
+	background-repeat:no-repeat;
+}
+.outlookKFR .kfrFieldSet legend
+{
+	color: #A0A0A0;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+/*Start:------FieldSet in IE*/
+.outlookKFR table.kfrRoundedWrapper_FieldSet
+{
+	display:inline-block;
+	_display:inline;
+}
+.outlookKFR table.kfrRoundedWrapper_FieldSet td
+{
+	vertical-align:middle;
+}
+.outlookKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;	
+	background-color:#9EBFDB;
+}
+.outlookKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;	
+	background-image: url(FieldsetBgr.png);
+	border-top:1px solid #9EBFDB;
+	border-bottom:1px solid #9EBFDB;
+}
+.outlookKFR table.kfrRoundedWrapper_FieldSet .kfrFieldSet
+{
+	background-position:0px 7px;	
+}
+/*End:------FieldSet in IE*/
+
+
+/*Label*/
+.outlookKFR .kfrLabel
+{
+	margin-left:2px;
+	margin-right:2px;	
+}
+.outlookKFR .kfrDisabled
+{
+	color:#9F9F9F;
+}
+
+/*Validator*/
+.outlookKFR .kfrValidator
+{
+	margin-left:5px;
+	margin-right:5px;	
+	color:red;
+}
+
+
+/*KoolTextBox*/
+.outlookKFR .kfrTextBox
+{
+    background-color: #FFFFFF;
+    border: 1px solid #C3D9F9;
+    height: auto;
+    line-height: normal;
+    padding: 2px 2px 3px;	
+}
+
+.outlookKFR .kfrTextBox:hover,
+.outlookKFR .kfrTextBox:focus
+{
+    border: 1px solid #305090;
+}
+
+
+.outlookKFR .kfrEmpty .kfrTextBox
+{
+	color:#9F9F9F;
+}
+
+.outlookKFR .kfrTable
+{
+	vertical-align: bottom;
+    border-collapse: collapse;
+    border-width: 0;	
+}
+
+
+.outlookKFR .kfrTextBoxWrapper
+{
+	display:inline-block;
+	vertical-align:middle;	
+}
+
+
+
+
+/*Start:----------------------------TextBox in IE*/
+.outlookKFR .kfrRoundedWrapper
+{
+	border:0px !important;
+	display:inline-block;
+	vertical-align:middle;
+	vertical-align: bottom;
+    border-collapse: collapse;
+	_display:inline;
+}
+
+.outlookKFR .kfrRoundedWrapper td
+{
+	border:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+
+
+.outlookKFR table.kfrRoundedWrapper div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;
+	background-color:#C3D9F9;
+}
+.outlookKFR table.kfrRoundedWrapper div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;
+	background-color:#FFFFFF;
+	border-top:1px solid #C3D9F9;
+	border-bottom:1px solid #C3D9F9;
+	background-image:none;
+}
+
+.outlookKFR table.kfrRoundedWrapper:hover div.kfrRoundedOuter,
+.outlookKFR table.kfrFocus div.kfrRoundedOuter
+{
+	background-color:#305090 !important;
+}
+.outlookKFR table.kfrRoundedWrapper:hover div.kfrRoundedInner,
+.outlookKFR table.kfrFocus div.kfrRoundedInner
+{
+	border-top-color:#305090 !important;
+	border-bottom-color:#305090 !important;
+}
+/*End:----------------------------TextBox in IE*/
+
+
+/*KoolNumericTextBox*/
+.outlookKFR .kfrTable .kfrSpinUp,
+.outlookKFR .kfrTable .kfrSpinDown
+{
+    height: 7px;
+    line-height: 7px;
+    width: 15px;
+    display: block;
+    outline: medium none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -2222px;
+    z-index: 2;
+	cursor:pointer;
+}
+
+
+
+.outlookKFR .kfrTable .kfrSpinUp
+{
+	background-position: 4px -98px;
+	background-image:url(sprite.gif);
+}
+.outlookKFR .kfrTable .kfrSpinUp:hover
+{
+	background-position: 4px -148px;
+}
+
+.outlookKFR .kfrTable .kfrSpinDown
+{
+	margin-top: 3px;
+	background-position: 4px -199px;
+	background-image:url(sprite.gif);
+}
+.outlookKFR .kfrTable .kfrSpinDown:hover
+{
+	background-position: 4px -249px;
+}
+
+/*KoolPasswordTextBox*/
+.outlookKFR .kfrIndicator
+{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+	margin:0px 10px 0px 10px;
+	padding:3px 5px 3px 5px;
+	border-radius:4px;
+}
+.outlookKFR .kfrIndicator_Score_0
+{
+	display:none;
+}
+.outlookKFR .kfrIndicator_Score_1
+{
+	background:#FF7553;
+}
+.outlookKFR .kfrIndicator_Score_2
+{
+	background:#FFEDA4;
+}
+.outlookKFR .kfrIndicator_Score_3
+{
+	background:#93C9FF;
+}
+.outlookKFR .kfrIndicator_Score_4
+{
+	background:#6CFF92;
+}
+.outlookKFR .kfrIndicator_Score_5
+{
+	background:#20FF58;
+}
+
+
+
+
+/*KoolCheckBox*/
+.outlookKFR .kfrHide
+{
+	position:absolute;
+	left:-9999px;
+}
+.outlookKFR .kfrCheckBox .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(CheckBoxSprites.gif);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.outlookKFR .kfrCheckBox .kfrOver
+{
+	background-position:-3px -203px;
+}
+.outlookKFR .kfrCheckBoxSelected .kfrSub
+{
+	background-position:-3px -423px;
+}
+.outlookKFR .kfrCheckBoxSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.outlookKFR .kfrCheckBox .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.outlookKFR .kfrCheckBoxSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolRadioButton*/
+.outlookKFR .kfrRadio .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(RadioSprites.png);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.outlookKFR .kfrRadio .kfrOver
+{
+	background-position:-3px -223px;
+}
+.outlookKFR .kfrRadioSelected .kfrSub
+{
+	background-position:-3px -443px;
+}
+.outlookKFR .kfrRadioSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.outlookKFR .kfrRadio .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.outlookKFR .kfrRadioSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolDropDownList*/
+.outlookKFR .kfrRealDropDown
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+	height:22px;
+	position:relative;
+}
+/*Safari*/
+body:nth-of-type(1) .outlookKFR .kfrRealDropDown
+{
+	line-height:18px;
+}
+.outlookKFR .kfrDropDownList
+{
+	display:inline-block;
+	padding-right:1px;
+	cursor:default;
+	overflow:hidden;
+	vertical-align:middle;
+}
+
+.outlookKFR .kfrOut
+{
+	display:inline-block;
+	position:relative;
+	background-image:url(ComboSprites.gif);
+	height:22px;
+}
+
+
+
+.outlookKFR .kfrDropDownList .kfrSub
+{
+	position:absolute;
+	float:left;
+	left:0px;
+	height:22px;
+	padding-left:4px;
+	overflow:hidden;
+	line-height:22px;
+}
+.outlookKFR .kfrDropDownList .kfrArrow
+{
+	position:absolute;
+	display:inline-block;
+	float:right;
+	height:22px;
+	width:22px;
+	height:22px;
+	background-image:url(ComboSprites.gif);
+ 	background-position: right -22px;
+	right:-1px;
+}
+.outlookKFR .kfrDropDownList:hover .kfrOut
+{
+ 	background-position: 0 -44px;
+}
+
+.outlookKFR .kfrDropDownList:hover .kfrArrow
+{
+ 	background-position: right -66px;
+}
+
+.outlookKFR .kfrDropDownList .kfrDisabled
+{
+	background-position: 0 -176px !important;
+}
+.outlookKFR .kfrDropDownList .kfrDisabled .kfrArrow
+{
+	background-position: right -198px;
+}
+.outlookKFR .kfrDropDownList .kfrDisabled .kfrSub
+{
+	color:#9F9F9F;
+}
+
+
+
+/*KoolButton*/
+.outlookKFR a.kfrButtonWrapper
+{
+	background-image: url(ButtonSprites.gif);	
+    background-color: transparent;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+	vertical-align:middle;
+	cursor:pointer;      
+}
+
+.outlookKFR a.kfrButtonWrapper span.kfrOut 
+{
+	background-image: url(ButtonSprites.gif);
+    background-color: transparent;
+    background-position: left -22px;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;    
+	margin-right:4px;
+}
+
+
+.outlookKFR a.kfrButtonWrapper input.kfrButton
+{
+	background:none;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    outline: medium none;
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 6px;
+   	padding-bottom:1px;
+    text-align: center;
+	vertical-align:middle;
+}
+
+.outlookKFR a.kfrButtonWrapper:hover
+{
+	background-position: right -44px;
+}
+.outlookKFR a.kfrButtonWrapper:hover span.kfrOut
+{
+	background-position: left -66px;
+}
+
+.outlookKFR a.kfrButtonDown:hover 
+{
+	background-position: right -88px;
+}
+.outlookKFR a.kfrButtonDown:hover span.kfrOut
+{
+	background-position: left -110px;
+}
+
+.outlookKFR a.kfrButtonWrapper span.kfrLeftImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	left:5px;
+}
+
+.outlookKFR a.kfrButtonWrapper span.kfrSpaceLeft .kfrButton
+{
+	padding-left:22px;
+}
+
+.outlookKFR a.kfrButtonWrapper span.kfrRightImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	right:2px;
+}
+
+.outlookKFR a.kfrButtonWrapper span.kfrSpaceRight .kfrButton
+{
+	padding-right:22px;
+}
+.outlookKFR a.kfrButtonWrapper span.kfrSpaceBoth .kfrButton
+{
+	padding-left:22px;
+	padding-right:22px;
+}
+/*KoolLinkButton*/
+.outlookKFR span.kfrButton
+{
+    line-height: 22px;
+}
+.outlookKFR a.kfrButtonWrapper
+{
+	outline:none;
+}
+.outlookKFR  a.kfrButtonLink
+{
+	background-image:none;
+    border: 1px solid #D5E3F5;
+    color: #00156E;
+    text-decoration: none;	
+}
+.outlookKFR a.kfrButtonLink:hover
+{
+	background-color:#FFEFC4;
+}
+.outlookKFR  a.kfrButtonLink span.kfrOut
+{
+	background-image:none;	
+}
+.outlookKFR a.kfrButtonLink:active
+{
+	background-color:#FFEFC4;
+}
+
+/*KoolSplitButton*/
+.outlookKFR a.kfrSplitButton span.kfrOut
+{
+	margin-right:18px;
+}
+.outlookKFR a.kfrSplitButton span.kfrSplitRight
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -137px;
+    right: 0;
+	top:0;	
+	height: 100%;
+	width:18px;
+	display:block;
+	position:absolute;
+}
+.outlookKFR a.kfrSplitButton span.kfrSplitRight:hover
+{
+    background-position: -18px -137px;
+}
+
+.outlookKFR a.kfrSplitArrowDown span.kfrSplitRight:hover
+{
+	background-position: -36px -137px;
+}
+
+
+.outlookKFR a.kfrSplitButton div.kfrSplitButtonContainer
+{
+	position:absolute;
+	top:22px;
+	left:0px;
+}
+.outlookKFR div.kfrSplitButtonContainer div.kfrContainerInner
+{
+	border-radius:3px;
+	border:solid 1px #003CF4;
+	background-color:#FAF9F8;
+}
+
+
+
+.outlookKFR div.kfrSplitButtonContainer div.kfrOutter
+{
+	margin:1px;
+}
+.outlookKFR div.kfrSplitButtonContainer div.kfrOutter:hover
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 100% -44px;
+	background-repeat:no-repeat;
+}
+
+.outlookKFR div.kfrSplitButtonContainer div.kfrInner
+{
+	position:relative;
+	text-align:left;
+	margin-right:4px;
+}
+.outlookKFR div.kfrOutter:hover div.kfrInner
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -66px;
+	background-repeat:no-repeat;
+}
+
+.outlookKFR div.kfrSplitButtonContainer span.kfrLeftImage
+{
+	left:4px;
+}
+
+
+.outlookKFR div.kfrInner span.kfrText
+{
+	color: #3B3B3B;
+	background:none;
+    border: 0 none;
+    line-height: 22px;
+    margin-left: 24px;
+	padding-right:20px;
+}
+
+

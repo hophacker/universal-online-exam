@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/dxks/!svn/ver/210/yangda/app/View/Layouts
+END
+ajax.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/dxks/!svn/ver/133/yangda/app/View/Layouts/ajax.ctp
+END
+default.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/200/yangda/app/View/Layouts/default.ctp
+END
+error.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/app/View/Layouts/error.ctp
+END
+dangxiao.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/210/yangda/app/View/Layouts/dangxiao.ctp
+END
+manager.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/210/yangda/app/View/Layouts/manager.ctp
+END
+flash.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/app/View/Layouts/flash.ctp
+END

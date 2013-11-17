@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config
+END
+database.php.default
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/database.php.default
+END
+core.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/core.php
+END
+email.php.default
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/email.php.default
+END
+acl.ini.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/acl.ini.php
+END
+bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/bootstrap.php
+END
+acl.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/acl.php
+END
+routes.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/routes.php
+END

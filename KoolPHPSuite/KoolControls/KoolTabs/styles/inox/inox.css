@@ -1,0 +1,587 @@
+.inoxKTS
+{
+	background-color:transparent;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-decoration:none;
+	overflow:hidden;
+}
+.inoxKTS *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.inoxKTS .ktsUL
+{
+	width:auto;
+}
+
+.inoxKTS .ktsleftScroll .ktsUL,
+.inoxKTS .ktsrightScroll .ktsUL,
+.inoxKTS .ktsmiddleScroll .ktsUL
+{
+	width:1000px;
+}
+
+.inoxKTS .ktsright .ktsUL,
+.inoxKTS .ktscenter .ktsUL
+{
+	width:auto;
+}
+
+
+.inoxKTS .ktsLI
+{
+	float:left;
+	list-style-type:none;
+	overflow:hidden;	
+}
+.inoxKTS .ktsLevel
+{
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	position:relative;
+}
+
+
+/*Align Right*/
+.inoxKTS .ktsright .ktsUL
+{
+	float:right;
+}
+
+/*Align Center*/
+.inoxKTS .ktscenter
+{
+	text-align:center;
+}
+.inoxKTS .ktscenter .ktsUL
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	float:none;
+}
+
+/*Css for IE*/
+* html .inoxKTS .ktscenter .ktsUL { display: inline-block; }
+* html .inoxKTS .ktscenter .ktsUL { display: inline; }
+*+html .inoxKTS .ktscenter .ktsUL { display: inline-block; }
+*+html .inoxKTS .ktscenter .ktsUL { display: inline; }
+
+
+
+
+/*Align Justify*/
+.inoxKTS .ktsjustify .ktsUL
+{
+	float:none;
+}
+
+
+
+
+
+/*Scrolling*/
+
+.inoxKTS .ktsPrev,
+.inoxKTS .ktsNext,
+.inoxKTS .ktsNextDisable,
+.inoxKTS .ktsPrevDisable
+{
+	display:none;
+	position:absolute;
+	width:13px;
+	height:13px;
+	background-color:yellow;
+	font-size:0pt;
+	outline-style:none;
+	cursor:pointer;	
+}
+.inoxKTS .ktsPrev
+{
+	background:url(n.gif) 0 0;
+}
+.inoxKTS .ktsPrevDisable
+{
+	background:url(n.gif) 0 100%;
+}
+.inoxKTS .ktsNext
+{
+	background:url(n.gif) 100% 0;
+}
+
+.inoxKTS .ktsNextDisable
+{
+	background:url(n.gif) 100% 100%;
+}
+
+
+/* Right Scroll*/
+.inoxKTS .ktsrightScroll .ktsPrev,
+.inoxKTS .ktsrightScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:17px;	
+}
+
+.inoxKTS .ktsrightScroll .ktsNext,
+.inoxKTS .ktsrightScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;	
+}
+
+/* Left Scroll*/
+.inoxKTS .ktsleftScroll .ktsPrev,
+.inoxKTS .ktsleftScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.inoxKTS .ktsleftScroll .ktsNext,
+.inoxKTS .ktsleftScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:17px;	
+}
+
+/* Middle Scroll*/
+.inoxKTS .ktsmiddleScroll .ktsPrev,
+.inoxKTS .ktsmiddleScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.inoxKTS .ktsmiddleScroll .ktsNext,
+.inoxKTS .ktsmiddleScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;
+}
+
+
+/*Normal display*/
+.inoxKTS .ktsLI .ktsA
+{
+	display:block;
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px 0px;
+	cursor:pointer;
+	text-decoration:none;
+	color:#000;	
+	text-align:center;
+}
+
+
+/*When mouse hover*/
+.inoxKTS .ktsLI .ktsA:hover
+{
+	color:#828ba5;
+}
+
+
+/*Normal display for unselected first link*/
+.inoxKTS .ktsFirst .ktsA
+{
+
+	background:transparent url(t.gif) no-repeat 0px 0px;
+	
+}
+
+.inoxKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -28px;
+	
+	
+}
+.inoxKTS .ktsLI .ktsSelected .ktsText
+{
+	color:#fff;
+}
+/*Normal display for selected first link*/
+.inoxKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -28px;
+}
+
+
+.inoxKTS .ktsLast .ktsA
+{
+
+	background:transparent url(t.gif) no-repeat 0px 0px;
+}
+.inoxKTS .ktsLast .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -28px;
+}
+/*Normal display for tail*/
+.inoxKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% 0pt;
+}
+/*Normal display for tail when selected*/
+.inoxKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% -28px;
+}
+
+.inoxKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% 0px;	
+}
+
+/*both*/
+.inoxKTS .ktsA .ktsIn
+{
+	padding:9px 18px 5px 12px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .inoxKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .inoxKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+
+
+.inoxKTS .ktsText
+{
+	padding-left:2px;
+	padding-right:2px;	
+}
+
+.inoxKTS .ktsBreak
+{
+	clear:both;
+	line-height:0px;
+	height:0px;
+	width:0px;
+	border:0px;
+	font-size:0px;
+}
+/*Disable*/
+.inoxKTS .ktsDisable .ktsA
+{
+	cursor:default;	
+}
+.inoxKTS .ktsDisable .ktsA .ktsText,
+.inoxKTS .ktsDisable .ktsA:hover .ktsText
+{
+	color:gray;
+}
+
+
+/*----Default Level 1&2-------------------------------*/
+
+.inoxKTS .ktsLevel1,
+.inoxKTS .ktsLevel2
+{
+	background-color:#eeeff0;
+}
+.inoxKTS .ktsLevel1 .ktsA,
+.inoxKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.inoxKTS .ktsLevel1 .ktsA,
+.inoxKTS .ktsLevel1 .ktsOut,
+.inoxKTS .ktsLevel2 .ktsA,
+.inoxKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.inoxKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.inoxKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#56607d;
+	text-decoration:underline;
+}
+
+.inoxKTS .ktsLevel1 .ktsSelected .ktsText,
+.inoxKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}
+
+/*-----For Left Position-------------------*/
+.inoxleftKTS
+{
+	line-height:18px;
+}
+
+.inoxleftKTS .ktsLI
+{
+	float:none;
+}
+
+.inoxleftKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:transparent url(t.gif) no-repeat 100% -3px;
+}
+.inoxleftKTS .ktsA .ktsOut
+{
+	background:none;
+	border-left:solid 1px #939286;
+	
+}
+
+.inoxleftKTS .ktsFirst .ktsA
+{
+	background:transparent url(t.gif) no-repeat 100% -3px;
+}
+
+
+.inoxleftKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.inoxleftKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 100% -28px;
+}
+
+.inoxleftKTS .ktsSelected .ktsOut
+{
+	border-right:none;
+}
+
+.inoxleftKTS .ktsA .ktsIn
+{
+	padding:3px 20px 3px 5px;
+	display:block;
+	text-align:right;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.inoxleftKTS .ktsLevel1,
+.inoxleftKTS .ktsLevel2
+{
+	background-color:#eeeff0;
+}
+
+.inoxleftKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.inoxleftKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#56607d;
+	text-decoration:none;
+}
+
+.inoxleftKTS .ktsLevel1 .ktsSelected .ktsText,
+.inoxleftKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Right Position-------------------*/
+/*-----For Right Position-------------------*/
+.inoxrightKTS
+{
+	line-height:18px;
+}
+
+.inoxrightKTS .ktsLI
+{
+	float:none;
+}
+
+.inoxrightKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:transparent url(t.gif) no-repeat 100% -3px;
+}
+.inoxrightKTS .ktsA .ktsOut
+{
+	background:none;
+	border-left:solid 1px #939286;
+	
+}
+
+.inoxrightKTS .ktsFirst .ktsA
+{
+	background:transparent url(t.gif) no-repeat 100% -3px;
+}
+
+
+.inoxrightKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.inoxrightKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 100% -28px;
+}
+
+.inoxrightKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 100% -28x;
+}
+
+
+.inoxrightKTS .ktsSelected .ktsOut
+{
+	border-left:none;
+}
+
+.inoxrightKTS .ktsA .ktsIn
+{
+	padding:4px 5px 2px 20px;
+	display:block;
+	text-align:left;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.inoxrightKTS .ktsLevel1,
+.inoxrightKTS .ktsLevel2
+{
+	background-color:#eeeff0;
+}
+
+.inoxrightKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.inoxrightKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#56607d;
+	text-decoration:none;
+}
+
+.inoxrightKTS .ktsLevel1 .ktsSelected .ktsText,
+.inoxrightKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Bottom Position-------------------*/
+/*-----For Bottom Position-------------------*/
+
+
+/*Normal display*/
+.inoxbottomKTS .ktsLI .ktsA
+{
+	background:transparent url(t.gif) no-repeat 0px -85px;
+}
+
+
+/*Normal display for unselected first link*/
+.inoxbottomKTS .ktsFirst .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px -85px;
+}
+
+.inoxbottomKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -113px;
+}
+
+/*Normal display for selected first link*/
+.inoxbottomKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -113px;
+}
+
+
+/*Normal display for tail*/
+.inoxbottomKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% -85px;
+}
+/*Normal display for tail when selected*/
+.inoxbottomKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% -113px;
+}
+
+.inoxbottomKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -85px;	
+}
+
+/*both*/
+.inoxbottomKTS .ktsA .ktsIn
+{
+	padding:7px 15px 8px 10px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .inoxbottomKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .inoxKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+/*----Default Bottom 1&2-------------------------------*/
+
+.inoxbottomKTS .ktsLevel1,
+.inoxbottomKTS .ktsLevel2
+{
+	background-color:#eeeff0;
+}
+.inoxbottomKTS .ktsLevel1 .ktsA,
+.inoxbottomKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.inoxbottomKTS .ktsLevel1 .ktsA,
+.inoxbottomKTS .ktsLevel1 .ktsOut,
+.inoxbottomKTS .ktsLevel2 .ktsA,
+.inoxbottomKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.inoxbottomKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.inoxbottomKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#56607d;
+	text-decoration:underline;
+}
+
+.inoxbottomKTS .ktsLevel1 .ktsSelected .ktsText,
+.inoxbottomKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}

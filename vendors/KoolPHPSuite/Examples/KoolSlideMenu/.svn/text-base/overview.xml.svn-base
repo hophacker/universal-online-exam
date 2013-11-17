@@ -1,0 +1,29 @@
+<control>
+	<name>KoolSlideMenu - Excellent PHP Menu</name>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.</description>
+	<examples>
+		<example	name="Many Styles" 
+					link="Appearance/Styles/index.php" 
+					image="Appearance/Styles/preview.gif"/>
+		<example	name="Functionality" 
+					link="Features/Functionality/index.php"
+					image="Features/Functionality/preview.gif"/>
+		<example	name="Intergrate With TreeView" 
+					link="Integrations/With_TreeView/index.php"
+					image="Integrations/With_TreeView/preview.gif"/>
+		<example	name="Using Database" 
+					link="Create_Menu_Using_Data/Using_Database/index.php"
+					image="Create_Menu_Using_Data/Using_Database/preview.gif"/>
+		<example	name="Manual control" 
+					link="Client_side_API/Manual_control/index.php" 
+					image="Client_side_API/Manual_control/preview.gif"/>
+		<example	name="Form Registration" 
+					link="Application/Registration/index.php" 
+					image="Application/Registration/preview.gif"/>
+		<example	name="Multi-Levels" 
+					link="Features/MultiLevels/index.php"
+					image="Features/MultiLevels/preview.gif"/>
+	</examples>			
+</control>

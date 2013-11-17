@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="DateTimePicker_FirstLook" usedb="false">
+	<title>FirstLook</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker,</metakeywords>	 
+	<metadescription>Powerful PHP DateTime Picker</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+The example show how simply we can create a date time picker and retrive its value after postback.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolCalendar/koolcalendar.php";	
+	
+	$timepicker = new KoolTimePicker("timepicker"); //Create calendar object
+	$timepicker->scriptFolder = $KoolControlsFolder."/KoolCalendar";//Set scriptFolder
+	$timepicker->styleFolder="default";
+
+	$timepicker->TimeViewSettings->StartTime = mktime(8,0,0); // Start at 8:00
+	$timepicker->TimeViewSettings->EndTime = mktime(17,0,0); // End at 17:00
+	$timepicker->TimeViewSettings->Interval = mktime(1,0,0); // Every 1 hour
+
+	$timepicker->Init();
+?>
+
+<form id="form1" method="post">	
+	<div style="padding-top:20px;padding-bottom:40px;width:650px;">
+		Pick a time:
+		<br/>
+		<?php echo $timepicker->Render();?>
+		<div style="padding-top:10px;">
+			<input type="submit" value="Submit" />
+		</div>
+		<div style="padding-top:10px;">
+			<?php
+				if($timepicker->Value!=null)
+				{
+					echo "<b>Choosed time:</b> ".$timepicker->Value;
+				}
+			?>
+		</div>		
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolCalendar/PHP/KoolCalendar_Class/index.php">KoolCalendar</doc>
+	</docs>
+</example>

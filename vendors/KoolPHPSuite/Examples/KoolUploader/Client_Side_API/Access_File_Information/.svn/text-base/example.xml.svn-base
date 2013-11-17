@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Access_File_Information" usedb="false">
+	<title>Access File Information</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolUploader supports accessing status of uploading files. While the file uploading, you can access information such as uploaded bytes, estimated time left, average speed, uploading percentage and so on.
+You may register handle for OnUpdateProgress event and get most updated uploading status.
+</p>
+<p>
+<i>*Note:</i> If you run this example in localhost, the uploading process would be too fast for KoolUploader to get status.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->handlePage = "handle.php";
+	$kul->allowedExtension = "gif,jpg,txt,doc,pdf";
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul->progressTracking = true;
+	$kul->maxFileSize = 512*1024; //500KB
+	
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	
+	<table style="width:650px;">
+		<tr>
+			<td><?php echo $kul->Render();?></td>
+			<td>
+				Uploading information:
+				<div id="log" style="width:300px;height:200px;overflow:auto;background:#EEEEEE"></div>
+			</td>
+		</tr>		
+	</table>
+	
+	<script type="text/javascript">
+		kul.registerEvent("OnUploadDone",function(sender,arg){
+			var _items = kul.getItems(); //Get all items
+			for(var i in _items)
+			{
+				if(_items[i].getStatus()=="ready")
+				{
+					_items[i].upload();
+					return;
+				}
+			}				
+			
+		});
+		kul.registerEvent("OnBeforeUpload",function(sender,arg){
+			//Make sure that only one file is uploaded at a time.
+			//Cancel user click button to upload the file when there is file uploading.
+			var _items = kul.getItems(); //Get all items
+			for(var i in _items)
+			{
+				if(_items[i].getStatus()=="uploading")
+				{
+					return false;
+				}
+			}				
+			return true;
+		});
+		kul.registerEvent("OnUpdateProgress",function(sender,arg){
+			var _item = kul.getItem(arg.ItemId); //Get all items
+			clearlog();
+			writelog("Filename: <i>"+_item.getFileName()+"</i>");
+			writelog("Uploaded bytes: <i>"+_item.getUploadedBytes()+"/"+_item.getTotalBytes()+"</i>");			
+			writelog("Elapsed time: <i>"+_item.getElapsedTime()+" seconds</i>");			
+			writelog("Esimated time left: <i>"+_item.getEstimatedTimeLeft()+" seconds</i>");			
+			writelog("Average speed: <i>"+_item.getAverageSpeed()+" bytes/second</i>");			
+		});	
+		function writelog(_text)
+		{
+			var _log = document.getElementById("log");
+			_log.innerHTML +="<div style='white-space:nowrap;'>"+_text+"</div>";
+			_log.scrollTop = 9999;
+		}
+		function clearlog()
+		{
+			var _log = document.getElementById("log");
+			_log.innerHTML="";			
+			_log.scrollTop = 0;
+		}
+	</script>
+	
+	<div style="padding-top:20px;">
+		<i>*Note:</i> Please test uploading with *.txt, *.doc, *.pdf, *.jpg, *.gif ( size &lt; 500KB )
+	</div>	
+
+</form>
+			]]>			
+		</code>	
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	$kulhandle->allowedExtension = "gif,jpg,doc,pdf,txt";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getFileName">Javascript :: KoolUploaderItem :: getFileName()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getTotalBytes">Javascript :: KoolUploaderItem :: getTotalBytes()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getUploadedBytes">Javascript :: KoolUploaderItem :: getUploadedBytes()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getElapsedTime">Javascript :: KoolUploaderItem :: getElapsedTime()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getEstimatedTimeLeft">Javascript :: KoolUploaderItem :: getEstimatedTimeLeft()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getAverageSpeed">Javascript :: KoolUploaderItem :: getAverageSpeed()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getLastSpeed">Javascript :: KoolUploaderItem :: getLastSpeed()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getUploadedPercent">Javascript :: KoolUploaderItem :: getUploadedPercent()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/Javascript/KoolUploaderItem_Class/index.php#getUploadedPercent">Javascript :: KoolUploaderItem :: getUploadedPercent()</doc>
+		
+	</docs>
+</example>

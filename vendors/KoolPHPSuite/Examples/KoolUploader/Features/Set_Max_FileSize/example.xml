@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Set_Max_FileSize" usedb="false">
+	<title>Set Max FileSize</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+
+<p>
+KoolUploader supports setting max filesize that allow to upload. In above example, the max file size of KoolUploader is set to 500KB, which mean user will not able to upload a file with size more than 500KB.
+To set this, you need to put size in byte to <b>maxFileSize</b> property.
+</p>
+
+<p>
+<i>*Note:</i> The <b>maxFileSize</b> is only effective in max upload limitation of PHP . Setting <b>maxFileSize</b> to 100MB does not mean that you can upload 100MB. The max file size also depends on following setting of PHP:
+<ul>
+	<li><b>max_execution_time</b>: If the uploading time is over max_execution_time, the page not found error may happen.</li>
+	<li><b>max_input_time</b> : Limit the input upload time</li>	
+	<li><b>post_max_size</b> : Limit the max of form post.</li>	
+	<li><b>upload_max_filesize</b> : Directly limit the max file size of uploading</li>	
+</ul>
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->handlePage = "handle.php";	
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul->allowedExtension = "gif,jpg,doc,pdf,txt";
+	$kul->progressTracking = true;	
+	$kul->maxFileSize = 512*1024; //500KB
+	
+?>
+
+<form id="form1" method="post">	
+	<?php echo $koolajax->Render();?>
+	<?php echo $kul->Render();?>
+	<div style="padding-top:20px;">
+		<i>*Note:</i> Please test uploading with *.txt, *.doc, *.pdf, *.jpg, *.gif
+	</div>	
+	<div style="padding-top:5px;">
+		<i>*Note:</i> The above uploader is set max filesize to 500KB
+	</div>	
+</form>
+
+			]]>			
+		</code>	
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	$kulhandle->allowedExtension = "gif,jpg,doc,pdf,txt";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/PHP/KoolUploader_Class/index.php#styleFolder">PHP :: KoolUploader :: styleFolder</doc>
+	</docs>
+</example>

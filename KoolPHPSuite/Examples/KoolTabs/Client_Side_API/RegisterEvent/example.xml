@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="RegisterEvent" usedb="false">
+	<title>RegisterEvent</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolTabs supports rich client-side event handling. With the use of <b>registerEvent() </b>, you can bind your function to an event.
+</p>
+<p>
+<ul>
+	<li><i>"OnBeforeSelect"</i> - Before the tab changes to selection state.</li>
+	<li><i>"OnSelect"</i> - After the tab changes to selection state.</li>
+	<li><i>"OnBeforeUnselect"</i> - Before the tab changes to unselection state.</li>
+	<li><i>"OnUselect"</i> - After the tab changes to unselection state.</li>
+	<li><i>"OnBeforeSelect"</i> - Before the tab changes to selection state.</li>
+	<li><i>"OnSelect"</i> - After the tab changes to selection state.</li>
+	<li><i>"OnMouseOver"</i> - When the mouse is over a tab.</li>
+	<li><i>"OnMouseOut"</i> - When the mouse is moving out of a tab.</li>
+</ul>
+</p>
+<br />
+<p>
+<i>*Note:</i> Returning <b>false</b> in "OnBefore..." handle function will result in cancelling user action.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->scriptFolder = $KoolControlsFolder."/KoolTabs";
+	$kts->styleFolder="outlook";
+	
+	$kts->addTab("root","home","Home");	
+	$kts->addTab("root","products","Products");
+	$kts->addTab("root","services","Services");
+	$kts->addTab("root","contactus","Contact us");	
+	
+	
+?>
+
+<form id="form1" method="post">
+	<style type="text/css">
+		.box
+		{
+			float:right;
+			width:280px;
+			height:180px;
+			margin:10px;
+			padding:10px;
+		}		
+		.focus
+		{
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#eventlog
+		{
+			overflow:auto;
+			overflow-x:hidden;
+			height : 150px;
+			width : 280px;
+		}	
+				
+	</style>
+	
+	
+	<div style="width:650px;">
+
+		<div class="box focus">
+			<b>Client-side events:  </b><hr/>
+			<div id="eventlog"></div>		
+		</div>
+		
+		<div style="padding-top:15px;">
+			<?php echo $kts->Render();?>
+		</div>
+		
+		<div class="clear"></div>		
+	</div>
+
+	<script type="text/javascript">
+		kts.registerEvent("OnBeforeSelect",function(sender,arg){
+			if(confirm("Select ["+arg.TabId+"] tab?"))
+			{
+				writelog("Selecting " + arg.TabId + " was approved");				
+				return true; //Approve selecting.
+			}
+			else
+			{
+				writelog("Selecting " + arg.TabId + " was cancelled");	
+				return false;//Disapprove selecting.
+			}
+		});
+		
+		kts.registerEvent("OnSelect",function(sender,arg){
+			writelog("The <b>"+arg.TabId+"</b> tab is selected!");
+		});
+
+				
+		function writelog(_text)
+		{
+			var _eventlog = document.getElementById("eventlog");
+			_eventlog.innerHTML +="<div style='white-space:nowrap;'>"+_text+"</div>";
+			_eventlog.scrollTop = 9999;
+		}		
+		
+	</script>
+	
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/Javascript/KoolTabs_Class/index.php#registerEvent">Javascript :: KoolTabs :: registerEvent</doc>
+	</docs>
+</example>

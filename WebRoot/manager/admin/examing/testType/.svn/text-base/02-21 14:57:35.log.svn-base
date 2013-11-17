@@ -1,0 +1,10 @@
+update test_type set 
+            style=0, 
+            sel_num=0,
+            sel_score=0,
+            jud_num=0,
+            jud_score=0,
+            ans_num=0,
+            ans_score=0,
+            duration=0,
+            grad_test_type_id=2, comment="" where test_type_id=48

@@ -1,0 +1,208 @@
+.defaultKSS
+{
+	border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+
+	border: 1px solid #828282;
+}
+
+
+.defaultKSS ul.kssUL
+{
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;	
+}
+
+
+.defaultKSS li.kssItem
+{
+	display: inline-block;
+	margin:2px 0px 2px 0px;
+    vertical-align: middle;
+}
+
+.defaultKSS ul.kssVertical li.kssItem
+{
+	display:block;
+}
+
+.defaultKSS li.kssLineBreak
+{
+	display:block;
+	margin:0px;
+}
+.defaultKSS ul.kssVertical li.kssLineBreak
+{
+	margin:4px 0px 4px 0px;
+	background-color:#828282;
+	height:1px;
+}
+
+
+.defaultKSS a.kssLink
+{
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+
+.defaultKSS span.kssText
+{
+	color: #3B3B3B;
+	vertical-align: middle;
+	margin:0px 2px 0px 2px;
+}
+
+.defaultKSS span.kssIcon
+{
+	background-image: url(SocialShareSprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin:0px 2px 0px 2px;
+    width: 16px;
+	vertical-align: middle;
+}
+
+/*Facebook*/
+.defaultKSS .kssFacebook span.kssIcon
+{
+	background-position: -260px 0;
+}
+.defaultKSS .kssFacebook:hover span.kssIcon
+{
+	background-position: -260px -20px;
+}
+
+/*Twitter*/
+.defaultKSS .kssTwitter span.kssIcon
+{
+	background-position: -20px 0;
+}
+.defaultKSS .kssTwitter:hover span.kssIcon
+{
+	background-position: -20px -20px;
+}
+
+/*Blogger*/
+.defaultKSS .kssBlogger span.kssIcon
+{
+	background-position: 0 0;
+}
+.defaultKSS .kssBlogger:hover span.kssIcon
+{
+	background-position: 0 -20px;
+}
+
+/*Delicious*/
+.defaultKSS .kssDelicious span.kssIcon
+{
+	background-position: -60px 0;
+}
+.defaultKSS .kssDelicious:hover span.kssIcon
+{
+	background-position: -60px -20px;
+}
+
+/*Digg*/
+.defaultKSS .kssDigg span.kssIcon
+{
+	background-position: -80px 0;
+}
+.defaultKSS .kssDigg:hover span.kssIcon
+{
+	background-position: -80px -20px;
+}
+
+/*GoogleBookmarks*/
+.defaultKSS .kssGoogleBookmarks span.kssIcon
+{
+	background-position: -120px 0;
+}
+.defaultKSS .kssGoogleBookmarks:hover span.kssIcon
+{
+	background-position: -120px -20px;
+}
+
+/*LinkedIn*/
+.defaultKSS .kssLinkedIn span.kssIcon
+{
+	background-position: -140px 0;
+}
+.defaultKSS .kssLinkedIn:hover span.kssIcon
+{
+	background-position: -140px -20px;
+}
+
+/*MySpace*/
+.defaultKSS .kssMySpace span.kssIcon
+{
+	background-position: -40px 0;
+}
+.defaultKSS .kssMySpace:hover span.kssIcon
+{
+	background-position: -40px -20px;
+}
+
+/*Reddit*/
+.defaultKSS .kssReddit span.kssIcon
+{
+	background-position: -160px 0;
+}
+.defaultKSS .kssReddit:hover span.kssIcon
+{
+	background-position: -160px -20px;
+}
+
+/*StumbleUpon*/
+.defaultKSS .kssStumbleUpon span.kssIcon
+{
+	background-position: -180px 0;
+}
+.defaultKSS .kssStumbleUpon:hover span.kssIcon
+{
+	background-position: -180px -20px;
+}
+
+/*Tumblr*/
+.defaultKSS .kssTumblr span.kssIcon
+{
+	background-position: -200px 0;
+}
+.defaultKSS .kssTumblr:hover span.kssIcon
+{
+	background-position: -200px -20px;
+}
+
+/*MailTo*/
+.defaultKSS .kssMailTo span.kssIcon
+{
+	background-position: -220px 0;
+}
+.defaultKSS .kssMailTo:hover span.kssIcon
+{
+	background-position: -220px -20px;
+}
+
+/*SendEmail*/
+.defaultKSS .kssSendEmail span.kssIcon
+{
+	background-position: -100px 0;
+}
+.defaultKSS .kssSendEmail:hover span.kssIcon
+{
+	background-position: -100px -20px;
+}
+
+.defaultKSS  li.kssFacebookButton,
+.defaultKSS  li.kssTwitterButton,
+.defaultKSS  li.kssLinkedInButton,
+.defaultKSS  li.kssGooglePlusButton
+{
+	margin:0px 2px 0px 2px;
+}

@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$template_dir</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.variables.html" title="Chapter 13. Smarty Class Variables">
+<link rel="prev" href="variable.smarty.debug.id.html" title="$smarty_debug_id">
+<link rel="next" href="variable.trusted.dir.html" title="$trusted_dir">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">$template_dir</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="variable.smarty.debug.id.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 13. Smarty Class Variables</th>
+<td width="20%" align="right"> <a accesskey="n" href="variable.trusted.dir.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="$template_dir">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="variable.template.dir"></a>$template_dir</h2></div></div></div>
+<p>
+     This is the name of the default template directory. If you do
+     not supply a resource type when including files, they will be
+     found here. By default this is
+     <code class="filename">./templates</code>,
+     meaning that Smarty
+     will look for the
+     <code class="filename">templates/</code> directory in
+     the same directory as the executing php script. <span class="property">$template_dir</span>
+     can also be an array of directory paths: Smarty will traverse the
+     directories and stop on the first matching template found.
+    </p>
+<div class="note" title="Technical Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Technical Note</h3>
+<p>
+      It is not recommended to put this directory under
+      the web server document root.
+     </p>
+</div>
+<div class="note" title="Technical Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Technical Note</h3>
+<p>
+      If the directories known to <em class="parameter"><code>$template_dir</code></em> 
+      are relative to directories known to the
+      <a class="ulink" href="http://php.net/ini.core.php#ini.include-path" target="_top">include_path</a>
+      you need to activate the 
+      <a class="link" href="variable.use.include.path.html" title="$use_include_path"><em class="parameter"><code>$use_include_path</code></em></a> 
+      option.
+     </p>
+</div>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+      As of Smarty 3.1 the attribute $template_dir is no longer accessible directly. Use 
+      <a class="link" href="api.get.template.dir.html" title="getTemplateDir()"><code class="varname">getTemplateDir()</code></a>, 
+      <a class="link" href="api.set.template.dir.html" title="setTemplateDir()"><code class="varname">setTemplateDir()</code></a> and
+      <a class="link" href="api.add.template.dir.html" title="addTemplateDir()"><code class="varname">addTemplateDir()</code></a> instead.
+     </p>
+</div>
+<p>
+     See also 
+     <a class="link" href="resources.html" title="Chapter 16. Resources"><code class="varname">Template Resources</code></a>, 
+     <a class="link" href="variable.use.include.path.html" title="$use_include_path"><em class="parameter"><code>$use_include_path</code></em></a>, 
+     <a class="link" href="api.get.template.dir.html" title="getTemplateDir()"><code class="varname">getTemplateDir()</code></a>, 
+     <a class="link" href="api.set.template.dir.html" title="setTemplateDir()"><code class="varname">setTemplateDir()</code></a> and
+     <a class="link" href="api.add.template.dir.html" title="addTemplateDir()"><code class="varname">addTemplateDir()</code></a>.
+    </p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="variable.smarty.debug.id.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.variables.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="variable.trusted.dir.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">$smarty_debug_id </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> $trusted_dir</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

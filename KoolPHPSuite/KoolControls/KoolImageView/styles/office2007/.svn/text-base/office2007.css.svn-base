@@ -1,0 +1,79 @@
+﻿.office2007ZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.office2007KIV
+{
+	display:inline;
+}
+
+.office2007KIV .kivZoomPanel
+{
+    position:absolute;
+	background:#d6e7fc url(bg.gif) no-repeat left top ;
+	border:1px #94b6e0 solid;
+	padding:10px;
+	
+}
+
+.office2007KIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:#d6e7fc ;
+    border:solid 1px gray;
+}
+
+.office2007KIV .kivBigImage
+{
+	cursor:url(zoomout.cur),pointer !important;
+	border:solid 1px #94b6e0;
+}
+
+
+.office2007KIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+.office2007KIV .kivEffectPanel
+{
+	background:#d6e7fc url(bg.gif) no-repeat left top ;
+	border:solid 1px gray;
+}
+
+.office2007KIV .kivEffectImage
+{
+    border:solid 1px gray;
+}
+
+.office2007KIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.office2007KIV .kivDescription
+{
+	float:left;
+	padding-top:5px;
+    color:#555;
+    font-family:Arial;
+    font-size:12px;
+}
+
+.office2007KIV .kivCloseButton
+{
+
+}
+
+.office2007KIV .kivMoveButton
+{
+
+}
+
+

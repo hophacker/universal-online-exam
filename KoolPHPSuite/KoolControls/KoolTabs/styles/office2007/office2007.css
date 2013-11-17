@@ -1,0 +1,577 @@
+.office2007KTS
+{
+	background-color:transparent;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-decoration:none;
+	overflow:hidden;
+}
+.office2007KTS *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.office2007KTS .ktsUL
+{
+	width:auto;
+}
+
+.office2007KTS .ktsleftScroll .ktsUL,
+.office2007KTS .ktsrightScroll .ktsUL,
+.office2007KTS .ktsmiddleScroll .ktsUL
+{
+	width:1000px;
+}
+
+.office2007KTS .ktsright .ktsUL,
+.office2007KTS .ktscenter .ktsUL
+{
+	width:auto;
+}
+
+
+.office2007KTS .ktsLI
+{
+	float:left;
+	list-style-type:none;
+	overflow:hidden;	
+}
+.office2007KTS .ktsLevel
+{
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	position:relative;
+	background:#bbd7fa;
+	padding-top:0px;
+	padding-left:1px;
+}
+
+
+/*Align Right*/
+.office2007KTS .ktsright .ktsUL
+{
+	float:right;
+}
+
+/*Align Center*/
+.office2007KTS .ktscenter
+{
+	text-align:center;
+}
+.office2007KTS .ktscenter .ktsUL
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	float:none;
+}
+
+/*Css for IE*/
+* html .office2007KTS .ktscenter .ktsUL { display: inline-block; }
+* html .office2007KTS .ktscenter .ktsUL { display: inline; }
+*+html .office2007KTS .ktscenter .ktsUL { display: inline-block; }
+*+html .office2007KTS .ktscenter .ktsUL { display: inline; }
+
+
+
+
+/*Align Justify*/
+.office2007KTS .ktsjustify .ktsUL
+{
+	float:none;
+}
+
+
+
+
+
+/*Scrolling*/
+
+.office2007KTS .ktsPrev,
+.office2007KTS .ktsNext,
+.office2007KTS .ktsNextDisable,
+.office2007KTS .ktsPrevDisable
+{
+	display:none;
+	position:absolute;
+	width:11px;
+	height:11px;
+	background-color:yellow;
+	font-size:0pt;
+	outline-style:none;
+	cursor:pointer;	
+}
+.office2007KTS .ktsPrev
+{
+	background:url(n.gif) 0 0;
+}
+.office2007KTS .ktsPrevDisable
+{
+	background:url(n.gif) 0 100%;
+}
+.office2007KTS .ktsNext
+{
+	background:url(n.gif) 100% 0;
+}
+
+.office2007KTS .ktsNextDisable
+{
+	background:url(n.gif) 100% 100%;
+}
+
+
+/* Right Scroll*/
+.office2007KTS .ktsrightScroll .ktsPrev,
+.office2007KTS .ktsrightScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:17px;	
+}
+
+.office2007KTS .ktsrightScroll .ktsNext,
+.office2007KTS .ktsrightScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;	
+}
+
+/* Left Scroll*/
+.office2007KTS .ktsleftScroll .ktsPrev,
+.office2007KTS .ktsleftScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.office2007KTS .ktsleftScroll .ktsNext,
+.office2007KTS .ktsleftScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:17px;	
+}
+
+/* Middle Scroll*/
+.office2007KTS .ktsmiddleScroll .ktsPrev,
+.office2007KTS .ktsmiddleScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.office2007KTS .ktsmiddleScroll .ktsNext,
+.office2007KTS .ktsmiddleScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;
+}
+
+
+/*Normal display*/
+.office2007KTS .ktsLI .ktsA
+{
+	display:block;
+	padding-left:5px;
+	background:#bbd7fa;
+	cursor:pointer;
+	text-decoration:none;
+	color:#000;	
+	text-align:center;
+}
+
+
+/*When mouse hover*/
+.office2007KTS .ktsLI .ktsA:hover
+{
+}
+
+
+/*Normal display for unselected first link*/
+.office2007KTS .ktsFirst .ktsA
+{
+	background:#bbd7fa;
+	
+}
+
+.office2007KTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px 0px;
+	
+	
+}
+.office2007KTS .ktsLI .ktsSelected .ktsText
+{
+}
+/*Normal display for selected first link*/
+.office2007KTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px 0px;
+}
+
+
+.office2007KTS .ktsLast .ktsA
+{
+	background:#bbd7fa;
+}
+.office2007KTS .ktsLast .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px 0px;
+}
+/*Normal display for tail*/
+.office2007KTS .ktsA .ktsOut
+{
+	display:block;
+	background:#bbd7fa;
+}
+/*Normal display for tail when selected*/
+.office2007KTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% 0px;
+}
+
+.office2007KTS .ktsBefore .ktsOut
+{
+	background:#bbd7fa;
+}
+
+/*both*/
+.office2007KTS .ktsA .ktsIn
+{
+	padding:5px 15px 4px 10px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .office2007KTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .office2007KTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+
+
+.office2007KTS .ktsText
+{
+	padding-left:2px;
+	padding-right:2px;	
+}
+
+.office2007KTS .ktsBreak
+{
+	clear:both;
+	line-height:0px;
+	height:0px;
+	width:0px;
+	border:0px;
+	font-size:0px;
+}
+/*Disable*/
+.office2007KTS .ktsDisable .ktsA
+{
+	cursor:default;	
+}
+.office2007KTS .ktsDisable .ktsA .ktsText,
+.office2007KTS .ktsDisable .ktsA:hover .ktsText
+{
+	color:gray;
+}
+
+
+/*----Default Level 1&2-------------------------------*/
+
+.office2007KTS .ktsLevel1,
+.office2007KTS .ktsLevel2
+{
+	background-color:#FFF;
+}
+.office2007KTS .ktsLevel1 .ktsA,
+.office2007KTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.office2007KTS .ktsLevel1 .ktsA,
+.office2007KTS .ktsLevel1 .ktsOut,
+.office2007KTS .ktsLevel2 .ktsA,
+.office2007KTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.office2007KTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.office2007KTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#638ec6;
+	text-decoration:underline;
+}
+
+.office2007KTS .ktsLevel1 .ktsSelected .ktsText,
+.office2007KTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:638ec6;
+	text-decoration:underline;
+}
+
+/*-----For Left Position-------------------*/
+.office2007leftKTS
+{
+	line-height:18px;
+}
+
+.office2007leftKTS .ktsLI
+{
+	float:none;
+}
+
+.office2007leftKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+}
+.office2007leftKTS .ktsA .ktsOut
+{
+	background:none;
+	border-right:solid 1px #939286;
+	
+}
+
+.office2007leftKTS .ktsFirst .ktsA
+{
+}
+
+
+.office2007leftKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.office2007leftKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0 -31px;
+	border-right:1px #FFF solid;
+}
+
+.office2007leftKTS .ktsSelected .ktsOut
+{
+	border-right:none;
+}
+
+.office2007leftKTS .ktsA .ktsIn
+{
+	padding:5px 5px 5px 20px;
+	display:block;
+	text-align:right;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.office2007leftKTS .ktsLevel1,
+.office2007leftKTS .ktsLevel2
+{
+	background-color:#FFF;
+}
+
+.office2007leftKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.office2007leftKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#638ec6;
+	text-decoration:none;
+}
+
+.office2007leftKTS .ktsLevel1 .ktsSelected .ktsText,
+.office2007leftKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Right Position-------------------*/
+/*-----For Right Position-------------------*/
+.office2007rightKTS
+{
+	line-height:18px;
+}
+
+.office2007rightKTS .ktsLI
+{
+	float:none;
+}
+
+.office2007rightKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+}
+.office2007rightKTS .ktsA .ktsOut
+{
+	background:none;	
+}
+
+.office2007rightKTS .ktsFirst .ktsA
+{
+}
+
+
+.office2007rightKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.office2007rightKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 100% -91px;
+	border-left:1px #FFF solid;
+}
+
+.office2007rightKTS .ktsFirst .ktsSelected
+{
+}
+
+
+.office2007rightKTS .ktsSelected .ktsOut
+{
+	border-left:none;
+}
+
+.office2007rightKTS .ktsA .ktsIn
+{
+	padding:5px 5px 5px 20px;
+	display:block;
+	text-align:left;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.office2007rightKTS .ktsLevel1,
+.office2007rightKTS .ktsLevel2
+{
+	background-color:#FFF;
+}
+
+.office2007rightKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.office2007rightKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#638ec6;
+	text-decoration:none;
+}
+
+.office2007rightKTS .ktsLevel1 .ktsSelected .ktsText,
+.office2007rightKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Bottom Position-------------------*/
+/*-----For Bottom Position-------------------*/
+
+
+/*Normal display*/
+.office2007bottomKTS .ktsLI .ktsA
+{
+
+}
+
+
+/*Normal display for unselected first link*/
+.office2007bottomKTS .ktsFirst .ktsA
+{
+}
+
+.office2007bottomKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -61px;
+}
+
+/*Normal display for selected first link*/
+.office2007bottomKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -61px;
+}
+
+
+/*Normal display for tail*/
+.office2007bottomKTS .ktsA .ktsOut
+{
+	display:block;
+}
+/*Normal display for tail when selected*/
+.office2007bottomKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -61px;
+}
+
+.office2007bottomKTS .ktsBefore .ktsOut
+{
+}
+
+/*both*/
+.office2007bottomKTS .ktsA .ktsIn
+{
+	padding:3px 15px 5px 15px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .office2007bottomKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .office2007KTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+/*----Default Bottom 1&2-------------------------------*/
+
+.office2007bottomKTS .ktsLevel1,
+.office2007bottomKTS .ktsLevel2
+{
+	background-color:#FFF;
+}
+.office2007bottomKTS .ktsLevel1 .ktsA,
+.office2007bottomKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.office2007bottomKTS .ktsLevel1 .ktsA,
+.office2007bottomKTS .ktsLevel1 .ktsOut,
+.office2007bottomKTS .ktsLevel2 .ktsA,
+.office2007bottomKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.office2007bottomKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.office2007bottomKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#638ec6;
+	text-decoration:underline;
+}
+
+.office2007bottomKTS .ktsLevel1 .ktsSelected .ktsText,
+.office2007bottomKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}

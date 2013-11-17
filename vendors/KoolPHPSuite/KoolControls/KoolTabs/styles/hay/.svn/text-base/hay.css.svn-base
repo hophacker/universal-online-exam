@@ -1,0 +1,637 @@
+.hayKTS
+{
+	background-color:transparent;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:20px;
+	text-decoration:none;
+	overflow:hidden;
+}
+.hayKTS *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.hayKTS .ktsUL
+{
+	width:auto;
+}
+
+.hayKTS .ktsleftScroll .ktsUL,
+.hayKTS .ktsrightScroll .ktsUL,
+.hayKTS .ktsmiddleScroll .ktsUL
+{
+	width:1000px;
+}
+
+.hayKTS .ktsright .ktsUL,
+.hayKTS .ktscenter .ktsUL
+{
+	width:auto;
+}
+
+
+.hayKTS .ktsLI
+{
+	float:left;
+	list-style-type:none;
+	overflow:hidden;	
+}
+.hayKTS .ktsLevel
+{
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	position:relative;
+}
+
+
+/*Align Right*/
+.hayKTS .ktsright .ktsUL
+{
+	float:right;
+}
+
+/*Align Center*/
+.hayKTS .ktscenter
+{
+	text-align:center;
+}
+.hayKTS .ktscenter .ktsUL
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	float:none;
+}
+
+/*Css for IE*/
+* html .hayKTS .ktscenter .ktsUL { display: inline-block; }
+* html .hayKTS .ktscenter .ktsUL { display: inline; }
+*+html .hayKTS .ktscenter .ktsUL { display: inline-block; }
+*+html .hayKTS .ktscenter .ktsUL { display: inline; }
+
+
+
+
+/*Align Justify*/
+.hayKTS .ktsjustify .ktsUL
+{
+	float:none;
+}
+
+
+
+
+
+/*Scrolling*/
+
+.hayKTS .ktsPrev,
+.hayKTS .ktsNext,
+.hayKTS .ktsNextDisable,
+.hayKTS .ktsPrevDisable
+{
+	display:none;
+	position:absolute;
+	width:17px;
+	height:17px;
+	background-color:yellow;
+	font-size:0pt;
+	outline-style:none;
+	cursor:pointer;	
+}
+.hayKTS .ktsPrev
+{
+	background:url(n.gif) 0 0;
+}
+.hayKTS .ktsPrevDisable
+{
+	background:url(n.gif) 0 19px;
+}
+.hayKTS .ktsNext
+{
+	background:url(n.gif) 100% 0;
+}
+
+.hayKTS .ktsNextDisable
+{
+	background:url(n.gif) 100% 19px;
+}
+
+
+/* Right Scroll*/
+.hayKTS .ktsrightScroll .ktsPrev,
+.hayKTS .ktsrightScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:17px;	
+}
+
+.hayKTS .ktsrightScroll .ktsNext,
+.hayKTS .ktsrightScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;	
+}
+
+/* Left Scroll*/
+.hayKTS .ktsleftScroll .ktsPrev,
+.hayKTS .ktsleftScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.hayKTS .ktsleftScroll .ktsNext,
+.hayKTS .ktsleftScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:17px;	
+}
+
+/* Middle Scroll*/
+.hayKTS .ktsmiddleScroll .ktsPrev,
+.hayKTS .ktsmiddleScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.hayKTS .ktsmiddleScroll .ktsNext,
+.hayKTS .ktsmiddleScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;
+}
+
+
+/*Normal display*/
+.hayKTS .ktsLI .ktsA
+{
+	display:block;
+	padding-left:12px;
+	background:transparent url(t.gif) no-repeat -12px 0;
+	cursor:pointer;
+	text-decoration:none;
+	color:black;	
+	text-align:center;
+}
+
+
+/*When mouse hover*/
+.hayKTS .ktsLI .ktsA:hover
+{
+	color:green;
+}
+
+
+/*Normal display for unselected first link*/
+.hayKTS .ktsFirst .ktsA
+{
+	padding-left:24px;
+	background:transparent url(t.gif) no-repeat 0 0;
+}
+
+.hayKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat -12px -26px;
+}
+.hayKTS .ktsLI .ktsSelected .ktsText
+{
+	color:green;
+}
+/*Normal display for selected first link*/
+.hayKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -26px;
+}
+
+
+.hayKTS .ktsLast .ktsA
+{
+	padding-left:12px;
+}
+
+
+/*Normal display for tail*/
+.hayKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% 0pt;
+}
+/*Normal display for tail when selected*/
+.hayKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -26px;
+}
+
+.hayKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -52px;	
+}
+
+
+
+
+/*both*/
+.hayKTS .ktsA .ktsIn
+{
+	padding:5px 15px 1px 5px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .hayKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .hayKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+
+
+.hayKTS .ktsText
+{
+	padding-left:2px;
+	padding-right:2px;	
+}
+
+.hayKTS .ktsBreak
+{
+	clear:both;
+	line-height:0px;
+	height:0px;
+	width:0px;
+	border:0px;
+	font-size:0px;
+}
+/*Disable*/
+.hayKTS .ktsDisable .ktsA
+{
+	cursor:default;	
+}
+.hayKTS .ktsDisable .ktsA .ktsText,
+.hayKTS .ktsDisable .ktsA:hover .ktsText
+{
+	color:gray;
+}
+
+
+/*----Default Level 1&2-------------------------------*/
+
+.hayKTS .ktsLevel1,
+.hayKTS .ktsLevel2
+{
+	background-color:#F3F3E2;
+}
+.hayKTS .ktsLevel1 .ktsA,
+.hayKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.hayKTS .ktsLevel1 .ktsA,
+.hayKTS .ktsLevel1 .ktsOut,
+.hayKTS .ktsLevel2 .ktsA,
+.hayKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.hayKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.hayKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:green;
+	text-decoration:underline;
+}
+
+.hayKTS .ktsLevel1 .ktsSelected .ktsText,
+.hayKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}
+
+/*-----For Left Position-------------------*/
+.hayleftKTS
+{
+	line-height:18px;
+}
+
+.hayleftKTS .ktsLI
+{
+	float:none;
+	font-size:0pt;
+}
+
+.hayleftKTS .ktsLI .ktsText
+{
+	font-size:8pt;
+}
+
+.hayleftKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:transparent url(t.gif) no-repeat 0 -198px;
+}
+.hayleftKTS .ktsA .ktsOut
+{
+	background:none;
+	border-right:solid 1px #939286;
+	
+}
+
+.hayleftKTS .ktsFirst .ktsA
+{
+	background:transparent url(t.gif) no-repeat 0 -174px;
+}
+
+
+.hayleftKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.hayleftKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0 -246px;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .hayleftKTS .ktsLI .ktsSelected,
+/*For IE7-no doctype*/
+* html .hayleftKTS .ktsLI .ktsSelected
+{
+	height:24px;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .hayleftKTS .ktsLast .ktsSelected,
+/*For IE7-no doctype*/
+* html .hayleftKTS .ktsLast .ktsSelected
+{
+	height:25px;
+}
+
+
+
+.hayleftKTS .ktsSelected .ktsOut
+{
+	border-right:none;
+}
+
+.hayleftKTS .ktsA .ktsIn
+{
+	padding:4px 20px 2px 5px;
+	display:block;
+	text-align:right;
+}
+
+
+
+
+/*---Left level 1 and 2 --------*/
+
+.hayleftKTS .ktsLevel1,
+.hayleftKTS .ktsLevel2
+{
+	background-color:#F3F3E2;
+}
+
+.hayleftKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.hayleftKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:green;
+	text-decoration:none;
+}
+
+.hayleftKTS .ktsLevel1 .ktsSelected .ktsText,
+.hayleftKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Right Position-------------------*/
+/*-----For Right Position-------------------*/
+.hayrightKTS
+{
+	line-height:18px;
+}
+
+.hayrightKTS .ktsLI
+{
+	float:none;
+	font-size:0pt;
+}
+
+.hayrightKTS .ktsLI .ktsText
+{
+	font-size:8pt;
+}
+
+
+.hayrightKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:transparent url(t.gif) no-repeat 100% -198px;
+}
+.hayrightKTS .ktsA .ktsOut
+{
+	background:none;
+	border-left:solid 1px #939286;
+	
+}
+
+.hayrightKTS .ktsFirst .ktsA
+{
+	background:transparent url(t.gif) no-repeat 100% -174px;
+}
+
+
+.hayrightKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.hayrightKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 100% -246px;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .hayrightKTS .ktsLI .ktsSelected,
+/*For IE7-no doctype*/
+* html .hayleftKTS .ktsLI .ktsSelected
+{
+	height:24px;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .hayrightKTS .ktsLast .ktsSelected,
+/*For IE7-no doctype*/
+* html .hayleftKTS .ktsLast .ktsSelected
+{
+	height:25px;
+}
+
+
+
+.hayrightKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 100% -222px;
+}
+
+
+.hayrightKTS .ktsSelected .ktsOut
+{
+	border-left:none;
+}
+
+.hayrightKTS .ktsA .ktsIn
+{
+	padding:4px 5px 2px 20px;
+	display:block;
+	text-align:left;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.hayrightKTS .ktsLevel1,
+.hayrightKTS .ktsLevel2
+{
+	background-color:#F3F3E2;
+}
+
+.hayrightKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.hayrightKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:green;
+	text-decoration:none;
+}
+
+.hayrightKTS .ktsLevel1 .ktsSelected .ktsText,
+.hayrightKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Bottom Position-------------------*/
+/*-----For Bottom Position-------------------*/
+
+
+/*Normal display*/
+.haybottomKTS .ktsLI .ktsA
+{
+	background:transparent url(t.gif) no-repeat -12px -130px;
+}
+
+
+/*Normal display for unselected first link*/
+.haybottomKTS .ktsFirst .ktsA
+{
+	padding-left:24px;
+	background:transparent url(t.gif) no-repeat 0 -130px;
+}
+
+.haybottomKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat -12px -104px;
+}
+
+/*Normal display for selected first link*/
+.haybottomKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -104px;
+}
+
+
+/*Normal display for tail*/
+.haybottomKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% -78px;
+}
+/*Normal display for tail when selected*/
+.haybottomKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -104px;
+}
+
+.haybottomKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% -130px;	
+}
+
+/*both*/
+.haybottomKTS .ktsA .ktsIn
+{
+	padding:1px 15px 5px 5px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .haybottomKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .hayKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+/*----Default Bottom 1&2-------------------------------*/
+
+.haybottomKTS .ktsLevel1,
+.haybottomKTS .ktsLevel2
+{
+	background-color:#F3F3E2;
+}
+.haybottomKTS .ktsLevel1 .ktsA,
+.haybottomKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.haybottomKTS .ktsLevel1 .ktsA,
+.haybottomKTS .ktsLevel1 .ktsOut,
+.haybottomKTS .ktsLevel2 .ktsA,
+.haybottomKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.haybottomKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.haybottomKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:green;
+	text-decoration:underline;
+}
+
+.haybottomKTS .ktsLevel1 .ktsSelected .ktsText,
+.haybottomKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}

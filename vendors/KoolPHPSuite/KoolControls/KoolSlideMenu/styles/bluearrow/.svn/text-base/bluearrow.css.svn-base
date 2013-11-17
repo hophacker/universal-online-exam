@@ -1,0 +1,186 @@
+.bluearrowKSM
+{
+
+}
+.bluearrowKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.bluearrowKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+.bluearrowKSM .ksmIn,
+.bluearrowKSM .ksmLeft,
+.bluearrowKSM .ksmRight,
+.bluearrowKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.bluearrowKSM .ksmA
+{
+	text-decoration:none;
+	color:#000000;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.bluearrowKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.bluearrowKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.bluearrowKSM .ksmChildBox
+{
+	padding-left:5px;
+	background-color:white;
+}
+
+
+.bluearrowKSM .ksmCollapse .ksmChildBox,
+.bluearrowKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.bluearrowKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.bluearrowKSM .ksmParent
+{
+	line-height:27px;
+	cursor:pointer;
+	white-space:nowrap;
+}
+.bluearrowKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	padding-left:5px;
+	margin-left:20px;
+	margin-right:20px;	
+}
+html>body .bluearrowKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	padding-left:5px;
+	margin:0px;
+}
+
+.bluearrowKSM a.ksmParent:hover .ksmIn
+{
+	background-color:orange;
+}
+
+.bluearrowKSM .ksmCollapse .ksmParent .ksmIn
+{
+
+}
+.bluearrowKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+/*Added*/
+.bluearrowKSM .ksmParent .ksmLeft
+{
+	width:26px;
+	height:27px;
+	background-image:url(parent_left.gif);
+	float:left;
+	
+}
+.bluearrowKSM .ksmParent .ksmRight
+{
+	width:26px;
+	height:27px;
+	background-image:url(parent_right.gif);
+	float:right;
+
+}
+
+
+/*Child*/
+.bluearrowKSM .ksmChild
+{
+	line-height:20px;
+}
+
+.bluearrowKSM .ksmChild .ksmIn
+{
+	
+}
+.bluearrowKSM a.ksmChild:hover .ksmIn
+{
+	text-decoration:underline;
+}
+.bluearrowKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.bluearrowKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.bluearrowKSM .ksmChild .ksmBul
+{
+	width:26px;
+	height:20px;
+	background:url(child.gif) no-repeat 5pt 4pt;
+	float:left;
+}
+
+
+/*Child Selected*/
+.bluearrowKSM .ksmSelected .ksmIn
+{
+	font-weight:bold;
+}
+.bluearrowKSM a.ksmSelected:hover .ksmIn
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.bluearrowKSM .ksmPanel
+{
+	line-height:normal;
+}
+.bluearrowKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#000000;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}

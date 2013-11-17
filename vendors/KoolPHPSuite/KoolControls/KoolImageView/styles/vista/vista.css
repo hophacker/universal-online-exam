@@ -1,0 +1,78 @@
+﻿.vistaZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.vistaKIV
+{
+	display:inline;
+}
+
+.vistaKIV .kivZoomPanel
+{
+    position:absolute;
+	background:#d2ecfa url(bg.gif) repeat-x left top ;
+	padding:10px;
+	
+}
+
+.vistaKIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:#d2ecfa ;
+    border:solid 1px gray;
+}
+
+.vistaKIV .kivBigImage
+{
+	cursor:url(zoomout.cur),pointer !important;
+	border:solid 1px #fff;
+}
+
+
+.vistaKIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+.vistaKIV .kivEffectPanel
+{
+	background:#d2ecfa url(bg.gif) repeat-x left top ;
+	border:solid 1px gray;
+}
+
+.vistaKIV .kivEffectImage
+{
+    border:solid 1px gray;
+}
+
+.vistaKIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.vistaKIV .kivDescription
+{
+	float:left;
+	padding-top:5px;
+    color:#555;
+    font-family:Arial;
+    font-size:12px;
+}
+
+.vistaKIV .kivCloseButton
+{
+
+}
+
+.vistaKIV .kivMoveButton
+{
+
+}
+
+

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/dxks/!svn/ver/166/yangda/app/webroot/img
+END
+test-fail-icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/app/webroot/img/test-fail-icon.png
+END
+cake.power.gif
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/133/yangda/app/webroot/img/cake.power.gif
+END
+test-pass-icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/app/webroot/img/test-pass-icon.png
+END
+test-skip-icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/app/webroot/img/test-skip-icon.png
+END
+cake.icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/133/yangda/app/webroot/img/cake.icon.png
+END
+test-error-icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/133/yangda/app/webroot/img/test-error-icon.png
+END

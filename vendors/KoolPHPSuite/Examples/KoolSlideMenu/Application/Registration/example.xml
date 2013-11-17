@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Registration" usedb="false">
+	<title>Registration</title>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+The example shows how to use KoolSlideMenu for application Registration
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolSlideMenu/koolslidemenu.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	if ($koolajax->isCallback)	{		sleep(1);	}	
+	
+	include_once "functions.php" ;
+	$ksm = new KoolSlideMenu("ksm");
+	$ksm->scriptFolder =  $KoolControlsFolder."/KoolSlideMenu";	
+	$ksm->styleFolder = $KoolControlsFolder."KoolSlideMenu/styles/darkgray";
+	$ksm_expand = $ksm->addParent("root","step1","Step1 : Account information");	
+	$ksm->addPanel( "step1", "Pstep1" , echoStep1() ) ;
+	$ksm_expand->expand = true ;
+	
+	$ksm->addParent("root","step2","<span class='hid' id='wstep2' >Step2 : Newsletter options </span>");
+	$ksm->addPanel( "step2", "Pstep2" , echoStep2() ) ;
+	
+	$ksm->addParent("root","step3","<span class='hid' id='wstep3' >Step3 : Terms of use </span>");
+	$ksm->addPanel( "step3", "Pstep3" , echoStep3() ) ;
+	
+	$ksm->singleExpand = true;
+	$ksm->width="500px";
+	
+	$regisForm = new UpdatePanel( "regisForm" ) ;
+	$regisForm->setLoading("$KoolControlsFolder/koolajax/loading/1.gif" , "white"   , 50 );	
+	$stepDone = ( isset( $_POST["task"] ) && $_POST[ "task" ] == "done" ) ? true : false  ;
+	
+	if( $stepDone ) {
+		$return = '<div style="height:auto;width:500px;" id="registration-form">		
+						<div id="my-tit" >Registration form</div><br/>
+						<div >';						
+		$return .= echoResult( $_POST[ "data" ]) ;
+		$return .= '</div>';
+	}else{		
+		$return = '	<script type="text/javascript" src="functions.js"></script>
+					<div style="height:auto;width:500px;" id="registration-form">		
+						<div id="my-tit" >Registration form</div><br/>
+						<div >'. $ksm->Render().
+						'</div>						
+						<input type="hidden" name="data" value="" />
+						<input type="hidden" name="task" value="" />
+						<script language="javascript">
+							ksm.registerEvent("OnBeforeExpand",OnBeforeExpand_handle);
+						</script>
+					</div>';
+	}
+	
+	$regisForm->cssclass = "cssRegisForm" ;
+	$regisForm->content= $return ;
+	
+?>
+<?php echo $koolajax->Render();?>
+<?php echo $regisForm->Render();?>
+<link rel="stylesheet" href="example.css" />
+<script type="text/javascript" >
+	var step1ok = "0000" ;
+	var step2ok = false ;
+	var step3ok = false ;
+	function dostep1(){
+		if ( step1ok == "1111" ){
+			ksm.getItem( "step2" ).expand() ;
+		}else{
+			alert( "You must finish step 1 before continuousing with step 2" );
+		}
+	}
+	function dostep2(){
+		checkList = document.getElementsByName( "list" ) ;
+		for (i = 0; i < checkList.length; i++){
+			if (checkList[i].checked ) {
+				step2ok = true ;
+			} 
+		}
+		if ( step2ok ){
+			ksm.getItem( "step3" ).expand() ;
+		}else{
+			alert( "You must check at least one option before continuousing with step 3" );
+		}
+	}
+	function dostep3(){
+		checkList = document.getElementsByName( "agree" ) ;		
+		if (checkList[0].checked ) {
+			step3ok = true ;
+		} 		
+		if ( step3ok ){
+			checkList = document.getElementsByName( "list" ) ;
+			finalList = new Array(); 
+			for (i = 0; i < checkList.length; i++){
+				if (checkList[i].checked ) {
+					finalList[i] = " checked=\"checked\" " ;
+				}else{
+					finalList[i] = "" ;
+				}
+			}
+			dataX = document.getElementById( "txtName" ).value + ".::." 
+					+ document.getElementById( "txtMail" ).value + ".::." 
+					+ finalList[0] + ".::." + finalList[1] + ".::." + finalList[2] ;
+			regisForm.attachData( "data" , dataX );
+			regisForm.attachData( "task" , "done" );
+			regisForm.update() ;			
+		}else{
+			alert( "You must agree with our Terms & Conditions !" );
+		}
+	}
+	function Back(){
+		regisForm.attachData( "task" , "restart" );
+		regisForm.update() ;		
+		step1ok = "0000" ;
+		step2ok = false ;
+		step3ok = false ;					
+	}
+   
+</script>
+			]]>			
+		</code>
+		<code header="Functions.php">
+			<![CDATA[
+<?php
+	
+function echoStep1(){		
+		 $return = '
+<div class="my-bg padd-top frm-height"  >	
+	<div>
+	<ul class="formList" id="accountInfo">
+		<li class="li1" >
+			<label for="txtName" id="">Account Name:</label>
+			<input name="txtName" type="text" id="txtName" class="textInput" style="width:100px;" onchange="checkAccName();" />
+			<span id="accNoteWord" class="" style="color:brown;"></span>
+		</li>
+		<li class="li2">
+			<label for="txtPass" id="">Password:</label>
+			<input name="txtPass" type="password" id="txtPass"  class="textInput" style="width:110px;" onchange="checkAccPass();" />
+			<span id="passNoteWord" style="color:brown;"></span>
+		</li>
+		<li class="li3">
+			<label for="txtRepass" id="">Confirm Password:</label>
+			<input name="txtRepass" type="password" id="txtRepass" class="textInput" style="width:110px;" onchange="checkAccCfmPass();"  />
+			<span id="repassNoteWord" style="color:brown;"></span>
+
+		</li>
+		<li class="li4">
+			<label for="txtMail" id="">Email:</label>
+			<input name="txtMail" type="text" id="txtMail" class="textInput" style="width:115px;" onchange="checkEmail();" />
+			<span id="mailNoteWord" style="color:brown;"></span>
+		</li>
+
+	</ul>
+	</div>
+	<br />	
+	<input type="button" name="btnStep1" value="Next" onclick="dostep1();" id="" class="nextButton" />	
+</div>		';			
+		
+	return $return ;
+}
+	
+function echoStep2()	{
+		
+		 $return = '
+<div class="my-bg">
+	<ul class="formList" id="news">
+		<li>Receive email notification for:</li>
+		<li>
+			<input id="" name="list" value="1" type="checkbox">&nbsp;<label for="" id="" class="checkboxLabel">Product Updates</label>
+		</li>
+		<li>
+			<input id="" name="list" value="2" type="checkbox">&nbsp;<label for="" id="" class="checkboxLabel">Promotions</label>
+		</li>
+		<li class="">
+			<input id="" name="list" value="3" type="checkbox">&nbsp;<label for="" id="" class="checkboxLabel">Corporate News</label>
+		</li>
+	</ul>
+	<br>
+	<input name="" value="Next" onclick="dostep2()" id="" class="nextButton" type="button"><br><br>
+</div>	';						
+		
+	return $return ;
+}
+	
+function echoStep3()	{
+		
+		 $return = '
+<div class="my-bg" >
+	<img src="terms.gif" alt="sample terms" width="480" height="200">
+	<br><br>
+	<input id="" name="agree" type="checkbox">&nbsp;<label for="" id="" class="checkboxLabel">I agree to the Terms &amp; Conditions</label>
+	<span id="" style="color: Red; visibility: hidden;">*</span>
+	<br>
+	<input name="" value="Register" onclick="dostep3()" id="" class="nextButton" type="button">
+	<br><br>
+</div>' ;						
+		
+	return $return ;
+}
+
+function echoResult( $result ) {
+		$str = split( ".::." ,$result);
+		$return = '
+<div  id="my-sucess">
+	<div class="my-padd-suc my-dimension ">
+		<b class="sucess">Registration sucessful !</b>
+		<br />
+		<br />
+		<div style="float: left; width: 230px; padding-top: 20px;">
+			<b>You account details : </b> <br/><br/>
+			<ul style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<li style="text-align: left;">
+					Account Name: <span id="previewControl_accountName">'.$str[0].'</span>
+					<br>
+					Email Address: <span id="previewControl_email">'.$str[1].'</span>
+				</li>
+			</ul>
+		</div>
+		<div style="float: left; width: 230px; padding-top: 20px;">
+			<b>Your options details :</b><br/><br/>
+			<ul style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<li>
+					<input id="" name="FinalList" '.$str[2].' type="checkbox">&nbsp;Product Updates
+					<br>
+					<input id="" name="FinalList" '.$str[3].' type="checkbox">&nbsp;Promotions
+					<br>
+					<input id="" name="FinalList" '.$str[4].' type="checkbox">&nbsp;Corporate News
+					<br>
+				</li>
+			</ul>
+		</div><br style="clear:both;"/><br/><br/>
+		<i>You will received mail to active account on your box, please check carefully in your bulk if you dont find the mail on inbox.</i>
+		<input name="backButton" value="Done" onclick="Back();" id="backButton" class="nextButton" style="margin: 10px 0pt 30px 25px;" type="button">
+	</div>	
+</div>' ;						
+		
+	return $return ;
+}
+
+
+?>			
+			]]>			
+		</code>
+		<code header="Functions.js">
+			<![CDATA[
+function OnBeforeExpand_handle(sender,arg)
+{
+	if ( arg.ItemId == 'step2' ){
+		if( step1ok.indexOf( "0" ) > -1 ){
+			alert( "You must finish step 1 before continuousing with step 2" );
+			return false;				
+		}else{
+			document.getElementById( "wstep2" ).className = "showw" ;
+			return true;			
+		}		
+	}else if ( arg.ItemId == 'step3' ){
+		if( !step2ok ){
+			alert( "You must finish step 2 before continuousing with step 3" );
+			return false;				
+		}else{
+			document.getElementById( "wstep3" ).className = "showw" ;
+			return true;			
+		}					
+	}else if ( arg.ItemId == 'step1' ){		
+		return true;
+	}	
+}
+function checkAccName()
+{
+	txtname = document.getElementById( "txtName" ).value ;
+	checkArr = step1ok.split( "" );	
+	if ( txtname.length > 4 ){
+		document.getElementById( "accNoteWord" ).innerHTML = "" ;
+		checkArr[0] = "1" ;
+	}else{ 		
+		document.getElementById( "accNoteWord" ).innerHTML = "Account Name must more than 4 characters." ;
+		checkArr[0] = "0" ;		
+	}
+	step1ok =  checkArr[0] +  checkArr[1] +  checkArr[2] + checkArr[3] ;
+}
+
+function checkAccPass()
+{
+	txtpass = document.getElementById( "txtPass" ).value ;
+	checkArr = step1ok.split( "" );	
+	if ( txtpass.length > 4 ){
+		document.getElementById( "passNoteWord" ).innerHTML = "" ;
+		checkArr[1] = "1" ;
+	}else{ 		
+		document.getElementById( "passNoteWord" ).innerHTML = "Password must more than 4 characters." ;
+		checkArr[1] = "0" ;
+	}
+	step1ok =  checkArr[0] +  checkArr[1] +  checkArr[2] + checkArr[3] ;
+}
+function checkAccCfmPass()
+{
+	txtcfmpass = document.getElementById( "txtRepass" ).value ;
+	txtpass = document.getElementById( "txtPass" ).value ;
+	checkArr = step1ok.split( "" );	
+	if ( txtcfmpass ==  txtpass ){
+		document.getElementById( "repassNoteWord" ).innerHTML = "" ;	
+		checkArr[2] = "1" ;
+	}else{ 
+		document.getElementById( "repassNoteWord" ).innerHTML = "Password and confirm pass does not match." ;
+		checkArr[2] = "0" ;
+	}
+	step1ok =  checkArr[0] +  checkArr[1] +  checkArr[2] + checkArr[3] ;
+}
+function checkEmail()
+{
+	txtmail = document.getElementById( "txtMail" ).value ;
+	checkArr = step1ok.split( "" );	
+	checkMail = false ;
+	var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+	if (  txtmail.search(emailRegEx) == -1 ){		
+	}else{
+		checkMail = true ;
+	}
+	document.getElementById( "mailNoteWord" ).innerHTML = ( checkMail )  ? "" : "Email is not valid." ;
+	checkArr[3] = ( checkMail ) ? "1" : "0" ;
+	step1ok =  checkArr[0] +  checkArr[1] +  checkArr[2] + checkArr[3] ;	
+}			
+			]]>			
+		</code>										
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/PHP/KoolSlideMenu_Class/index.php#addPanel">PHP :: KoolSlideMenu :: addPanel()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/Javascript/KoolSlideMenu_Class/index.php#registerEvent">Javascript :: KoolSlideMenu :: registerEvent()</doc>
+	</docs>
+</example>

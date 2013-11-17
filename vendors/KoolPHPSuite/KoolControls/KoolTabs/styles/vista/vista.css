@@ -1,0 +1,592 @@
+.vistaKTS
+{
+	background-color:transparent;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-decoration:none;
+	overflow:hidden;
+}
+.vistaKTS *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.vistaKTS .ktsUL
+{
+	width:auto;
+}
+
+.vistaKTS .ktsleftScroll .ktsUL,
+.vistaKTS .ktsrightScroll .ktsUL,
+.vistaKTS .ktsmiddleScroll .ktsUL
+{
+	width:1000px;
+}
+
+.vistaKTS .ktsright .ktsUL,
+.vistaKTS .ktscenter .ktsUL
+{
+	width:auto;
+}
+
+
+.vistaKTS .ktsLI
+{
+	float:left;
+	list-style-type:none;
+	overflow:hidden;	
+}
+.vistaKTS .ktsLevel
+{
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	position:relative;
+}
+
+
+/*Align Right*/
+.vistaKTS .ktsright .ktsUL
+{
+	float:right;
+}
+
+/*Align Center*/
+.vistaKTS .ktscenter
+{
+	text-align:center;
+}
+.vistaKTS .ktscenter .ktsUL
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	float:none;
+}
+
+/*Css for IE*/
+* html .vistaKTS .ktscenter .ktsUL { display: inline-block; }
+* html .vistaKTS .ktscenter .ktsUL { display: inline; }
+*+html .vistaKTS .ktscenter .ktsUL { display: inline-block; }
+*+html .vistaKTS .ktscenter .ktsUL { display: inline; }
+
+
+
+
+/*Align Justify*/
+.vistaKTS .ktsjustify .ktsUL
+{
+	float:none;
+}
+
+
+
+
+
+/*Scrolling*/
+
+.vistaKTS .ktsPrev,
+.vistaKTS .ktsNext,
+.vistaKTS .ktsNextDisable,
+.vistaKTS .ktsPrevDisable
+{
+	display:none;
+	position:absolute;
+	width:11px;
+	height:11px;
+	background-color:yellow;
+	font-size:0pt;
+	outline-style:none;
+	cursor:pointer;	
+}
+.vistaKTS .ktsPrev
+{
+	background:url(n.gif) 0 0;
+}
+.vistaKTS .ktsPrevDisable
+{
+	background:url(n.gif) 0 100%;
+}
+.vistaKTS .ktsNext
+{
+	background:url(n.gif) 100% 0;
+}
+
+.vistaKTS .ktsNextDisable
+{
+	background:url(n.gif) 100% 100%;
+}
+
+
+/* Right Scroll*/
+.vistaKTS .ktsrightScroll .ktsPrev,
+.vistaKTS .ktsrightScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:17px;	
+}
+
+.vistaKTS .ktsrightScroll .ktsNext,
+.vistaKTS .ktsrightScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;	
+}
+
+/* Left Scroll*/
+.vistaKTS .ktsleftScroll .ktsPrev,
+.vistaKTS .ktsleftScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.vistaKTS .ktsleftScroll .ktsNext,
+.vistaKTS .ktsleftScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:17px;	
+}
+
+/* Middle Scroll*/
+.vistaKTS .ktsmiddleScroll .ktsPrev,
+.vistaKTS .ktsmiddleScroll .ktsPrevDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	left:0px;	
+}
+
+.vistaKTS .ktsmiddleScroll .ktsNext,
+.vistaKTS .ktsmiddleScroll .ktsNextDisable
+{
+	display:block;
+	float:right;
+	top:0pt;
+	right:0px;
+}
+
+
+/*Normal display*/
+.vistaKTS .ktsLI .ktsA
+{
+	display:block;
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat -1px 2px;
+	cursor:pointer;
+	text-decoration:none;
+	color:#333;	
+	text-align:center;
+}
+
+
+/*When mouse hover*/
+.vistaKTS .ktsLI .ktsA:hover
+{
+	color:#819cbf;
+}
+
+
+/*Normal display for unselected first link*/
+.vistaKTS .ktsFirst .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px 2px;
+	
+}
+
+.vistaKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -19px;
+	
+	
+}
+.vistaKTS .ktsLI .ktsSelected .ktsText
+{
+	color:#333;
+}
+/*Normal display for selected first link*/
+.vistaKTS .ktsFirst .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -19px;
+}
+
+
+.vistaKTS .ktsLast .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat 0px 2px;
+}
+.vistaKTS .ktsLast .ktsSelected
+{
+	background:transparent url(t.gif) no-repeat 0px -19px;
+}
+/*Normal display for tail*/
+.vistaKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% 2px;
+}
+/*Normal display for tail when selected*/
+.vistaKTS .ktsSelected .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% -19px;
+}
+
+.vistaKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat 100% 2px;	
+}
+
+
+/*both*/
+.vistaKTS .ktsA .ktsIn
+{
+	padding:5px 15px 3px 9px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .vistaKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .vistaKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+
+
+.vistaKTS .ktsText
+{
+	padding-left:2px;
+	padding-right:2px;	
+}
+
+.vistaKTS .ktsBreak
+{
+	clear:both;
+	line-height:0px;
+	height:0px;
+	width:0px;
+	border:0px;
+	font-size:0px;
+}
+/*Disable*/
+.vistaKTS .ktsDisable .ktsA
+{
+	cursor:default;	
+}
+.vistaKTS .ktsDisable .ktsA .ktsText,
+.vistaKTS .ktsDisable .ktsA:hover .ktsText
+{
+	color:gray;
+}
+
+
+/*----Default Level 1&2-------------------------------*/
+
+.vistaKTS .ktsLevel1,
+.vistaKTS .ktsLevel2
+{
+	background-color:#fff;
+}
+.vistaKTS .ktsLevel1 .ktsA,
+.vistaKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.vistaKTS .ktsLevel1 .ktsA,
+.vistaKTS .ktsLevel1 .ktsOut,
+.vistaKTS .ktsLevel2 .ktsA,
+.vistaKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.vistaKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.vistaKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:underline;
+}
+
+.vistaKTS .ktsLevel1 .ktsSelected .ktsText,
+.vistaKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}
+
+/*-----For Left Position-------------------*/
+.vistaleftKTS
+{
+	line-height:18px;
+}
+
+.vistaleftKTS .ktsLI
+{
+	float:none;
+}
+
+.vistaleftKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:transparent url(t.gif) no-repeat 0 0px;
+}
+.vistaleftKTS .ktsA .ktsOut
+{
+	background:none;
+	border-right:solid 1px #939286;
+	
+}
+
+.vistaleftKTS .ktsFirst .ktsA
+{
+	border-top:1px #CCC solid;
+	background:transparent url(t.gif) no-repeat 0 0px;
+}
+
+
+.vistaleftKTS .ktsLast .ktsOut
+{
+	border-bottom:solid 1px #939286;
+}
+
+.vistaleftKTS .ktsLI .ktsSelected
+{
+	border-left:solid 1px #939286;
+	background:#FFF;
+}
+
+.vistaleftKTS .ktsSelected .ktsOut
+{
+	border-right:none;
+}
+
+.vistaleftKTS .ktsA .ktsIn
+{
+	padding:1px 20px 1px 5px;
+	display:block;
+	text-align:right;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.vistaleftKTS .ktsLevel1,
+.vistaleftKTS .ktsLevel2
+{
+	background-color:#fff;
+}
+
+.vistaleftKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.vistaleftKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:none;
+}
+
+.vistaleftKTS .ktsLevel1 .ktsSelected .ktsText,
+.vistaleftKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Right Position-------------------*/
+/*-----For Right Position-------------------*/
+.vistarightKTS
+{
+	line-height:16px;
+}
+
+.vistarightKTS .ktsLI
+{
+	float:none;
+}
+
+.vistarightKTS .ktsLI .ktsA
+{
+	padding-left:0px;
+	background:transparent url(t.gif) 0px 0px;
+}
+.vistarightKTS .ktsA .ktsOut
+{
+	border-right:solid 1px #939286;
+	background:transparent url(t.gif) 0px 0px;
+}
+
+.vistarightKTS .ktsFirst .ktsA
+{
+	background:transparent url(t.gif) 0px 0px;
+}
+
+
+.vistarightKTS .ktsLast .ktsOut
+{
+	background:transparent url(t.gif) 0px 0px;
+}
+
+.vistarightKTS .ktsLI .ktsSelected
+{
+	background:transparent url(t.gif) 0px 0px;
+}
+
+.vistarightKTS .ktsFirst .ktsSelected
+{
+	border-top:1px #CCC solid;
+	border-right:0px;
+	background:#fff;
+}
+
+
+.vistarightKTS .ktsSelected .ktsOut
+{
+	background:#fff;
+}
+
+.vistarightKTS .ktsA .ktsIn
+{
+	padding:2px 5px 2px 20px;
+	display:block;
+	text-align:left;
+}
+
+/*---Left level 1 and 2 --------*/
+
+.vistarightKTS .ktsLevel1,
+.vistarightKTS .ktsLevel2
+{
+	background-color:#fff;
+}
+
+.vistarightKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.vistarightKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:none;
+}
+
+.vistarightKTS .ktsLevel1 .ktsSelected .ktsText,
+.vistarightKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-----For Bottom Position-------------------*/
+/*-----For Bottom Position-------------------*/
+
+
+/*Normal display*/
+.vistabottomKTS .ktsLI .ktsA
+{
+	background:transparent url(t.gif) no-repeat 0px 0px;
+}
+
+
+/*Normal display for unselected first link*/
+.vistabottomKTS .ktsFirst .ktsA
+{
+	padding-left:5px;
+	background:transparent url(t.gif) no-repeat scroll 0px 0px;
+}
+
+.vistabottomKTS .ktsLI .ktsSelected
+{
+	background:#fff;
+}
+
+/*Normal display for selected first link*/
+.vistabottomKTS .ktsFirst .ktsSelected
+{
+	border-left:1px #CCC solid;
+	background:#fff;
+}
+
+
+/*Normal display for tail*/
+.vistabottomKTS .ktsA .ktsOut
+{
+	display:block;
+	background:transparent url(t.gif) no-repeat scroll 100% 0px;
+}
+/*Normal display for tail when selected*/
+.vistabottomKTS .ktsSelected .ktsOut
+{
+	background:#fff;
+}
+
+.vistabottomKTS .ktsBefore .ktsOut
+{
+	background:transparent url(t.gif) no-repeat scroll 100% 0px;	
+}
+
+/*both*/
+.vistabottomKTS .ktsA .ktsIn
+{
+	padding:3px 15px 3px 5px;
+	display:block;
+}
+
+/*Only read by IE 7-doctype and below*/
+*:first-child+html .vistabottomKTS .ktsA .ktsIn,
+/*For IE7-no doctype*/
+* html .vistaKTS .ktsA .ktsIn
+{
+	padding-right:12px;
+}
+
+
+/*----Default Bottom 1&2-------------------------------*/
+
+.vistabottomKTS .ktsLevel1,
+.vistabottomKTS .ktsLevel2
+{
+	background-color:#fff;
+}
+.vistabottomKTS .ktsLevel1 .ktsA,
+.vistabottomKTS .ktsLevel2 .ktsA
+
+{
+	background:none;
+}
+.vistabottomKTS .ktsLevel1 .ktsA,
+.vistabottomKTS .ktsLevel1 .ktsOut,
+.vistabottomKTS .ktsLevel2 .ktsA,
+.vistabottomKTS .ktsLevel2 .ktsOut
+
+{
+	background:none;
+}
+
+.vistabottomKTS .ktsLevel1 .ktsLI .ktsA:hover .ktsText,
+.vistabottomKTS .ktsLevel2 .ktsLI .ktsA:hover .ktsText
+{
+	color:#555;
+	text-decoration:underline;
+}
+
+.vistabottomKTS .ktsLevel1 .ktsSelected .ktsText,
+.vistabottomKTS .ktsLevel2 .ktsSelected .ktsText
+{
+	color:black;
+	text-decoration:underline;
+}

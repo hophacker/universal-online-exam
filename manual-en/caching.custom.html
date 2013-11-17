@@ -1,0 +1,346 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Custom Cache Implementation</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="caching.html" title="Chapter 15. Caching">
+<link rel="prev" href="caching.cacheable.html" title="Controlling Cacheability of Output">
+<link rel="next" href="resources.html" title="Chapter 16. Resources">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">Custom Cache Implementation</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="caching.cacheable.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 15. Caching</th>
+<td width="20%" align="right"> <a accesskey="n" href="resources.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="Custom Cache Implementation">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="caching.custom"></a>Custom Cache Implementation</h2></div></div></div>
+<p>
+  As an alternative to using the default file-based caching mechanism, you can specify a custom cache implementation 
+  that will be used to read, write and clear cached files. 
+ </p>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+  In Smarty2 this used to be a callback function called <code class="literal">$cache_handler_func</code>. 
+  Smarty3 replaced this callback by the <code class="literal">Smarty_CacheResource</code> module.
+ </p>
+</div>
+<p>
+  With a custom cache implementation you're likely trying to achieve at least one of the following goals: 
+  replace the slow filesystem by a faster storage engine,
+  centralize the cache to be accessible to multiple servers.
+ </p>
+<p>
+  Smarty allows CacheResource implementations to use one of the APIs <code class="literal">Smarty_CacheResource_Custom</code> 
+  or <code class="literal">Smarty_CacheResource_KeyValueStore</code>. <code class="literal">Smarty_CacheResource_Custom</code> is
+  a simple API directing all read, write, clear calls to your implementation. This API allows you to store wherever
+  and however you deem fit. The <code class="literal">Smarty_CacheResource_KeyValueStore</code> API allows you to turn any
+  "dumb" KeyValue-Store (like APC, Memcache, …) into a full-featured CacheResource implementation. That is, everything
+  around deep cache-groups like "a|b|c" is being handled for you in way that allows clearing the cache-group "a" and
+  all nested groups are cleared as well - even though KeyValue-Stores don't allow this kind of hierarchy by nature.
+ </p>
+<p>
+  Custom CacheResources may be put in a file <code class="literal">cacheresource.foobarxyz.php</code> within your 
+  <a class="link" href="variable.plugins.dir.html" title="$plugins_dir"><code class="varname">$plugins_dir</code></a>, or registered on runtime
+  with <a class="link" href="api.register.cacheresource.html" title="registerCacheResource()"><code class="varname">registerCacheResource()</code></a>. 
+  In either case you need to set <a class="link" href="variable.caching.type.html" title="$caching_type"><code class="varname">$caching_type</code></a>
+  to invoke your custom CacheResource implementation.
+ </p>
+<div class="example">
+<a name="id453128"></a><p class="title"><b>Example 15.15. Smarty_CacheResource_Mysql</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+require_once 'libs/Smarty.class.php';
+$smarty = new Smarty();
+$smarty-&gt;caching_type = 'mysql';
+
+/**
+ * MySQL CacheResource
+ *
+ * CacheResource Implementation based on the Custom API to use
+ * MySQL as the storage resource for Smarty's output caching.
+ *
+ * Table definition:
+ * &lt;pre&gt;CREATE TABLE IF NOT EXISTS `output_cache` (
+ *   `id` CHAR(40) NOT NULL COMMENT 'sha1 hash',
+ *   `name` VARCHAR(250) NOT NULL,
+ *   `cache_id` VARCHAR(250) NULL DEFAULT NULL,
+ *   `compile_id` VARCHAR(250) NULL DEFAULT NULL,
+ *   `modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ *   `content` LONGTEXT NOT NULL,
+ *   PRIMARY KEY (`id`),
+ *   INDEX(`name`),
+ *   INDEX(`cache_id`),
+ *   INDEX(`compile_id`),
+ *   INDEX(`modified`)
+ * ) ENGINE = InnoDB;&lt;/pre&gt;
+ *
+ * @package CacheResource-examples
+ * @author Rodney Rehm
+ */
+class Smarty_CacheResource_Mysql extends Smarty_CacheResource_Custom {
+    // PDO instance
+    protected $db;
+    protected $fetch;
+    protected $fetchTimestamp;
+    protected $save;
+    
+    public function __construct() {
+        try {
+            $this-&gt;db = new PDO("mysql:dbname=test;host=127.0.0.1", "smarty", "smarty");
+        } catch (PDOException $e) {
+            throw new SmartyException('Mysql Resource failed: ' . $e-&gt;getMessage());
+        }
+        $this-&gt;fetch = $this-&gt;db-&gt;prepare('SELECT modified, content FROM output_cache WHERE id = :id');
+        $this-&gt;fetchTimestamp = $this-&gt;db-&gt;prepare('SELECT modified FROM output_cache WHERE id = :id');
+        $this-&gt;save = $this-&gt;db-&gt;prepare('REPLACE INTO output_cache (id, name, cache_id, compile_id, content)
+            VALUES  (:id, :name, :cache_id, :compile_id, :content)');
+    }
+
+    /**
+     * fetch cached content and its modification time from data source
+     *
+     * @param string $id unique cache content identifier
+     * @param string $name template name
+     * @param string $cache_id cache id
+     * @param string $compile_id compile id
+     * @param string $content cached content
+     * @param integer $mtime cache modification timestamp (epoch)
+     * @return void
+     */
+    protected function fetch($id, $name, $cache_id, $compile_id, &amp;$content, &amp;$mtime)
+    {
+        $this-&gt;fetch-&gt;execute(array('id' =&gt; $id));
+        $row = $this-&gt;fetch-&gt;fetch();
+        $this-&gt;fetch-&gt;closeCursor();        
+        if ($row) {
+            $content = $row['content'];
+            $mtime = strtotime($row['modified']);
+        } else {
+            $content = null;
+            $mtime = null;
+        }
+    }
+    
+    /**
+     * Fetch cached content's modification timestamp from data source
+     *
+     * @note implementing this method is optional. Only implement it if modification times can be accessed faster than loading the complete cached content.
+     * @param string $id unique cache content identifier
+     * @param string $name template name
+     * @param string $cache_id cache id
+     * @param string $compile_id compile id
+     * @return integer|boolean timestamp (epoch) the template was modified, or false if not found
+     */
+    protected function fetchTimestamp($id, $name, $cache_id, $compile_id)
+    {
+        $this-&gt;fetchTimestamp-&gt;execute(array('id' =&gt; $id));
+        $mtime = strtotime($this-&gt;fetchTimestamp-&gt;fetchColumn());
+        $this-&gt;fetchTimestamp-&gt;closeCursor();
+        return $mtime;
+    }
+    
+    /**
+     * Save content to cache
+     *
+     * @param string $id unique cache content identifier
+     * @param string $name template name
+     * @param string $cache_id cache id
+     * @param string $compile_id compile id
+     * @param integer|null $exp_time seconds till expiration time in seconds or null
+     * @param string $content content to cache
+     * @return boolean success
+     */
+    protected function save($id, $name, $cache_id, $compile_id, $exp_time, $content)
+    {
+        $this-&gt;save-&gt;execute(array(
+            'id' =&gt; $id,
+            'name' =&gt; $name,
+            'cache_id' =&gt; $cache_id,
+            'compile_id' =&gt; $compile_id,
+            'content' =&gt; $content,
+        ));
+        return !!$this-&gt;save-&gt;rowCount();
+    }
+    
+    /**
+     * Delete content from cache
+     *
+     * @param string $name template name
+     * @param string $cache_id cache id
+     * @param string $compile_id compile id
+     * @param integer|null $exp_time seconds till expiration or null
+     * @return integer number of deleted caches
+     */
+    protected function delete($name, $cache_id, $compile_id, $exp_time)
+    {
+        // delete the whole cache
+        if ($name === null &amp;&amp; $cache_id === null &amp;&amp; $compile_id === null &amp;&amp; $exp_time === null) {
+            // returning the number of deleted caches would require a second query to count them
+            $query = $this-&gt;db-&gt;query('TRUNCATE TABLE output_cache');
+            return -1;
+        }
+        // build the filter
+        $where = array();
+        // equal test name
+        if ($name !== null) {
+            $where[] = 'name = ' . $this-&gt;db-&gt;quote($name);
+        }
+        // equal test compile_id
+        if ($compile_id !== null) {
+            $where[] = 'compile_id = ' . $this-&gt;db-&gt;quote($compile_id);
+        }
+        // range test expiration time
+        if ($exp_time !== null) {
+            $where[] = 'modified &lt; DATE_SUB(NOW(), INTERVAL ' . intval($exp_time) . ' SECOND)';
+        }
+        // equal test cache_id and match sub-groups
+        if ($cache_id !== null) {
+            $where[] = '(cache_id = '. $this-&gt;db-&gt;quote($cache_id)
+                . ' OR cache_id LIKE '. $this-&gt;db-&gt;quote($cache_id .'|%') .')';
+        }
+        // run delete query
+        $query = $this-&gt;db-&gt;query('DELETE FROM output_cache WHERE ' . join(' AND ', $where));
+        return $query-&gt;rowCount();
+    }
+}
+
+   </pre></div>
+</div>
+<br class="example-break"><div class="example">
+<a name="id453143"></a><p class="title"><b>Example 15.16. Smarty_CacheResource_Memcache</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+require_once 'libs/Smarty.class.php';
+$smarty = new Smarty();
+$smarty-&gt;caching_type = 'memcache';
+
+/**
+ * Memcache CacheResource
+ *
+ * CacheResource Implementation based on the KeyValueStore API to use
+ * memcache as the storage resource for Smarty's output caching.
+ *
+ * Note that memcache has a limitation of 256 characters per cache-key.
+ * To avoid complications all cache-keys are translated to a sha1 hash.
+ *
+ * @package CacheResource-examples
+ * @author Rodney Rehm
+ */
+class Smarty_CacheResource_Memcache extends Smarty_CacheResource_KeyValueStore {
+    /**
+     * memcache instance
+     * @var Memcache
+     */
+    protected $memcache = null;
+    
+    public function __construct()
+    {
+        $this-&gt;memcache = new Memcache();
+        $this-&gt;memcache-&gt;addServer( '127.0.0.1', 11211 );
+    }
+    
+    /**
+     * Read values for a set of keys from cache
+     *
+     * @param array $keys list of keys to fetch
+     * @return array list of values with the given keys used as indexes
+     * @return boolean true on success, false on failure
+     */
+    protected function read(array $keys)
+    {
+        $_keys = $lookup = array();
+        foreach ($keys as $k) {
+            $_k = sha1($k);
+            $_keys[] = $_k;
+            $lookup[$_k] = $k;
+        }
+        $_res = array();
+        $res = $this-&gt;memcache-&gt;get($_keys);
+        foreach ($res as $k =&gt; $v) {
+            $_res[$lookup[$k]] = $v;
+        }
+        return $_res;
+    }
+    
+    /**
+     * Save values for a set of keys to cache
+     *
+     * @param array $keys list of values to save
+     * @param int $expire expiration time
+     * @return boolean true on success, false on failure
+     */
+    protected function write(array $keys, $expire=null)
+    {
+        foreach ($keys as $k =&gt; $v) {
+            $k = sha1($k);
+            $this-&gt;memcache-&gt;set($k, $v, 0, $expire);
+        }
+        return true;
+    }
+
+    /**
+     * Remove values from cache
+     *
+     * @param array $keys list of keys to delete
+     * @return boolean true on success, false on failure
+     */
+    protected function delete(array $keys)
+    {
+        foreach ($keys as $k) {
+            $k = sha1($k);
+            $this-&gt;memcache-&gt;delete($k);
+        }
+        return true;
+    }
+
+    /**
+     * Remove *all* values from cache
+     *
+     * @return boolean true on success, false on failure
+     */
+    protected function purge()
+    {
+        return $this-&gt;memcache-&gt;flush();
+    }
+}
+
+
+   </pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="caching.cacheable.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="caching.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="resources.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">Controlling Cacheability of Output </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> Chapter 16. Resources</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<navigation id="KoolUploader" title="PHP Ajax File Upload">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>
+			<link 	id="Hide_Buttons_With_Css" 
+					text="Hide Buttons With Css"
+					link="Appearance/Hide_Buttons_With_Css/index.php" 
+					new="false"/>
+			<link 	id="Change_Size" 
+					text="Change Size"
+					link="Appearance/Change_Size/index.php" 
+					new="false"/>										
+		</category>		
+		<category id="Features" text="Features">
+			<link 	id="Ajax_Progress_Tracking" 
+					text="Ajax Progress Tracking"
+					link="Features/Ajax_Progress_Tracking/index.php" 
+					new="true"/>
+			<link 	id="Allowed_File_Extension" 
+					text="Allowed File Extension"
+					link="Features/Allowed_File_Extension/index.php" 
+					new="false"/>
+			<link 	id="Set_Max_FileSize" 
+					text="Set Max FileSize"
+					link="Features/Set_Max_FileSize/index.php" 
+					new="false"/>
+			<link 	id="Manual_File_Handle" 
+					text="Manual File Handle"
+					link="Features/Manual_File_Handle/index.php" 
+					new="false"/>
+					
+		</category>
+		<category id="Client_Side_API" text="Client-side API">
+			<link 	id="RegisterEvent" 
+					text="RegisterEvent"
+					link="Client_Side_API/RegisterEvent/index.php" 
+					new="false"/>			
+			<link 	id="Attach_Extra_Data" 
+					text="Attach Extra Data"
+					link="Client_Side_API/Attach_Extra_Data/index.php" 
+					new="false"/>			
+			<link 	id="Access_File_Information" 
+					text="Access File Information"
+					link="Client_Side_API/Access_File_Information/index.php" 
+					new="false"/>			
+			<link 	id="Auto_Uploading_OnAddItem" 
+					text="Auto Uploading OnAddItem"
+					link="Client_Side_API/Auto_Uploading_OnAddItem/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Advances" text="Advances">
+			<link 	id="Sequential_Uploading" 
+					text="Sequential Uploading"
+					link="Advances/Sequential_Uploading/index.php" 
+					new="true"/>			
+		</category>
+	</category>
+</navigation>

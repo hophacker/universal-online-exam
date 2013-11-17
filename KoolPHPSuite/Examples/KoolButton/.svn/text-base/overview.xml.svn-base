@@ -1,0 +1,27 @@
+<control>
+	<name>KoolButton</name>
+	<metadescription>KoolButton is advanced web button for PHP. It just make your page perfect. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php button, split button, custom button, toggle button, link button</metakeywords>	 
+	<description>
+
+	</description>
+	<examples>
+
+		<example	name="KoolButton" 
+					link="Button/KoolButton/index.php" 
+					image="Button/KoolButton/preview.gif"/>
+
+		<example	name="KoolLinkButton" 
+					link="Button/KoolLinkButton/index.php" 
+					image="Button/KoolLinkButton/preview.gif"/>
+
+		<example	name="KoolToggleButton" 
+					link="Button/KoolToggleButton/index.php" 
+					image="Button/KoolToggleButton/preview.gif"/>
+
+		<example	name="KoolSplitButton" 
+					link="Button/KoolSplitButton/index.php" 
+					image="Button/KoolSplitButton/preview.gif"/>
+
+	</examples>			
+</control>

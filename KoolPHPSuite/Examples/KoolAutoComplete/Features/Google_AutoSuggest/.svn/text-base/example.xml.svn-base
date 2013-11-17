@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Google_AutoSuggest" usedb="true">
+	<title>Google AutoSuggest</title>
+	<metakeywords>php ajax autocomplete,ajax autocomplete php, php autocomplete, php ajax autosuggest, php autosuggest, php mysql autocomplete, ajax autocomplete textbox, ajax autocomplete mysql, ajax autocomplete example, php autocomplete dropdown</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+With KoolAutoComplete, you can easily make a Google-like AutoSuggest.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAutoComplete/koolautocomplete.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kac = new KoolAutoComplete("kac");
+	$kac->scriptFolder = $KoolControlsFolder."/KoolAutoComplete";
+	$kac->width = "160px";
+	$kac->attachTo = "txtSearch";
+	$kac->styleFolder="default";
+
+
+	function service($text)
+	{
+		$items = array();
+
+		$result = mysql_query("select KeyWord,ResultNo from kac_tbKeyWords where KeyWord like '$text%'");
+		while($row = mysql_fetch_assoc($result))
+		{
+			$item = array("text"=>$row["KeyWord"],"ResultNo"=>number_format($row["ResultNo"]));
+			array_push($items,$item);
+		}
+		return $items;
+	}
+
+	
+	$kac->itemTemplate ="<table style='text-align:left'><tr><td class='keyword'>{text}</td><td class='resultno' align='right'>{ResultNo} results&nbsp;</td></tr></table>";
+	$kac->footerTemplate = "<div class='footer'><a href='javascript:close_autocomplete()'>close</a></div>";
+	$kac->serviceFunction = "service";
+	$koolajax->enableFunction("service");
+?>
+<div>
+	<?php echo $koolajax->Render();?>
+	<style type="text/css">
+		#txtSearch
+		{
+			width:350px;
+		}
+		.resultno
+		{
+			font-size:10px;
+			color:green;
+		}
+		.kacSelectFocus .resultno
+		{
+			color:white;
+		}
+		.kacSelectFocus .keyword
+		{
+			color:white;
+		}
+		.footer
+		{
+			font-size:10px;
+			text-align:right;
+		}
+		.footer a
+		{
+			color:blue;
+			text-decoration:underline;
+		}		
+	</style>
+	
+	
+	<table style="width:650px;">
+		<tr>
+			<td align="center">
+				<img src="Images/logo_plain.png" alt="google" />
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<input type="text" id="txtSearch" autocomplete="off"/>
+				<br/>
+				<input type="button" id="btnSearch" value="Google Search" onclick="doSearch()"/>
+				<input type="button" id="btnLucky" value="I'm Feeling Lucky"/>
+				<?php echo $kac->Render();?>				
+			</td>
+		</tr>		
+	</table>
+	<script type="text/javascript">
+		function doSearch()
+		{
+			var _text = document.getElementById("txtSearch").value;
+			window.open("http://www.google.com/search?hl=en&btnG=Google+Search&aq=f&oq=&aqi=g10&q="+_text);
+		}
+		function close_autocomplete()
+		{
+			kac.close();
+			document.getElementById("txtSearch").focus();
+		}		
+	</script>
+	
+	<div style="height:50px;"></div>
+</div>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAutoComplete/PHP/KoolAutoComplete_Class/index.php#itemTemplate">PHP :: KoolAutoComplete :: itemTemplate</doc>
+	</docs>
+</example>

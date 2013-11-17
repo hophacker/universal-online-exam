@@ -1,0 +1,118 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+KoolControlsFolder	admin/account/manager/index.php	/^                $this->KoolControlsFolder = "$this->root\/KoolPHPSuite\/KoolControls";$/;"	v
+KoolControlsFolder	admin/account/manager/index.php	/^            private $KoolControlsFolder;$/;"	v
+KoolControlsFolder	admin/account/student/deptListBox.php	/^        $KoolControlsFolder = "$root\/KoolPHPSuite\/KoolControls";$/;"	v
+KoolControlsFolder	admin/account/student/index.php	/^        $KoolControlsFolder = "..\/..\/..\/..\/..\/KoolPHPSuite\/KoolControls\/";$/;"	v
+KoolControlsFolder	admin/account/student/studentGrid.php	/^        $this->KoolControlsFolder = "$this->root\/KoolPHPSuite\/KoolControls";$/;"	v
+KoolControlsFolder	admin/account/student/studentGrid.php	/^    private $KoolControlsFolder;$/;"	v
+KoolControlsFolder	admin/account/student/studentListBox.php	/^$KoolControlsFolder = "..\/..\/..\/..\/..\/KoolPHPSuite\/KoolControls"; \/\/Relative path to "KoolPHPSuite\/KoolControls" folder$/;"	v
+KoolControlsFolder	count/student/enrollment/gradeCount.php	/^$KoolControlsFolder = "..\/..\/..\/..\/..\/KoolPHPSuite\/KoolControls";$/;"	v
+KoolControlsFolder	count/student/enrollment/regCount.php	/^        $KoolControlsFolder = "..\/..\/..\/..\/..\/KoolPHPSuite\/KoolControls";$/;"	v
+KoolControlsFolder	menu.php	/^        $KoolControlsFolder = "..\/..\/KoolPHPSuite\/KoolControls";$/;"	v
+MT	admin/account/manager/index.php	/^                $MT = $grid->MasterTable;$/;"	v
+MT	admin/account/manager/index.php	/^                $MT = $this->grid->MasterTable;$/;"	v
+MT	admin/account/student/studentGrid.php	/^        $MT = $grid->MasterTable;$/;"	v
+MT	admin/account/student/studentGrid.php	/^        $MT = $this->grid->MasterTable;$/;"	v
+OnParentMouseOver_handle	menu.php	/^                        function OnParentMouseOver_handle(sender,arg)$/;"	f
+__construct	admin/account/manager/index.php	/^            function __construct() {$/;"	f
+__construct	admin/account/student/studentGrid.php	/^    function __construct() {$/;"	f
+ajax	admin/account/manager/index.php	/^                $this->ajax = $koolajax;$/;"	v
+ajax	admin/account/manager/index.php	/^            private $ajax;$/;"	v
+ajax	admin/account/student/studentGrid.php	/^        $this->ajax = $koolajax;$/;"	v
+ajax	admin/account/student/studentGrid.php	/^    private $ajax;$/;"	v
+ajaxRender	admin/account/manager/index.php	/^            function ajaxRender(){$/;"	f
+ajaxRender	admin/account/student/studentGrid.php	/^    function ajaxRender() {$/;"	f
+bundle	menu.php	/^        $bundle = $jquery_ui . "\/development-bundle";$/;"	v
+chart	count/student/enrollment/gradeCount.php	/^    $chart = new KoolChart("chart");$/;"	v
+chart	count/student/enrollment/regCount.php	/^	$chart = new KoolChart("chart");$/;"	v
+class_id	admin/account/student/index.php	/^                $class_id = $_POST["class_id"];$/;"	v
+classes	admin/account/student/deptListBox.php	/^    public function classes($major_id) {$/;"	f
+column	admin/account/manager/index.php	/^                $column = new GridBoundColumn();$/;"	v
+column	admin/account/manager/index.php	/^                $column = new GridDropDownColumn();$/;"	v
+column	admin/account/manager/index.php	/^                $column = new GridEditDeleteColumn();$/;"	v
+column	admin/account/student/studentGrid.php	/^        $column = new GridBoundColumn();$/;"	v
+column	admin/account/student/studentGrid.php	/^        $column = new GridDropDownColumn();$/;"	v
+column	admin/account/student/studentGrid.php	/^        $column = new GridEditDeleteColumn();$/;"	v
+count	count/student/enrollment/gradeCount.php	/^    $count = $stmt->fetchAll(PDO::FETCH_NUM|PDO::FETCH_COLUMN, 1);$/;"	v
+db	count/student/enrollment/gradeCount.php	/^$db = new DB_Connect;$/;"	v
+departments	admin/account/student/deptListBox.php	/^    public function departments() {$/;"	f
+dept	admin/account/manager/index.php	/^                $dept = $deptobj->getAll();$/;"	v
+dept	admin/account/student/deptListBox.php	/^        $dept = $dept_obj->getALL();$/;"	v
+dept	admin/account/student/deptListBox.php	/^        $dept = $dept_obj->getALLMajor($dept_id);$/;"	v
+dept	admin/account/student/deptListBox.php	/^        $dept = $dept_obj->getALLMajor($major_id);$/;"	v
+dept	admin/account/student/dept_select.php	/^$dept = $dept_obj->getAll();$/;"	v
+dept	admin/account/student/studentGrid.php	/^        $dept = $deptobj->getAll();$/;"	v
+dept	count/student/enrollment/gradeCount.php	/^    $dept = $stmt->fetchAll(PDO::FETCH_NUM|PDO::FETCH_COLUMN, 0);$/;"	v
+deptListBox	admin/account/student/deptListBox.php	/^class deptListBox {$/;"	c
+dept_id	admin/account/student/index.php	/^                $dept_id = $_POST["dept_id"];$/;"	v
+dept_list	admin/account/student/dept_select.php	/^$dept_list = "<select id='st_depart' class='dept_select'>"; $/;"	v
+dept_obj	admin/account/student/deptListBox.php	/^        $dept_obj = new department();$/;"	v
+dept_obj	admin/account/student/dept_select.php	/^$dept_obj = new department();$/;"	v
+deptobj	admin/account/manager/index.php	/^                $deptobj = new department();$/;"	v
+deptobj	admin/account/student/studentGrid.php	/^        $deptobj = new department();$/;"	v
+ds	admin/account/manager/index.php	/^                $ds = new MySQLDataSource(DB_Connect::mysql_db()); \/\/This $db_con link has been created inside KoolPHPSuite\/Resources\/runexample.php$/;"	v
+ds	admin/account/manager/index.php	/^            private $ds;$/;"	v
+ds	admin/account/student/studentGrid.php	/^        $ds = new MySQLDataSource(DB_Connect::mysql_db()); \/\/This $db_con link has been created inside KoolPHPSuite\/Resources\/runexample.php$/;"	v
+ds	admin/account/student/studentGrid.php	/^    private $ds;$/;"	v
+export	admin/account/manager/index.php	/^            function export($format){$/;"	f
+export	admin/account/student/studentGrid.php	/^    function export($format) {$/;"	f
+grid	admin/account/manager/index.php	/^                $grid = $this->grid;$/;"	v
+grid	admin/account/manager/index.php	/^                $this->grid = new KoolGrid("grid");$/;"	v
+grid	admin/account/manager/index.php	/^            private $grid;$/;"	v
+grid	admin/account/manager/index.php	/^        $grid = new ksGrid();$/;"	v
+grid	admin/account/student/index.php	/^                $grid = new studentGrid();$/;"	v
+grid	admin/account/student/studentGrid.php	/^        $grid = $this->grid;$/;"	v
+grid	admin/account/student/studentGrid.php	/^        $this->grid = new KoolGrid("grid");$/;"	v
+grid	admin/account/student/studentGrid.php	/^    private $grid;$/;"	v
+jquery_ui	menu.php	/^        $jquery_ui = "..\/jquery-ui";$/;"	v
+key	admin/account/manager/index.php	/^                foreach ($dept as $key => $value){$/;"	v
+key	admin/account/student/deptListBox.php	/^        foreach ($dept as $key => $value) {$/;"	v
+key	admin/account/student/dept_select.php	/^foreach ($dept as $key => $value) {$/;"	v
+key	admin/account/student/studentGrid.php	/^        foreach ($dept as $key => $value) {$/;"	v
+ksGrid	admin/account/manager/index.php	/^        class ksGrid {$/;"	c
+ksm	menu.php	/^        $ksm = new KoolSlideMenu("ksm");$/;"	v
+listbox	admin/account/student/deptListBox.php	/^        $listbox = new KoolListBox("department");$/;"	v
+listbox	admin/account/student/deptListBox.php	/^        $listbox = new KoolListBox("major");$/;"	v
+listbox	admin/account/student/studentListBox.php	/^$listbox = new KoolListBox("listbox");$/;"	v
+major_id	admin/account/student/index.php	/^                $major_id = $_POST["major_id"];$/;"	v
+majors	admin/account/student/deptListBox.php	/^    public function majors($dept_id) {$/;"	f
+on	count/student/enrollment/gradeCount.php	/^ inner join class on (student.class_id = class.class_id)$/;"	c
+on	count/student/enrollment/gradeCount.php	/^ student inner join class on (student.class_id = class.class_id)$/;"	c
+post_url	admin/account/student/index.js	/^var post_url = '..\/..\/..\/..\/..\/class\/LoadAndCheck.php';$/;"	v
+prepare	admin/account/student/deptListBox.php	/^    public function prepare() {$/;"	f
+query	count/student/enrollment/gradeCount.php	/^ $query = 'select department.dept_name as name,count(*) as count from$/;"	v
+query	count/student/enrollment/gradeCount.php	/^$query = 'select department.dept_name as name,count(*) as count from$/;"	v
+render	admin/account/manager/index.php	/^            function render(){$/;"	f
+render	admin/account/student/studentGrid.php	/^    function render() {$/;"	f
+root	admin/account/manager/index.php	/^                $this->root = "..\/..\/..\/..\/..";$/;"	v
+root	admin/account/manager/index.php	/^            private $root;$/;"	v
+root	admin/account/student/deptListBox.php	/^        $root = "..\/..\/..\/..\/..";$/;"	v
+root	admin/account/student/index.php	/^$root = "..\/..\/..\/..\/..";$/;"	v
+root	admin/account/student/studentGrid.php	/^        $this->root = "..\/..\/..\/..\/..";$/;"	v
+root	admin/account/student/studentGrid.php	/^    private $root;$/;"	v
+selectStyle	admin/account/student/deptListBox.php	/^    private static $selectStyle = "sunset";$/;"	v
+selectStyle	admin/account/student/studentListBox.php	/^    $selectStyle = $_POST["selectStyle"];$/;"	v
+selectStyle	admin/account/student/studentListBox.php	/^$selectStyle = "default";$/;"	v
+series	count/student/enrollment/gradeCount.php	/^	$series = new BarSeries();$/;"	v
+series	count/student/enrollment/regCount.php	/^	$series = new BarSeries();$/;"	v
+setColumn	admin/account/manager/index.php	/^            function setColumn(){$/;"	f
+setColumn	admin/account/student/studentGrid.php	/^    function setColumn() {$/;"	f
+setDB	admin/account/manager/index.php	/^            private function setDB() {$/;"	f
+setDB	admin/account/student/studentGrid.php	/^    private function setDB() {$/;"	f
+setEdit	admin/account/manager/index.php	/^            function setEdit() {$/;"	f
+setEdit	admin/account/student/studentGrid.php	/^    function setEdit() {$/;"	f
+setGrid	admin/account/manager/index.php	/^            private function setGrid() {$/;"	f
+setGrid	admin/account/student/studentGrid.php	/^    private function setGrid() {$/;"	f
+setIgnore	admin/account/manager/index.php	/^            function setIgnore($b){$/;"	f
+setIgnore	admin/account/student/studentGrid.php	/^    function setIgnore($b) {$/;"	f
+setPager	admin/account/manager/index.php	/^            function setPager(){$/;"	f
+setPager	admin/account/student/studentGrid.php	/^    function setPager() {$/;"	f
+setView	admin/account/manager/index.php	/^            function setView() {$/;"	f
+setView	admin/account/student/studentGrid.php	/^    function setView() {$/;"	f
+studentGrid	admin/account/student/studentGrid.php	/^class studentGrid {$/;"	c
+xmlDoc	menu.php	/^        $xmlDoc = new DOMDocument();$/;"	v

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Styles" usedb="false">
+	<title>Styles</title>
+	<metakeywords>php image view, php image zoom, zoom image script</metakeywords>	 
+	<metadescription>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</metadescription>
+
+	<description>
+		<![CDATA[ 
+KoolImageView is very flexible in changing appearance look with styleFolder settings.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolImageView/koolimageview.php";
+		
+	$kiv = new KoolImageView("kiv");
+	$kiv->scriptFolder =  $KoolControlsFolder."/KoolImageView";	
+	$kiv->imageUrl = "../../Images/nv.jpg";
+	$kiv->bigImageUrl = "../../Images/niceview.jpg";
+	
+	$style_select = ( isset($_POST['style_select']) ) ? $_POST['style_select'] : "simple";
+
+	$kiv->description = "Beautiful Beach with $style_select style";	
+	$kiv->styleFolder =  $KoolControlsFolder."/KoolImageView/styles/$style_select";
+?>
+<form id="form1" method="post">
+
+	<style type="text/css">
+		.box
+		{
+			float:left;
+			width:280px;
+			height:180px;
+			margin:10px;
+			padding:10px;
+		}
+		.focus
+		{
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;
+			height:140px;
+			width:200px;
+			padding-top:40px;
+			padding-left:80px;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#style_select
+		{
+			width:100px;	
+		}				
+		div.framepic { width:96px; height:69px; padding : 2px; vertical-align:middle;}
+		div.framepic1 { border : 2px  dotted gray; width:100px; }
+		div.framepic2 { border : 2px dotted black ;  width : 104px;}		
+		div.framepic3 { border : 2px solid gray ; padding : 1px ; width : 108px;}
+	</style>
+	<div class="box focus">
+		<div class="framepic3">		
+			<div class="framepic2">
+				<div class="framepic1">					
+					<div class="framepic">	
+						<?php echo $kiv->Render();?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		Select style:
+		<select id="style_select" name="style_select" onchange="submit();">
+			<option value="dark"   <?php echo ( $style_select =='dark') ? 'selected' : '' ;?> >Dark</option>
+			<option value="hay"   <?php echo ( $style_select =='hay') ? 'selected' : '' ;?> >Hay</option>
+			<option value="inox"   <?php echo ( $style_select =='inox') ? 'selected' : '' ;?> >Inox</option>
+			<option value="office2007"   <?php echo ( $style_select =='office2007') ? 'selected' : '' ;?> >Office2007</option>
+			<option value="outlook"   <?php echo ( $style_select =='outlook') ? 'selected' : '' ;?> >Outlook</option>
+			<option value="silver"   <?php echo ( $style_select =='silver') ? 'selected' : '' ;?> >Silver</option>
+			<option value="vista"   <?php echo ( $style_select =='vista') ? 'selected' : '' ;?> >Vista</option>
+			<option value="simple" <?php echo ( $style_select =='simple') ? 'selected' : '' ;?> >Simple</option>
+		</select>
+	</div>
+	<div class="clear"></div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolImageView/PHP/KoolImageView_Class/index.php#styleFolder">PHP :: KoolImageView :: styleFolder</doc>
+	</docs>
+</example>

@@ -1,0 +1,38 @@
+/* 
+    Document   : common
+    Created on : Feb 21, 2013, 3:53:06 PM
+    Author     : simon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#test_type_radio { 
+    margin:4px;
+    padding:4px;
+    height:25px;
+    background:#F0853D;
+    border:solid 1px #C6E1F2;
+    max-width: 500px;
+    text-align:center;
+    position: relative;
+}
+
+.m {
+    font-size: large;
+    text-align:center;
+    font-weight: bold;
+    font-style: normal;
+}
+
+textarea fieldset .textarea{
+    width: 600px;
+}
+body{
+    position: absolute;
+    left: 150px;
+    align: center;
+}

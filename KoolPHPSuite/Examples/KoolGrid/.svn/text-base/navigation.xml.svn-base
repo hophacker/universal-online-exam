@@ -1,0 +1,191 @@
+<navigation id="KoolGrid" title="PHP Grid Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>
+		</category>
+		<category id="Communication_Mode" text="Communication">
+			<link 	id="Postback_Mode" 
+					text="Postback"
+					link="Communication_Mode/Postback_Mode/index.php" 
+					new="false"/>
+			<link 	id="Ajax_Mode" 
+					text="Ajax"
+					link="Communication_Mode/Ajax_Mode/index.php" 
+					new="false"/>
+		</category>
+		<category id="Columns" text="Columns">
+			<link 	id="AutoGenerateColumns" 
+					text="AutoGenerateColumns"
+					link="Columns/AutoGenerateColumns/index.php" 
+					new="false"/>
+			<link 	id="ColumnTypes" 
+					text="Column Types"
+					link="Columns/ColumnTypes/index.php" 
+					new="false"/>
+			<link 	id="Resizing" 
+					text="Resizing"
+					link="Columns/Resizing/index.php" 
+					new="false"/>			
+		</category>	
+		<category id="Rows" text="Rows">			
+			<link 	id="RowAlternative" 
+					text="RowAlternative"
+					link="Rows/RowAlternative/index.php" 
+					new="false"/>			
+			<link 	id="AllowSelecting" 
+					text="AllowSelecting"
+					link="Rows/AllowSelecting/index.php" 
+					new="false"/>			
+			<link 	id="AllowMultiSelecting" 
+					text="AllowMultiSelecting"
+					link="Rows/AllowMultiSelecting/index.php" 
+					new="false"/>			
+			<link 	id="KeepSelectedRecords" 
+					text="KeepSelectedRecords"
+					link="Rows/KeepSelectedRecords/index.php" 
+					new="false"/>			
+
+		</category>
+		<category id="DataSources" text="DataSources">		
+			<link 	id="ArrayData" 
+					text="Array Data"
+					link="DataSources/ArrayData/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Sorting" text="Sorting">		
+			<link 	id="Basic_Sorting" 
+					text="Basic Sorting"
+					link="Sorting/Basic_Sorting/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Filtering" text="Filtering">		
+			<link 	id="Basic_Filtering" 
+					text="Basic Filtering"
+					link="Filtering/Basic_Filtering/index.php" 
+					new="false"/>			
+		</category>		
+		<category id="Grouping" text="Grouping">		
+			<link 	id="Outlook_Style_Grouping" 
+					text="Outlook-style Grouping"
+					link="Grouping/Outlook_Style_Grouping/index.php" 
+					new="true"/>			
+			<link 	id="Initial_Grouping" 
+					text="Initial Grouping"
+					link="Grouping/Initial_Grouping/index.php" 
+					new="true"/>			
+		</category>		
+		<category id="Exporting" text="Exporting">		
+			<link 	id="Excel_Word_CSV_PDF" 
+					text="MS Excel/Word/CSV/PDF"
+					link="Exporting/Excel_Word_CSV_PDF/index.php" 
+					new="true"/>			
+			<link 	id="Change_Filename" 
+					text="Change Filename"
+					link="Exporting/Change_Filename/index.php" 
+					new="true"/>			
+		</category>		
+
+		<category id="Paging" text="Paging">
+			<link 	id="PrevNextPager" 
+					text="Prev-Next Pager"
+					link="Paging/PrevNextPager/index.php" 
+					new="false"/>			
+			<link 	id="NumericPager" 
+					text="NumericPager"
+					link="Paging/NumericPager/index.php" 
+					new="false"/>			
+			<link 	id="PrevNextAndNumericPager" 
+					text="Prev-Next And Numeric Pager"
+					link="Paging/PrevNextAndNumericPager/index.php" 
+					new="false"/>			
+			<link 	id="ManualPager" 
+					text="Manual Pager"
+					link="Paging/ManualPager/index.php" 
+					new="false"/>			
+			<link 	id="CustomPager" 
+					text="Custom Pager"
+					link="Paging/CustomPager/index.php" 
+					new="false"/>								
+			<link 	id="PagerPosition" 
+					text="Pager Position"
+					link="Paging/PagerPosition/index.php" 
+					new="true"/>								
+		</category>
+		<category id="Scrolling" text="Scrolling">		
+			<link 	id="Basic_Scrolling" 
+					text="Basic Scrolling"
+					link="Scrolling/Basic_Scrolling/index.php" 
+					new="false"/>			
+			<link 	id="Virtual_Scrolling" 
+					text="Virtual Scrolling"
+					link="Scrolling/Virtual_Scrolling/index.php" 
+					new="true"/>			
+			<link 	id="Frozen_Columns" 
+					text="Frozen Columns"
+					link="Scrolling/Frozen_Columns/index.php" 
+					new="true"/>			
+
+		</category>
+		<category id="Hierarchy" text="Hierarchy">		
+			<link 	id="Three_Levels_Hierarchy" 
+					text="Three-Levels Hierarchy"
+					link="Hierarchy/Three_Levels_Hierarchy/index.php" 
+					new="false"/>			
+
+		</category>
+		<category id="Editing" text="Editing">		
+			<link 	id="InlineEditing" 
+					text="Inline Editing"
+					link="Editing/InlineEditing/index.php" 
+					new="false"/>			
+			<link 	id="FormEditing" 
+					text="Form Editing"
+					link="Editing/FormEditing/index.php" 
+					new="false"/>			
+			<link 	id="InputFocus" 
+					text="Input Focus"
+					link="Editing/InputFocus/index.php" 
+					new="true"/>			
+		</category>
+		<category id="Inserting" text="Inserting">		
+			<link 	id="Form_Inserting" 
+					text="Form Inserting"
+					link="Inserting/Form_Inserting/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Validation" text="Validation">		
+			<link 	id="Insert_Edit_Validation" 
+					text="Insert/Edit Validation"
+					link="Validation/Insert_Edit_Validation/index.php" 
+					new="true"/>			
+		</category>
+		
+		<category id="Localization" text="Localization">		
+			<link 	id="Change_Language" 
+					text="Change Language"
+					link="Localization/Change_Language/index.php" 
+					new="false"/>			
+		</category>		
+		<category id="Client_Side_API" text="Client-Side API">		
+			<link 	id="ClientEvents" 
+					text="Client Events"
+					link="Client_Side_API/ClientEvents/index.php" 
+					new="false"/>			
+		</category>
+		<category id="Advanced" text="Advanced">		
+			<link 	id="Master_Detail" 
+					text="Master/Detail"
+					link="Advanced/Master_Detail/index.php" 
+					new="true"/>			
+			<link 	id="Ajax_Template" 
+					text="Ajax Template"
+					link="Advanced/Ajax_Template/index.php" 
+					new="true"/>			
+		</category>
+
+	</category>
+</navigation>

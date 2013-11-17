@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="MultiView" usedb="false">
+	<title>MultiView</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker,</metakeywords>	 
+	<metadescription>KoolCalendar support ajax MultiView.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolCalendar support multi-views. You can turn this features on by settings the <b>$MultiViewColumns</b> and <b>$MultiViewRows</b>
+</p>
+	 	]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolCalendar/koolcalendar.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+	
+	
+	$cal = new KoolCalendar("cal"); //Create calendar object
+	$cal->scriptFolder = $KoolControlsFolder."/KoolCalendar";//Set scriptFolder
+	$cal->styleFolder="default";
+	
+	//Enable Ajax
+	$cal->AjaxEnabled = true;
+	$cal->AjaxLoadingImage = $KoolControlsFolder."/KoolAjax/loading/2.gif";
+
+	//MultiView setting
+	$cal->MultiViewColumns = 3;
+	$cal->MultiViewRows = 2;	
+
+	//Init calendar before render
+	$cal->Init();
+?>
+
+<form id="form1" method="post">	
+	<div style="padding-top:20px;padding-bottom:40px;width:650px;<?php if ($style_select=="black") echo "background:#333"; ?>">
+		<?php echo $koolajax->Render();?>
+		<?php echo $cal->Render();?>
+	</div>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolCalendar/PHP/KoolCalendar_Class/index.php">KoolCalendar</doc>
+	</docs>
+</example>

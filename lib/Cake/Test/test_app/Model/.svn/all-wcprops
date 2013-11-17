@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Model
+END
+AppModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Model/AppModel.php
+END
+Comment.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Model/Comment.php
+END
+PersisterOne.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Model/PersisterOne.php
+END
+Post.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Model/Post.php
+END
+PersisterTwo.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/test_app/Model/PersisterTwo.php
+END

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Initial_Grouping" usedb="true">
+	<title>Initial Grouping</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>With KoolGrid, you can define your own grouping in coding.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+With KoolGrid, you can define your own grouping in coding. Basically, you need to create <b>GridGroup</b>'s object and add it to the <b>GridTableView</b> that you want to show the group.
+</p>
+
+<p>
+You can:
+<ul>
+	<li>- Group by any available fields from SelectCommand.</li>
+	<li>- Customize the header text of the group.</li>
+	<li>- Customize the summary information of each groups.</li>
+	<li>- Show group aggregate information.</li>
+</ul>
+</p>
+<br/>
+<p>
+You may have a look at our example for more details.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select CONCAT(employees.firstName,' ',employees.lastName) as employee_name,addressLine1,CONCAT(reportsTo_employees.firstName,' ',reportsTo_employees.lastName) as supervisor_name,employees.jobTitle from employees,offices,employees as reportsTo_employees where reportsTo_employees.employeeNumber=employees.reportsTo and employees.officeCode=offices.officeCode";
+	
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="sunset";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+	$grid->DataSource = $ds;
+	
+	$grid->AjaxEnabled = true;
+	$grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/2.gif";
+
+	$column = new GridBoundColumn();
+	$column->DataField = "employee_name";
+	$column->HeaderText = "Name";	
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->DataField = "jobTitle";
+	$column->HeaderText = "Title";	
+	$grid->MasterTable->AddColumn($column);
+
+	
+	$column = new GridBoundColumn();
+	$column->DataField = "supervisor_name";
+	$column->HeaderText = "Supervisor";
+	
+	//Set group to true so that koolgrid will group by this column initially.	
+	$column->Group = true;
+	$column->GroupSettings->InfoTemplate = "Reports To: {supervisor_name}";
+	$column->GroupSettings->HeaderText = "Supervisor";
+	
+	$grid->MasterTable->AddColumn($column);
+
+
+	$column = new GridBoundColumn();
+	$column->DataField = "addressLine1";
+	$column->HeaderText = "Office Address";		
+	$grid->MasterTable->AddColumn($column);
+
+
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	
+	$grid->AllowGrouping = true; //Allow Grouping
+	$grid->MasterTable->ShowGroupPanel = true; //Show Group Panel	
+
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridGroup/index.php#AddInfoField">GridGroup::AddInfoField()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridGroup/index.php#GroupField">GridGroup::GroupField</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridGroup/index.php#InfoTemplate">GridGroup::InfoTemplate</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridGroup/index.php#Expand">GridGroup::Expand</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridGroup/index.php#Sort">GridGroup::Sort</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#AddGroup">GridTableView::AddGroup()</doc>
+	</docs>
+</example>

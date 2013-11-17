@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="MultiColumn_ComboBox" usedb="true">
+	<title>MultiColumn ComboBox</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolComboBox provides support for multiple columns. Developers can now define any table structure and it will be applied to all combobox items. The key benefit here is that this is achieved using templates. Table structures can be easily customized and modified on the go, without the need to code anything.
+</p>
+<p>
+In addition, you can take advantage of the <b>headerTemplate</b> and <b>footerTemplate</b> to improve the usability of the drop-down list.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+
+	$result = mysql_query("select employeeNumber,lastName,firstName,jobTitle from employees");
+	$total = mysql_num_rows($result);
+
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->width = "347px";
+	$kcb->styleFolder="default";
+	$kcb->headerTemplate = "<div class='header'><div class='column'>Name</div><div class='column'>Title</div><div class='columnLast'>&nbsp;</div><div class='clear' /></div>";
+	$kcb->itemTemplate = "<div class='column'>{text}</div><div class='column'>{jobTitle}</div>";	
+	$kcb->footerTemplate ="<div class='footer'>A total of ".$total." items</div>";	
+
+
+	$selectValue = "";
+	$selectText = "";
+	if(isset($_POST["kcb_selectedValue"]))
+	{
+		$selectValue = $_POST["kcb_selectedValue"];
+		$selectText = $_POST["kcb_selectedText"];
+	}	
+
+	while($row = mysql_fetch_assoc($result))
+	{
+		$kcb->addItem($row["firstName"]." ".$row["lastName"],$row["employeeNumber"],array("jobTitle"=>$row["jobTitle"]),($selectValue==$row["employeeNumber"]));
+	}	
+
+?>
+
+<form id="form1" method="post">
+	<style type="text/css">
+		
+		
+		
+		.clear
+		{
+			clear:both;
+		}
+		.columnLast
+		{
+			width:16px;
+			float:left;
+		}
+		
+		.column
+		{
+			float:left;
+			width:160px;
+		}
+
+		.header .column
+		{
+			padding-left:5px;
+		}
+		
+		.header
+		{
+			border-bottom:solid 1px #BBBBBB;
+			background:url(Images/background.png);
+			height:20px;
+			line-height:20px;
+		}
+				
+		.footer
+		{
+			height:20px;
+			border-top:solid 1px #BBBBBB;
+			background:url(Images/background.png);
+			line-height:20px;
+			padding-left:5px;
+		}
+	</style>
+	<div style="padding-left:10px;padding-bottom:10px;width:500px;">
+		<table>
+			<tr>
+				<td>Employee:</td>
+				<td><?php echo $kcb->Render();?></td>
+				<td><input type="submit" value="Select" /></td>				
+			</tr>
+		</table>
+	</div>
+	
+	<div style="padding-left:10px;padding-top:10px;width:430px;">
+		<?php
+			if($selectValue!="")
+			{
+				echo "You selected: <b>$selectText</b>, SelectedValue (employeeNumber) is <b>$selectValue</b>";
+			}
+		?>
+	</div>	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#headerTemplate">PHP :: KoolComboBox :: headerTemplate</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#itemTemplate">PHP :: KoolComboBox :: itemTemplate</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#footerTemplate">PHP :: KoolComboBox :: footerTemplate</doc>
+	</docs>
+</example>

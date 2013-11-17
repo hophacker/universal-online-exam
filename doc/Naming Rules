@@ -1,0 +1,99 @@
+Variables
+All variables must be lowercase with underscore for "space"
+        $yet_another_long_var = 48;
+class variables camel..
+
+
+Arrays and loops
+Arrays follow the same rule for variables, except data from database should be named $data, and in loops should always have $key => $row pairs
+
+        foreach ($data as $key => $row)
+        {
+                echo $row['something'];
+        }
+        or if you don't need keys
+        foreach ($data as $row)
+        {
+                echo $row['something'];
+        }
+
+Constants
+        I_AM_CONSTANTS
+类传入参数:
+        function setName($_name){
+            $this->name = $_name;
+        }
+Functions
+Functions must follow camelCaseConvention, which means no spaces and no underscores, lowercase with first letter of each word - uppercase (except the first word)
+
+function yetAnotherLongFunction ()
+{
+	...
+}
+
+
+Class names are lowercase with each first letter uppercase and underscore ("_") for space
+class Mysql_Database
+{
+	...
+}
+
+At the end of each class add comment: // end of class
+class User extends Object
+{
+} // end of class
+
+Files
+Classes should be saved as {$class_name}.php
+require_once "Database.php";
+require_once "My_Other_Class_Name.php";
+
+Common variables
+All counters must be named as $i. If you have more than one counter, use the next letter: $j, $k, $l...
+for ($i = 0; $i < 100; $i++)
+All temporary variables must be called $temp or $tmp;
+for ($i = 0; $i < 100; $i++)
+{
+	$temp  = $a[$i];
+	$a[$i] = $b[$i];
+	$b[$i] = $temp;
+}
+
+Function names
+Try to use as descriptive names as possible, but avoid to many words or to long names.
+If you have class User and function to validate if this use is valid or not, instead of this
+if (User::isValidUser ())
+Or even worse
+if (User::checkIfThisUserIsValidAndActivated ())
+Use this
+if (User::isValid ())
+Becauses there's no need to reapeat word "User" since it's already in the class name
+Function prefix
+All functions that return some $variable should be prefixed with "get".
+$username = getUsername ();
+$data = $object->getLastItem ();
+$user = Class_Name::getUserById ($id);
+All functions that set object variable should be prefixed with "set"
+setUsername ($username);
+$object->setLastItem ($item);
+Class_Name::setUserId ($id);
+Constants
+Global Constants
+All global constants (constants that are used everywhere in application, not just single class) must be uppercase
+define ('USER_TIMEOUT', '3000');
+define ('LIMIT_POSTS', 15);
+Class constants
+Constants that are used in a single class should be defined as class constants, not global constants. Uppercase but without prefix, and must be defined first before any other class variable
+class User
+{
+	const LIMIT   = 2;
+	const ANOTHER = 'test';
+}
+
+echo User::LIMIT;
+Test Values
+Dummy variables
+All test variables should follow those rules
+$url = "www.example.com";
+$string = "dummy";		// dummy strings
+$temp = 'some temp value';	// temporary values

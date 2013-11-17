@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+	<employee id="0V1" gender="Male" age="19" dept="Technical support">Premshree Pillai</employee>
+	<employee id="J02" gender="Male" age="24" dept="Maketing">Kumar Singh</employee>
+	<employee id="C05" gender="Female" age="21" dept="Sales">Ranjit Kapoor</employee>
+	<employee id="BB4" gender="Female" age="31" dept="IT management">Anna Kapoor</employee>
+	<employee id="005" gender="Male" age="21" dept="Sales">Ran Jinemor</employee>
+</company>
+
+ 

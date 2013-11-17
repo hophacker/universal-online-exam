@@ -1,0 +1,2 @@
+<div class="left"><a href="<?php echo $rootURL;?>"><img class="logo" src="<?php echo $imgURL?>/none.gif" alt="KoolPHP Suite Demo" /></a></div>
+<div class="right"><a href="http://www.koolphp.net/KoolPHPSuite.php"><img src='<?php echo $imgURL;?>/none.gif' class='download' alt="Download" /></a><a href="http://www.koolphp.net">KoolPHP.net</a><a href="http://doc.koolphp.net">Documentation</a><a href="http://forum.koolphp.net">Forums</a></div>

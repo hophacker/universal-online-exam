@@ -1,0 +1,17 @@
+tables :
+select concat('rename table ', table_name, ' to ' , lower(table_name) , ';') from information_schema.tables where table_schema = 'dxks';
+
+
+
+columns:
+SELECT CONCAT('ALTER TABLE `', table_schema, '`.`', table_name, 
+              '` CHANGE `', column_name, '` `', LOWER(column_name), '` ', column_type,
+              IF(IS_NULLABLE='NO',' NOT NULL',''),
+              IF(column_default <> '', CONCAT(' DEFAULT ', column_default), ''), 
+              
+               ' ', extra,';' ) into outfile '/tmp/b.sql'
+  FROM information_schema.columns 
+  WHERE LEFT(column_name, 1) = UPPER(LEFT(column_name,1)) COLLATE utf8_bin 
+    AND table_schema != 'information_schema';
+
+SELECT CONCAT(table_schema, , table_name, , column_name) FROM information_schema.columns 

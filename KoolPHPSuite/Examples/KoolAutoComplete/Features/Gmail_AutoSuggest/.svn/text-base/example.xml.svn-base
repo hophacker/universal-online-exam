@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Gmail_AutoSuggest" usedb="true">
+	<title>Gmail AutoSuggest</title>
+	<metakeywords>php ajax autocomplete,ajax autocomplete php, php autocomplete, php ajax autosuggest, php autosuggest, php mysql autocomplete, ajax autocomplete textbox, ajax autocomplete mysql, ajax autocomplete example, php autocomplete dropdown</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+With KoolAutoComplete, you can easily make a gmail-like autosuggest.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAutoComplete/koolautocomplete.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+
+	$kac = new KoolAutoComplete("kac");
+	$kac->scriptFolder = $KoolControlsFolder."/KoolAutoComplete";
+	$kac->width = "160px";
+	$kac->attachTo = "txtTo";
+	$kac->styleFolder="office2007";
+	$kac->itemTemplate = "{html}";
+	$kac->boxWidth = "400px";
+
+	function service($text)
+	{
+		$text = str_replace("\\\"","\"",$text);
+		$token = explode(",",$text);
+		$last_token = $token[sizeof($token)-1];
+		$last_token = trim($last_token);
+		$items = array();		
+		$result = mysql_query("select firstName, lastName, email from employees where CONCAT(firstName,' ',lastName,' ', email) like '%$last_token%' order by email;");
+		
+		while($row = mysql_fetch_assoc($result))
+		{
+
+			$text = '"'.$row["firstName"]." ".$row["lastName"].'"'."<".$row["email"].">";
+			$text_array = $token;
+			$text_array[sizeof($text_array)-1] = $text;
+			$text = join(",",$text_array);			
+			
+			$html = '"'.$row["firstName"]." ".$row["lastName"].'"'."[".$row["email"]."]";
+			$html = preg_replace("/".$last_token."/i","<b>$last_token</b>",$html);
+			$html = str_replace("[","&lt;",$html);
+			$html = str_replace("]","&gt;",$html);
+			
+			$item = array("text"=>$text,"html"=>$html);
+			array_push($items,$item);
+		}
+		return $items;
+	}
+	$kac->serviceFunction = "service";
+	$koolajax->enableFunction("service");
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<img src="gmail.gif" alt="Gmail" />
+	<table>
+		<tr>
+			<td valign="top"><b>To:</b></td>
+			<td>
+					<textarea id="txtTo" style="width:620px;height:60px;font-family:Arial;"></textarea>	
+					<?php echo $kac->Render();?>
+			</td>			
+		</tr>
+	</table>
+	<div style="padding-top:10px;padding-left:30px;">
+	<i>*Note:</i> Use comma (,) to seperate the emails
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAutoComplete/PHP/KoolAutoComplete_Class/index.php#itemTemplate">PHP :: KoolAutoComplete :: itemTemplate</doc>
+	</docs>
+</example>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="CheckBoxList" usedb="true">
+	<title>CheckBoxList</title>
+	<metakeywords>php combobox,php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+
+	<description>
+		<![CDATA[ 
+The example shows how to create checkboxes inside KoolComboBox for multi-selecting.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->styleFolder= "default";
+	$kcb->width = "290px";
+	$kcb->inputValidate = false;
+	$kcb->itemTemplate = "<div><input id='{text}' name='mstate' type='checkbox' onclick='on_checkbox_click()' value='{text}' /><label for='{text}' class='desc'>{text}</label></div>";
+	
+	$result = mysql_query("select StateName from kcb_tbstates");
+	while($row = mysql_fetch_assoc($result))
+	{
+		$value = $row["StateName"];
+		$text = $row["StateName"];
+		$kcb->addItem($text,$value);
+	}
+	
+	$selectedText = "";
+	if(isset($_POST["kcb_selectedText"]))
+	{
+		$selectedText = $_POST["kcb_selectedText"];
+	}	
+	
+?>
+
+
+<form id="form1" method="post" name="form1">
+	<style type="text/css">			
+		.desc
+		{
+			padding-left:5px;
+		}
+		.kcbItem .kcbIn
+		{
+			line-height:25px;
+		}
+		.defaultKCB .kcbSelectFocus .kcbA .kcbIn
+		{
+			background:none;
+			color:black;
+		}
+	</style>
+	
+	<table style="width:350px;">
+		<tr>
+			<td colspan="2">Select States:</td>
+		</tr>					
+		<tr>
+			<td>
+				<?php echo $kcb->Render();?>
+			</td>
+			<td>
+				<input type="submit" value="Select" />
+			</td>
+		</tr>
+	</table>	
+	<div style="padding-top:10px;width:350px;min-height:50px;">
+		<?php
+			if($selectedText!="")
+			{
+				echo "You selected: <b>$selectedText</b>";
+			}
+		?>
+	</div>	
+	
+	<script language="javascript">
+		var _item_select = false;
+
+		kcb.registerEvent("OnBeforeSelect",function(sender,arg)
+		{
+			_item_select = true;
+			return false;
+		});
+		kcb.registerEvent("OnBeforeClose",function(sender,arg)
+		{
+			if(_item_select)
+			{
+				_item_select = false;
+				return false;
+			}
+			else
+			{
+				return true;	
+			}
+		});
+		function on_checkbox_click()
+		{
+			var _selected_text = "";
+			var _mstate = document.getElementsByName("mstate");
+			for(var i=0;i<_mstate.length;i++)
+			{
+				if(_mstate[i].checked)
+				{
+					_selected_text+=", "+_mstate[i].id;
+				}
+			}
+			_selected_text = _selected_text.substr(2);
+			document.getElementById("kcb_selectedText").value = _selected_text;
+		}		
+	</script>	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#addItem">PHP :: KoolComboBox :: addItem()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#inputValidate">PHP :: KoolComboBox :: inputValidate</doc>
+	</docs>
+</example>

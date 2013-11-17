@@ -1,0 +1,204 @@
+.hayKCB *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.hayKCB table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.hayKCB .kcbUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.hayKCB .kcbLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.hayKCB .kcbCombobox
+{
+	border:solid 1px #797863;
+	background:url(b.gif);
+	height:23px;
+}
+
+.hayKCB .kcbArrow
+{
+	border:none;
+	width:22px;
+	height:20px;
+	background:url(arrow.gif) 0px -53px;
+	border-left:solid 1px #797863;
+	float:right;
+}
+
+/*Box*/
+
+.hayKCB .kcbBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #989785;
+	border-top:0px;
+	background-color:#f3f3e5;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.hayKCB .kcbIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.hayKCB .kcbItemBox
+{
+	overflow:auto;
+}
+
+.hayKCB .kcbItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .hayKCB .kcbItem
+{
+	display:block;
+}
+
+
+.hayKCB .kcbOpen
+{
+	display:block;
+}
+
+
+.hayKCB .kcbA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.hayKCB .kcbItem .kcbIn img
+{
+	border:0px;
+}
+
+
+.hayKCB .kcbItem .kcbIn
+{
+	color:#333;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:23px;
+	line-height:23px;
+}
+
+
+
+.hayKCB .kcbSelectFocus .kcbIn
+{
+	background:url(b.gif);
+	height:23px;
+	line-height:23px;
+	color:#333;
+}
+
+/*Disable Item*/
+.hayKCB .kcbDisable .kcbIn
+{
+	color:gray;
+}
+
+.hayKCB .kcbDisable a.kcbA:hover .kcbIn
+{
+	background:none;
+	color:gray;
+}
+
+.hayKCB .kcbLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.hayKCB .kcbHeader,
+.hayKCB .kcbFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+
+.hayKCB .kcbOver .kcbArrow
+{
+	background:url(arrow.gif) 0px -28px;
+}
+
+.hayKCB .kcbDown .kcbArrow
+{
+	background:url(arrow.gif) 0px -28px;
+}
+
+
+.hayKCB .kcbCombobox .kcbInput
+{
+	border:none;
+	background:none;
+	width:100%;
+	cursor:default;
+	overflow:hidden;
+}
+
+.hayKCB .kcbOpen .kcbBox 
+{
+	display:block;
+	overflow:hidden;
+}
+.hayKCB .kcbOpen .kcbIframe
+{
+	display:block;
+}
+
+.hayKCB .kcbIn
+{
+	display:block;
+}
+
+/*Textbox settings*/
+.hayKCB .kcbTextbox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.hayKCB .kcbTextbox .kcbInput
+{
+	width:100%;
+	border:none;
+	background:white;	
+	height:18px;
+}
+.hayKCB a:focus 
+{
+	outline:none;
+}

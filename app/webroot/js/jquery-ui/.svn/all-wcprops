@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui
+END
+ui.button.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.button.jquery.json
+END
+ui.effect-transfer.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-transfer.jquery.json
+END
+ui.effect-blind.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-blind.jquery.json
+END
+ui.widget.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.widget.jquery.json
+END
+ui.core.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.core.jquery.json
+END
+ui.effect-fade.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-fade.jquery.json
+END
+ui.tooltip.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.tooltip.jquery.json
+END
+ui.effect-slide.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-slide.jquery.json
+END
+ui.effect-drop.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-drop.jquery.json
+END
+package.json
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/package.json
+END
+ui.accordion.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.accordion.jquery.json
+END
+ui.menu.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.menu.jquery.json
+END
+ui.droppable.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.droppable.jquery.json
+END
+ui.draggable.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.draggable.jquery.json
+END
+grunt.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/grunt.js
+END
+ui.datepicker.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.datepicker.jquery.json
+END
+ui.sortable.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.sortable.jquery.json
+END
+ui.effect-fold.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-fold.jquery.json
+END
+ui.spinner.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.spinner.jquery.json
+END
+ui.resizable.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.resizable.jquery.json
+END
+ui.effect-scale.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-scale.jquery.json
+END
+ui.effect-clip.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-clip.jquery.json
+END
+ui.slider.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.slider.jquery.json
+END
+ui.effect-shake.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-shake.jquery.json
+END
+MIT-LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/MIT-LICENSE.txt
+END
+ui.mouse.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.mouse.jquery.json
+END
+ui.progressbar.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.progressbar.jquery.json
+END
+ui.tabs.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.tabs.jquery.json
+END
+ui.effect-explode.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-explode.jquery.json
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/README.md
+END
+ui.effect.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect.jquery.json
+END
+jquery-1.9.1.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/jquery-1.9.1.js
+END
+ui.dialog.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.dialog.jquery.json
+END
+ui.autocomplete.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.autocomplete.jquery.json
+END
+AUTHORS.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/AUTHORS.txt
+END
+ui.effect-highlight.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-highlight.jquery.json
+END
+ui.selectable.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.selectable.jquery.json
+END
+ui.position.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.position.jquery.json
+END
+ui.effect-bounce.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-bounce.jquery.json
+END
+ui.effect-pulsate.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/166/yangda/app/webroot/js/jquery-ui/ui.effect-pulsate.jquery.json
+END

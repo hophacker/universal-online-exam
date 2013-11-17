@@ -1,0 +1,32 @@
+/* CSS Document */
+body{
+
+	color: #194F95;
+}
+legend,span{
+	color: #194F95;
+	font-size:14px;
+}
+#conf1{
+	position:relative;
+	top:20px;
+	left:500px;
+		color: #194F95
+	
+	}
+.l{	height:20px;
+	border-color:#0CF;
+	border-width:1px;
+}
+.m{	color: #194F95;
+	}
+#conf2{
+	position:relative;
+	top:20px;
+	left:500px;
+	}
+input{
+	   	color: #194F95
+		font-size:14px;
+		}
+	

@@ -1,0 +1,72 @@
+<navigation id="KoolAjax" title="PHP Ajax Framework Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Callback" text="Callback">
+			
+			<link 	id="Basic_Ajax_Callback" 
+					text="Basic Ajax Callback"
+					link="Callback/Basic_Ajax_Callback/index.php" 
+					new="false"/>
+			<link 	id="Data_Type" 
+					text="Data Type"
+					link="Callback/Data_Type/index.php" 
+					new="false"/>			
+		</category>
+		<category id="UpdatePanel" text="UpdatePanel">			
+			<link 	id="First_Look" 
+					text="First Look"
+					link="UpdatePanel/First_Look/index.php" 
+					new="false"/>	
+			<link 	id="With_Database" 
+					text="With Database"
+					link="UpdatePanel/With_Database/index.php" 
+					new="true"/>	
+			
+			<link 	id="UpdatePanel_Client_side_event" 
+					text="Client Side Event"
+					link="UpdatePanel/Client_side_event/index.php" 
+					new="false"/>	
+			
+			<link 	id="Loading_Images" 
+					text="Loading Images"
+					link="UpdatePanel/Loading_Images/index.php" 
+					new="false"/>	
+			
+			<link 	id="Shopping_Cart" 
+					text="Shopping Cart"
+					link="UpdatePanel/Shopping_Cart/index.php" 
+					new="false"/>	
+
+			<link 	id="Ajax_Comment_Post" 
+					text="Ajax Comment Posting"
+					link="UpdatePanel/Ajax_Comment_Post/index.php" 
+					new="true"/>	
+
+
+		</category>
+		<category id="KoolAjaxRequest" text="KoolAjaxRequest">
+			
+			<link 	id="Customized_Ajax_Request" 
+					text="Customized Ajax Request"
+					link="KoolAjaxRequest/Customized_Ajax_Request/index.php" 
+					new="false"/>
+					
+			<link 	id="Client_Side_Event" 
+					text="Client-Side Event"
+					link="KoolAjaxRequest/Client_Side_Event/index.php" 
+					new="false"/>			
+		</category>	
+		<category id="Utilities" text="Utilities">
+			
+			<link 	id="Load_Javascript_OnDemand" 
+					text="Load Javascript On-Demand"
+					link="Utilities/Load_Javascript_OnDemand/index.php" 
+					new="false"/>
+					
+			<link 	id="Load_Parse_XML" 
+					text="Load and parse XML data"
+					link="Utilities/Load_Parse_XML/index.php" 
+					new="false"/>			
+		</category>	
+	</category>
+</navigation>

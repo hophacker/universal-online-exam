@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/dxks/!svn/ver/250/yangda/app/Config
+END
+routes.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/250/yangda/app/Config/routes.php
+END
+database.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/133/yangda/app/Config/database.php
+END
+database.php.default
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/133/yangda/app/Config/database.php.default
+END
+core.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/182/yangda/app/Config/core.php
+END
+email.php.default
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/133/yangda/app/Config/email.php.default
+END
+acl.ini.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/133/yangda/app/Config/acl.ini.php
+END
+bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/269/yangda/app/Config/bootstrap.php
+END
+acl.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/133/yangda/app/Config/acl.php
+END

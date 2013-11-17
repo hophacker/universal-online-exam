@@ -1,0 +1,41 @@
+/* CSS Document */
+#header{
+	font-size:18px;
+	color: #194F95;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight:900;
+	background-color:#F2F6FB;
+	border-bottom: 1px solid #D0DBE7;
+	margin:0;
+	padding:3px;
+	 }
+#bod{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	background-color:#FFFFFF;
+	}
+	
+#bodin{
+	border: 1px solid #D0DBE7;
+	min-height:800px;
+	height:auto;
+	}
+#seaKey{
+		height:20px;
+	border-color:#0CF;
+	border-width:1px;
+	margin-left:10px;
+	}
+#conf,#del,#selAll{
+	font-size:14px;
+	color: #194F95;
+	}
+#del{
+	margin-left:10px;
+	}
+.h{
+	color: #194F95;
+	font-size:14px;
+   }

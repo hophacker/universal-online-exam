@@ -1,0 +1,83 @@
+<navigation id="KoolCalendar" title="PHP Calendar Demo">
+	<category id="root">
+		<link id="Overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+			
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>		
+		</category>	
+		<category id="Calendar" text="Calendar">	
+							
+			<link 	id="AjaxEnabled" 
+					text="AjaxEnabled"
+					link="Calendar/AjaxEnabled/index.php" 
+					new="false"/>
+
+			<link 	id="MultiView" 
+					text="MultiView"
+					link="Calendar/MultiView/index.php" 
+					new="false"/>
+
+			<link 	id="MultiSelection" 
+					text="MultiSelection"
+					link="Calendar/MultiSelection/index.php" 
+					new="false"/>
+
+			<link 	id="QuickMonthSelection" 
+					text="QuickMonthSelection"
+					link="Calendar/QuickMonthSelection/index.php" 
+					new="false"/>
+
+			<link 	id="ClientMode" 
+					text="ClientMode"
+					link="Calendar/ClientMode/index.php" 
+					new="false"/>
+
+			<link 	id="Localization" 
+					text="Localization"
+					link="Calendar/Localization/index.php" 
+					new="true"/>
+
+		</category>
+
+		<category id="DatePickerFolder" text="DatePicker">
+			
+			<link 	id="DatePicker_FirstLook" 
+					text="FirstLook"
+					link="DatePicker/DatePicker_FirstLook/index.php" 
+					new="false"/>
+			<link 	id="DateFormat" 
+					text="DateFormat"
+					link="DatePicker/DateFormat/index.php" 
+					new="true"/>
+		</category>
+
+		<category id="TimePickerFolder" text="TimePicker">
+			
+			<link 	id="TimePicker_FirstLook" 
+					text="FirstLook"
+					link="TimePicker/TimePicker_FirstLook/index.php" 
+					new="false"/>
+		</category>
+
+		<category id="DateTimePickerFolder" text="DateTimePicker">
+			
+			<link 	id="DateTimePicker_FirstLook" 
+					text="FirstLook"
+					link="DateTimePicker/DateTimePicker_FirstLook/index.php" 
+					new="false"/>
+		</category>
+
+
+		<category id="Client_Side_API" text="Client-side API">
+			
+			<link 	id="ClientEvents" 
+					text="ClientEvents"
+					link="Client_Side_API/ClientEvents/index.php" 
+					new="false"/>
+		</category>
+					
+	</category>
+</navigation>

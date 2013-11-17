@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Alignment" usedb="false">
+	<title>Alignment</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>KoolTabs support two types of layouts: Horizontal (default) and Vertial</p>
+<p>
+In Horizontal layout, the <b>align</b> property allows you to specify the way tabs position themselves:
+<ul>
+	<li><b>Left</b> - tabs will be left aligned;</li>
+	<li><b>Right</b> - tabs will be right aligned;</li>
+	<li><b>Center</b> - tabs will be centered;</li>
+	<li><b>Justify</b> - tabs will be proportionally resized to full-up the width of the tabstrip.</li>	
+	
+</ul>
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->styleFolder = "hay";
+	$kts->addTab("root","home","Home",null,true);	
+	$kts->addTab("root","products","Products");
+	$kts->addTab("root","services","Services");
+	$kts->addTab("root","company","Company");
+	$kts->addTab("root","contactus","Contact us");	
+	$kts->width = "650px";
+	
+	$sel = "left";
+	if (isset($_POST["alignmentSelect"]))
+	{
+		$sel = $_POST["alignmentSelect"];
+	}
+	$kts->align = $sel;
+?>
+
+<form id="form1" method="post">
+
+	Select tab alignment:
+	<div style="border:dotted 1px gray;width:150px;height:100px;">
+		<input type="radio" name="alignmentSelect" id="left" value="left" onclick="submit()" <? if($sel=="left") echo "checked"?> /> <label for="left">Left</label><br />
+		<input type="radio" name="alignmentSelect" id="right" value="right" onclick="submit()" <? if($sel=="right") echo "checked"?> /> <label for="right">Right</label><br />
+		<input type="radio" name="alignmentSelect" id="center" value="center" onclick="submit()" <? if($sel=="center") echo "checked"?> /> <label for="center">Center</label><br />		
+		<input type="radio" name="alignmentSelect" id="justify" value="justify" onclick="submit()" <? if($sel=="justify") echo "checked"?> /> <label for="justify">Jusitfy</label>		
+	</div>
+	
+	<div style="padding:10px;">
+		<?php echo $kts->Render();?>
+		<div style="width:650px;height:20px;background-color:#F3F3E2"></div>
+	</div>
+	
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#align">PHP :: KoolTabs :: align</doc>
+	</docs>
+</example>

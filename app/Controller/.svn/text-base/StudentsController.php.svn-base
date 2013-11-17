@@ -1,0 +1,37 @@
+<?php
+class StudentsController extends AppController {
+    var $name = "Student";
+    var  $helpers  = array(
+        'Html', 
+        'Session',
+        'Paginator'
+    );
+    var $paginate = array(
+        'limit' => 25,
+        'order' => array(
+            'Students.s_id' => 'asc'
+        )
+    );
+    public function index() {
+        $data = $this->paginate('students');
+        $this->set('students',$data); 
+
+    }
+    public function register(){
+        
+    }
+    public function setTestIds(){
+        $this->autoRender = false;
+        $test_id = $this->request->data('test_id');
+        $student_ids = $this->request->data('student_ids');
+        $ids = explode(',', $student_ids);
+        $records = array();
+        foreach($ids as $id){
+            // if id == "" then id will be 0
+            $records[] = array('id'=>$id, 'test_id'=>$test_id);
+        }
+        if ($this->Student->saveAll($records)){
+            return array('result'=>'成功');
+        }else return array('result'=>'失败');
+    }
+}

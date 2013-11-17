@@ -1,0 +1,419 @@
+.vistaKLB
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;	
+}
+
+
+.vistaKLB_Scrollable .klbGroup
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #979797;
+	overflow: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.vistaKLB .klbList
+{
+    height: 100%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.vistaKLB .klbItem
+{
+	line-height: 18px;
+    color: #000000;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    cursor: default;
+    padding: 2px 5px;
+    white-space: nowrap;	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 		
+}
+
+.vistaKLB .klbDisabledItem 
+{
+	color: #AAAAAA;
+}
+
+
+.vistaKLB .klbGroup .klbHovered
+{
+    background: none repeat scroll 0 0 #55BBFF;
+    color: #000000;
+}
+
+.vistaKLB .klbGroup .klbSelected {
+    background: none repeat scroll 0 0 #3399FF;
+    color: #000000;
+}
+
+.vistaKLB .klbGroup .klbActive {
+    border: 1px dotted #555555;
+    padding: 1px 4px;
+}
+
+.vistaKLB .klbItem .klbText,
+.vistaKLB .klbItem .klbCheck,
+.vistaKLB .klbItem .klbImage
+{
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.vistaKLB .klbItem .klbImage
+{
+	padding-right:2px;
+}
+
+.vistaKLB .klbButtonAreaRight
+{
+	float:right;
+	width:30px;
+	height:100%;
+}
+
+.vistaKLB .klbButtonAreaLeft
+{
+	float:left;
+	width:30px;
+	height:100%;
+}
+
+.vistaKLB .klbButtonAreaTop,
+.vistaKLB .klbButtonAreaBottom
+{
+	float:left;
+	width:100%;
+	height:30px;
+}
+.vistaKLB .klbAlignLeft
+{
+	text-align:left;
+}
+.vistaKLB .klbAlignRight
+{
+	text-align:right;
+}
+.vistaKLB .klbAlignCenter
+{
+	text-align:center;
+}
+
+.vistaKLB .klbAlignTop td
+{
+	vertical-align:top;
+}
+.vistaKLB .klbAlignBottom td
+{
+	vertical-align:bottom;
+}
+.vistaKLB .klbAlignMiddle td
+{
+	vertical-align:middle;
+}
+
+
+
+
+.vistaKLB .klbButton
+{
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    line-height: 15px;
+    margin: 0 0 5px 6px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+.vistaKLB .klbButtonAreaLeft .klbButton
+{
+	margin: 0 6px 5px 0;
+}
+.vistaKLB .klbButtonAreaTop .klbButton
+{
+	display:inline-block;	
+	margin: 0 8px 6px 0;
+}
+.vistaKLB .klbButtonAreaBottom .klbButton
+{
+	display:inline-block;
+	margin: 6px 8px 0 0;
+}
+
+.vistaKLB .klbAlignBottom .klbButton
+{
+	margin-bottom:2px;
+	margin-top:5px;
+}
+.vistaKLB .klbAlignRight .klbButton
+{
+	margin-left:4px;
+	margin-right:4px;
+}
+
+
+
+.vistaKLB .klbButton .klbButtonBL,
+.vistaKLB .klbButton .klbButtonBR,
+.vistaKLB .klbButton .klbButtonTR,
+.vistaKLB .klbButton .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	display: inline-block;
+	position: relative;
+	width: auto;	
+}
+
+.vistaKLB .klbButton:hover .klbButtonBL,
+.vistaKLB .klbButton:hover .klbButtonBR,
+.vistaKLB .klbButton:hover .klbButtonTR,
+.vistaKLB .klbButton:hover .klbButtonTL
+{
+	background-image: url(ButtonHover.png);
+}
+
+.vistaKLB .klbDisabled:hover .klbButtonBL,
+.vistaKLB .klbDisabled:hover .klbButtonBR,
+.vistaKLB .klbDisabled:hover .klbButtonTR,
+.vistaKLB .klbDisabled:hover .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	cursor:default;
+}
+
+.vistaKLB .klbButton .klbButtonBL
+{
+    background-position: 0 100%;
+    right: 0;
+    top: 4px;	
+}
+
+.vistaKLB .klbButton .klbButtonBR
+{
+    background-position: 100% 100%;
+    display: inline-block;
+    right: -4px;
+}
+.vistaKLB .klbButton .klbButtonTR
+{
+    background-position: 100% 0;
+    bottom: 4px;
+    overflow: visible;
+    right: 0;	
+}
+.vistaKLB .klbButton .klbButtonTL
+{
+    background-position: 0 0;
+    left: -4px;
+}
+
+
+.vistaKLB .klbButton .klbButtonText
+{
+    background: url(Sprite.png) no-repeat;
+    display: inline-block;
+	position: relative;
+    width: 0px;
+    padding-left: 18px;
+	height:13px;
+	padding-top: 3px;
+    text-align: left;
+    z-index: 1;
+	font-size: 0;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;	   
+}
+
+/*Default and right*/
+.vistaKLB .klbDelete .klbButtonText
+{
+   background-position: 0 -50px;
+}
+.vistaKLB .klbMoveUp .klbButtonText
+{
+  background-position: 0 0;
+}
+.vistaKLB .klbMoveDown .klbButtonText
+{
+  background-position: 0 -25px;
+}
+
+.vistaKLB .klbTransferOut .klbButtonText
+{
+  background-position: 0 -75px;
+}
+.vistaKLB .klbTransferIn .klbButtonText
+{
+  background-position: 0px -100px;
+}
+
+.vistaKLB .klbTransferAllOut .klbButtonText
+{
+  background-position: 0 -125px;
+}
+.vistaKLB .klbTransferAllIn .klbButtonText
+{
+  background-position: 0px -150px;
+}
+
+
+
+.vistaKLB .klbDeleteDisabled .klbButtonText
+{
+   background-position: -200px -50px;
+}
+.vistaKLB .klbMoveUpDisabled .klbButtonText
+{
+  background-position: -200px 0;
+}
+.vistaKLB .klbMoveDownDisabled .klbButtonText
+{
+  background-position: -200px -25px;
+}
+
+.vistaKLB .klbTransferOutDisabled .klbButtonText
+{
+  background-position: -200px -75px;
+}
+.vistaKLB .klbTransferInDisabled .klbButtonText
+{
+  background-position: -200px -100px;
+}
+
+.vistaKLB .klbTransferAllOutDisabled .klbButtonText
+{
+  background-position: -200px -125px;
+}
+.vistaKLB .klbTransferAllInDisabled .klbButtonText
+{
+  background-position: -200px -150px;
+}
+
+/*Left*/
+.vistaKLB .klbButtonAreaLeft .klbTransferOut .klbButtonText
+{
+	background-position: 0px -100px;
+  
+}
+.vistaKLB .klbButtonAreaLeft .klbTransferIn .klbButtonText
+{
+	background-position: 0 -75px;
+}
+.vistaKLB .klbButtonAreaLeft .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -150px;
+}
+.vistaKLB .klbButtonAreaLeft .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -125px;
+}
+
+
+.vistaKLB .klbButtonAreaLeft .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -100px;
+}
+.vistaKLB .klbButtonAreaLeft .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -75px;
+}
+
+.vistaKLB .klbButtonAreaLeft .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -150px;
+}
+.vistaKLB .klbButtonAreaLeft .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -125px;
+}
+
+/*Top*/
+.vistaKLB .klbButtonAreaTop .klbTransferOut .klbButtonText
+{
+	background-position: 0px -200px;
+  
+}
+.vistaKLB .klbButtonAreaTop .klbTransferIn .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.vistaKLB .klbButtonAreaTop .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -250px;
+}
+.vistaKLB .klbButtonAreaTop .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -225px;
+}
+
+
+.vistaKLB .klbButtonAreaTop .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+.vistaKLB .klbButtonAreaTop .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+
+.vistaKLB .klbButtonAreaTop .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}
+.vistaKLB .klbButtonAreaTop .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+
+
+/*Bottom*/
+.vistaKLB .klbButtonAreaBottom .klbTransferOut .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.vistaKLB .klbButtonAreaBottom .klbTransferIn .klbButtonText
+{
+	background-position: 0px -200px;
+}
+.vistaKLB .klbButtonAreaBottom .klbTransferAllOut .klbButtonText
+{
+	background-position: 0 -225px;
+}
+.vistaKLB .klbButtonAreaBottom .klbTransferAllIn .klbButtonText
+{
+	background-position: 0px -250px;
+}
+
+
+.vistaKLB .klbButtonAreaBottom .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+.vistaKLB .klbButtonAreaBottom .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+
+.vistaKLB .klbButtonAreaBottom .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+.vistaKLB .klbButtonAreaBottom .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}

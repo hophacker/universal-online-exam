@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="SeachFilter" usedb="true">
+	<title>SeachFilter</title>
+	<metakeywords>php ajax autocomplete,ajax autocomplete php, php autocomplete, php ajax autosuggest, php autosuggest, php mysql autocomplete, ajax autocomplete textbox, ajax autocomplete mysql, ajax autocomplete example, php autocomplete dropdown</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolAutoComplete supports search filtering option. To use this feature, you need to set <b>searchFilter</b> property of KoolAutoComplete's instance. There are two types of search filter:
+</p>
+
+<ul>
+ <li><b>"startwith"</b>: KoolAutoComplete returns all items that start with user-typed text.</li>
+ <li><b>"contain"</b>:KoolAutoComplete returns all items that contain user-typed text.</li>
+</ul>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAutoComplete/koolautocomplete.php";
+
+	$kac = new KoolAutoComplete("kac");
+	$kac->scriptFolder = $KoolControlsFolder."/KoolAutoComplete";
+	$kac->width = "160px";
+	$kac->attachTo = "txtRegion";
+	$kac->styleFolder="office2007";
+
+
+	$result = mysql_query("select CountryName from kcb_tbcountries");
+	while($row = mysql_fetch_assoc($result))
+	{
+		$kac->addItem($row["CountryName"]);	
+	}	
+	
+	$filter_select = "startwith";
+	if(isset($_POST["filter_select"]))
+	{
+		$filter_select = $_POST["filter_select"];
+	}
+	$kac->searchFilter=$filter_select;	
+	
+?>
+
+<form id="form1" method="post">
+
+	<div style="float:left;width:300px;margin-bottom:30px;">
+		<input type="text" id="txtRegion" autocomplete='off' />
+		<?php echo $kac->Render();?>
+	</div>
+
+	Select filter:
+	<select id="filter_select" name="filter_select" onchange="submit();">
+		<option value="startwith"		<?php if ($filter_select=="startwith") echo "selected" ?> >StartWith</option>
+		<option value="contain"		<?php if ($filter_select=="contain") echo "selected" ?> >Contain</option>
+	</select>
+	<br style="clear:both;"/>
+	
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAutoComplete/PHP/KoolAutoComplete_Class/index.php#searchFilter">PHP :: KoolAutoComplete :: searchFilter</doc>
+	</docs>
+</example>

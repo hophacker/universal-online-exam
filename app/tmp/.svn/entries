@@ -1,0 +1,40 @@
+10
+
+dir
+250
+http://58.211.23.247:1314/svn/dxks/yangda/app/tmp
+http://58.211.23.247:1314/svn/dxks
+
+
+
+2013-03-11T11:36:46.932272Z
+250
+j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ed2a3f95-546a-6449-b542-f2536213d64d
+
+tests
+dir
+
+cache
+dir
+
+logs
+dir
+
+sessions
+dir
+

@@ -1,0 +1,634 @@
+.sunsetKFR,
+.sunsetKFR input,
+.sunsetKFR select
+
+{
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color: #000000;
+}
+
+
+.kfrRoundCorner
+{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+	border-radius:4px;	
+}
+
+/*Headings*/
+.sunsetKFR h1.kfrH1
+{
+	font-size:16px;
+}
+.sunsetKFR h2.kfrH2
+{
+	font-size:15px;
+}
+.sunsetKFR h3.kfrH3
+{
+	font-size:14px;
+}
+.sunsetKFR h4.kfrH4
+{
+	font-size:13px;
+}
+.sunsetKFR h5.kfrH5
+{
+	font-size:12px;
+}
+/*FieldSet*/
+.sunsetKFR .kfrFieldSet
+{
+    background-image: url(FieldsetBgr.png);
+    border: 1px solid #BCAE9B;
+	background-repeat:no-repeat;
+}
+.sunsetKFR .kfrFieldSet legend
+{
+	padding-left:3px;
+	padding-right:3px;
+	color: #000000;
+}
+
+/*Start:------FieldSet in IE*/
+.sunsetKFR table.kfrRoundedWrapper_FieldSet
+{
+	display:inline-block;
+	_display:inline;
+}
+.sunsetKFR table.kfrRoundedWrapper_FieldSet td
+{
+	vertical-align:middle;
+}
+.sunsetKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;	
+	background-color:#BCAE9B;
+}
+.sunsetKFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;	
+	background-image: url(FieldsetBgr.png);
+	border-top:1px solid #BCAE9B;
+	border-bottom:1px solid #BCAE9B;
+}
+.sunsetKFR table.kfrRoundedWrapper_FieldSet .kfrFieldSet
+{
+	background-position:0px 7px;	
+}
+/*End:------FieldSet in IE*/
+
+
+/*Label*/
+.sunsetKFR .kfrLabel
+{
+	margin-left:2px;
+	margin-right:2px;	
+}
+.sunsetKFR .kfrDisabled
+{
+	color:#9F9F9F;
+}
+
+/*Validator*/
+.sunsetKFR .kfrValidator
+{
+	margin-left:5px;
+	margin-right:5px;	
+	color:red;
+}
+
+
+/*KoolTextBox*/
+.sunsetKFR .kfrTextBox
+{
+    background-color: #FFFFFF;
+    border: 1px solid #938879;
+    height: auto;
+    line-height: normal;
+    padding: 2px 2px 3px;	
+}
+
+.sunsetKFR .kfrTextBox:hover,
+.sunsetKFR .kfrTextBox:focus
+{
+    border: 1px solid #AC7D21;
+}
+
+
+.sunsetKFR .kfrEmpty .kfrTextBox
+{
+	color:#9F9F9F;
+}
+
+.sunsetKFR .kfrTable
+{
+	vertical-align: bottom;
+    border-collapse: collapse;
+    border-width: 0;	
+}
+
+
+.sunsetKFR .kfrTextBoxWrapper
+{
+	display:inline-block;
+	vertical-align:middle;	
+}
+
+
+
+/*Start:----------------------------TextBox in IE*/
+.sunsetKFR .kfrRoundedWrapper
+{
+	border:0px !important;
+	display:inline-block;
+	vertical-align:middle;
+	vertical-align: bottom;
+    border-collapse: collapse;
+	_display:inline;
+}
+
+.sunsetKFR .kfrRoundedWrapper td
+{
+	border:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+
+
+.sunsetKFR table.kfrRoundedWrapper div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;
+	background-color:#938879;
+}
+.sunsetKFR table.kfrRoundedWrapper div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;
+	background-color:#FFFFFF;
+	border-top:1px solid #938879;
+	border-bottom:1px solid #938879;
+	background-image:none;
+}
+
+.sunsetKFR table.kfrRoundedWrapper:hover div.kfrRoundedOuter,
+.sunsetKFR table.kfrFocus div.kfrRoundedOuter
+{
+	background-color:#AC7D21 !important;
+}
+.sunsetKFR table.kfrRoundedWrapper:hover div.kfrRoundedInner,
+.sunsetKFR table.kfrFocus div.kfrRoundedInner
+{
+	border-top-color:#AC7D21 !important;
+	border-bottom-color:#AC7D21 !important;
+}
+/*End:----------------------------TextBox in IE*/
+
+
+
+/*KoolNumericTextBox*/
+.sunsetKFR .kfrTable .kfrSpinUp,
+.sunsetKFR .kfrTable .kfrSpinDown
+{
+    height: 7px;
+    line-height: 7px;
+    width: 15px;
+    display: block;
+    outline: medium none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -2222px;
+    z-index: 2;
+	cursor:pointer;
+}
+
+
+
+.sunsetKFR .kfrTable .kfrSpinUp
+{
+	background-position: 4px -98px;
+	background-image:url(sprite.gif);
+}
+.sunsetKFR .kfrTable .kfrSpinUp:hover
+{
+	background-position: 4px -148px;
+}
+
+.sunsetKFR .kfrTable .kfrSpinDown
+{
+	margin-top: 3px;
+	background-position: 4px -199px;
+	background-image:url(sprite.gif);
+}
+.sunsetKFR .kfrTable .kfrSpinDown:hover
+{
+	background-position: 4px -249px;
+}
+
+/*KoolPasswordTextBox*/
+.sunsetKFR .kfrIndicator
+{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+	margin:0px 10px 0px 10px;
+	padding:3px 5px 3px 5px;
+	border-radius:4px;
+}
+.sunsetKFR .kfrIndicator_Score_0
+{
+	display:none;
+}
+.sunsetKFR .kfrIndicator_Score_1
+{
+	background:#FF7553;
+}
+.sunsetKFR .kfrIndicator_Score_2
+{
+	background:#FFEDA4;
+}
+.sunsetKFR .kfrIndicator_Score_3
+{
+	background:#93C9FF;
+}
+.sunsetKFR .kfrIndicator_Score_4
+{
+	background:#6CFF92;
+}
+.sunsetKFR .kfrIndicator_Score_5
+{
+	background:#20FF58;
+}
+
+
+/*KoolCheckBox*/
+.sunsetKFR .kfrHide
+{
+	position:absolute;
+	left:-9999px;
+}
+.sunsetKFR .kfrCheckBox .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(CheckBoxSprites.gif);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.sunsetKFR .kfrCheckBox .kfrOver
+{
+	background-position:-3px -203px;
+}
+.sunsetKFR .kfrCheckBoxSelected .kfrSub
+{
+	background-position:-3px -423px;
+}
+.sunsetKFR .kfrCheckBoxSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.sunsetKFR .kfrCheckBox .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.sunsetKFR .kfrCheckBoxSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolRadioButton*/
+.sunsetKFR .kfrRadio .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(RadioSprites.png);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.sunsetKFR .kfrRadio .kfrOver
+{
+	background-position:-3px -223px;
+}
+.sunsetKFR .kfrRadioSelected .kfrSub
+{
+	background-position:-3px -443px;
+}
+.sunsetKFR .kfrRadioSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.sunsetKFR .kfrRadio .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.sunsetKFR .kfrRadioSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolDropDownList*/
+.sunsetKFR .kfrRealDropDown
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+	height:22px;
+	position:relative;
+}
+/*Safari*/
+body:nth-of-type(1) .sunsetKFR .kfrRealDropDown
+{
+	line-height:18px;
+}
+.sunsetKFR .kfrDropDownList
+{
+	display:inline-block;
+	padding-right:1px;
+	cursor:default;
+	overflow:hidden;
+	vertical-align:middle;
+}
+
+.sunsetKFR .kfrOut
+{
+	display:inline-block;
+	position:relative;
+	background-image:url(ComboSprites.gif);
+	height:22px;
+}
+
+
+
+.sunsetKFR .kfrDropDownList .kfrSub
+{
+	position:absolute;
+	float:left;
+	left:0px;
+	height:22px;
+	padding-left:4px;
+	overflow:hidden;
+	line-height:22px;
+}
+.sunsetKFR .kfrDropDownList .kfrArrow
+{
+	position:absolute;
+	display:inline-block;
+	float:right;
+	height:22px;
+	width:22px;
+	height:22px;
+	background-image:url(ComboSprites.gif);
+ 	background-position: right -22px;
+	right:-1px;
+}
+.sunsetKFR .kfrDropDownList:hover .kfrOut
+{
+ 	background-position: 0 -44px;
+}
+
+.sunsetKFR .kfrDropDownList:hover .kfrArrow
+{
+ 	background-position: right -66px;
+}
+
+.sunsetKFR .kfrDropDownList .kfrDisabled
+{
+	background-position: 0 -176px !important;
+}
+.sunsetKFR .kfrDropDownList .kfrDisabled .kfrArrow
+{
+	background-position: right -198px;
+}
+.sunsetKFR .kfrDropDownList .kfrDisabled .kfrSub
+{
+	color:#9F9F9F;
+}
+
+
+
+/*KoolButton*/
+.sunsetKFR a.kfrButtonWrapper
+{
+	background-image: url(ButtonSprites.gif);	
+    background-color: transparent;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+	vertical-align:middle;
+	cursor:pointer;      
+}
+
+.sunsetKFR a.kfrButtonWrapper span.kfrOut 
+{
+	background-image: url(ButtonSprites.gif);
+    background-color: transparent;
+    background-position: left -22px;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;    
+	margin-right:4px;
+}
+
+
+.sunsetKFR a.kfrButtonWrapper input.kfrButton
+{
+	background:none;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    outline: medium none;
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 6px;
+   	padding-bottom:1px;
+    text-align: center;
+	vertical-align:middle;
+	color: #824703;
+}
+
+.sunsetKFR a.kfrButtonWrapper:hover
+{
+	background-position: right -44px;
+}
+.sunsetKFR a.kfrButtonWrapper:hover span.kfrOut
+{
+	background-position: left -66px;
+}
+
+.sunsetKFR a.kfrButtonDown:hover 
+{
+	background-position: right -88px;
+}
+.sunsetKFR a.kfrButtonDown:hover span.kfrOut
+{
+	background-position: left -110px;
+}
+
+.sunsetKFR a.kfrButtonWrapper span.kfrLeftImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	left:5px;
+}
+
+.sunsetKFR a.kfrButtonWrapper span.kfrSpaceLeft .kfrButton
+{
+	padding-left:22px;
+}
+
+.sunsetKFR a.kfrButtonWrapper span.kfrRightImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	right:2px;
+}
+
+.sunsetKFR a.kfrButtonWrapper span.kfrSpaceRight .kfrButton
+{
+	padding-right:22px;
+}
+.sunsetKFR a.kfrButtonWrapper span.kfrSpaceBoth .kfrButton
+{
+	padding-left:22px;
+	padding-right:22px;
+}
+/*KoolLinkButton*/
+.sunsetKFR span.kfrButton
+{
+    line-height: 22px;
+}
+.sunsetKFR a.kfrButtonWrapper
+{
+	outline:none;
+}
+.sunsetKFR  a.kfrButtonLink
+{
+	background-image:none;
+    border: 1px solid #863D02;
+    color: #000000;
+    text-decoration: none;	
+}
+.sunsetKFR a.kfrButtonLink:hover
+{
+	background-color:#F9EB83;
+	color:#863D02;
+}
+.sunsetKFR  a.kfrButtonLink span.kfrOut
+{
+	background-image:none;	
+}
+.sunsetKFR a.kfrButtonLink:active
+{
+	background-color:#F9EB83;
+}
+
+/*KoolSplitButton*/
+.sunsetKFR a.kfrSplitButton span.kfrOut
+{
+	margin-right:18px;
+}
+.sunsetKFR a.kfrSplitButton span.kfrSplitRight
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -137px;
+    right: 0;
+	top:0;	
+	height: 100%;
+	width:18px;
+	display:block;
+	position:absolute;
+}
+.sunsetKFR a.kfrSplitButton span.kfrSplitRight:hover
+{
+    background-position: -18px -137px;
+}
+
+.sunsetKFR a.kfrSplitArrowDown span.kfrSplitRight:hover
+{
+	background-position: -36px -137px;
+}
+
+
+.sunsetKFR a.kfrSplitButton div.kfrSplitButtonContainer
+{
+	position:absolute;
+	top:22px;
+	left:0px;
+}
+.sunsetKFR div.kfrSplitButtonContainer div.kfrContainerInner
+{
+	border-radius:3px;
+	border:solid 1px #938879;
+	background-color:#EBE4D7;
+}
+
+
+
+.sunsetKFR div.kfrSplitButtonContainer div.kfrOutter
+{
+	margin:1px;
+}
+.sunsetKFR div.kfrSplitButtonContainer div.kfrOutter:hover
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 100% -44px;
+	background-repeat:no-repeat;
+}
+
+.sunsetKFR div.kfrSplitButtonContainer div.kfrInner
+{
+	position:relative;
+	text-align:left;
+	margin-right:4px;
+}
+.sunsetKFR div.kfrOutter:hover div.kfrInner
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -66px;
+	background-repeat:no-repeat;
+}
+
+.sunsetKFR div.kfrSplitButtonContainer span.kfrLeftImage
+{
+	left:4px;
+}
+
+
+.sunsetKFR div.kfrInner span.kfrText
+{
+	color: #3B3B3B;
+	background:none;
+    border: 0 none;
+    line-height: 22px;
+    margin-left: 24px;
+	padding-right:20px;
+}
+
+

@@ -1,0 +1,559 @@
+.sunsetKCD
+{
+	position:relative;
+	margin:0px;
+	padding:0px;
+}
+
+.sunsetKCD,
+.sunsetKCD_UpdatePanel
+{
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+
+.sunsetKCD .kcdMultiView,
+.sunsetKCD .kcdMonthView,
+.sunsetKCD .kcdMainTable
+{
+	background:#F4EDE1 none repeat scroll 0 0;
+	border:0 none;
+	border-collapse:separate;
+	font-family:arial,tahoma,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;	
+}
+
+.sunsetKCD .kcdMonthView
+{
+	width:224px;	
+}
+
+.sunsetKCD a:focus
+{
+	outline:none;
+}
+
+.sunsetKCD .kcdTopHeader
+{
+	background:#B25327 url(sprite.gif) repeat-x scroll 0 -500px;
+	border:1px solid #8C664F;
+	color:#FFFFFF;
+	padding:0;
+	width:100%;
+	line-height:32px;
+	text-align:center;
+}
+
+.sunsetKCD .kcdNavText
+{
+	font-family:arial,tahoma,sans-serif;
+	font-size:13px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;	
+}
+
+
+
+.sunsetKCD .kcdQMSNav
+{
+	cursor:pointer;
+}
+
+
+.sunsetKCD .kcdFastPrev,
+.sunsetKCD .kcdPrev
+{
+	float:left;
+}
+
+.sunsetKCD .kcdFastNext,
+.sunsetKCD .kcdNext
+{
+	float:right;
+}
+
+.sunsetKCD .kcdFastPrev a,
+.sunsetKCD .kcdPrev a,
+.sunsetKCD .kcdFastNext a,
+.sunsetKCD .kcdNext a
+{
+	display:block;	
+	color:#CCCCCC;	
+	overflow:hidden;
+	text-decoration:none;	
+	text-indent:-1111px;
+	width:13px;
+	height:13px;
+}
+
+.sunsetKCD .kcdFastPrev a:hover,
+.sunsetKCD .kcdPrev a:hover,
+.sunsetKCD .kcdFastNext a:hover,
+.sunsetKCD .kcdNext a:hover
+{
+	cursor:pointer;
+}
+
+.sunsetKCD .kcdNavText
+{
+	white-space:nowrap;
+}
+
+
+.sunsetKCD .kcdFastPrev a
+{
+	background:transparent url(sprite.gif) no-repeat scroll 2px 2px;
+	margin:9px 0 0 6px;
+}
+
+.sunsetKCD .kcdPrev a
+{
+	background:transparent url(sprite.gif) no-repeat scroll 3px -48px;
+	margin:9px 0 0 6px;
+}
+
+.sunsetKCD .kcdFastNext a
+{
+	background:transparent url(sprite.gif) no-repeat scroll 2px -148px;
+	margin:9px 6px 0 0;
+}
+
+.sunsetKCD .kcdNext a
+{
+	background:transparent url(sprite.gif) no-repeat scroll 4px -98px;
+	margin:9px 6px 0 0;
+}
+
+
+.sunsetKCD .kcdMonthContainer
+{
+	padding:5px;
+	border-right:solid 1px #C4B7A2;
+}
+
+.sunsetKCD .kcdLastCol
+{
+	border-right:none;
+}
+
+
+
+/*Main Table*/
+.sunsetKCD .kcdMain
+{
+	border:solid 1px #C4B7A2;
+}
+
+
+.sunsetKCD .kcdMainTable
+{
+	width:95%;
+	line-height:16px;
+	margin:5px;
+}
+.sunsetKCD .kcdColHeader
+{
+	border-bottom:solid 1px #C4B7A2;
+	padding:4px 6px 3px 6px;
+	text-align:right;
+	color:#A43A00;
+	cursor:default;
+	font-weight:normal;	
+}
+.sunsetKCD .kcdViewSelector
+{
+	width:14px;
+}
+
+
+.sunsetKCD .kcdRowHeader
+{
+	padding:0 6px 0 6px;
+	text-align:right;
+	color:#A43A00;
+	cursor:default;
+	font-weight:normal;
+	width:14px;		
+}
+
+.sunsetKCD .kcdDay
+{
+	border:1px solid #F4EDE1;
+	padding:0;
+	text-align:right;
+}
+
+.sunsetKCD .kcdDay a
+{
+	color:#272522;
+	padding:1px 5px;
+	text-decoration:none;
+	display:block;
+}
+
+.sunsetKCD .kcdDay a:hover
+{
+	cursor:pointer;
+}
+
+.sunsetKCD .kcdWeekend a
+{
+	color:#757566;
+}
+
+
+.sunsetKCD .kcdOtherMonth a
+{
+	color:#9D9A87;
+}
+
+.sunsetKCD .kcdToday
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border-color:#BDAB92;
+}
+
+
+
+.sunsetKCD .kcdOver
+{
+	background:#FFA630 url(sprite.gif) repeat-x scroll 0 -600px;
+	border-color:#DE9700;
+}
+
+.sunsetKCD .kcdOver a
+{
+	color:#272522;
+}
+
+
+.sunsetKCD .kcdMainTable .kcdSelected
+{
+	background:#6B655E url(sprite.gif) repeat-x scroll 0 -700px;
+	border-color:#796F61 #63594C #483E32;
+}
+
+.sunsetKCD .kcdMainTable .kcdSelected a
+{
+	border-color:#B2A798 #9A9184 #7C756B;
+	border-style:solid;
+	border-width:1px;
+	color:#FFFFFF;
+	padding:0 4px;	
+}
+
+
+.sunsetKCD .kcdDisabled a
+{
+	color:#9D9A87;
+}
+
+
+
+
+
+/*MultiView*/
+
+.sunsetKCD .kcdMultiViewContainer
+{
+	padding:0px;
+	border:solid 1px #C4B7A2;
+}
+
+
+/*MonthView in MultiView*/
+
+.sunsetKCD .kcdMonthContainer .kcdTopHeader
+{
+	background:#F4EDE1;
+	border:1px solid #F4EDE1;
+	border-bottom:solid 1px #C4B7A2;
+	color:#A43A00;
+	line-height:32px;
+	font-size:13px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;		
+}
+
+
+.sunsetKCD .kcdMonthContainer .kcdMain
+{
+	border:solid 1px #F4EDE1;
+}
+
+.sunsetKCD .kcdMonthContainer .kcdMainTable
+{
+	margin-top:0px;
+}
+
+.sunsetKCD .kcdTableSlide
+{
+}
+
+/*Quick Month Selector*/
+
+.sunsetKCD .kcdQMS
+{
+	position:absolute;
+}
+
+.sunsetKCD .kcdQMS table
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #979797;
+	border-collapse:separate;
+	color:#272522;
+}
+.sunsetKCD .kcdQMS a
+{
+	font-family:verdana,tahoma,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;	
+	color:#707070;
+	display:block;
+	padding:2px 4px;
+	text-align:center;
+	text-decoration:none;	
+}
+
+.sunsetKCD .kcdQMS a:hover
+{
+	cursor:pointer;
+}
+
+
+.sunsetKCD .kcdQMS .kcdSelected a
+{
+	background:#6B655E url(sprite.gif) repeat-x scroll 0 -700px;
+	border-color:#796F61 #63594C #483E32;
+	border-style:solid;
+	border-width:1px;
+	color:#FFFFFF;
+	padding:1px 3px;	
+}
+.sunsetKCD .kcdQMS td
+{
+	border:0 none;
+	padding:2px;	
+}
+
+.sunsetKCD .kcdQMS .kcdSeparate
+{
+	border-right:1px solid #CBBDA9;	
+}
+
+.sunsetKCD .kcdQMS .kcdButtons
+{
+	background:#F3F3E2 none repeat scroll 0 0;
+	border-color:#CBBDA9 -moz-use-text-color -moz-use-text-color;
+	border-style:solid none none;
+	border-width:1px 0 0;
+	padding:0.5em 0.6em;
+	text-align:center;
+	white-space:nowrap;	
+}
+
+.sunsetKCD .kcdQMS .kcdButtonToday,
+.sunsetKCD .kcdQMS .kcdButtonOK,
+.sunsetKCD .kcdQMS .kcdButtonCancel
+{
+	background:#BA4F00 url(sprite.gif) repeat-x scroll 0 -800px;
+	border-color:#BD4C04 #AC4601 #973F00;
+	border-style:solid;
+	border-width:1px;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-family:verdana,arial,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	padding:0;
+	margin:0 3px 0 3px;
+}
+
+/*TimeView*/
+.sunsetKCD .ktmTable
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #979797;
+	border-collapse:separate;
+	color:#272522;
+	font-family:arial,tahoma,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;	
+}
+
+.sunsetKCD .ktmTable .ktmHeader
+{
+	background:#B25327 url(sprite.gif) repeat-x scroll 0 -500px;
+	border-color:#B1572D;
+	border-style:none none solid;
+	border-width:0 0 1px;
+	color:#FFFFFF;
+	cursor:default;
+	font-family:arial,tahoma,sans-serif;
+	font-size:13px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:31px;
+	padding:0 0 1px;
+	text-align:center;
+}
+
+.sunsetKCD .ktmTable .ktmTime
+{
+	border-color:#CBBDA9;
+	border-style:none none none solid;
+	border-width:0 0 0 1px;
+	padding:1px 2px;	
+}
+
+.sunsetKCD .ktmTable .ktmFirst
+{
+	border-left:0 none;
+}
+
+
+.sunsetKCD .ktmTable .ktmTime a
+{
+	color:#272522;
+	display:block;
+	padding:5px 7px;
+	text-align:center;
+	text-decoration:none;
+	white-space:nowrap;
+}
+
+.sunsetKCD .ktmTable .ktmTime a:hover
+{
+	cursor:pointer;
+}
+
+
+.sunsetKCD .ktmTable .ktmOver a
+{
+	background:#FFA630 url(sprite.gif) repeat-x scroll 0 -600px;
+	border:1px solid #DE9700;
+	padding:4px 6px;
+}
+
+.sunsetKCD .ktmTable .ktmNoTime
+{
+	border-color:#CBBDA9;
+	border-style:none none none solid;
+	border-width:0 0 0 1px;
+	padding:1px 2px;	
+}
+
+.sunsetKCD .ktmTable .ktmNoTime a
+{
+	background:none;
+}
+
+
+/*DateTimePicker*/
+
+.sunsetKCD .kcdDateOpener,
+.sunsetKCD .kcdTimeOpener
+{
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	width:16px;
+	height:16px;
+	background:transparent url(sprite.gif) no-repeat scroll 0 0;	
+	cursor:pointer;
+	margin-right:2px;
+}
+
+.sunsetKCD .kcdPicker
+{
+	width:18px;
+}
+
+.sunsetKCD .kcdDateOpener
+{
+	background-position:0 -200px;
+}
+.sunsetKCD .kcdDateOpener:hover
+{
+	background-position:0 -250px;
+}
+
+.sunsetKCD .kcdTimeOpener
+{
+	background-position:0 -350px;
+}
+.sunsetKCD .kcdTimeOpener:hover
+{
+	background-position:0 -300px;
+}
+
+.sunsetKCD .kcdInput div
+{
+	padding-right:6px;
+}
+
+/*IE6 only*/
+* html .sunsetKCD .kcdInput div
+{
+	padding-right:8px;
+}
+/*IE7 only*/
+*+html .sunsetKCD .kcdInput div
+{
+	padding-right:8px;
+}
+
+.sunsetKCD .kcdInput input
+{
+	font-family:arial,tahoma,sans-serif;
+	font-size:12px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+}
+
+.kcdOpening,
+.kcdOpening .kcdDatePicker,
+.kcdOpening .kcdTimePicker
+{
+	z-index:1000;
+}
+

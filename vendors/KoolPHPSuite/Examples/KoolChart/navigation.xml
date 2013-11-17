@@ -1,0 +1,62 @@
+<navigation id="KoolChart" title="PHP Charting Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="First_Look_cat" text="First Look">
+			<link 	id="First_Look" 
+					text="First Look"
+					link="First_Look/First_Look/index.php" 
+					new="false"/>					
+		</category>
+		
+		<category id="ChartTypes" text="ChartTypes">
+			<link 	id="Column_Chart" 
+					text="Column Chart"
+					link="ChartTypes/Column_Chart/index.php" 
+					new="false"/>					
+			<link 	id="Bar_Chart" 
+					text="Bar Chart"
+					link="ChartTypes/Bar_Chart/index.php" 
+					new="false"/>					
+			<link 	id="Line_Chart" 
+					text="Line Chart"
+					link="ChartTypes/Line_Chart/index.php" 
+					new="false"/>					
+			<link 	id="Pie_Chart" 
+					text="Pie Chart"
+					link="ChartTypes/Pie_Chart/index.php" 
+					new="false"/>					
+			<link 	id="Area_Chart" 
+					text="Area Chart"
+					link="ChartTypes/Area_Chart/index.php" 
+					new="false"/>					
+			<link 	id="Scatter_Chart" 
+					text="Scatter Chart"
+					link="ChartTypes/Scatter_Chart/index.php" 
+					new="false"/>					
+			<link 	id="ScatterLine_Chart" 
+					text="ScatterLine Chart"
+					link="ChartTypes/ScatterLine_Chart/index.php" 
+					new="false"/>					
+		</category>
+		<category id="Functionality" text="Functionality">
+			<link 	id="Mixed_Charts" 
+					text="Mixed Charts"
+					link="Functionality/Mixed_Charts/index.php" 
+					new="false"/>
+			<link 	id="Negative_Values" 
+					text="Negative Values"
+					link="Functionality/Negative_Values/index.php" 
+					new="false"/>
+
+		</category>
+		
+		<category id="ClientSidesAPI" text="ClientSidesAPI">
+			<link 	id="ClientSide_Events" 
+					text="ClientSide Events"
+					link="ClientSidesAPI/ClientSide_Events/index.php" 
+					new="false"/>
+
+		</category>
+
+	</category>
+</navigation>

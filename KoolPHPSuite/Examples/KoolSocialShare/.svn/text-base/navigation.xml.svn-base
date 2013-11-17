@@ -1,0 +1,102 @@
+<navigation id="KoolSocialShare" title="PHP Social Share">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Features" text="Features">
+			<link 	id="ShowAllShareButtons" 
+					text="ShowAllShareButtons"
+					link="Features/ShowAllShareButtons/index.php" 
+					new="false"/>
+			<link 	id="ShareSpecificPage" 
+					text="Share Specific Page"
+					link="Features/ShareSpecificPage/index.php" 
+					new="false"/>
+
+
+			<link 	id="AddSocialButton" 
+					text="AddSocialButton"
+					link="Features/AddSocialButton/index.php" 
+					new="false"/>
+			<link 	id="AddLineBreak" 
+					text="AddLineBreak"
+					link="Features/AddLineBreak/index.php" 
+					new="false"/>
+
+
+
+					
+		
+		</category>		
+
+		<category id="Facebook" text="Facebook">
+
+
+			<link 	id="FacebookLike" 
+					text="FacebookLike"
+					link="Facebook/FacebookLike/index.php" 
+					new="false"/>
+			<link 	id="FacebookLikeWithCount" 
+					text="FacebookLikeWithCount"
+					link="Facebook/FacebookLikeWithCount/index.php" 
+					new="false"/>
+			<link 	id="FacebookLikeWithCountAndSend" 
+					text="FacebookLikeWithCountAndSend"
+					link="Facebook/FacebookLikeWithCountAndSend/index.php" 
+					new="false"/>
+			<link 	id="FacebookLikeWithSend" 
+					text="FacebookLikeWithSend"
+					link="Facebook/FacebookLikeWithSend/index.php" 
+					new="false"/>
+			<link 	id="FacebookLikeWithSendAndPeople" 
+					text="FacebookLikeWithSendAndPeople"
+					link="Facebook/FacebookLikeWithSendAndPeople/index.php" 
+					new="false"/>
+			<link 	id="FacebookVertical" 
+					text="FacebookVertical"
+					link="Facebook/FacebookVertical/index.php" 
+					new="false"/>					
+					
+					
+		</category>
+				
+		<category id="Twitter" text="Twitter">
+			<link 	id="TwitterButton" 
+					text="TwitterButton"
+					link="Twitter/TwitterButton/index.php"/>
+			<link 	id="TwitterWithCount" 
+					text="TwitterWithCount"
+					link="Twitter/TwitterWithCount/index.php"/>
+			<link 	id="TwitterFollow" 
+					text="TwitterFollow"
+					link="Twitter/TwitterFollow/index.php"/>
+			
+		</category>
+		<category id="LinkedIn" text="LinkedIn">
+			<link 	id="LinkedInButton" 
+					text="LinkedInButton"
+					link="LinkedIn/LinkedInButton/index.php"/>
+			<link 	id="LinkedInWithCount" 
+					text="LinkedInWithCount"
+					link="LinkedIn/LinkedInWithCount/index.php"/>
+			<link 	id="LinkedInVertical" 
+					text="LinkedInVertical"
+					link="LinkedIn/LinkedInVertical/index.php"/>
+			
+		</category>
+		<category id="GooglePlus" text="GooglePlus">
+			<link 	id="GooglePlusButton" 
+					text="GooglePlusButton"
+					link="GooglePlus/GooglePlusButton/index.php"/>
+			<link 	id="GooglePlusWithCount" 
+					text="GooglePlusWithCount"
+					link="GooglePlus/GooglePlusWithCount/index.php"/>
+			<link 	id="GooglePlusWithCountAndPeople" 
+					text="GooglePlusWithCountAndPeople"
+					link="GooglePlus/GooglePlusWithCountAndPeople/index.php"/>
+			<link 	id="GooglePlusVertical" 
+					text="GooglePlusVertical"
+					link="GooglePlus/GooglePlusVertical/index.php"/>
+			
+		</category>
+
+	</category>
+</navigation>

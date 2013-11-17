@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Keyboard Shortcuts</title>
+		<style type="text/css">
+		div	{ border : 1px solid black;float:left;height:200px; margin:10px; width:220px;}
+		</style>
+	</head>
+	<body>
+		<div>You can toggle this div using Alt+S</div>
+		
+		<div>You can toggle this div using Alt+G </div>
+		
+		<p style="clear:both;">&nbsp;</p>
+		<p>Press Alt+B to toggle both divs</p>
+
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				//remember that this is a global variable
+				var altPressed = false;	
+				$(document).keydown(function (event) 
+				{
+					if(event.which == 18) 
+						altPressed = true;
+					if(altPressed)
+					{
+						switch(event.which) 
+						{
+							case 83:	//value for s
+								$('div:first').slideToggle('slow');
+								return false;
+							break;
+							case 71:	// value for g
+								$('div:last').slideToggle('slow');
+								return false;
+							break;
+							case 66:	//value for b
+								$('div').slideToggle('slow');
+								return false;
+							break;
+						}
+					}
+				});	
+
+				$(document).keyup(function (event) {
+					if(event.which == 18) 
+						altPressed = false;
+				});
+			});
+		</script>
+	</body>
+</html>

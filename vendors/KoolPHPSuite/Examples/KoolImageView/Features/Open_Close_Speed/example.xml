@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Open_Close_Speed" usedb="false">
+	<title>Open Close Speed</title>
+	<metakeywords>php image view, php image zoom, zoom image script</metakeywords>	 
+	<metadescription>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+The example shows how to use KoolImageView with control speed show image.
+You may use the openTime and frameNumber properties to set how fast and how smooth ImageView will transform.
+</p>
+<p>
+$kiv->openTime=500;// miliseconds
+</p>
+<p>
+$kiv->numberFrame=30;// number of frames drawn in openTime 
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolImageView/koolimageview.php";
+	
+	$kiv_fast = new KoolImageView("kiv_fast");
+	$kiv_fast->scriptFolder =  $KoolControlsFolder."/KoolImageView";
+	$kiv_fast->styleFolder =  $KoolControlsFolder."/KoolImageView/styles/simple";
+	$kiv_fast->imageUrl = "../../Images/nv.jpg";
+	$kiv_fast->bigImageUrl = "../../Images/niceview.jpg";
+	$kiv_fast->openTime = 200;
+	$kiv_fast->frameNumber = 15;
+	$kiv_fast->description = "Fast Opening";
+	
+	$kiv_slow = new KoolImageView("kiv_slow");
+	$kiv_slow->scriptFolder =  $KoolControlsFolder."/KoolImageView";
+	$kiv_slow->styleFolder =  $KoolControlsFolder."/KoolImageView/styles/simple";
+	$kiv_slow->imageUrl = "../../Images/nv.jpg";
+	$kiv_slow->bigImageUrl = "../../Images/niceview.jpg";
+	$kiv_slow->openTime = 500;
+	$kiv_slow->frameNumber = 20;
+	$kiv_slow->description = "Slow and Smooth Opening";
+	
+?>
+<form id="form1" method="post">
+
+	<style type="text/css">
+		.box
+		{
+			float:left;
+			width:280px;
+			height:180px;
+			margin:10px;
+			padding:10px;
+		}
+		.focus
+		{
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;
+			height:140px;
+			width:195px;
+			padding-top:40px;
+			padding-left:85px;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#style_select
+		{
+			width:100px;	
+		}				
+		div.framepic { width:96px; height:69px; padding : 2px; vertical-align:middle;}
+		div.framepic1 { border : 2px  dotted gray; width:100px; }
+		div.framepic2 { border : 2px dotted black ;  width : 104px;}		
+		div.framepic3 { border : 2px solid gray ; padding : 1px ; width : 108px;}
+	</style>
+	
+	
+	<div class="box focus">
+		<div class="framepic3">		
+			<div class="framepic2">
+				<div class="framepic1">					
+					<div class="framepic">	
+						<?php echo $kiv_fast->Render();?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box focus">
+		<div class="framepic3">		
+			<div class="framepic2">
+				<div class="framepic1">					
+					<div class="framepic">	
+						<?php echo $kiv_slow->Render();?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolImageView/PHP/KoolImageView_Class/index.php#openTime">PHP :: KoolImageView :: openTime</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolImageView/PHP/KoolImageView_Class/index.php#frameNumber">PHP :: KoolImageView :: frameNumber</doc>
+	</docs>
+</example>

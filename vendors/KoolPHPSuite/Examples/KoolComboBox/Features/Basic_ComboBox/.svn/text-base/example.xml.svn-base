@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Basic_ComboBox" usedb="false">
+	<title>Basic ComboBox</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+This example shows you how to create a simple combobox and get the selected value and selected text through postback.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->styleFolder= "default";
+	$kcb->width = "160px";
+	
+	$select_value = "asia";
+	$select_text = "Asia";
+	if (isset($_POST["kcb_selectedText"]))
+	{
+		$select_value = $_POST["kcb_selectedValue"];
+		$select_text = $_POST["kcb_selectedText"];
+	}
+	$kcb->addItem("Asia","asia",null,($select_value=="asia"));
+	$kcb->addItem("Europe","europe",null,($select_value=="europe"));
+	$kcb->addItem("Africa","afica",null,($select_value=="afica"));
+	$kcb->addItem("America","america",null,($select_value=="america"));
+	$kcb->addItem("Australia","australia",null,($select_value=="australia"));
+	
+	
+	
+	
+?>
+
+<form id="form1" method="post">
+
+	<div style="padding:10px;">
+		Choose your region : 
+	<?php echo $kcb->Render();?>
+	</div>
+	<div style="padding:10px;">
+		<input type="submit" value="Submit" />
+	</div>
+	<div style="padding:10px;">
+		<b><?php echo $select_text;?></b> is selected
+	</div>
+	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#addItem">PHP :: KoolComboBox :: addItem()</doc>
+	</docs>
+</example>

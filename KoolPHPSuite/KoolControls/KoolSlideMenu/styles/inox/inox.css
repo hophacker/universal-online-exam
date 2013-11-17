@@ -1,0 +1,232 @@
+.inoxKSM
+{
+	background-color:#F0F0F0;
+	padding:1px;
+}
+.inoxKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.inoxKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.inoxKSM .ksmIn,
+.inoxKSM .ksmLeft,
+.inoxKSM .ksmRight,
+.inoxKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.inoxKSM .ksmA
+{
+	text-decoration:none;
+	color:#000000;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.inoxKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.inoxKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+
+.inoxKSM .ksmChildBox .ksmCBB
+{
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;	
+}
+html>body .inoxKSM .ksmChildBox .ksmCBB
+{
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+.inoxKSM .ksmCollapse .ksmChildBox,
+.inoxKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.inoxKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+/*Parent*/
+.inoxKSM .ksmParent
+{
+	line-height:31px;
+	cursor:pointer;
+	white-space:nowrap;
+}
+.inoxKSM .ksmCollapse .ksmParent
+{
+	line-height:27px;
+}
+
+
+.inoxKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_expand_mid.gif);
+	font-weight:bold;
+	color:white;
+	line-height:24px;
+	height:26px;
+}
+.inoxKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:5px;
+}
+
+
+.inoxKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_collapse_mid.gif);
+	font-weight:bold;
+	color:black;	
+}
+.inoxKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.inoxKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:10px;
+	height:26px;
+}
+.inoxKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:24px;
+	width:10px;
+}
+
+.inoxKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:24px;
+	height:24px;
+}
+
+
+
+
+/*Child*/
+.inoxKSM .ksmChild
+{
+	line-height:20px;
+}
+
+.inoxKSM .ksmChild .ksmIn
+{
+	
+}
+.inoxKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.inoxKSM a.ksmChild:hover .ksmIn
+{
+	background:#F7F7F7;
+}
+
+.inoxKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+}
+
+
+.inoxKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.inoxKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.inoxKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.inoxKSM .ksmSelected .ksmIn
+{
+	font-weight:bold;
+	background:white;
+}
+
+.inoxKSM .ksmSelected .ksmIn .ksmBul
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+}
+
+
+
+.inoxKSM a.ksmSelected:hover .ksmIn
+{
+	background:white;
+	text-decoration:none;
+	cursor:default;
+
+}
+.inoxKSM a.ksmSelected:hover .ksmIn .ksmBul
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	opacity:1.0;
+}
+/*Panel*/
+.inoxKSM .ksmPanel
+{
+	line-height:normal;
+}
+.inoxKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#000000;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;
+}
+.inoxKSM a:focus 
+{
+	outline:none;
+}

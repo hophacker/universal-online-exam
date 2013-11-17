@@ -1,0 +1,399 @@
+appendix: Solutions to Chapter Questions
+==================
+
+switch ($action) {
+  case "add":
+    $x = $x+y;
+    break;
+  case "subtract":
+    $x = $x-y;
+    break;
+  case "multiply":
+    $x = $x*$y;
+    break;
+  case "divide":
+    $x = $x/$y;
+    break;
+}
+
+    
+    
+====================================
+
+<?php
+for ($num = 10; $num >= 1; $num&#8722;&#8722;) {
+    print "$num<br>";
+}
+?>
+
+    
+    
+====================================
+
+<?php
+function toast( $minutes ){
+
+  //do the toasting here
+  echo ("done.");
+}
+?>
+
+    
+    
+====================================
+
+<?php
+toast(5);
+?>
+
+    
+    
+====================================
+
+<?php
+$months[]='January';
+$months[]='February';
+$months[]='March';
+$months[]='April';
+$months[]='May';
+$months[]='June';
+$months[]='July';
+$months[]='August';
+$months[]='September';
+$months[]='October';
+$months[]='November';
+$months[]='December';
+?>
+
+    
+    
+====================================
+
+array('January,'February','March','April','May','June','July','August',
+'September','October','November','December');
+
+    
+    
+====================================
+
+<?php
+$months= array('January' => 31,
+               'February' => 28,
+               'March' => 31,
+               'April' => 30,
+               'May' => 31,
+               'June' => 30,
+               'July' => 31,
+               'August' => 31,
+               'September' => 30,
+               'October' => 31,
+               'November' => 30,
+               'December' => 31);
+?>
+
+    
+    
+====================================
+
+<?php
+$months= array('January' => 31,
+               'February' => 28,
+               'March' => 31,
+               'April' => 30,
+               'May' => 31,
+               'June' => 30,
+               'July' => 31,
+               'August' => 31,
+               'September' => 30,
+               'October' => 31,
+               'November' => 30,
+               'December' => 31);
+var_dump($months);
+?>
+
+    
+    
+====================================
+
+CREATE TABLE months (
+   month_id INT NOT NULL AUTO_INCREMENT,
+   month VARCHAR (20),
+   days INT,
+   PRIMARY KEY (month_id));
+
+    
+    
+====================================
+
+INSERT INTO months VALUES (NULL,'January',31);
+INSERT INTO months VALUES (NULL,'February',28);
+INSERT INTO months VALUES (NULL,'March',31);
+INSERT INTO months VALUES (NULL,'April',30);
+INSERT INTO months VALUES (NULL,'May',31);
+INSERT INTO months VALUES (NULL,'June',30);
+INSERT INTO months VALUES (NULL,'July',31);
+INSERT INTO months VALUES (NULL,'August',31);
+INSERT INTO months VALUES (NULL,'September',30);
+INSERT INTO months VALUES (NULL,'October',31);
+INSERT INTO months VALUES (NULL,'November',30);
+INSERT INTO months VALUES (NULL,'December',31);
+
+    
+    
+====================================
+
+mysqldump -u root -p blog > my_backup.sql
+
+    
+    
+====================================
+
+mysql -u root -p -D test < my_backup.sql
+
+    
+    
+====================================
+
+mysql://db_username:db_password@db_host/db_database:
+mysql://joe:my$ql@oreilly.com/survey
+
+    
+    
+====================================
+
+<?php
+//set the connection details
+$db_host='oreilly.com';
+$db_database='survey';
+$db_username='joe';
+$db_password='my$ql';
+//call mysql_connect to connect
+$connection = mysql_connect($db_host, $db_username, $db_password);
+if (!$connection){
+die ("Could not connect to the database: <br />". mysql_error(  ));
+}
+//select the database using mysql_select_db
+$db_select = mysql_select_db($db_database);
+if (!$db_select){
+die ("Could not select the database: <br />". mysql_error(  ));
+}
+?>
+
+    
+    
+====================================
+
+<?php
+$query = "SELECT * FROM authors";
+$result = mysql_query( $query );
+if (!$result){    die ("Could not query the database: <br />". mysql_error(  ));
+}
+while ($result_row = mysql_fetch_row(($result))){
+    echo 'Author ID: '.$result_row[0] . '<br />';
+    echo 'Title ID: '.$result_row[1] . '<br /> ';
+    echo 'Author Name: '.$result_row[2] . '<br /><br />';
+}
+//Close the connection
+mysql_close($connection);
+?>
+
+    
+    
+====================================
+
+<?php
+echo ('<form action="'.$_SERVER["PHP_SELF"].'" method="GET">');
+echo ('
+    <label>Username:<input type="text" name="username" size="10" maxlength="30" />
+</label>
+    <br />
+    <label>Password:<input type="text" name="password" size="10" maxlength="30" />
+</label>
+    <input type="submit" value="Submit" />
+    </form>
+');
+?>
+
+    
+    
+====================================
+
+<?php
+//Get the username and password from the GET global array
+$username = $_GET["username"];
+$password = $_GET["password"];
+//determine if this is after the form's been submitted
+if (!empty($username)){
+  //display the values from the submission
+  echo ("Username: $username<br>");
+  echo ("Password: $password<br>");
+}
+else {
+//display the form
+echo ('<form action="'.$_SERVER["PHP_SELF"].'" method="GET">');
+echo ('
+        <label>Username:<input type="text" name="username" size="10"
+maxlength="30" /></label>
+        <br />
+        <label>Password:<input type="text" name="password" size="10"
+maxlength="30" /></label>
+        <input type="submit" value="Submit" />
+        </form>
+    ');
+}
+?>
+
+    
+    
+====================================
+
+SELECT * FROM authors WHERE author LIKE 'A%''
+
+    
+    
+====================================
+
+if (checkdate(1,31,2045)) {
+    echo('Date is valid.');
+}
+else {
+    echo ('Invalid date.');
+}
+
+    
+    
+====================================
+
+<?php
+$timestamp= mktime(1,31,2045);
+echo date("l",$timestamp);
+?>
+
+    
+    
+====================================
+
+<?php
+$status=rename('upload.tmp','sample.jpg');
+if ($status) {
+    echo ("Renamed file.");
+}
+?>
+
+    
+    
+====================================
+
+<?php
+require_once('db_login.php');
+//sets the values for the database connection
+require_once('DB.php');
+//connect to the database
+$connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
+if (DB::isError($connection)){
+    die ("Could not connect to the database: <br />". DB::errorMessage($connection));
+}
+//modify the table
+$query = "ALTER TABLE books ADD published_date date";
+//check for an error
+$result = $connection->query($query);
+if (DB::isError($result)){
+    die("Could not query the database: <br />". $query." ".DB::errorMessage($result));
+}
+echo "Modified successfully!";
+$connection->disconnect(  );
+?>
+
+    
+    
+====================================
+
+<?php
+    session_start(  );
+    $_SESSION['user_id'] = 1;
+?>
+
+    
+    
+====================================
+
+<?php
+    session_start(  );
+    echo $_SESSION['user_id'];
+?>
+
+    
+    
+====================================
+
+alert("The username field must be at least six characters");
+
+    
+    
+====================================
+
+'/^/d{5}(-/d{4})?$/'
+
+    
+    
+====================================
+
+<?php
+$pattern = '/^/d{5}(-/d{4})?$/';
+$matched=preg_match($pattern, $zipcode, $matches);
+if ($matched) {
+  echo ("Zipcode OK.");
+}
+?>
+
+    
+    
+====================================
+
+<?php
+  // put full path to Smarty.class.php
+  require('/usr/share/php/Smarty/Smarty.class.php');
+  $smarty = new Smarty(  );
+  $smarty->template_dir = '/home/www/htmlkb/smarty/templates';
+  $smarty->compile_dir = '/home/www/htmlkb/smarty/templates_c';
+  $smarty->cache_dir = '/home/www/htmlkb/smarty/cache';
+  $smarty->config_dir = '/home/www/htmlkb/smarty/configs';
+  $blog_title="PHP and MySQL Zone";
+?>
+
+    
+    
+====================================
+
+insert into categories values (NULL, 'Bugs');
+
+    
+    
+====================================
+
+<?php
+/*
+ * this file welcomes the user.
+ * this file welcomes the user and uses proper code styles.
+ *
+ * Copyright 2006 (c) O'Reilly Media, Inc.
+ *
+ * @version   $Id: coding_standards_example.html,v 1.2 2006/1/19 24:49:50
+ *
+ */
+//verify the user
+if ($_GET[user_id] == 'Admin')
+{
+  //Welcome the admin user to the control panel.
+  echo ('Welcome to the control panel.');
+}
+else
+{
+  //Welcome other user.
+  echo ('Welcome.');
+}
+?>
+
+    
+    
+==================

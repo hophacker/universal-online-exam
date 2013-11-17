@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/webroot
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/webroot/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/webroot/index.php
+END
+favicon.ico
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/webroot/favicon.ico
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/webroot/test.php
+END

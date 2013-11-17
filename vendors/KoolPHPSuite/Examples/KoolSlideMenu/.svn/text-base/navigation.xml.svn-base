@@ -1,0 +1,100 @@
+<navigation id="KoolSlideMenu" title="PHP Slide Menu Demo">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Appearance" text="Appearance">
+		
+			<link 	id="Styles" 
+					text="Styles"
+					link="Appearance/Styles/index.php" 
+					new="false"/>
+			
+		</category>		
+		<category id="Features" text="Features">
+		
+			<link 	id="Functionality" 
+					text="Functionality"
+					link="Features/Functionality/index.php" 
+					new="false"/>
+
+			<link 	id="MultiLevels" 
+					text="Multi-Levels"
+					link="Features/MultiLevels/index.php" 
+					new="true"/>
+
+					
+			<link 	id="Set_ChildBox_Height" 
+					text="Set ChildBox Height"
+					link="Features/Set_ChildBox_Height/index.php" 
+					new="false"/>
+			
+			<link 	id="Scrolling" 
+					text="Scrolling"
+					link="Features/Scrolling/index.php" 
+					new="false"/>
+			
+			<link 	id="SingleExpand" 
+					text="SingleExpand"
+					link="Features/SingleExpand/index.php" 
+					new="false"/>
+								
+			<link 	id="Sliding_Speed" 
+					text="Sliding Speed"
+					link="Features/Sliding_Speed/index.php" 
+					new="false"/>
+		</category>		
+		<category id="Create_Menu_Using_Data" text="Create Menu Using Data">
+		
+			<link 	id="Using_XML" 
+					text="Using XML"
+					link="Create_Menu_Using_Data/Using_XML/index.php" 
+					new="false"/>
+			<link 	id="Using_Database" 
+					text="Using Database"
+					link="Create_Menu_Using_Data/Using_Database/index.php" 
+					new="true"/>
+			<link 	id="Using_KoolScripting" 
+					text="Using KoolScripting"
+					link="Create_Menu_Using_Data/Using_KoolScripting/index.php" 
+					new="false"/>			
+		</category>		
+		<category id="Client_side_API" text="Client side API">
+		
+			<link 	id="RegisterEvent" 
+					text="RegisterEvent"
+					link="Client_side_API/RegisterEvent/index.php" 
+					new="false"/>
+			
+			<link 	id="Expand_Collapse_All" 
+					text="Expand All and Collapse All"
+					link="Client_side_API/Expand_Collapse_All/index.php" 
+					new="false"/>
+					
+			<link 	id="Manual_control" 
+					text="Manual control"
+					link="Client_side_API/Manual_control/index.php" 
+					new="true"/>
+					
+			<link 	id="OnMouseOver" 
+					text="OnMouseOver Effect"
+					link="Client_side_API/OnMouseOver/index.php" 
+					new="false"/>
+			
+		</category>		
+		<category id="Integrations" text="Integrations">
+		
+			<link 	id="With_TreeView" 
+					text="With TreeView"
+					link="Integrations/With_TreeView/index.php" 
+					new="false"/>
+			
+		</category>		
+		<category id="Application" text="Application">
+		
+			<link 	id="Registration" 
+					text="Registration"
+					link="Application/Registration/index.php" 
+					new="true"/>
+			
+		</category>	
+	</category>
+</navigation>

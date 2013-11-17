@@ -1,0 +1,294 @@
+.defaultKMU,
+.defaultKMU *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.defaultKMU
+{
+	white-space:nowrap;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	color:#272722;
+	float:left;
+	position:relative;
+}
+
+
+.defaultKMU .kmuText
+{
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;	
+	padding:0 15px;
+	display:block;
+}
+
+
+.defaultKMU .kmuRootGroup
+{
+	display:inline-block;
+	position:relative;	
+	background:#F4EDE1 none repeat scroll 0 0;
+	border:1px solid #BDBD82;	
+}
+/* IE6 */
+* html .defaultKMU .kmuRootGroup
+{
+	display:inline;
+}
+
+
+.defaultKMU .kmuSlide
+{
+	display:block;
+	float:left;
+	overflow:hidden;
+	position:absolute;
+	margin-left:-2px;
+	padding-left:5px;	
+}
+
+
+.defaultKMU .kmuGroup
+{
+	display:inline-block;
+	background:transparent url(DropShadow.png) no-repeat scroll 100% 100%;
+	padding:0 5px 0 0;
+	position:relative;
+}
+/*IE6 only*/
+* html .defaultKMU .kmuGroup
+{
+	background:transparent url(DropShadow.gif) no-repeat scroll 100% 100%;
+	padding:0;
+}
+/*IE7 only*/
+*+html .defaultKMU .kmuGroup
+{
+	padding:0;
+}
+
+
+.defaultKMU .kmuItem
+{
+	float:left;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	position:relative;	
+}
+
+.defaultKMU .kmuHorizontal .kmuItem
+{
+	clear:none;
+}
+.defaultKMU .kmuVertical .kmuItem
+{
+	clear:both;
+}
+
+.defaultKMU .kmuGroup .kmuItem
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border-left:1px solid #959485;
+	margin-left:-3px;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+/*IE6*/
+* html .defaultKMU .kmuGroup .kmuItem
+{
+	margin-left:-1px;
+}
+
+
+.defaultKMU .kmuGroup .kmuFirst
+{
+	border-top:1px solid #959485;
+	padding-top:2px;
+}
+
+.defaultKMU .kmuGroup .kmuLast
+{
+	background:transparent url(DropShadowLeft.png) no-repeat scroll 0 100%;
+	border-left:0 none;
+	padding-bottom:8px;
+	padding-left:3px;
+}
+/*IE6*/
+* html .defaultKMU .kmuGroup .kmuLast
+{
+	background:transparent url(DropShadowLeft.gif) no-repeat scroll 0 100%;
+	margin-left:-1px;
+}
+
+
+
+.defaultKMU .kmuVertical .kmuSeparator .kmuSub
+{
+	display:block;
+	padding:0;
+}
+
+.defaultKMU .kmuVertical .kmuSeparator .kmuSub span
+{
+	display:block;
+	font-size:0px;
+	height:1px;
+	background:#DDDCC3 none repeat scroll 0 0;
+	margin:0 5px 0 20px;
+}
+
+
+.defaultKMU .kmuLink
+{
+	display:block;
+	text-decoration:none;
+	line-height:20px;
+	padding:1px;
+	font-family:arial,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	color:#272722;
+	cursor:default;
+}
+
+.defaultKMU .kmuLink:focus
+{
+	outline:none;
+}
+
+
+.defaultKMU .kmuLink:hover,
+.defaultKMU .kmuExpanded
+{
+	background:transparent url(rootHovered.gif) no-repeat scroll 0 0;
+	border:1px solid #959485;
+	color:#FFFFFF;
+	padding:0;
+}
+/*IE7 only*/
+*+html .defaultKMU .kmuHorizontal .kmuLink:hover,
+*+html .defaultKMU .kmuHorizontal .kmuExpanded
+{
+	background-position:0 1px;
+}
+*+html .defaultKMU .kmuVertical .kmuLink:hover,
+*+html .defaultKMU .kmuVertical .kmuExpanded
+{
+	background-position:0 0px;
+}
+/*IE6 only*/
+* html .defaultKMU .kmuHorizontal .kmuLink:hover,
+* html .defaultKMU .kmuHorizontal .kmuExpanded
+{
+	background-position:0 1px;
+}
+* html .defaultKMU .kmuVertical .kmuLink:hover,
+* html .defaultKMU .kmuVertical .kmuExpanded
+{
+	background-position:0 0px;
+}
+* html .defaultKMU .kmuLink:hover
+{
+	text-decoration:none;
+}
+
+
+.defaultKMU .kmuDisabled
+{
+	color:#999999;
+}
+
+.defaultKMU .kmuDisabled:hover
+{
+	background:none;
+	border:none;
+	color:#999999;
+	padding:1px;
+}
+
+.defaultKMU .kmuGroup .kmuLink
+{
+	padding:0px;
+	line-height:22px;
+}
+
+.defaultKMU .kmuGroup .kmuText {
+	line-height:18px;
+	margin:0 0 0 5px;
+	padding:2px 30px 2px 15px;
+}
+
+
+.defaultKMU .kmuGroup .kmuLink:hover,
+.defaultKMU .kmuGroup .kmuExpanded
+{
+	color:#CF5B17;
+	background:transparent url(submenuHover.gif) no-repeat scroll 0 0;
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+
+.defaultKMU .kmuGroup .kmuLink:hover .kmuText,
+.defaultKMU .kmuGroup .kmuExpanded .kmuText
+{
+	background:transparent url(submenuHover.gif) no-repeat scroll 100% 0;
+}
+
+.defaultKMU .kmuGroup .kmuExpandRight
+{
+	background:transparent url(submenuExpandable.gif) no-repeat scroll 100% 1px;
+}
+
+.defaultKMU .kmuGroup .kmuLink:hover .kmuExpandRight,
+.defaultKMU .kmuGroup .kmuExpanded .kmuExpandRight
+{
+	background:transparent url(submenuHoverExpandable.gif) no-repeat scroll 100% 0;
+}
+
+
+.defaultKMU .kmuGroup .kmuDisabled,
+.defaultKMU .kmuGroup .kmuDisabled:hover,
+.defaultKMU .kmuGroup .kmuDisabled .kmuText,
+.defaultKMU .kmuGroup .kmuDisabled:hover .kmuText
+{
+	background-image:none;
+	color:#999999;
+}
+
+.defaultKMU .kmuLink .kmuImage
+{
+	border:0;
+	margin: 3px;
+	float:left;
+}
+
+.defaultKMU .kmuTemplate div.kmuText
+{
+	border-left:1px solid #959485;
+	border-top:1px solid #959485;
+	margin:0 -2px 0 -3px;
+	padding:3px 0 3px 3px;	
+}
+
+
+
+

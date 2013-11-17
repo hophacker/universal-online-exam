@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Attaching events elements </title>
+		<style type="text/css">
+		div { border: 1px solid black;cursor:pointer;width:200px;margin:10px; }
+		</style>
+	</head>
+	<body>
+
+		<input type="button" id="button" value="Create New Element"/>
+		
+		<div class="future">Already on page</div>
+		
+		
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function ()
+			{
+				$('#button').click(function()
+				{
+					$('body').append('<div class="future">I am a new div</div>');
+				});
+				
+				$('div').live('click', function()
+				{
+					$(this).css({'color':'red','font-weight':'bold'}).html('You clicked me');
+				});
+			});
+		</script>
+	</body>
+</html>

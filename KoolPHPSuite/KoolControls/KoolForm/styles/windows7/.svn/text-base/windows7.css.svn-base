@@ -1,0 +1,635 @@
+.windows7KFR,
+.windows7KFR input,
+.windows7KFR select
+
+{
+	font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color: #000000;
+}
+
+
+.kfrRoundCorner
+{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+	border-radius:4px;	
+}
+
+/*Headings*/
+.windows7KFR h1.kfrH1
+{
+	font-size:16px;
+}
+.windows7KFR h2.kfrH2
+{
+	font-size:15px;
+}
+.windows7KFR h3.kfrH3
+{
+	font-size:14px;
+}
+.windows7KFR h4.kfrH4
+{
+	font-size:13px;
+}
+.windows7KFR h5.kfrH5
+{
+	font-size:12px;
+}
+/*FieldSet*/
+.windows7KFR .kfrFieldSet
+{
+    background-image: url(FieldsetBgr.png);
+    border: 1px solid #5B5B5B;
+	background-repeat:no-repeat;	
+}
+.windows7KFR .kfrFieldSet legend
+{
+	padding-left:3px;
+	padding-right:3px;
+	color: #000000;
+}
+
+
+/*Start:------FieldSet in IE*/
+.windows7KFR table.kfrRoundedWrapper_FieldSet
+{
+	display:inline-block;
+	_display:inline;
+}
+.windows7KFR table.kfrRoundedWrapper_FieldSet td
+{
+	vertical-align:middle;
+}
+.windows7KFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;	
+	background-color:#5B5B5B;
+}
+.windows7KFR table.kfrRoundedWrapper_FieldSet div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;	
+	background-image: url(FieldsetBgr.png);
+	border-top:1px solid #5B5B5B;
+	border-bottom:1px solid #5B5B5B;
+}
+.windows7KFR table.kfrRoundedWrapper_FieldSet .kfrFieldSet
+{
+	background-position:0px 7px;	
+}
+/*End:------FieldSet in IE*/
+
+
+/*Label*/
+.windows7KFR .kfrLabel
+{
+	margin-left:2px;
+	margin-right:2px;	
+}
+.windows7KFR .kfrDisabled
+{
+	color:#9F9F9F;
+}
+
+/*Validator*/
+.windows7KFR .kfrValidator
+{
+	margin-left:5px;
+	margin-right:5px;	
+	color:red;
+}
+
+
+/*KoolTextBox*/
+.windows7KFR .kfrTextBox
+{
+    background-color: #FFFFFF;
+    border: 1px solid #B8CBDE;
+    height: auto;
+    line-height: normal;
+    padding: 2px 2px 3px;	
+}
+
+.windows7KFR .kfrTextBox:hover,
+.windows7KFR .kfrTextBox:focus
+{
+    border: 1px solid #C1DBFC;
+}
+
+
+.windows7KFR .kfrEmpty .kfrTextBox
+{
+	color:#9F9F9F;
+}
+
+.windows7KFR .kfrTable
+{
+	vertical-align: bottom;
+    border-collapse: collapse;
+    border-width: 0;	
+}
+
+
+.windows7KFR .kfrTextBoxWrapper
+{
+	display:inline-block;
+	vertical-align:middle;	
+}
+
+
+
+/*Start:----------------------------TextBox in IE*/
+.windows7KFR .kfrRoundedWrapper
+{
+	border:0px !important;
+	display:inline-block;
+	vertical-align:middle;
+	vertical-align: bottom;
+    border-collapse: collapse;
+	_display:inline;
+}
+
+.windows7KFR .kfrRoundedWrapper td
+{
+	border:0px;
+	padding:0px;
+	vertical-align:middle;
+}
+
+
+.windows7KFR table.kfrRoundedWrapper div.kfrRoundedOuter
+{
+	width:1px;
+	font-size:0px;
+	background-color:#B8CBDE;
+}
+.windows7KFR table.kfrRoundedWrapper div.kfrRoundedInner
+{
+	width:1px;
+	font-size:0px;
+	background-color:#FFFFFF;
+	border-top:1px solid #B8CBDE;
+	border-bottom:1px solid #B8CBDE;
+	background-image:none;
+}
+
+.windows7KFR table.kfrRoundedWrapper:hover div.kfrRoundedOuter,
+.windows7KFR table.kfrFocus div.kfrRoundedOuter
+{
+	background-color:#C1DBFC !important;
+}
+.windows7KFR table.kfrRoundedWrapper:hover div.kfrRoundedInner,
+.windows7KFR table.kfrFocus div.kfrRoundedInner
+{
+	border-top-color:#C1DBFC !important;
+	border-bottom-color:#C1DBFC !important;
+}
+/*End:----------------------------TextBox in IE*/
+
+
+
+/*KoolNumericTextBox*/
+.windows7KFR .kfrTable .kfrSpinUp,
+.windows7KFR .kfrTable .kfrSpinDown
+{
+    height: 7px;
+    line-height: 7px;
+    width: 15px;
+    display: block;
+    outline: medium none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -2222px;
+    z-index: 2;
+	cursor:pointer;
+}
+
+
+
+.windows7KFR .kfrTable .kfrSpinUp
+{
+	background-position: 4px -98px;
+	background-image:url(sprite.gif);
+}
+.windows7KFR .kfrTable .kfrSpinUp:hover
+{
+	background-position: 4px -148px;
+}
+
+.windows7KFR .kfrTable .kfrSpinDown
+{
+	margin-top: 3px;
+	background-position: 4px -199px;
+	background-image:url(sprite.gif);
+}
+.windows7KFR .kfrTable .kfrSpinDown:hover
+{
+	background-position: 4px -249px;
+}
+
+/*KoolPasswordTextBox*/
+.windows7KFR .kfrIndicator
+{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+	margin:0px 10px 0px 10px;
+	padding:3px 5px 3px 5px;
+	border-radius:4px;
+}
+.windows7KFR .kfrIndicator_Score_0
+{
+	display:none;
+}
+.windows7KFR .kfrIndicator_Score_1
+{
+	background:#FF7553;
+}
+.windows7KFR .kfrIndicator_Score_2
+{
+	background:#FFEDA4;
+}
+.windows7KFR .kfrIndicator_Score_3
+{
+	background:#93C9FF;
+}
+.windows7KFR .kfrIndicator_Score_4
+{
+	background:#6CFF92;
+}
+.windows7KFR .kfrIndicator_Score_5
+{
+	background:#20FF58;
+}
+
+
+
+/*KoolCheckBox*/
+.windows7KFR .kfrHide
+{
+	position:absolute;
+	left:-9999px;
+}
+.windows7KFR .kfrCheckBox .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(CheckBoxSprites.gif);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.windows7KFR .kfrCheckBox .kfrOver
+{
+	background-position:-3px -203px;
+}
+.windows7KFR .kfrCheckBoxSelected .kfrSub
+{
+	background-position:-3px -423px;
+}
+.windows7KFR .kfrCheckBoxSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.windows7KFR .kfrCheckBox .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.windows7KFR .kfrCheckBoxSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolRadioButton*/
+.windows7KFR .kfrRadio .kfrSub
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(RadioSprites.png);
+	background-position:-3px -3px;
+	vertical-align:middle;
+}
+.windows7KFR .kfrRadio .kfrOver
+{
+	background-position:-3px -223px;
+}
+.windows7KFR .kfrRadioSelected .kfrSub
+{
+	background-position:-3px -443px;
+}
+.windows7KFR .kfrRadioSelected .kfrOver
+{
+	background-position:-3px -643px;
+}
+
+.windows7KFR .kfrRadio .kfrDisabled
+{
+	background-position:-3px -863px;
+}
+.windows7KFR .kfrRadioSelected .kfrDisabled
+{
+	background-position:-3px -1083px;
+}
+
+/*KoolDropDownList*/
+.windows7KFR .kfrRealDropDown
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+	height:22px;
+	position:relative;
+}
+/*Safari*/
+body:nth-of-type(1) .windows7KFR .kfrRealDropDown
+{
+	line-height:18px;
+}
+.windows7KFR .kfrDropDownList
+{
+	display:inline-block;
+	padding-right:1px;
+	cursor:default;
+	overflow:hidden;
+	vertical-align:middle;
+}
+
+.windows7KFR .kfrOut
+{
+	display:inline-block;
+	position:relative;
+	background-image:url(ComboSprites.gif);
+	height:22px;
+}
+
+
+
+.windows7KFR .kfrDropDownList .kfrSub
+{
+	position:absolute;
+	float:left;
+	left:0px;
+	height:22px;
+	padding-left:4px;
+	overflow:hidden;
+	line-height:22px;
+}
+.windows7KFR .kfrDropDownList .kfrArrow
+{
+	position:absolute;
+	display:inline-block;
+	float:right;
+	height:22px;
+	width:22px;
+	height:22px;
+	background-image:url(ComboSprites.gif);
+ 	background-position: right -22px;
+	right:-1px;
+}
+.windows7KFR .kfrDropDownList:hover .kfrOut
+{
+ 	background-position: 0 -44px;
+}
+
+.windows7KFR .kfrDropDownList:hover .kfrArrow
+{
+ 	background-position: right -66px;
+}
+
+.windows7KFR .kfrDropDownList .kfrDisabled
+{
+	background-position: 0 -176px !important;
+}
+.windows7KFR .kfrDropDownList .kfrDisabled .kfrArrow
+{
+	background-position: right -198px;
+}
+.windows7KFR .kfrDropDownList .kfrDisabled .kfrSub
+{
+	color:#9F9F9F;
+}
+
+
+
+/*KoolButton*/
+.windows7KFR a.kfrButtonWrapper
+{
+	background-image: url(ButtonSprites.gif);	
+    background-color: transparent;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; 
+	vertical-align:middle;
+	cursor:pointer;     
+}
+
+.windows7KFR a.kfrButtonWrapper span.kfrOut 
+{
+	background-image: url(ButtonSprites.gif);
+    background-color: transparent;
+    background-position: left -22px;
+    background-repeat: no-repeat;
+    border: 0 none;
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;    
+	margin-right:4px;
+}
+
+
+.windows7KFR a.kfrButtonWrapper input.kfrButton
+{
+	background:none;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    outline: medium none;
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 6px;
+   	padding-bottom:1px;
+    text-align: center;
+	vertical-align:middle;
+	color: #1E395B;
+}
+
+.windows7KFR a.kfrButtonWrapper:hover
+{
+	background-position: right -44px;
+}
+.windows7KFR a.kfrButtonWrapper:hover span.kfrOut
+{
+	background-position: left -66px;
+}
+
+.windows7KFR a.kfrButtonDown:hover 
+{
+	background-position: right -88px;
+}
+.windows7KFR a.kfrButtonDown:hover span.kfrOut
+{
+	background-position: left -110px;
+}
+
+.windows7KFR a.kfrButtonWrapper span.kfrLeftImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	left:5px;
+}
+
+.windows7KFR a.kfrButtonWrapper span.kfrSpaceLeft .kfrButton
+{
+	padding-left:22px;
+}
+
+.windows7KFR a.kfrButtonWrapper span.kfrRightImage
+{
+	display:block;
+	height:16px;
+	width:16px;
+	position:absolute;
+	top:3px;
+	right:2px;
+}
+
+.windows7KFR a.kfrButtonWrapper span.kfrSpaceRight .kfrButton
+{
+	padding-right:22px;
+}
+.windows7KFR a.kfrButtonWrapper span.kfrSpaceBoth .kfrButton
+{
+	padding-left:22px;
+	padding-right:22px;
+}
+/*KoolLinkButton*/
+.windows7KFR span.kfrButton
+{
+    line-height: 22px;
+}
+.windows7KFR a.kfrButtonWrapper
+{
+	outline:none;
+}
+.windows7KFR  a.kfrButtonLink
+{
+	background-image:none;
+    border: 1px solid #BDD9FB;
+    color: #1E395B;
+    text-decoration: none;	
+}
+.windows7KFR a.kfrButtonLink:hover
+{
+	background-color:#F7FAFD;
+}
+.windows7KFR  a.kfrButtonLink span.kfrOut
+{
+	background-image:none;	
+}
+.windows7KFR a.kfrButtonLink:active
+{
+	background-color:#F7FAFD;
+}
+
+/*KoolSplitButton*/
+.windows7KFR a.kfrSplitButton span.kfrOut
+{
+	margin-right:18px;
+}
+.windows7KFR a.kfrSplitButton span.kfrSplitRight
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -137px;
+    right: 0;
+	top:0;	
+	height: 100%;
+	width:18px;
+	display:block;
+	position:absolute;
+}
+.windows7KFR a.kfrSplitButton span.kfrSplitRight:hover
+{
+    background-position: -18px -137px;
+}
+
+.windows7KFR a.kfrSplitArrowDown span.kfrSplitRight:hover
+{
+	background-position: -36px -137px;
+}
+
+
+.windows7KFR a.kfrSplitButton div.kfrSplitButtonContainer
+{
+	position:absolute;
+	top:22px;
+	left:0px;
+}
+.windows7KFR div.kfrSplitButtonContainer div.kfrContainerInner
+{
+	border-radius:3px;
+	border:solid 1px #C2CEDB;
+	background-color:#ECF3FB;
+}
+
+
+
+.windows7KFR div.kfrSplitButtonContainer div.kfrOutter
+{
+	margin:1px;
+}
+.windows7KFR div.kfrSplitButtonContainer div.kfrOutter:hover
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 100% -44px;
+	background-repeat:no-repeat;
+}
+
+.windows7KFR div.kfrSplitButtonContainer div.kfrInner
+{
+	position:relative;
+	text-align:left;
+	margin-right:4px;
+}
+.windows7KFR div.kfrOutter:hover div.kfrInner
+{
+	background-image: url(ButtonSprites.gif);
+    background-position: 0 -66px;
+	background-repeat:no-repeat;
+}
+
+.windows7KFR div.kfrSplitButtonContainer span.kfrLeftImage
+{
+	left:4px;
+}
+
+
+.windows7KFR div.kfrInner span.kfrText
+{
+	color: #3B3B3B;
+	background:none;
+    border: 0 none;
+    line-height: 22px;
+    margin-left: 24px;
+	padding-right:20px;
+}
+
+

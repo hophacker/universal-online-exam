@@ -1,0 +1,603 @@
+chapter: Functions
+==================
+Example: The ubiquitous Hello world!
+<?php
+echo ("Hello world!");
+?>
+
+    
+    
+====================================
+Example: Displaying information about the PHP environment
+<?php
+phpinfo();
+?>
+
+    
+    
+====================================
+Example: Creating an md5 signature
+<?php
+    $mystring = "mystring";
+    $signature = md5($mystring);
+    echo $signature;
+?>
+
+    
+    
+====================================
+
+169319501261c644a58610f967e8f9d0
+
+    
+    
+====================================
+
+function some_function([arguments]) { code to execute; }
+
+    
+    
+====================================
+
+<?php
+function hi()
+{
+    echo ("Hello from function-land!");
+}
+//Call the function
+hi();
+?>
+
+    
+    
+====================================
+
+Hello from function-land!
+
+    
+    
+====================================
+Example: Using the string capitalization functions within a new function that takes a parameter
+<?php
+// Capitalize a string
+function capitalize( $str )
+{
+  // First, convert all characters to lowercase
+  $str = strtolower($str);
+  // Second, convert the first character to uppercase
+  $str{0} = strtoupper($str{0});  //$str{0} accesses the first character in the string
+  echo $str;
+}
+capitalize("hEllo WoRld!");
+
+?>
+
+    
+    
+====================================
+
+Hello world!
+
+    
+    
+====================================
+Example: Creating a capitalize function with a default parameter $each
+<?php
+// Capitalize a string or only the first letter of each word
+function capitalize( $str, $each=TRUE ) {
+
+  // First, convert all characters to lowercase or non-first-word letters may remain
+capitalized
+  $str = strtolower($str);
+  if ($each === TRUE) {
+     $str = ucwords ($str);
+  } else {
+     $str = strtoupper($str);
+
+  }
+  echo ("$str <br />");
+}
+capitalize("hEllo WoRld!");
+echo ("Now do the same with the echo parameter set to FALSE.<br>");
+capitalize("hEllo WoRld!",FALSE);
+?>
+
+    
+    
+====================================
+
+Hello World!
+Now do the same with the echo parameter set to FALSE.
+HELLO WORLD!
+
+    
+    
+====================================
+Example: Modifying capitalize() to take a reference parameter
+<?php
+function capitalize( &$str, $each=TRUE )
+{   // First, convert all characters to lowercase
+   $str = strtolower($str);
+   if ($each === true) {
+      $str = ucwords($str);
+   } else {
+      $str{0} = strtoupper($str{0});
+   }
+}
+$str = "hEllo WoRld!";
+capitalize( $str );
+echo $str;
+?>
+
+    
+    
+====================================
+
+Hello World!
+
+    
+    
+====================================
+Example: A sample include file called add.php
+<?php
+function add( $x, $y ){
+
+  return $x + $y;
+}
+?>
+
+    
+    
+====================================
+Example: Using the include function
+<?php
+include('add.php');
+echo add(2, 2);
+?>
+
+    
+    
+====================================
+
+4
+
+    
+    
+====================================
+
+<?php include('add.php');include('add.php');
+echo add(2, 2);
+?>
+
+    
+    
+====================================
+
+Fatal error: Cannot redeclare add() (previously declared in
+/home/www/htmlkb/oreilly/ch5/add.php:2) in /home/www/htmlkb/oreilly/ch5/add.php on
+line 2
+
+    
+    
+====================================
+Example: Using include_once to include a file
+<?php
+include_once('add.php');
+include_once('add.php');
+echo add(2, 2);
+?>
+
+    
+    
+====================================
+
+4
+
+    
+    
+====================================
+
+<?php
+require_once('add_wrong.php');
+echo add(2, 2);
+?>
+
+    
+    
+====================================
+
+Warning: main(add_wrong.php): failed to open stream: No such
+file or directory in/home/www/htmlkb/oreilly/ch5/require_once.php on line 2
+Fatal error: main(  ): Failed opening required 'add_wrong.php'
+
+(include_path='.:/usr/share/php:/usr/share/pear') in/home/www/htmlkb/oreilly/ch5/
+require_once.php on line 2
+
+    
+    
+====================================
+
+<?php
+$test=function_exists("test_this");
+if ($test == TRUE)
+{
+    echo "Function test_this exists.";
+}
+else
+{
+    echo "Function test_this does not exist.";
+    //call_different_function();
+}
+?>
+
+    
+    
+====================================
+
+Function test_this does not exist.
+
+    
+    
+====================================
+Example: Creating an object from the Cat class
+<?php
+class Cat {
+}
+
+$fluffy = new Cat();
+echo "Fluffy is a new ".gettype($fluffy)."!";
+?>
+
+    
+    
+====================================
+
+Fluffy is a new object!
+
+    
+    
+====================================
+Example: Creating the Cat constructor
+<?php
+class Cat {
+  // Constructor
+  function Cat() {
+  }
+}
+?>
+
+    
+    
+====================================
+Example: Using the PHP 5 style constructor
+<?php
+class Cat {
+  // Constructor
+  function __constructor(){
+  }
+}
+?>
+
+    
+    
+====================================
+Example: Defining three member functions for Cat
+<?php
+Class Cat {
+  // Constructor
+  function __constructor() {
+  }
+
+  // The cat meows
+  function meow() {
+    echo "Meow...";
+  }
+
+  // The cat eats
+  function eat() {
+    echo "*eats*";
+  }
+
+  // The cat purrs
+  function purr() {
+    echo "*Purr...*";
+  }
+}
+?>
+
+    
+    
+====================================
+Example: Creating a new object and assigning it to a variable
+<?php
+Class Cat {
+  // Constructor
+  function __constructor() {
+  }
+
+  // The cat meows
+  function meow() {
+    echo "Meow...";
+  }
+
+  // The cat eats
+  function eat() {
+    echo "*eats*";
+  }
+
+  // The cat purrs
+  function purr() {
+    echo "*Purr...*";
+  }
+}
+
+//Assign the new Cat object reference to $myCat
+$myCat=new Cat;
+?>
+
+    
+    
+====================================
+Example: Adding the $age variable to Cat
+<?php
+class Cat {
+  // How old the cat is
+  var $age;
+  //PHP 5 uses:
+  //public $age;
+}
+?>
+
+    
+    
+====================================
+
+$this->variable or method name;
+
+    
+    
+====================================
+Example: Accessing the $age variable using this->
+<?php
+class Cat {
+    // How old the cat is
+    var $age;
+
+    // Constructor
+    function Cat($new_age){
+
+        // Set the age of this cat to the new age
+        $this->age = $new_age;
+    }
+    //The birthday method increments the age variable
+    function Birthday(){
+
+        $this->age++;
+    }
+}
+// Create a new instance of the cat object that's one year old
+$fluffy = new Cat(1);
+echo "Age is $fluffy->age <br />";
+echo "Birthday<br/>";
+// Increase fluffy's age
+$fluffy->Birthday();
+echo "Age is $fluffy->age <br />";
+?>
+
+    
+    
+====================================
+
+Age is 1
+Birthday
+Age is 2
+
+    
+    
+====================================
+Example: Using the extends keyword to define a subclass
+<?php
+class Cat {
+    // How old the cat is
+    var $age;
+
+    function Cat($new_age){
+
+        // Set the age of this cat to the new age
+        $this->age = $new_age;
+    }
+    function Birthday(){
+
+        $this->age++;
+    }
+}
+class Domestic_Cat extends Cat {
+    // Constructor
+    function Domestic_Cat() {
+    }
+
+    // Sleep like a domestic cat
+    function sleep() {
+        echo("Zzzzzz.<br />");
+    }
+}
+$fluffy=new Domestic_Cat();
+$fluffy->Birthday();
+$fluffy->sleep();
+echo "Age is $fluffy->age <br />";
+?>
+
+    
+    
+====================================
+
+Zzzzzz.
+Age is 1
+
+    
+    
+====================================
+
+parent::method_from_parent
+
+    
+    
+====================================
+Example: Using the parent construct
+<?php
+class Cat {
+    // How old the cat is
+    var $age;
+
+    function Cat($new_age){
+
+        // Set the age of this cat to the new age
+        $this->age = $new_age;
+    }
+    function Birthday(){
+
+        $this->age++;
+    }
+    function Eat(){
+
+        echo "Chomp chomp.";
+    }
+    function Meow(){
+
+        echo "Meow.";
+    }
+}
+
+class Domestic_Cat extends Cat {
+    // Constructor
+    function Domestic_Cat() {
+    }
+
+    // Eat like a Domestic_Cat
+    function eat() {
+        parent::eat();
+        // After we're finished eating, let's meow
+        $this->meow();
+    }
+}
+?>
+
+    
+    
+====================================
+Example: Calling the constructor of the parent class
+<?php
+    class Cat {
+    // How old the cat is
+    var $age;
+
+    function Cat($new_age){
+
+        // Set the age of this cat to the new age
+        $this->age = $new_age;
+    }
+    function Birthday(){
+
+        $this->age++;
+    }
+    function Eat(){
+
+        echo "Chomp chomp.";
+    }
+    function Meow(){
+
+        echo "Meow.";
+    }
+}
+class Domestic_Cat extends Cat {
+    // Constructor
+    function Domestic_Cat($new_age) {
+        // This will call the constructor
+        // in the parent class (the superclass)
+        parent::Cat($new_age);
+    }
+}
+?>
+
+    
+    
+====================================
+Example: Using the -> and :: operators to call hypnotize
+<?php
+    class Cat {
+    }
+
+class Hypnotic_Cat extends Cat {
+    // Constructor
+    function Hypnotic_Cat() {
+    }
+
+    // This function must be called statically
+    public static function hypnotize() {
+
+echo ("The cat was hypnotized.");
+      return;
+    }
+}
+
+// Hypnotize all cats
+Hypnotic_Cat::hypnotize();
+
+$hypnotic_cat = new Hypnotic_Cat();
+// Does nothing
+$hypnotic_cat->hypnotize();
+?>
+
+    
+	capitalize
+    
+====================================
+
+The cat was hypnotized.
+
+    
+    
+====================================
+Example: Referencing the $some_variable
+<?php
+$some_variable = "Hello World!";
+$some_reference = &$some_variable;
+$some_reference = "Guten Tag World!";
+echo $some_variable;
+echo $some_reference;
+?>
+
+    
+    
+====================================
+
+Guten Tag World!Guten Tag World!
+
+    
+    
+====================================
+
+<?php
+
+// define a function
+function Response {
+    echo "Have a good day!<br /><br />";
+}
+
+// driving to work
+echo "Are you going to merge? <br />";
+Response;
+
+// at the office
+echo "I need a status report on all your projects in the next 10 minutes for
+my management meeting.<br />";
+Response;
+
+// at the pub after work
+echo "Did Bill get everything he needed today? He was sure crabby!<br />";
+Response;
+?>
+
+    
+    
+==================

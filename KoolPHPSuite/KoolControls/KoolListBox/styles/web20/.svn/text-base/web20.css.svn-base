@@ -1,0 +1,419 @@
+.web20KLB
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;	
+}
+
+
+.web20KLB_Scrollable .klbGroup
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #6788BE;
+	overflow: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.web20KLB .klbList
+{
+    height: 100%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.web20KLB .klbItem
+{
+	line-height: 18px;
+    color: #000000;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    cursor: default;
+    padding: 2px 5px;
+    white-space: nowrap;	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 		
+}
+
+.web20KLB .klbDisabledItem 
+{
+	color: #AAAAAA;
+}
+
+
+.web20KLB .klbGroup .klbHovered
+{
+    background: none repeat scroll 0 0 #E7F1FF;
+    color: #000000;
+}
+
+.web20KLB .klbGroup .klbSelected {
+    background: none repeat scroll 0 0 #D4FFBC;
+    color: #000000;
+}
+
+.web20KLB .klbGroup .klbActive {
+    border: 1px dotted #555555;
+    padding: 1px 4px;
+}
+
+.web20KLB .klbItem .klbText,
+.web20KLB .klbItem .klbCheck,
+.web20KLB .klbItem .klbImage
+{
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.web20KLB .klbItem .klbImage
+{
+	padding-right:2px;
+}
+
+.web20KLB .klbButtonAreaRight
+{
+	float:right;
+	width:30px;
+	height:100%;
+}
+
+.web20KLB .klbButtonAreaLeft
+{
+	float:left;
+	width:30px;
+	height:100%;
+}
+
+.web20KLB .klbButtonAreaTop,
+.web20KLB .klbButtonAreaBottom
+{
+	float:left;
+	width:100%;
+	height:30px;
+}
+.web20KLB .klbAlignLeft
+{
+	text-align:left;
+}
+.web20KLB .klbAlignRight
+{
+	text-align:right;
+}
+.web20KLB .klbAlignCenter
+{
+	text-align:center;
+}
+
+.web20KLB .klbAlignTop td
+{
+	vertical-align:top;
+}
+.web20KLB .klbAlignBottom td
+{
+	vertical-align:bottom;
+}
+.web20KLB .klbAlignMiddle td
+{
+	vertical-align:middle;
+}
+
+
+
+
+.web20KLB .klbButton
+{
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    line-height: 15px;
+    margin: 0 0 5px 6px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+.web20KLB .klbButtonAreaLeft .klbButton
+{
+	margin: 0 6px 5px 0;
+}
+.web20KLB .klbButtonAreaTop .klbButton
+{
+	display:inline-block;	
+	margin: 0 8px 6px 0;
+}
+.web20KLB .klbButtonAreaBottom .klbButton
+{
+	display:inline-block;
+	margin: 6px 8px 0 0;
+}
+
+.web20KLB .klbAlignBottom .klbButton
+{
+	margin-bottom:2px;
+	margin-top:5px;
+}
+.web20KLB .klbAlignRight .klbButton
+{
+	margin-left:4px;
+	margin-right:4px;
+}
+
+
+
+.web20KLB .klbButton .klbButtonBL,
+.web20KLB .klbButton .klbButtonBR,
+.web20KLB .klbButton .klbButtonTR,
+.web20KLB .klbButton .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	display: inline-block;
+	position: relative;
+	width: auto;	
+}
+
+.web20KLB .klbButton:hover .klbButtonBL,
+.web20KLB .klbButton:hover .klbButtonBR,
+.web20KLB .klbButton:hover .klbButtonTR,
+.web20KLB .klbButton:hover .klbButtonTL
+{
+	background-image: url(ButtonHover.png);
+}
+
+.web20KLB .klbDisabled:hover .klbButtonBL,
+.web20KLB .klbDisabled:hover .klbButtonBR,
+.web20KLB .klbDisabled:hover .klbButtonTR,
+.web20KLB .klbDisabled:hover .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	cursor:default;
+}
+
+.web20KLB .klbButton .klbButtonBL
+{
+    background-position: 0 100%;
+    right: 0;
+    top: 4px;	
+}
+
+.web20KLB .klbButton .klbButtonBR
+{
+    background-position: 100% 100%;
+    display: inline-block;
+    right: -4px;
+}
+.web20KLB .klbButton .klbButtonTR
+{
+    background-position: 100% 0;
+    bottom: 4px;
+    overflow: visible;
+    right: 0;	
+}
+.web20KLB .klbButton .klbButtonTL
+{
+    background-position: 0 0;
+    left: -4px;
+}
+
+
+.web20KLB .klbButton .klbButtonText
+{
+    background: url(Sprite.png) no-repeat;
+    display: inline-block;
+	position: relative;
+    width: 0px;
+    padding-left: 18px;
+	height:13px;
+	padding-top: 3px;
+    text-align: left;
+    z-index: 1;
+	font-size: 0;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;	   
+}
+
+/*Default and right*/
+.web20KLB .klbDelete .klbButtonText
+{
+   background-position: 0 -50px;
+}
+.web20KLB .klbMoveUp .klbButtonText
+{
+  background-position: 0 0;
+}
+.web20KLB .klbMoveDown .klbButtonText
+{
+  background-position: 0 -25px;
+}
+
+.web20KLB .klbTransferOut .klbButtonText
+{
+  background-position: 0 -75px;
+}
+.web20KLB .klbTransferIn .klbButtonText
+{
+  background-position: 0px -100px;
+}
+
+.web20KLB .klbTransferAllOut .klbButtonText
+{
+  background-position: 0 -125px;
+}
+.web20KLB .klbTransferAllIn .klbButtonText
+{
+  background-position: 0px -150px;
+}
+
+
+
+.web20KLB .klbDeleteDisabled .klbButtonText
+{
+   background-position: -200px -50px;
+}
+.web20KLB .klbMoveUpDisabled .klbButtonText
+{
+  background-position: -200px 0;
+}
+.web20KLB .klbMoveDownDisabled .klbButtonText
+{
+  background-position: -200px -25px;
+}
+
+.web20KLB .klbTransferOutDisabled .klbButtonText
+{
+  background-position: -200px -75px;
+}
+.web20KLB .klbTransferInDisabled .klbButtonText
+{
+  background-position: -200px -100px;
+}
+
+.web20KLB .klbTransferAllOutDisabled .klbButtonText
+{
+  background-position: -200px -125px;
+}
+.web20KLB .klbTransferAllInDisabled .klbButtonText
+{
+  background-position: -200px -150px;
+}
+
+/*Left*/
+.web20KLB .klbButtonAreaLeft .klbTransferOut .klbButtonText
+{
+	background-position: 0px -100px;
+  
+}
+.web20KLB .klbButtonAreaLeft .klbTransferIn .klbButtonText
+{
+	background-position: 0 -75px;
+}
+.web20KLB .klbButtonAreaLeft .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -150px;
+}
+.web20KLB .klbButtonAreaLeft .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -125px;
+}
+
+
+.web20KLB .klbButtonAreaLeft .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -100px;
+}
+.web20KLB .klbButtonAreaLeft .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -75px;
+}
+
+.web20KLB .klbButtonAreaLeft .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -150px;
+}
+.web20KLB .klbButtonAreaLeft .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -125px;
+}
+
+/*Top*/
+.web20KLB .klbButtonAreaTop .klbTransferOut .klbButtonText
+{
+	background-position: 0px -200px;
+  
+}
+.web20KLB .klbButtonAreaTop .klbTransferIn .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.web20KLB .klbButtonAreaTop .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -250px;
+}
+.web20KLB .klbButtonAreaTop .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -225px;
+}
+
+
+.web20KLB .klbButtonAreaTop .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+.web20KLB .klbButtonAreaTop .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+
+.web20KLB .klbButtonAreaTop .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}
+.web20KLB .klbButtonAreaTop .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+
+
+/*Bottom*/
+.web20KLB .klbButtonAreaBottom .klbTransferOut .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.web20KLB .klbButtonAreaBottom .klbTransferIn .klbButtonText
+{
+	background-position: 0px -200px;
+}
+.web20KLB .klbButtonAreaBottom .klbTransferAllOut .klbButtonText
+{
+	background-position: 0 -225px;
+}
+.web20KLB .klbButtonAreaBottom .klbTransferAllIn .klbButtonText
+{
+	background-position: 0px -250px;
+}
+
+
+.web20KLB .klbButtonAreaBottom .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+.web20KLB .klbButtonAreaBottom .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+
+.web20KLB .klbButtonAreaBottom .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+.web20KLB .klbButtonAreaBottom .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}

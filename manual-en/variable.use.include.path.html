@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$use_include_path</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.variables.html" title="Chapter 13. Smarty Class Variables">
+<link rel="prev" href="variable.trusted.dir.html" title="$trusted_dir">
+<link rel="next" href="variable.use.sub.dirs.html" title="$use_sub_dirs">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">$use_include_path</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="variable.trusted.dir.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 13. Smarty Class Variables</th>
+<td width="20%" align="right"> <a accesskey="n" href="variable.use.sub.dirs.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="$use_include_path">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="variable.use.include.path"></a>$use_include_path</h2></div></div></div>
+<p>
+  This tells smarty to respect the <a class="ulink" href="http://php.net/ini.core.php#ini.include-path" target="_top">include_path</a> 
+  within the <a class="link" href="resources.html#resources.file" title="File Template Resources"><code class="varname">File Template Resource</code></a> handler and the plugin loader
+  to resolve the directories known to <a class="link" href="variable.template.dir.html" title="$template_dir"><em class="parameter"><code>$template_dir</code></em></a>. 
+  The flag also makes the plugin loader check the include_path for 
+  <a class="link" href="variable.plugins.dir.html" title="$plugins_dir"><em class="parameter"><code>$plugins_dir</code></em></a>.
+ </p>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+   You should not design your applications to rely on the include_path, as this
+   may - depending on your implementation - slow down your system (and Smarty) considerably.
+  </p>
+</div>
+<p>
+  If use_include_path is enabled, file discovery for
+  <a class="link" href="variable.template.dir.html" title="$template_dir"><em class="parameter"><code>$template_dir</code></em></a> and 
+  <a class="link" href="variable.plugins.dir.html" title="$plugins_dir"><em class="parameter"><code>$plugins_dir</code></em></a>
+  work as follows.
+ </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>
+    For each element <code class="literal">$directory</code> in array ($template_dir or $plugins_dir) do
+   </p></li>
+<li class="listitem"><p>
+    Test if requested file is in <code class="literal">$directory</code> relative to the <a class="ulink" href="http://php.net/function.getcwd.php" target="_top">current working directory</a>. If file found, return it.
+   </p></li>
+<li class="listitem"><p>
+    For each <code class="literal">$path</code> in include_path do
+   </p></li>
+<li class="listitem"><p>
+    Test if requested file is in <code class="literal">$directory</code> relative to the <code class="literal">$path</code> (possibly relative to the <a class="ulink" href="http://php.net/function.getcwd.php" target="_top">current working directory</a>). If file found, return it.
+   </p></li>
+<li class="listitem"><p>
+    Try default_handler or fail.
+   </p></li>
+</ul></div>
+<p>
+  This means that whenever a directory/file relative to the current working directory is encountered, it is preferred over anything potentially accessible through the include_path.
+ </p>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+   Smarty does not filter elements of the include_path. 
+   That means a ".:" within your include path will trigger the current working directory lookup twice.
+  </p>
+</div>
+<p>
+   See also
+   <a class="link" href="resources.html" title="Chapter 16. Resources"><code class="varname">Template Resources</code></a> and 
+   <a class="link" href="variable.template.dir.html" title="$template_dir"><em class="parameter"><code>$template_dir</code></em></a>
+  </p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="variable.trusted.dir.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.variables.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="variable.use.sub.dirs.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">$trusted_dir </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> $use_sub_dirs</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

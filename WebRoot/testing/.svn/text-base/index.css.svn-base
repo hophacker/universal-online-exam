@@ -1,0 +1,90 @@
+/* 
+    Document   : index
+    Created on : Feb 2, 2013, 10:47:51 PM
+    Author     : j
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#page-container {
+    background: red;
+    width: 760px;
+    margin:auto;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, Verdana, Sans-serif;
+    font-size: 12px;
+    color: #666666;
+    background: #ffffff;
+}
+#main-nav{
+    background: red;
+    height: 50px;
+}
+#header {
+    background: blue;
+    height: 150px;
+}
+#footer{
+    background: orange;
+    height: 66px;
+}
+#header{
+    background: blue;
+    height: 150px;
+}
+#sidebar-a{
+    background: darkgreen;
+    float: right;
+    width: 280px;
+    background: darkgreen;
+}
+#content {
+    margin-right: 280px;
+    background: green;
+}
+#footer{
+    clear: both;
+    background: orange;
+    height: 66px;
+}
+.hidden {
+    display: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+h2{
+    margin:0;
+    padding:0;
+    padding-bottom: 15px;
+   
+}
+p{
+    margin:0;
+    padding-bottom: 15px;
+}
+#sidebar-a {
+	float: right;
+	width: 280px;
+}
+
+#sidebar-a .padding {
+	padding: 25px;
+        line-height: 18px;
+
+}
+
+#content {
+	margin-right: 280px;
+}
+
+#content .padding {
+	padding: 25px;
+}

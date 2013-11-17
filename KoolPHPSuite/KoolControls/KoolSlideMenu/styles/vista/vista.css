@@ -1,0 +1,239 @@
+.vistaKSM
+{
+	background:#d9eef7;
+	padding:1px;
+}
+.vistaKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.vistaKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.vistaKSM .ksmIn,
+.vistaKSM .ksmLeft,
+.vistaKSM .ksmRight,
+.vistaKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.vistaKSM .ksmA
+{
+	text-decoration:none;
+	color:#F4F4F4;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.vistaKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.vistaKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.vistaKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 
+}
+html>body .vistaKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.vistaKSM .ksmCollapse .ksmChildBox,
+.vistaKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.vistaKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.vistaKSM .ksmParent
+{
+	line-height:24px;
+	cursor:pointer;
+	white-space:nowrap;	
+}
+.vistaKSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.vistaKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:white;
+	line-height:24px;
+	height:23px;
+}
+.vistaKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+	line-height:20px;
+}
+
+
+.vistaKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:#f4f4f4;	
+}
+.vistaKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.vistaKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:10px;
+	height:24px;
+	background-image:url(parent_mid.gif);
+}
+.vistaKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:24px;
+	background-image:url(parent_mid.gif);
+}
+
+.vistaKSM .ksmParent .ksmRight
+{
+	float:right;
+	width:31px;
+	height:24px;
+	background-image:url(parent_right_expand.gif);
+}
+.vistaKSM .ksmCollapse .ksmParent .ksmRight
+{
+	height:24px;
+	background-image:url(parent_right.gif);
+}
+
+.vistaKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:23px;
+	height:24px;
+}
+
+
+
+
+/*Child*/
+.vistaKSM .ksmChild
+{
+	line-height:20px;
+	color:#333;
+}
+
+.vistaKSM .ksmChild .ksmIn
+{
+	margin-bottom:1px;
+}
+.vistaKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.vistaKSM a.ksmChild:hover .ksmIn
+{
+	background:#96d9f9;
+}
+
+.vistaKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+}
+
+
+.vistaKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.vistaKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.vistaKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.vistaKSM .ksmSelected .ksmIn
+{
+	background:#96d9f9;
+}
+
+.vistaKSM .ksmSelected .ksmIn .ksmBul
+{
+}
+
+.vistaKSM a.ksmSelected:hover .ksmIn
+{
+	background:#96d9f9;
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.vistaKSM .ksmPanel
+{
+	line-height:normal;
+}
+.vistaKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#CCCCCC;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}
+.vistaKSM a:focus 
+{
+	outline:none;
+}

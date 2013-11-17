@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ManualPager" usedb="true">
+	<title>Manual Pager</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid support various type of pagers which you can choose.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolGrid support various type of pagers which you can choose. To use PrevNext pager in MasterTable, you set:
+</p>
+<b>$grid->MasterTable->Pager = new GridManualPager();</b>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+
+	$grid->RowAlternative = true;
+
+	$grid->AjaxEnabled = true;
+	$grid->AutoGenerateColumns = true;
+
+	//Pager settings
+	$grid->MasterTable->Pager = new GridManualPager();
+	$grid->MasterTable->Pager->ShowPageSize = false;		
+
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridPager/index.php">GridPager</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridManualPager/index.php">GridManualPager</doc>
+	</docs>
+</example>

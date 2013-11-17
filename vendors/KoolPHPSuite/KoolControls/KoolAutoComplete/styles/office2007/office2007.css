@@ -1,0 +1,150 @@
+.office2007KAC *
+{
+	margin:0px;
+	padding:0px;
+	white-space:nowrap;
+}
+.office2007KAC table
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.office2007KAC .kacUL
+{
+	margin:0px;
+	padding:0px;
+}
+
+.office2007KAC .kacLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+/*Combobox settings*/
+.office2007KAC .kacCombobox
+{
+	border:solid 1px #7F9DB9;
+}
+
+.office2007KAC .kacArrow
+{
+	border:none;
+	width:20px;
+	height:20px;
+	background:url(arrow.gif) 2px;
+}
+
+/*Box*/
+
+.office2007KAC .kacBox
+{
+	font-size:0pt;
+	display:none;
+	position:absolute;
+	border:solid 1px #94b4dc;
+	background-color:#bbd7fa;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.office2007KAC .kacIframe
+{
+	display:none;
+	position:absolute;
+	border:0px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;	
+	z-index:8888;	
+}
+
+
+.office2007KAC .kacItemBox
+{
+	overflow:auto;
+}
+
+.office2007KAC .kacItem
+{
+	display:inline-block;
+}
+/*Hack CSS for Opera*/
+html>body .office2007KAC .kacItem
+{
+	display:block;
+}
+
+
+.office2007KAC .kacOpen
+{
+	display:block;
+}
+
+
+.office2007KAC .kacA
+{
+	text-decoration:none;
+	cursor:default;
+}
+
+.office2007KAC .kacItem .kacIn img
+{
+	border:0px;
+}
+
+
+.office2007KAC .kacItem .kacIn
+{
+	color:#222;
+	padding-left:5px;
+	font-family:Arial;
+	font-size:10pt;
+	overflow:hidden;
+	height:21px;
+	line-height:21px;
+}
+
+
+
+.office2007KAC .kacSelectFocus .kacIn
+{
+	background:url(b.gif);
+	height:21px;
+	line-height:21px;
+	color:#222;
+}
+
+/*Disable Item*/
+.office2007KAC .kacDisable .kacIn
+{
+	color:gray;
+}
+
+.office2007KAC .kacDisable a.kacA:hover .kacIn
+{
+	background:none;
+	color:gray;
+}
+
+.office2007KAC .kacLoading
+{
+	background:#EEEEEE;
+	text-align:center;
+	color:gray;
+	font-size:10pt;
+	font-family:Arial;
+}
+
+
+.office2007KAC .kacHeader,
+.office2007KAC .kacFooter
+{
+	font-size:10pt;
+	font-family:Arial;
+	color:Black;
+}
+.office2007KAC a:focus 
+{
+	outline:none;
+}

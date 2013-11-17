@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Use_KoolScripting" usedb="false">
+	<title>Use KoolScripting</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolTabs supports creating by XML with the use of KoolScripting. You may have a look at code section for more details.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+?>
+
+<form id="form1" method="post">
+
+	<?php echo KoolScripting::Start();?>
+		<kooltabs id="kts" styleFolder="silver" scriptFolder="<?php echo $KoolControlsFolder."/KoolTabs"; ?>">
+			<tab id="home" text="Home" selected="true"/>
+			<tab id="products" text="Products" />
+			<tab id="services" text="Services" />
+			<tab id="company" text="Company" />
+			<tab id="contactus" text="Contact us" />				
+		</kooltabs>
+	<?php echo KoolScripting::End();?>
+
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+</example>

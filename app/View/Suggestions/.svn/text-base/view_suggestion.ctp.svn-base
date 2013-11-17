@@ -1,0 +1,36 @@
+<?php
+echo $this->Html->script('Suggestion/viewSuggestion');
+echo $this->Html->css('Suggestion/viewSuggestion');
+echo $this->Html->css('common');
+echo $this->Paginator->first('第一页'). ' ';
+echo $this->Paginator->prev('<< 前一页').' ';
+echo $this->Paginator->numbers(array('separator'=>' - ')); 
+echo ' '.$this->Paginator->next('下一页 >>');
+echo ' '.$this->Paginator->last("最后一页");
+$id = ($pageInfo['page']-1)*$pageInfo['current'] + 1;
+?>
+<table>
+    <tr>
+        <th>编号</th><th>建议标题</th><th>提出人</th><th>提出时间</th><th>查看</th><th>删除</th>
+    </tr>
+    <?php 
+        foreach($suggestions as $suggestion) {
+            echo '<tr>';
+            echo '<td>'.$id++.'</td>';
+            echo '<td id="title'.$suggestion['Suggestion']['id'].'">'.$suggestion['Suggestion']['title'].'</td>';
+            echo '<td>'.$suggestion['Student']['s_name'].'</td>';
+            echo '<td>'.$suggestion['Suggestion']['date'].'</td>';
+            echo '<td><span class="listSuggestion" viewId="'.$suggestion['Suggestion']['id'].'">查看</span></td>';
+            echo '<td><span class="delLink" delId="'.$suggestion['Suggestion']['id'].'">删除</span></td>';
+            echo '</tr>';
+        }
+    ?>
+</table>
+<?php 
+        foreach($suggestions as $suggestion) {
+            echo '<div class="listBlock" id="div'.$suggestion['Suggestion']['id'].'">';
+            echo '<label class="medium_label">'.$suggestion['Suggestion']['title'].'</label>';
+            echo $suggestion['Suggestion']['content'];
+            echo '</div>';
+        }
+?>

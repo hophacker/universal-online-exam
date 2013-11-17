@@ -1,0 +1,10 @@
+tr td div{
+    float: left;
+}
+.combine_label{
+    margin-top: 10px;
+}
+.combine_button{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}

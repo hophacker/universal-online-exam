@@ -1,0 +1,245 @@
+.violetKSM
+{
+	background-color:white;
+	padding:1px;
+}
+.violetKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.violetKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.violetKSM .ksmIn,
+.violetKSM .ksmLeft,
+.violetKSM .ksmRight,
+.violetKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.violetKSM .ksmA
+{
+	text-decoration:none;
+	color:#F4F4F4;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.violetKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.violetKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.violetKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 	
+}
+html>body .violetKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.violetKSM .ksmCollapse .ksmChildBox,
+.violetKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.violetKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.violetKSM .ksmParent
+{
+	line-height:23px;
+	cursor:pointer;
+	white-space:nowrap;	
+}
+.violetKSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.violetKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:white;
+	line-height:23px;
+	height:23px;
+	margin-bottom:1px;
+}
+.violetKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+	line-height:22px;
+}
+
+
+.violetKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:#f4f4f4;	
+}
+.violetKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.violetKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:18px;
+	height:23px;
+	background-image:url(parent_left.gif);
+}
+.violetKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:23px;
+	background-image:url(parent_left.gif);
+}
+
+.violetKSM .ksmParent .ksmRight
+{
+	float:right;
+	width:26px;
+	height:23px;
+	background-image:url(parent_right.gif);
+}
+.violetKSM .ksmCollapse .ksmParent .ksmRight
+{
+	height:23px;
+	background-image:url(parent_right.gif);
+}
+
+.violetKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:23px;
+	height:23px;
+}
+
+
+
+
+/*Child*/
+.violetKSM .ksmChild
+{
+	line-height:20px;
+	color:#b12894;
+}
+
+.violetKSM .ksmChild .ksmIn
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+	margin-bottom:1px;
+}
+.violetKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.violetKSM a.ksmChild:hover .ksmIn
+{
+	background-image:url(arrow_sl.gif);
+	background-repeat: no-repeat;
+	background-position:5pt 5pt;;
+	background-color:#eedeeb;
+}
+
+.violetKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	background:url(arrow.gif_sl) no-repeat 5pt 5pt;
+}
+
+
+.violetKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.violetKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.violetKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.violetKSM .ksmSelected .ksmIn
+{
+	background:#eedeeb;
+}
+
+.violetKSM .ksmSelected .ksmIn .ksmBul
+{
+	background:url(arrow_sl.gif) no-repeat 5pt 5pt;
+}
+
+.violetKSM a.ksmSelected:hover .ksmIn
+{
+	background-image:url(arrow_sl.gif);
+	background-repeat: no-repeat;
+	background-position:5pt 5pt;;
+	background-color:#eedeeb;
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.violetKSM .ksmPanel
+{
+	line-height:normal;
+}
+.violetKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#b12894;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}

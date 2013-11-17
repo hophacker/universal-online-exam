@@ -1,0 +1,74 @@
+<?php
+/**
+ * Description of SuggestionsController
+ *
+ * @author ark
+ */
+
+class SuggestionsController extends AppController{
+    public  $helpers  = array(
+        'Html','Paginator'
+    );
+    public $paginage;
+    
+    
+    public function index($target) {
+        /*if($target!=0&&$target!=1) {
+            throw NotFoundException();
+        }*/
+//        debug($_SESSION['Student']['Student']['s_user']);
+        $this->set('target', $target);
+    }
+    
+    public function newsuggestion() {
+        $this->autoRender = false;
+        $student_id = $_SESSION['Student']['Student']['id'];
+        $title = $this->request->data('title');
+        $info = $this->request->data('info');
+        $target = $this->request->data('target');
+        $data=array('title'=>$title,'content'=>$info,'target'=>$target,'student_id'=>$student_id,'date'=>date('y-m-d', time()));
+        $this->checkEmptyAjax($data);
+        $success = $this->Suggestion->save($data);
+        if($success ) {
+            //$this->Session->setFlash('建议提交成功！');
+            echo json_encode(array('success'=> 1));
+        } else {
+            //$this->Session->setFlash('建议提交失败！');
+            echo json_encode(array('success'=> 0));
+        }
+        
+        //$this->redirect(array('action' => 'index', $target));
+    }
+    
+    public function viewSuggestion($target) {
+        $this->paginate = array(
+            'conditions' => array('target'=>$target),
+            'limit'=>  25
+        );
+        $data = $this->paginate('Suggestion');
+//        debug($this->request->params['paging']['Suggestion']);
+//        debug($data);
+        //debug();
+        $this->set('suggestions', $data);
+        $this->set('pageInfo',$this->request->params['paging']['Suggestion']);
+    }
+    
+    public function delete($id) {
+        $this->autoRender= false;
+        if ($this->request->is('get')) throw new MethodNotAllowedException();
+        if ($this->Suggestion->delete($id)) {
+//            $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
+//            $this->redirect(array('action' => 'indexSel', 1));
+            echo json_encode(array('success'=>1));
+        } else {
+            echo json_encode(array('success'=>0));
+        }
+    }
+    
+    public function getSuggestionById($id) {
+        $this->autoRender=false;
+        if ($this->request->is('get')) throw new MethodNotAllowedException();
+        $data = $this->Suggestion->findById($id);
+        echo json_encode(array('suggestion'=>$data['Suggestion']));
+    }
+}

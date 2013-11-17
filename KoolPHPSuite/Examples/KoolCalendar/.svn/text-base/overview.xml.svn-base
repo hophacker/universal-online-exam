@@ -1,0 +1,24 @@
+<control>
+	<name>KoolCalendar - Advanced PHP Calendar</name>
+	<metadescription>KoolCalendar is a great PHP Calendar featuring with DateTime Picker and Ajax Capability.VIEW DEMO NOW!</metadescription>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker,</metakeywords>	 
+	<description>KoolCalendar is a great PHP Calendar with Ajax Capability.</description>
+	<examples>
+		<example	name="Ajax Calendar" 
+					link="Calendar/AjaxEnabled/index.php" 
+					image="Calendar/AjaxEnabled/preview.gif"/>
+
+		<example	name="Multi-Month View" 
+					link="Calendar/MultiView/index.php" 
+					image="Calendar/MultiView/preview.gif"/>
+
+		<example	name="MultiSelection" 
+					link="Calendar/MultiSelection/index.php" 
+					image="Calendar/MultiSelection/preview.gif"/>
+
+		<example	name="DateTime Picker" 
+					link="DateTimePicker/DateTimePicker_FirstLook/index.php" 
+					image="DateTimePicker/DateTimePicker_FirstLook/preview.gif"/>
+
+	</examples>			
+</control>

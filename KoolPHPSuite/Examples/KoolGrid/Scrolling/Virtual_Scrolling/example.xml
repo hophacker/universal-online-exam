@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Virtual_Scrolling" usedb="true">
+	<title>Virtual Scrolling</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>When you need to show more data on a page while still want to maintain size of grid, you can use <b>scrolling</b> feature. Simply set $AllowScrolling to true and the $Height for the grid, you have enabled the feature.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+You have too much data and so tired of moving to disired page. In this situation, new feature Virutal Scrolling of KoolGrid will save you much time. When the feature is turned on, you just need to scroll down and data will be load automatically.
+</p>
+<p>
+	<b>$grid->MasterTable->VirtualScrolling = true;</b>
+</p>
+<p>
+	<i>*Note: The AllowScrolling must be set to <b>true</b>.</i>
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="sunset";
+	$grid->DataSource = $ds;
+	$grid->AjaxEnabled = true;
+
+	$grid->Width = "655px";
+	$grid->PageSize = 25;
+	$grid->RowAlternative = true;
+	$grid->AutoGenerateColumns = true;
+	
+	$grid->AllowScrolling = true;
+	$grid->MasterTable->Height = "320px";
+	$grid->MasterTable->VirtualScrolling = true;
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#VirtualScrolling">KoolGrid::VirtualScrolling</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#VirtualScrolling">GridTableView::VirtualScrolling</doc>
+	</docs>
+</example>

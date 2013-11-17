@@ -1,0 +1,132 @@
+<?php
+//echo $this->Html->css('Login');
+//echo $this->Html->script('Login');
+//echo $this->Form->input('uname', array('label'=>'帐号'));
+//echo $this->Form->input('upwd', array('label'=>'密码'));
+//echo $this->Form->radio('登录类型', array(1=>'学员', 2=>'院管理员', 3=>'校管理员'), array(
+//    'label'=>'登录类型', 'id'=>'logtype'));
+//echo $this->Form->button('登录', array('id' => 'submit'));
+?>
+
+<title>党校网上测试平台</title>
+<?php echo $this->Html->css('Login') ?>
+<?php echo $this->Html->script('Login') ?>
+
+<style type="text/css">
+    <!--
+    .STYLE2 {font-family: Geneva, Arial, Helvetica, sans-serif}
+    -->
+</style>
+</head>
+<div id="outer">
+    <div id="header">
+        <?php echo $this->Html->image("Login/logo.jpg"); ?>
+    </div>
+    <center>
+        <div id="main">
+            <div>
+                <form name="form1" action="Login.jsp" id="form1" method="post">
+                    <marquee scrollamount="=8" style="width:300">
+                        <h2>
+                            <a>欢迎来到扬州大学党校测试新平台</a>
+                        </h2>
+                    </marquee>
+                    <br />
+                    <br />
+
+                    <div id="loga">
+                        &nbsp;
+                    </div>
+                    <div id="logb">
+                        &nbsp;
+                    </div>
+                    <div id="name">
+                        <span>&nbsp;帐&nbsp;号:</span>
+                        <input type="text" id="uname" name="uname" value="" />
+                    </div>
+                    <div id="pwd">
+                        <span>&nbsp;密&nbsp;码:</span>
+                        <input type="password" id="upwd" name="upwd" value=""   />
+                    </div>
+                    <br />
+                    <br />
+                    <div id="chos">
+                        <input type="radio" name="logtype" value="1" checked="checked" />
+                        <font size="+1"><span>学员</span> </font>
+                        <input type="radio" name="logtype" value="2" />
+                        <span class="STYLE2"><font size="+1">院管理员 </font></span>
+                        <input type="radio" name="logtype" value="3" />
+                        <font size="+1"><span>校管理员</span> </font>
+
+                    </div>
+                    <div>
+                        <span id="conf"> 
+                            <?php echo $this->Html->image("Login/bt_off.gif", array('id'=>'bt')); ?>
+                        </span>
+
+                        <span id="reg">
+                            <?php echo $this->Html->link("注册", "../WebRoot/student/manage/account/register") ?>
+                            
+                        <!-- 
+<div id="conf"><input type="submit" value="提交"   onclick="Check();"/></div>
+<input type="button" id="reg" value="注册" onclick="window.open('StuReg.jsp');"></input>
+                        -->
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </center>
+</div>
+
+<script>
+$(document).ready(function(){
+    $.ajaxSetup({
+        async: false
+    });
+    $("#bt").hover(function(){
+        $(this).attr('src', '/img/Login/bt_on.gif');
+    }, function(){
+        $(this).attr('src', '/img/Login/bt_off.gif');
+    });
+    
+    $("#uname").focus(function(){
+         $("#logerr").empty();
+    });
+
+    $('#bt').click(function(){
+        $(this).attr('src', '/img/Login/bt_click.gif');
+
+        var logtype = $('#chos').find('input:checked').val();
+        
+        if ($("#uname").val() == ""){
+            artWarning("帐号不能为空。如无帐号，请先注册。");
+            $("#uname").focus();
+            return false;
+        }
+        if($("#upwd").val() == ""){
+            artWarning("密码不能为空。");
+            $("#upwd").focus();
+            return false;
+        }else{
+            $.post('../../Logins/LoginCheck',{
+                uname:$("#uname").val(),
+                upass:$('#upwd').val(),
+                logtype:logtype
+            }, 
+            function(data) {
+                if (data.ret == 0){
+                    switch (logtype){
+                        case '1':window.location = "../WebRoot/student/"; break;
+                        case '2':break;
+                        case '3':window.location = "../WebRoot/manager"; break;
+                    }
+                }else artWarning(data.mes);
+                
+            }, 'json');
+        }
+    });
+
+});
+</script>

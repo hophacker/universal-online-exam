@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/dxks/!svn/ver/276/yangda/app/Model
+END
+Test.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/271/yangda/app/Model/Test.php
+END
+TestType.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/221/yangda/app/Model/TestType.php
+END
+Information.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/dxks/!svn/ver/194/yangda/app/Model/Information.php
+END
+Student.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/270/yangda/app/Model/Student.php
+END
+Promotion.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/194/yangda/app/Model/Promotion.php
+END
+InformationType.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dxks/!svn/ver/249/yangda/app/Model/InformationType.php
+END
+Suggestion.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/259/yangda/app/Model/Suggestion.php
+END
+Cla.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/276/yangda/app/Model/Cla.php
+END
+TryHistory.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/194/yangda/app/Model/TryHistory.php
+END
+AppModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/133/yangda/app/Model/AppModel.php
+END
+Department.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/276/yangda/app/Model/Department.php
+END
+Question.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/166/yangda/app/Model/Question.php
+END
+Posts.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/133/yangda/app/Model/Posts.php
+END
+Major.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/276/yangda/app/Model/Major.php
+END
+Manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/166/yangda/app/Model/Manager.php
+END

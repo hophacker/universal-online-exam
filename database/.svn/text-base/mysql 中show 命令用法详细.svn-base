@@ -1,0 +1,131 @@
+a. show tables或show tables from database_name; -- 显示当前数据库中所有表的名称
+b. show databases; -- 显示mysql中所有数据库的名称
+c. show columns from table_name from database_name; 或show columns from database_name.table_name; -- 显示表中列名称
+d. show grants for user_name; -- 显示一个用户的权限，显示结果类似于grant 命令
+e. show index from table_name; -- 显示表的索引
+f. show status; -- 显示一些系统特定资源的信息，例如，正在运行的线程数量
+g. show variables; -- 显示系统变量的名称和值
+h. show processlist; -- 显示系统中正在运行的所有进程，也就是当前正在执行的查询。大多数用户可以查看他们自己的进程，但是如果他们拥有process权限，就可以查看所有人的进程，包括密码。
+i. show table status; -- 显示当前使用或者指定的database中的每个表的信息。信息包括表类型和表的最新更新时间
+j. show privileges; -- 显示服务器所支持的不同权限
+k. show create database database_name; -- 显示create database 语句是否能够创建指定的数据库
+l. show create table table_name; -- 显示create database 语句是否能够创建指定的数据库
+m. show engies; -- 显示安装以后可用的存储引擎和默认引擎。
+n. show innodb status; -- 显示innoDB存储引擎的状态
+o. show logs; -- 显示BDB存储引擎的日志 
+p. show warnings; -- 显示最后一个执行的语句所产生的错误、警告和通知
+q. show errors; -- 只显示最后一个执行语句所产生的错误 
+r. show [storage] engines; --显示安装后的可用存储引擎和默认引擎
+s. show procedure status --显示数据库中所有存储的存储过程基本信息，包括所属数据库，存储过
+                                                 程名称，创建时间等
+t. show create procedure sp_name --显示某一个存储过程的详细信息
+一下午研究了两个内容:触发器与过程.
+触发器是在执行某种操作(插入,更新,删除)时(前,后)进行的操作. 这个功能完全可以由C语言实现,而且更简单. mysql中触发器的使用还要涉及到变量之类的,不如用C实现起来简单,所以这里就不介绍了.
+过程(procedure)相当于C语言中的子函数:
+1,创建:
+create procedure procedure_name() select * from table_name;
+2,调用:
+call procedure_name;
+3,查看:
+查看过程的内容有三种方法:
+1,show create procedure procedure_name;
+2,show procedure status like 'procedure_name'
+3,select * from mysql.proc where name='procedure_name'
+4,删除：
+drop procedure procedure_name;
+一些存储过程以及函数的例子
+delimiter |
+定义procedure
+create procedure p2_test1 (OUT para1 int)
+begin
+select sum(val) into para1 from test1;
+end
+|
+调用procedure
+call p2_test1(@sum)|
+select @sum|
+
+alter procedure没有研究出来
+
+定义函数
+create function f_test1(name char(20)) returns char(20)   //参数没有IN,OUT，都是IN
+begin
+return concat('Hello ',name,' !');
+end
+|
+调用函数
+select f_test1('hongjian')| 
+
+三种不同的show的用法
+show procedure status 
+show function status
+show triggers    //注意，没有status
+
+语法:
+CREATE PROCEDURE sp_name ([IN |OUT |INOUT] param type,...)
+begin
+routine_body
+end
+
+CREATE FUNCTION sp_name (para,...) RETURNS type
+begin
+routing_body
+end mysql5支持的存储过程语句声明 描述
+CREATE PROCEDURE 建立一个存放在MySQL数据库的表格的存储过程。 
+REATE FUNCTION 建立一个用户自定义的函数，尤其是返回数据的存储过程。 
+ALTER PROCEDURE 更改用CREATE PROCEDURE 建立的预先指定的存储过程，其不会影响相关存储过程或存储功能。. 
+ALTER FUNCTION 更改用CREATE FUNCTION 建立的预先指定的存储过程，其不会影响相关存储过程或存储功能。. 
+DROP PROCEDURE 从MySQL的表格中删除一个或多个存储过程。 
+DROP FUNCTION 从MySQL的表格中删除一个或多个存储函数。 
+SHOW CREATE PROCEDURE 返回使用CREATE PROCEDURE 建立的预先指定的存储过程的文本。这一声明是SQL:2003规范的一个MySQL扩展。 
+SHOW CREATE FUNCTION 返回使用CREATE FUNCTION建立的预先指定的存储过程的文本。这一声明是SQL:2003规范的一个MySQL扩展。 
+SHOW PROCEDURE STATUS 返回一个预先指定的存储过程的特性，包括名称、类型、建立者、建立日期、以及更改日期。这一声明是SQL:2003规范的一个MySQL扩展。 
+SHOW FUNCTION STATUS 返回一个预先指定的存储函数的特性，包括名称、类型、建立者、建立日期、以及更改日期。这一声明是SQL:2003规范的一个MySQL扩展。 
+CALL 调用一个使用CREATE PROCEDURE建立的预先指定的存储过程。 
+BEGIN ... END 包含一组执行的多声明。 
+DECLARE 用于指定当地变量、环境、处理器，以及指针。 
+SET 用于更改当地和全局服务器变量的值。 
+SELECT ... INTO 用于存储显示变量的纵列。 
+OPEN 用于打开一个指针。 
+FETCH 使用特定指针来获得下一列。 
+CLOSE 用于关闭和打开指针。 
+IF 一个An if-then-else-end if 声明。 
+CASE ... WHEN 一个 case声明的结构 
+LOOP 一个简单的循环结构；可以使用LE***E 语句来退出。 
+LE***E 用于退出IF，CASE，LOOP，REPEAT以及WHILE 语句。 
+ITERATE 用于重新开始循环。 
+REPEAT 在结束时测试的循环。 
+WHILE 在开始时测试的循环。 
+RETURNS 返回一个存储过程的值 建一个存储过程
+create procedure p1(appid varchar(50))
+begin
+select APPNAME from APPINFO where ID=appid;
+end
+在mysq1中不支持create or replace procedure p1()
+
+删除存储过程
+drop procedure p1;
+
+若要查看当前数据库中所有已存在的存储过程，则输入：show procedure status;
+若要查看某一个存储过程，则输入：show create procedure proc_name;
+
+//使用游标
+create procedure p3()
+begin
+//可以把相同类型的变量放在一起声明
+declare sum,t,no_more_record Integer;
+DECLARE cursor_total CURSOR FOR select Total from PNUMBER;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET no_more_record=1;//此处必须先声明no_more_record
+//必须把所有变量都声明完后，才能给变量赋值
+set sum=0,t=0,no_more_record=0;//可以在同一行给多个变量赋值
+open cursor_total;
+repeat
+fetch cursor_total into t;//mysql在取下一条记录时，若为空，则将no_more_record赋为1，但其记录还是最后一条记录
+if(no_more_record!=1) then
+set sum=sum+t;
+end if;
+until no_more_record
+end repeat;//此处必须有分号
+close cursor_total;
+set no_more_record=0;
+end

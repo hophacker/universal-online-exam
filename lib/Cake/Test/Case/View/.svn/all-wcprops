@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View
+END
+HelperTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/HelperTest.php
+END
+JsonViewTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/JsonViewTest.php
+END
+MediaViewTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/MediaViewTest.php
+END
+ViewTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/ViewTest.php
+END
+HelperCollectionTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/HelperCollectionTest.php
+END
+XmlViewTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/XmlViewTest.php
+END
+ScaffoldViewTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/ScaffoldViewTest.php
+END
+ThemeViewTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/View/ThemeViewTest.php
+END

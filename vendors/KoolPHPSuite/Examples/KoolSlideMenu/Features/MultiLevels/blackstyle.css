@@ -1,0 +1,36 @@
+/* Extra css for SlideMenu black style.*/
+
+.blackKSM .ksmLevel0 .ksmLevel1 .ksmParent .ksmIn
+{
+	background:none;
+	color:#CCCCCC;
+	height:20px;
+	line-height:20px;
+}
+
+.blackKSM .ksmLevel0 .ksmCollapse .ksmParent .ksmIn
+{
+	background:none;
+	font-weight:normal;
+}		
+
+.blackKSM .ksmLevel0 .ksmLevel1 .ksmParent:hover .ksmIn
+{
+	background:#535152;
+}
+
+
+.blackKSM .ksmLevel1 .ksmParent .ksmIn .ksmLeft
+{
+	background:none;
+}
+
+.blackKSM .ksmLevel1 .ksmChildBox .ksmCBB
+{
+	padding:0px 0px;
+}				
+
+.blackKSM .ksmLevel1 .ksmChild .ksmIn
+{
+	padding-left:15px;
+}

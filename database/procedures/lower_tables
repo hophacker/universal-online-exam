@@ -1,0 +1,4 @@
+create procedure lower_columns(in table_name char(100))
+begin
+    
+end;

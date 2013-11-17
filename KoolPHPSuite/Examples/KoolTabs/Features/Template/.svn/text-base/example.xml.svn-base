@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Template" usedb="false">
+	<title>Template</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>KoolTabs supports adding any html to tab content. Above example show you how to add a custom Close button to tabs</p>
+<p>Please have a look at code section for more details.</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->scriptFolder = $KoolControlsFolder."/KoolTabs";
+	$kts->styleFolder = "vista";
+	
+	$html = "<img class='btnclose' onmouseover='m_over(this)' onmouseout='m_out(this)' onclick=\"remove('home')\" src='Images/closenormal.gif' />Home";
+	$kts->addTab("root","home",$html,null,true,true,"120px");
+	
+	$html = "<img class='btnclose' onmouseover='m_over(this)' onmouseout='m_out(this)' onclick=\"remove('products')\" src='Images/closenormal.gif' />Products";
+	$kts->addTab("root","products",$html,null,null,true,"120px");
+
+	$html = "<img class='btnclose' onmouseover='m_over(this)' onmouseout='m_out(this)' onclick=\"remove('services')\" src='Images/closenormal.gif' />Services";
+	$kts->addTab("root","services",$html,null,null,true,"120px");
+
+	$html = "<img class='btnclose' onmouseover='m_over(this)' onmouseout='m_out(this)' onclick=\"remove('company')\" src='Images/closenormal.gif' />Company";
+	$kts->addTab("root","company",$html,null,null,true,"120px");
+
+	$html = "<img class='btnclose' onmouseover='m_over(this)' onmouseout='m_out(this)' onclick=\"remove('contactus')\" src='Images/closenormal.gif' />Contact Us";
+	$kts->addTab("root","contactus",$html,null,null,true,"120px");	
+?>
+
+<form id="form1" method="post">
+	<style type="text/css">
+		.vistaKTS .ktsIn
+		{
+			text-align:left;
+			margin-right:-7px;
+		}
+				
+		.btnclose
+		{
+			width:11px;
+			height:11px;
+			position:relative;
+			top:2px;
+			float:right;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function remove(_id)
+		{
+			kts.removeTab(_id);
+		}
+		function m_over(_this)
+		{
+			_this.src='Images/closeover.gif';
+		}
+		function m_out(_this)
+		{
+			_this.src='Images/closenormal.gif';
+		}		
+	</script>
+
+	<div style="padding:10px;">
+		<?php echo $kts->Render();?>
+	</div>
+
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#addTab">PHP :: KoolTabs :: addTab</doc>
+	</docs>
+</example>

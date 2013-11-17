@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="RowAlternative" usedb="true">
+	<title>RowAlternative</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid support row alternative feature. </metadescription>
+	<description>
+		<![CDATA[ 
+KoolGrid support row alternative feature. To enable this feature, you set the <b>$RowAlternative</b> of KoolGrid's instance or GridTableView's instance to true.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+
+	$grid->RowAlternative = true;
+
+	$grid->AjaxEnabled = true;
+	$grid->AutoGenerateColumns = true;
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#RowAlternative">KoolGrid::RowAlternative</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#RowAlternative">GridTableView::RowAlternative</doc>
+	</docs>
+</example>

@@ -1,0 +1,238 @@
+.redcaroKSM
+{
+	background-color:#343434;
+	padding:1px;
+}
+.redcaroKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.redcaroKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.redcaroKSM .ksmIn,
+.redcaroKSM .ksmLeft,
+.redcaroKSM .ksmRight,
+.redcaroKSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.redcaroKSM .ksmA
+{
+	text-decoration:none;
+	color:#F4F4F4;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.redcaroKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.redcaroKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.redcaroKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 
+}
+html>body .redcaroKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.redcaroKSM .ksmCollapse .ksmChildBox,
+.redcaroKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.redcaroKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.redcaroKSM .ksmParent
+{
+	line-height:23px;
+	cursor:pointer;
+	white-space:nowrap;	
+}
+.redcaroKSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.redcaroKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:white;
+	line-height:23px;
+	height:23px;
+	margin-bottom:1px;
+}
+.redcaroKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+	line-height:20px;
+}
+
+
+.redcaroKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:#f4f4f4;	
+}
+.redcaroKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.redcaroKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:10px;
+	height:23px;
+	background-image:url(parent_mid.gif);
+}
+.redcaroKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:23px;
+	background-image:url(parent_mid.gif);
+}
+
+.redcaroKSM .ksmParent .ksmRight
+{
+	float:right;
+	width:31px;
+	height:23px;
+	background-image:url(parent_right.gif);
+}
+.redcaroKSM .ksmCollapse .ksmParent .ksmRight
+{
+	height:23px;
+	background-image:url(parent_right.gif);
+}
+
+.redcaroKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:23px;
+	height:23px;
+}
+
+
+
+
+/*Child*/
+.redcaroKSM .ksmChild
+{
+	line-height:20px;
+	color:#CCCCCC;
+}
+
+.redcaroKSM .ksmChild .ksmIn
+{
+	margin-bottom:1px;
+}
+.redcaroKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.redcaroKSM a.ksmChild:hover .ksmIn
+{
+	background:#404040;
+}
+
+.redcaroKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+}
+
+
+.redcaroKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.redcaroKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.redcaroKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.redcaroKSM .ksmSelected .ksmIn
+{
+	background:#404040;
+}
+
+.redcaroKSM .ksmSelected .ksmIn .ksmBul
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+}
+
+.redcaroKSM a.ksmSelected:hover .ksmIn
+{
+	background:#404040;
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.redcaroKSM .ksmPanel
+{
+	line-height:normal;
+}
+.redcaroKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#CCCCCC;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}

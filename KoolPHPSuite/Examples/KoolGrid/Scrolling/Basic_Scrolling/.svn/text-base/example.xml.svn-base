@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Basic_Scrolling" usedb="true">
+	<title>Basic Scrolling</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>When you need to show more data on a page while still want to maintain size of grid, you can use <b>scrolling</b> feature. Simply set $AllowScrolling to true and the $Height for the grid, you have enabled the feature.</metadescription>
+	<description>
+		<![CDATA[ 
+When you need to show more data on a page while still want to maintain size of grid, you can use <b>scrolling</b> feature. Simply set <b>$AllowScrolling</b> to <b>true</b> and the <b>$Height</b> for the grid, you have enabled the feature.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,addressLine1, city, country from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->AjaxEnabled = true;
+	$grid->AllowFiltering = true;
+
+	$grid->AllowResizing = true;
+	$grid->Width = "655px";
+	$grid->PageSize = 20;
+	$grid->RowAlternative = true;
+	$grid->AllowScrolling = true;
+	$grid->MasterTable->Height = "300px";
+	$grid->MasterTable->ColumnWidth = "200px";
+
+	$grid->AutoGenerateColumns = true;
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+</form>
+
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#AllowScrolling">KoolGrid::AllowScrolling</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#AllowScrolling">GridTableView::AllowScrolling</doc>
+	</docs>
+</example>

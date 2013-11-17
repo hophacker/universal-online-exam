@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Node_Text_Editing" usedb="false">
+	<title>Node Text Editing</title>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview, treeview drag and drop, php treeview mysql, kooltreeview</metakeywords>	 
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolTreeView supports Node Editing functionality for tree-nodes.
+To enable this mode, you need to set the instance of KoolTreeView with <b>EditNodeEnable = true</b> and you will be able to edit node.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTreeView/kooltreeview.php";
+		
+	$treeview = new KoolTreeView("treeview");
+	$treeview->scriptFolder = $KoolControlsFolder."/KoolTreeView";
+	$treeview->imageFolder=$KoolControlsFolder."/KoolTreeView/icons";
+	$treeview->styleFolder="vista";
+	$treeview->showLines = true;
+	
+	
+	$root = $treeview->getRootNode();
+	$root->expand=true;
+	$root->visible = false;
+	
+	$treeview->Add("root","books","Books");
+	$treeview->Add("books","arts","Arts");
+	$treeview->Add("books","biographies","Biographies");
+	$treeview->Add("books","cooking","Cooking");
+	$treeview->Add("books","history","History");
+	$treeview->Add("books","travel","Travel");
+	
+	
+	$treeview->Add("root","music","Music");
+	$treeview->Add("music","alternative","Alternative");
+	$treeview->Add("music","blue","Blue");
+	$treeview->Add("music","classical","Classical");
+	$treeview->Add("music","hardrock","Hard Rock");
+	$treeview->Add("music","jazz","Jazz");
+	$treeview->Add("music","folk","Folk");
+
+	$treeview->Add("root","movies","Movies");
+	$treeview->Add("movies","action","Action");
+	$treeview->Add("movies","horror","Horror");
+	$treeview->Add("movies","drama","Drama");
+	
+	$treeview->Add("root","softwares","Softwares");
+	$treeview->Add("softwares","database","Database");
+	$treeview->Add("softwares","networking","Networking");
+	$treeview->Add("softwares","presentation","Presentation");
+	$treeview->Add("softwares","report","Report");
+	$treeview->Add("softwares","wordprocessing","Word Processing");
+	$treeview->Add("softwares","spreadsheet","Spreadsheet");
+	
+	$treeview->EditNodeEnable = true;
+		
+
+?>
+
+<div style="padding:10px;">
+	Select a node and click an already selected node.
+</div>
+	
+<div style="padding:10px;">
+	<?php echo $treeview->Render();?>
+</div>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/PHP/KoolTreeView_Class/index.php#EditNodeEnable ">KoolTreeView :: EditNodeEnable</doc>
+	</docs>
+</example>

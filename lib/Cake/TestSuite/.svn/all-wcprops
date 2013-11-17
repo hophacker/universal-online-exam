@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite
+END
+CakeTestLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/CakeTestLoader.php
+END
+CakeTestSuiteCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/CakeTestSuiteCommand.php
+END
+CakeTestRunner.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/CakeTestRunner.php
+END
+CakeTestSuite.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/CakeTestSuite.php
+END
+CakeTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/CakeTestCase.php
+END
+ControllerTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/ControllerTestCase.php
+END
+CakeTestSuiteDispatcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php
+END

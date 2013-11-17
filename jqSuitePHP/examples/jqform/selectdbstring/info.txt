@@ -1,0 +1,6 @@
+This exmple is the same as previous, but it uses a client side chaching.
+This way we made less request to the server.
+This is done just with setting a option cache on the setAutoomplete method.
+If you write some letter on ShipName then try to close and open the form again
+and write the same letter combinations. You will notice that there is no request
+to the server.

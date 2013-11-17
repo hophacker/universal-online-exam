@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller
+END
+CakeErrorController.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/CakeErrorController.php
+END
+Scaffold.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Scaffold.php
+END
+Component.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Component.php
+END
+Controller.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/Controller.php
+END
+ComponentCollection.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Controller/ComponentCollection.php
+END

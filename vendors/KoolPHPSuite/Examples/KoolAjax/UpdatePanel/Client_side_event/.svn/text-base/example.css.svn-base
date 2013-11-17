@@ -1,0 +1,37 @@
+.cssOrder
+{	
+	padding :10px 0;
+	height:160px;
+}
+.block
+{
+	background :#DFF3FF;
+	width:295px;
+	height:160px;
+	padding :10px;
+}
+.btn
+{
+	background:transparent url(btn.gif) no-repeat scroll 0 0;
+	height:43px;
+	font-size:12px; 	
+	font-weight:bold;
+	border:0 none;	
+	color:#0391E2;
+	padding:0 0 0 34px;
+	width:170px; 
+}
+.result
+{
+	background:transparent url(inform.gif) no-repeat scroll 0 0;
+	height:103px; 
+	width:200px;
+	padding:35px 20px 0 124px;	
+}
+#eventClient
+{
+	overflow:auto;
+	overflow-x:hidden;
+	height : 130px;
+	width : 280px;
+}

@@ -1,0 +1,22 @@
+<?php
+class Manager extends AppModel {
+    /*
+     *  1 => 用户名不存在
+        2 => 密码不对
+        0 => 正确
+     */
+    public function check($m_user, $m_pwd) {
+        if (!$this->find('first', array('conditions' => array('m_user' => $m_user)))){
+            return 1;
+        } else {
+            $options = array('conditions' => array(
+                    'm_user' => $m_user,
+                    'm_pwd' => md5($m_pwd)
+            ));
+            if (!$this->find('first', $options))
+                return 2;
+            else
+                return 0;
+        }
+    }
+}

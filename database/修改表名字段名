@@ -1,0 +1,14 @@
+修改表名:
+
+//alter table 表名 rename to 新表名
+
+alter table T rename to customer
+
+ 
+
+修改字段名
+
+//alter table 表名 change 旧表名 新表名 字段约束(如类型,primary key,not null)
+
+alter table T change a b char(10)
+

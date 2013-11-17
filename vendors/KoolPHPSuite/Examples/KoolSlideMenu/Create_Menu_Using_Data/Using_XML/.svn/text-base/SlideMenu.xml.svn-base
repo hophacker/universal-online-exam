@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<koolslidemenu id="ksm" width="200px" singleExpand="true" styleFolder="koolslidemenu/styles/bluearrow">
+	<parent id="company" text="Company" expand="true">
+		<child id="vision" text="Vision" />
+		<child id="mission" text="Mission" />
+		<child id="contact" text="Contact" />				
+	</parent>
+	<parent id="products" text="Products">
+		<child id="koolajax" text="KoolAjax" />
+		<child id="kooltreeview" text="KoolTreeView" />
+		<child id="koolslidemenu" text="KoolSlideMenu" />				
+	</parent>
+	<parent id="services" text="Services">
+		<child id="outsourcing" text="Out-sourcing" />
+		<child id="freelancer" text="Free-lancer" />			
+	</parent>			
+</koolslidemenu>

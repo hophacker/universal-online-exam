@@ -1,0 +1,26 @@
+<control>
+	<name>KoolTabs - Powerful PHP Tab Menu</name>
+	<metadescription>KoolTabs is a Powerful PHP Tabstrip Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs a PHP great navigation system. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<description>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</description>
+	<examples>
+		<example	name="Position" 
+					link="Features/Position/index.php"
+					image="Features/Position/preview.gif"/>
+		<example	name="MultiPages" 
+					link="Features/MultiPages/index.php" 
+					image="Features/MultiPages/preview.gif"/>
+		<example	name="Styles" 
+					link="Appearance/Styles/index.php"
+					image="Appearance/Styles/preview.gif"/>
+		<example	name="MultiLevels" 
+					link="Features/MultiLevels/index.php" 
+					image="Features/MultiLevels/preview.gif"/>
+		<example	name="Template" 
+					link="Features/Template/index.php" 
+					image="Features/Template/preview.gif"/>
+		<example	name="Add/Remove/Disable Tab" 
+					link="Client_Side_API/Add_Remove_Disable_Tab/index.php"
+					image="Client_Side_API/Add_Remove_Disable_Tab/preview.gif"/>
+	</examples>			
+</control>

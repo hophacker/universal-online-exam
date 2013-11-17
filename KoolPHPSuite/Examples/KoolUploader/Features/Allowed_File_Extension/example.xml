@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Allowed_File_Extension" usedb="false">
+	<title>Allowed File Extension</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolUploader supports limiting the file extension that is allowed to upload. This is very crucial in term of security.
+To enable this feature, you just need to provide list of allowed file extension to <b>allowedExtension</b> property.
+
+</p>
+
+<p>
+There are two levels of setting allowedExtension:
+</p>
+<ol>
+	<li>1. Set <b>allowedExtenstion</b> in KoolUploader's instance: This will allow KoolUploader to check the file extension before uploading and will not allow uploading in case of wrong extension. The good of this level is to provide fast check. The bad is that this is <b>low-level</b> of security since the protection is from client-side.<br/><br/></li>
+	<li>2. Set <b>allowedExtenstion</b> in KoolUploadHandler's instance: This will allow KoolUploader to check the file extension at server-side and will cancel the file upload in case of wrong extension. The good of this is to provide <b>high-level</b> security. The bad is that the file need to upload to server first before checking thus it is slow.</li>
+</ol>
+<br/>
+<p>
+<i>*Suggestion:</i> Setting <b>allowedExtension</b> in both KoolUploader's instance and KoolUploadHandler's instance is best choice.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->handlePage = "handle.php";
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul->maxFileSize = 512*1024; //500KB
+	$kul->progressTracking = true;
+			
+	$kul->allowedExtension = "txt,jpg,gif,doc,pdf";
+
+?>
+
+<form id="form1" method="post">	
+	<?php echo $koolajax->Render();?>
+
+	<?php echo $kul->Render();?>
+	<div style="padding-top:20px;">
+		<i>*Note:</i> Please test uploading with *.txt, *.doc, *.pdf, *.jpg, *.gif ( size &lt; 500KB )
+	</div>	
+
+</form>
+
+			]]>			
+		</code>	
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	$kulhandle->allowedExtension = "gif,jpg,doc,pdf,txt";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/PHP/KoolUploader_Class/index.php#allowedExtension">PHP :: KoolUploader :: allowedExtension</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/PHP/KoolUploadHandler_Class/index.php#allowedExtension">PHP :: KoolUploadHandler :: allowedExtension</doc>		
+	</docs>
+</example>

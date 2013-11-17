@@ -1,0 +1,248 @@
+.office2007KSM
+{
+	background-color:white;
+	padding:1px;
+}
+.office2007KSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.office2007KSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.office2007KSM .ksmIn,
+.office2007KSM .ksmLeft,
+.office2007KSM .ksmRight,
+.office2007KSM .ksmBul
+{
+	display:block;
+}
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.office2007KSM .ksmA
+{
+	text-decoration:none;
+	color:#F4F4F4;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.office2007KSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.office2007KSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.office2007KSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 
+}
+html>body .office2007KSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	background:#e7eff8;
+}
+
+
+.office2007KSM .ksmCollapse .ksmChildBox,
+.office2007KSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.office2007KSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.office2007KSM .ksmParent
+{
+	line-height:23px;
+	cursor:pointer;
+	white-space:nowrap;	
+}
+.office2007KSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.office2007KSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid_ex.gif);
+	font-weight:bold;
+	color:white;
+	line-height:24px;
+	height:24px;
+	color:#56429f;
+}
+.office2007KSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+	line-height:22px;
+}
+
+
+.office2007KSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:#56429f;
+}
+.office2007KSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.office2007KSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:10px;
+	height:24px;
+	background-image:url(parent_left_ex.gif);
+}
+.office2007KSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:23px;
+	background-image:url(parent_left.gif);
+}
+
+.office2007KSM .ksmParent .ksmRight
+{
+	float:right;
+	width:24px;
+	height:24px;
+	background-image:url(parent_ex_right.gif);
+}
+.office2007KSM .ksmCollapse .ksmParent .ksmRight
+{
+	height:24px;
+	background-image:url(parent_right.gif);
+}
+
+.office2007KSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:24px;
+	height:24px;
+}
+
+
+
+
+/*Child*/
+.office2007KSM .ksmChild
+{
+	line-height:20px;
+	color:#3e770e;
+}
+
+.office2007KSM .ksmChild .ksmIn
+{
+	margin-bottom:1px;
+	color:#56429f;
+}
+.office2007KSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.office2007KSM a.ksmChild:hover .ksmIn
+{
+	background-repeat: no-repeat;
+	background-position:5pt 5pt;;
+	background-color:#c9d9ed;
+}
+
+.office2007KSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	background:url(arrow.gif_sl) no-repeat 5pt 5pt;
+}
+
+
+.office2007KSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.office2007KSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.office2007KSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.office2007KSM .ksmSelected .ksmIn
+{
+	background:#c9d9ed;
+}
+
+.office2007KSM .ksmSelected .ksmIn .ksmBul
+{
+	
+}
+
+.office2007KSM a.ksmSelected:hover .ksmIn
+{
+	background-repeat: no-repeat;
+	background-position:5pt 5pt;;
+	background-color:#c9d9ed;
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.office2007KSM .ksmPanel
+{
+	line-height:normal;
+}
+.office2007KSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#3e770e;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}
+.office2007KSM a:focus 
+{
+	outline:none;
+}

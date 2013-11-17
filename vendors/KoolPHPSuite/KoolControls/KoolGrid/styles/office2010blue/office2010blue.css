@@ -1,0 +1,974 @@
+.office2010blueKGR,
+.office2010blueKGR *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.office2010blueKGR,
+.office2010blueKGR_UpdatePanel
+{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+.office2010blueKGR *,
+.office2010blueKGR input,
+.office2010blueKGR select,
+.office2010blueKGR textarea
+{
+	font-family:arial,sans-serif;
+}
+
+/*TableView*/
+.office2010blueKGR .kgrTableView
+{
+	/*overflow:hidden;*/
+	font-family:arial,sans-serif;
+	font-size:12px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #8BA0BC;
+	color: #384E73;
+}
+
+
+.office2010blueKGR .kgrTable
+{
+	border-collapse: separate;
+    border-spacing: 0;
+}
+
+.office2010blueKGR .kgrTable tr .kgrCell:first-child,
+.office2010blueKGR .kgrTable tr .kgrFilterCell:first-child,
+.office2010blueKGR .kgrTable tr .kgrHeader:first-child,
+.office2010blueKGR .kgrTable tr .kgrFooter:first-child
+{
+	border-left-style:none;
+	padding-left:1px;
+}
+.office2010blueKGR .kgrTable tr .kgrCell:last-child,
+.office2010blueKGR .kgrTable tr .kgrFilterCell:last-child,
+.office2010blueKGR .kgrTable tr .kgrHeader:last-child,
+.office2010blueKGR .kgrTable tr .kgrFooter:last-child
+{
+	border-right-style:none;
+	padding-right:1px;
+}
+
+
+
+.office2010blueKGR .kgrDesc
+{
+	color:green;
+	padding-top:3px;
+	padding-bottom:3px;	
+}
+
+.office2010blueKGR .kgrDetailTablesPanel
+{
+	border-bottom:solid 1px #D0D7E5;
+	padding-right:1px;
+}
+
+
+
+
+/*Header*/
+.office2010blueKGR .kgrHeader
+{
+	background:url(sprite.png) repeat-x scroll 0 -2300px #BDCBDE;
+    border-color: #8BA0BC;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+	font-weight:normal;
+	text-align:left;
+	color: #384E73;
+}
+.office2010blueKGR th.kgrSorted
+{
+
+}
+
+
+.office2010blueKGR .kgrFilterCell
+{
+	background: none repeat scroll 0 0 #DAE7F5;
+	border-style:none none solid solid;
+	border-width:1px;
+	border-color:#FFFFFF #FFFFFF #8BA0BC #8BA0BC;	
+}
+.office2010blueKGR .kgrSortHeaderText,
+.office2010blueDummyHeader .kgrSortHeaderText
+{
+	color: #384E73;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.office2010blueKGR .kgrIn,
+.office2010blueDummyHeader .kgrIn
+{
+	overflow:hidden;
+	margin:4px 7px 3px 7px;
+}
+.office2010blueKGR .kgrGroup .kgrIn
+{
+	margin:0px 3px 0px 3px;
+}
+
+.office2010blueKGR .kgrHeader .kgrIn,
+.office2010blueDummyHeader .kgrIn
+{
+	color: #384E73;
+	font-size:12px;
+	cursor:default;	
+}
+
+.office2010blueKGR .kgrEditIn
+{
+	padding-right:4px;
+}
+
+.office2010blueKGR .kgrFilterCell .kgrIn div
+{
+	padding-bottom:1px;	
+}
+
+
+/*Data*/
+.office2010blueKGR .kgrCell
+{
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+	border-color: #D0D7E5;
+}
+
+
+.office2010blueKGR .kgrRow .kgrCell .kgrIn
+{
+	margin:4px 8px 3px 8px;
+	cursor: default;
+}
+
+.office2010blueKGR .kgrAltRow
+{
+	background-color: #ECF2F9;
+}
+.office2010blueKGR .kgrAltRow .kgrCell
+{
+
+}
+
+.office2010blueKGR .kgrRow .kgrSorted
+{
+	background-color: #F1F9FD;
+}
+.office2010blueKGR .kgrAltRow .kgrSorted
+{
+	background-color: #E6EFF8;
+}
+
+
+.office2010blueKGR .kgrRowEdit,
+.office2010blueKGR tr.kgrValidator
+{
+	background:none repeat scroll 0 0 #EBEBEB;
+}
+
+
+.office2010blueKGR .kgrRowOver
+{
+	background:url(sprite.png) repeat-x scroll 0 -3201px #FCEBB9;
+}
+.office2010blueKGR .kgrRowOver .kgrCell
+{
+	border-style:none none solid none;
+	border-bottom-color:#D0D7E5;
+	padding: 0px 0px 0px 1px;
+}
+
+
+.office2010blueKGR .kgrRowSelected
+{
+	background:url(sprite.png)repeat-x scroll 0 -3900px #F8D05C;
+}
+.office2010blueKGR .kgrRowSelected .kgrCell
+{
+    background-image: url(sprite.png);
+    background-position: 0 100%;
+    background-repeat: repeat-x;	
+	border-style:none none none none;
+	border-bottom-color:#D0D7E5;
+	padding: 0px 0px 1px 1px;	
+}
+.office2010blueKGR .kgrGroupCol,
+.office2010blueKGR .kgrRowSelected .kgrGroupCol,
+.office2010blueKGR .kgrRowOver .kgrGroupCol
+{
+ 	background: none repeat scroll 0 0 #DAE7F5;
+    border-color: #DAE7F5 !important;
+}
+
+.office2010blueKGR .kgrRowSelected .kgrSorted,
+.office2010blueKGR .kgrRowOver .kgrSorted
+{
+	background-color: transparent;
+}
+
+
+
+
+.office2010blueKGR .kgrRowEdit input[type=text],
+.office2010blueKGR .kgrRowEdit select,
+.office2010blueKGR .kgrRowEdit textarea
+{
+	color:green;
+}
+
+
+.office2010blueKGR tr.kgrValidator .kgrIn
+{
+	color:red;
+}
+
+
+/*Grouping*/
+.office2010blueKGR .kgrGroup
+{
+   background: none repeat scroll 0 0 #DAE7F5;
+}
+.office2010blueKGR .kgrGroup .kgrCell
+{
+    background: none repeat scroll 0 0 #DAE7F5;
+    border-color: #DAE7F5;
+}
+.office2010blueKGR .kgrGroup .kgrHeaderText
+{
+	color: #384E73;
+	font-family:arial,sans-serif;
+	font-size:12px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	line-height:18px;
+	cursor:pointer;
+}
+
+
+
+.office2010blueKGR .kgrGroupPanel
+{
+	background: none repeat scroll 0 0 #DAE7F5;
+    border-color: #8BA0BC;
+    border-style: solid;
+    border-width: 0 0 1px;
+	color: #384E73;
+	padding:3px 3px 2px 3px;
+	min-height:17px;
+	cursor:default;
+}
+.office2010blueKGR .kgrGroupItem,
+.office2010blueDummyGroupItem
+{
+	background: url(sprite.png) repeat-x scroll 0 -1550px #E8F1FC;
+    border: 1px solid #7793B9;
+	cursor:move;
+}
+.office2010blueDummyGroupItem
+{
+	cursor:default;
+}
+
+.office2010blueKGR .kgrGroupItem .kgrIn,
+.office2010blueDummyGroupItem .kgrIn
+{
+	white-space:nowrap;
+	font-family:arial,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	margin:1px 1px 2px 4px;	
+	color: #384E73;
+	line-height:17px;
+}
+.office2010blueDummyGroupItem
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;	
+}
+
+
+.office2010blueKGR .kgrTopIndicator,
+.office2010blueKGR .kgrBottomIndicator
+{
+	width:9px;
+	height:12px;
+	background:url(sprite.png) 0 1px no-repeat;
+}
+.office2010blueKGR .kgrBottomIndicator
+{
+	background-position:0px -49px;
+}
+
+.office2010blueDummyHeader
+{
+	background:url(sprite.png) repeat-x scroll 0 -2300px #B94D0A;
+    border-color: #8BA0BC;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-align: left;	
+	
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+		
+}
+.office2010blueDummyHeader .kgrIn
+{
+	color: #384E73;
+	font-size:12px;
+	margin:3px 4px;
+	overflow:hidden;
+	font-family:arial,sans-serif;
+}
+.office2010blueDummyHeader .kgrSortHeaderText 
+{
+	color:#27413E;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+/*Footer*/
+.office2010blueKGR .kgrFooter
+{
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+	border-color: #D0D7E5;
+}
+
+
+/*Status*/
+.office2010blueKGR .kgrStatus,
+.office2010blueKGR .kgrPager
+{
+	background: url(sprite.png) repeat-x scroll 0 -7000px #B4C5D9;
+    color: #384E73;
+	border-color:#384E73;	
+	line-height:20px;
+	padding: 5px 0 4px;
+    border-left: 1px solid #F5FAFF;
+    border-top: 1px solid #8BA0BC;
+}
+.office2010blueKGR .kgrStatus
+{
+	padding-left:10px;
+}
+.office2010blueKGR .kgrTop .kgrPager
+{
+	border-bottom:1px solid #567DB0;
+	border-top:1px solid #FFFFFF;
+}
+
+
+/*Pager*/
+
+.office2010blueKGR .kgrPager .kgrPageSize,
+.office2010blueKGR .kgrPager .kgrNav
+{
+	float:left;
+	padding: 0 10px;
+	line-height: 22px;
+}
+.office2010blueKGR .kgrPager .kgrInfo
+{
+	float:right;
+	color: #384E73;
+	line-height: 22px;
+    padding: 0 10px;
+    white-space: nowrap;
+	cursor: default;
+}
+
+.office2010blueKGR .kgrPager .kgrPrev,
+.office2010blueKGR .kgrPager .kgrNext,
+.office2010blueKGR .kgrPager .kgrFirst,
+.office2010blueKGR .kgrPager .kgrLast
+{
+	line-height:22px;
+	float:left;
+	margin:0px 1px 0px 1px;
+}
+
+.office2010blueKGR .kgrPager .kgrPrev input,
+.office2010blueKGR .kgrPager .kgrNext input,
+.office2010blueKGR .kgrPager .kgrFirst input,
+.office2010blueKGR .kgrPager .kgrLast input
+{
+	background :transparent url(sprite.png) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:22px;
+	padding:0;
+	vertical-align:top;
+	width:22px;
+}
+
+
+.office2010blueKGR .kgrPager .kgrFirst input
+{
+	background-position: 0 -550px;
+}
+.office2010blueKGR .kgrPager .kgrFirst:hover input
+{
+	background-position: 0 -600px;
+}
+
+.office2010blueKGR .kgrPager .kgrLast input
+{
+	background-position: 0 -1000px;
+}
+.office2010blueKGR .kgrPager .kgrLast:hover input
+{
+	background-position: 0 -1050px;
+}
+
+.office2010blueKGR .kgrPager .kgrPrev input
+{
+	background-position: 0 -700px;
+}
+.office2010blueKGR .kgrPager .kgrPrev:hover input
+{
+	background-position: 0 -750px;
+}
+
+.office2010blueKGR .kgrPager .kgrNext input
+{
+	background-position: 0 -850px;
+}
+.office2010blueKGR .kgrPager .kgrNext:hover input
+{
+	background-position: 0 -900px;
+}
+
+
+
+.office2010blueKGR .kgrPager .kgrPrev a,
+.office2010blueKGR .kgrPager .kgrNext a,
+.office2010blueKGR .kgrPager .kgrFirst a,
+.office2010blueKGR .kgrPager .kgrLast a
+{
+	display:none;	
+}
+
+.office2010blueKGR .kgrPager a.kgrNum
+{
+	color: #384E73;
+    float: left;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 5px 0 0;
+    text-decoration: none;
+}
+.office2010blueKGR .kgrPager a.kgrNum:hover
+{
+	background-image:url(sprite.png);
+	background-position: 100% -1250px;
+	color:#863D02;
+}
+
+
+.office2010blueKGR .kgrPager a.kgrNum span
+{
+    float: left;
+    padding: 0 0 0 5px;
+	line-height: 22px;
+}
+
+.office2010blueKGR .kgrPager a.kgrNum:hover span
+{
+	background-image:url(sprite.png);
+	background-position: 0 -1150px;
+}
+
+
+
+.office2010blueKGR .kgrPager a.kgrNumSelected,
+.office2010blueKGR .kgrPager a.kgrNumSelected:hover
+{
+	background-image:url(sprite.png);
+	background-position: 100% -1450px;
+    color: #5D1F00;
+}
+.office2010blueKGR .kgrPager a.kgrNumSelected:hover
+{
+	cursor:default;
+}
+
+.office2010blueKGR .kgrPager a.kgrNumSelected span,
+.office2010blueKGR .kgrPager a.kgrNumSelected:hover span
+{
+	background-image:url(sprite.png);
+	background-position: 0 -1350px;
+}
+
+
+
+.office2010blueKGR .kgrPager .kgrPageSize select
+{
+	font-family:arial,sans-serif;
+	font-size:12px;
+}
+
+.office2010blueKGR .kgrPager .kgrPageSize
+{
+	padding:0 10px;
+}
+.office2010blueKGR .kgrPager .kgrPageSize select
+{
+	margin-left:5px;
+}
+
+
+
+/*FunctionPanel*/
+.office2010blueKGR .kgrFunctionPanel
+{
+	background:url(sprite.png) repeat-x scroll 0 -2100px #BDCBDE;
+	line-height:22px;
+	color:#333333;
+	padding:1px 7px 3px 7px;
+}
+.office2010blueKGR .kgrTop .kgrFunctionPanel
+{
+	border-top:none;
+}
+
+/*For Chrome and Safari*/
+body:nth-of-type(1) .office2010blueKGR .kgrFunctionPanel
+{
+	border-top:none;
+}
+body:nth-of-type(1) .office2010blueKGR .kgrTop .kgrFunctionPanel
+{
+	border-top:none;	
+}
+
+
+
+
+.office2010blueKGR .kgrRefresh input,
+.office2010blueKGR .kgrInsert input
+{
+	height:18px;
+	width:18px;
+	background:transparent url(sprite.png) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+	margin-right:3px;
+}
+
+.office2010blueKGR .kgrRefresh
+{
+	float:right;
+	clear:both;	
+}
+
+
+.office2010blueKGR .kgrRefresh input
+{
+	background-position:0px -1600px;
+}
+.office2010blueKGR .kgrInsert input
+{
+	background-position:0 -1650px;	
+}
+
+.office2010blueKGR .kgrRefresh a,
+.office2010blueKGR .kgrInsert a
+{
+	color:#333333;
+	text-decoration:none;
+}
+/*Auto button in Edit/Delete column */
+
+.office2010blueKGR .kgrLinkEdit,
+.office2010blueKGR .kgrLinkDelete,
+.office2010blueKGR .kgrLinkConfirm,
+.office2010blueKGR .kgrLinkCancel
+{
+	font-size:1px;
+	text-indent:-4000px;
+	display:inline-block;
+	height:18px;
+	width:18px;
+	background:transparent url(sprite.png) no-repeat;
+	margin-left:1px;
+	margin-right:1px;
+}
+
+.office2010blueKGR .kgrLinkEdit
+{
+	background-position:0px -1700px;
+}
+
+.office2010blueKGR .kgrLinkDelete
+{
+	background-position:0px -1750px;
+}
+
+
+.office2010blueKGR .kgrLinkConfirm
+{
+	background-position:0px -1800px;
+	height:22px;
+	width:22px;	
+}
+
+.office2010blueKGR .kgrLinkCancel
+{
+	background-position:0px -1850px;
+	height:22px;
+	width:22px;
+}
+
+
+/*Insert/Edit Form */
+.office2010blueKGR .kgrEditForm,
+.office2010blueKGR .kgrInsertForm
+{
+	padding:4px;
+	border-bottom:1px solid #8BA0BC;
+	background-color:#FFFFFF;
+}
+
+.office2010blueKGR label.kgrCaption
+{
+	padding-right:5px;
+}
+
+.office2010blueKGR ul.kgrValidator
+{
+	padding:3px 5px 5px 4px;	
+	color:red;
+	list-style-type:decimal;
+}
+.office2010blueKGR ul.kgrValidator li
+{
+	margin-left:16px;	
+}
+
+.office2010blueKGR .kgrFormHeader
+{
+	color:#0066CC;
+	font-size:14px;
+	padding:4px;
+}
+.office2010blueKGR .kgrFormFooter
+{
+	text-align:right;
+}
+
+.office2010blueKGR .kgrCancel,
+.office2010blueKGR .kgrConfirm
+{
+	margin-left:1px;
+	margin-right:1px;
+}
+
+
+.office2010blueKGR .kgrCancel input,
+.office2010blueKGR .kgrConfirm input
+{
+	height:18px;
+	width:18px;
+	background:transparent url(sprite.png) no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	padding:0;
+	vertical-align:middle;
+}
+
+.office2010blueKGR .kgrCancel input
+{
+	background-position:0px -1850px;
+}
+.office2010blueKGR .kgrConfirm input
+{
+	background-position:0px -1800px;
+}
+
+.office2010blueKGR .kgrConfirm a,
+.office2010blueKGR .kgrCancel a
+{
+	display:none;
+	color:#27413E;
+	text-decoration:underline;	
+}
+
+/*Columns*/
+
+.office2010blueKGR .kgrSortNone,
+.office2010blueKGR .kgrSortAsc,
+.office2010blueKGR .kgrSortDesc,
+.office2010blueDummyHeader .kgrSortNone,
+.office2010blueDummyHeader .kgrSortAsc,
+.office2010blueDummyHeader .kgrSortDesc,
+.office2010blueDummyGroupItem .kgrSortNone,
+.office2010blueDummyGroupItem .kgrSortAsc,
+.office2010blueDummyGroupItem .kgrSortDesc
+{
+	background-color:transparent;
+	background-image:url(sprite.png);
+	background-repeat:no-repeat;
+	border:0 none;
+	cursor:pointer;
+	font-size:1px;
+	height:10px;
+	padding:0;
+	vertical-align:middle;
+	width:16px;	
+}
+.office2010blueKGR .kgrSortNone,
+.office2010blueDummyHeader .kgrSortNone,
+.office2010blueDummyGroupItem .kgrSortNone
+{
+	background-image:url(sort_none.gif);
+}
+
+.office2010blueKGR .kgrSortNone,
+.office2010blueDummyHeader .kgrSortNone,
+.office2010blueDummyGroupItem .kgrSortNone
+{
+	height:11px;
+	background-position: 3px 0px;
+}
+
+.office2010blueKGR .kgrSortAsc,
+.office2010blueDummyHeader .kgrSortAsc
+{
+	background-position: 3px -148px;
+}
+.office2010blueKGR .kgrGroupItem .kgrSortAsc,
+.office2010blueDummyGroupItem .kgrSortAsc
+{
+	background-position: 3px -98px;
+}
+
+.office2010blueKGR .kgrSortDesc,
+.office2010blueDummyHeader .kgrSortDesc
+{
+	background-position: 3px -197px;
+}
+.office2010blueDummyGroupItem .kgrSortDesc,
+.office2010blueKGR .kgrGroupItem .kgrSortDesc
+{
+	background-position: 4px -147px;
+}
+/*IE7 only*/
+
+*+html .office2010blueKGR .kgrSortNone,
+*+html .office2010blueDummyHeader .kgrSortNone,
+*+html .office2010blueDummyGroupItem .kgrSortNone
+{
+	height:11px;
+}
+
+
+*+html .office2010blueKGR .kgrSortAsc,
+*+html .office2010blueDummyHeader .kgrSortAsc
+{
+	background-position: 3px -96px;
+}
+*+html .office2010blueDummyGroupItem .kgrSortAsc,
+*+html .office2010blueKGR .kgrGroupItem .kgrSortAsc
+{
+	background-position: 3px -195px;
+}
+
+
+*+html .office2010blueKGR .kgrSortDesc,
+*+html .office2010blueDummyHeader .kgrSortDesc
+{
+	background-position: 3px -195px;
+}
+*+html .office2010blueDummyGroupItem .kgrSortDesc,
+*+html .office2010blueKGR .kgrGroupItem .kgrSortDesc
+{
+	background-position: 4px -145px;
+}
+/*IE7 only*/
+
+/*IE6 only*/
+
+* html .office2010blueKGR .kgrSortNone,
+* html .office2010blueDummyHeader .kgrSortNone,
+* html .office2010blueDummyGroupItem .kgrSortNone
+{
+	height:11px;
+	background-position: 4px 0px;
+}
+
+* html .office2010blueKGR .kgrSortAsc,
+* html .office2010blueDummyHeader .kgrSortAsc
+{
+	background-position: 3px -96px;
+}
+* html .office2010blueDummyGroupItem .kgrSortAsc,
+* html .office2010blueKGR .kgrGroupItem .kgrSortAsc
+{
+	background-position: 3px -195px;
+}
+
+
+* html .office2010blueKGR .kgrSortDesc,
+* html .office2010blueDummyHeader .kgrSortDesc
+{
+	background-position: 3px -195px;
+}
+* html .office2010blueDummyGroupItem .kgrSortDesc,
+* html .office2010blueKGR .kgrGroupItem .kgrSortDesc
+{
+	background-position: 4px -145px;
+}
+/*IE6 only*/
+
+
+
+.office2010blueKGR col.kgrColumnExpand,
+.office2010blueKGR col.kgrColumnGroup
+{
+	width:20px;
+}
+.office2010blueKGR col.kgrColumnSelect
+{
+	width:30px;
+}
+
+.office2010blueKGR .kgrSelectAllRows
+{
+	margin:3px 0px 0px 4px;
+}
+
+.office2010blueKGR .kgrExpand,
+.office2010blueKGR .kgrCollapse
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(sprite.png) no-repeat 3px -93px;
+	cursor:pointer;
+}
+
+.office2010blueKGR .kgrCollapse
+{
+	background-position: 5px -495px;
+}
+
+
+.office2010blueKGR .kgrPartHeader
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+.office2010blueKGR .kgrPartData
+{
+	overflow:scroll;
+}
+
+.office2010blueKGR .kgrFrozenScroller
+{
+	height:17px;
+	margin-right:17px;
+	overflow-y:hidden;
+	overflow-x:scroll;
+}
+
+.office2010blueKGR .kgrFrozenScroller div
+{
+	height:17px;
+}
+
+
+
+.office2010blueKGR .kgrScrollingIndicator
+{
+	border-radius:4px;
+	background:#AAAAAA;
+	border-color:#555555;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+	color:#555555;
+	display:inline-block;
+	position:absolute;
+	padding:3px;
+	font-weight:bold;
+}
+
+
+.office2010blueKGR .kgrPartFooter
+{
+	overflow:hidden;
+	margin-right:17px;
+}
+
+
+.office2010blueKGR .kgrHidden
+{
+	display:none;
+}
+
+
+.office2010blueKGR .kgrStatus .kgrLoadingText
+{
+	display:none;
+}
+.office2010blueKGR .kgrLoading .kgrLoadingText
+{
+	display:inline;
+}
+.office2010blueKGR .kgrLoading .kgrDoneText
+{
+	display:none;
+}
+
+
+.office2010blueKGR .kgrHideGrid
+{
+	border:1px solid #3B5A82;
+}
+
+.office2010blueKGR .kgrFilterCell .kgrIn .kgrDateTimePickerOut,
+.office2010blueKGR .kgrFilterCell .kgrIn .kgrDateTimePickerIn
+{
+	padding:0px;	
+	margin:0px;
+	border:0px;
+	margin-bottom:-2px;
+}
+
+
+.office2010blueKGR .kgrDateTimePickerOpening
+{
+	height:21px;
+}
+
+.office2010blueKGR .kgrCell .kgrDateTimePickerOpening
+{
+	height:19px;
+}
+
+.office2010blueKGR .kgrIn .kgrDateTimePickerOpening .kgrDateTimePickerIn
+{
+	position:absolute;
+}

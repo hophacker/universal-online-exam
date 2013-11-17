@@ -1,0 +1,132 @@
+10
+
+dir
+248
+http://58.211.23.247:1314/svn/dxks/yangda/lib/Cake/Console/Templates/skel
+http://58.211.23.247:1314/svn/dxks
+
+
+
+2013-03-01T02:07:29.275226Z
+133
+j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ed2a3f95-546a-6449-b542-f2536213d64d
+
+Vendor
+dir
+
+index.php
+file
+
+
+
+
+2013-03-10T02:45:10.526507Z
+1a7ce1bc184768c2551c5c3ae652ae5a
+2013-03-01T02:07:29.275226Z
+133
+j
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+702
+
+Plugin
+dir
+
+Locale
+dir
+
+Test
+dir
+
+Model
+dir
+
+tmp
+dir
+
+webroot
+dir
+
+Console
+dir
+
+Controller
+dir
+
+Config
+dir
+
+Lib
+dir
+
+View
+dir
+
+.htaccess
+file
+
+
+
+
+2013-03-10T02:45:10.526507Z
+a2a9efe935decfd5f498bf0d83075574
+2013-03-01T02:07:29.275226Z
+133
+j
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+140
+

@@ -1,0 +1,122 @@
+10
+
+dir
+277
+http://58.211.23.247:1314/svn/dxks/yangda/app/webroot/js/jquery-ui/demos
+http://58.211.23.247:1314/svn/dxks
+
+
+
+2013-03-07T07:14:21.323644Z
+166
+j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ed2a3f95-546a-6449-b542-f2536213d64d
+
+progressbar
+dir
+
+tabs
+dir
+
+tooltip
+dir
+
+effect
+dir
+
+demos.css
+file
+
+
+
+
+2013-03-11T11:40:46.839169Z
+c7fc917de57fba6b610ad6191fc1a28a
+2013-03-07T07:14:21.323644Z
+166
+j
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+287
+
+dialog
+dir
+
+accordion
+dir
+
+autocomplete
+dir
+
+selectable
+dir
+
+menu
+dir
+
+position
+dir
+
+images
+dir
+
+droppable
+dir
+
+draggable
+dir
+
+datepicker
+dir
+
+button
+dir
+
+sortable
+dir
+
+spinner
+dir
+
+resizable
+dir
+
+slider
+dir
+
+widget
+dir
+

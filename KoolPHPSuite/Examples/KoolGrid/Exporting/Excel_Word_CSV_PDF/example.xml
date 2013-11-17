@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Excel_Word_CSV_PDF" usedb="true">
+	<title>MS Excel/Word/CSV/PDF</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid is able to export the data variety of file formats such as CSV, Excel, Word and PDF.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolGrid is able to export the data variety of file formats such as CSV, Excel, Word and PDF. You may have a look at our example for more details.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->Width = "655px";
+
+	//Enable Ajax Mode
+	$grid->AjaxEnabled = true;
+	//Add loading image
+	$grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/5.gif";
+
+	$grid->RowAlternative = true;
+	$grid->AutoGenerateColumns = true;		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->Process();
+	
+	if(isset($_POST["IgnorePaging"]))
+	{
+		$grid->ExportSettings->IgnorePaging = true;
+	}
+	
+	if(isset($_POST["ExportToExcel"]))
+	{
+		ob_end_clean();
+		$grid->GetInstanceMasterTable()->ExportToExcel();
+	}	
+	if(isset($_POST["ExportToWord"]))
+	{
+		ob_end_clean();
+		$grid->GetInstanceMasterTable()->ExportToWord();
+	}	
+	if(isset($_POST["ExportToCSV"]))
+	{
+		ob_end_clean();
+		$grid->GetInstanceMasterTable()->ExportToCSV();
+	}
+	if(isset($_POST["ExportToPDF"]))
+	{
+		ob_end_clean();
+		$grid->GetInstanceMasterTable()->ExportToPDF();
+	}	
+		
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<div style="margin-bottom:10px;padding:10px;width:635px;background:#DFF3FF;border:solid 1px #C6E1F2;">
+		<input type="checkbox" id="IgnorePaging" name="IgnorePaging"/> <label for="IgnorePaging">Ignore Paging</label>
+		<br/><br/>
+		<input type="submit" name="ExportToCSV" value = "Export to CSV" />
+		<input type="submit" name="ExportToExcel" value = "Export to Excel" />
+		<input type="submit" name="ExportToWord" value = "Export to Word" />
+		<input type="submit" name="ExportToPDF" value = "Export to PDF" />
+	</div>
+	<?php echo $grid->Render();?>
+	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#ExportToExcel">PHP::GridTableView::ExportToExcel()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#ExportToWord">PHP::GridTableView::ExportToWord()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#ExportToCSV">PHP::GridTableView::ExportToCSV()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#ExportToPDF">PHP::GridTableView::ExportToPDF()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/ExportSettings/index.php#IgnorePaging">PHP::ExportSettings::IgnorePaging</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/ExportSettings/index.php#FileName">PHP::ExportSettings::FileName</doc>
+	</docs>
+</example>

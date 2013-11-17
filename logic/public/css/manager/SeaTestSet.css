@@ -1,0 +1,41 @@
+
+/* CSS Document */
+p,span{
+    color:#03C;
+}
+p{
+font-size:20px;
+}
+#header{
+		font-size:24px;
+	    color:#1C3CA8;
+	  }
+ table input{
+	 background-color:#E0E8E9;
+	 margin:0;
+	 border:hidden;
+	 border-color:#09F;
+	}
+#per #adva{
+	position: relative;
+	left: 60px;}
+  #per p,#dat p{
+	   
+	  font-weight:bold;
+	  font-size:19px;
+	  color:#03C;}
+#conf{
+	size:300px;
+	}
+form input{
+		margin:0;
+		height:18px;}
+td{
+	color:#009;
+	font-size:18;}
+#conf{
+	position:relative;
+	top:20px;
+	left:370px;
+	
+	}

@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>unregisterCacheResource()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.template.exists.html" title="templateExists()">
+<link rel="next" href="api.unregister.filter.html" title="unregisterFilter()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">unregisterCacheResource()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.template.exists.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.unregister.filter.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="unregisterCacheResource()">
+<a name="api.unregister.cacheresource"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>unregisterCacheResource() — dynamically unregister a CacheResource plugin</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id440635"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">void </span><span class="methodname">unregisterCacheResource</span>(<span class="methodparam"><span class="type">string </span><span class="parameter">name</span></span>);</code><p>
+   Pass in the <em class="parameter"><code>name</code></em> of the CacheResource.
+  </p>
+<div class="example">
+<a name="id441102"></a><p class="title"><b>Example 14.49. unregisterCacheResource()</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+$smarty-&gt;unregisterCacheResource('mysql');
+
+?&gt;
+
+   </pre></div>
+</div>
+<br class="example-break"><p>
+  See also
+  <a class="link" href="api.register.cacheresource.html" title="registerCacheResource()">
+  <code class="varname">registerCacheResource()</code></a>
+  and the
+  <a class="link" href="caching.custom.html" title="Custom Cache Implementation">Custom CacheResource Implementation</a> section.
+</p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.template.exists.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.unregister.filter.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">templateExists() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> unregisterFilter()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

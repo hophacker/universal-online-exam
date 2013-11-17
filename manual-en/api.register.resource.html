@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>registerResource()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.register.object.html" title="registerObject()">
+<link rel="next" href="api.set.cache.dir.html" title="setCacheDir()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">registerResource()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.register.object.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.set.cache.dir.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="registerResource()">
+<a name="api.register.resource"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>registerResource() — dynamically register resources</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id439105"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">void </span><span class="methodname">registerResource</span>(<span class="methodparam"><span class="type">string </span><span class="parameter">name</span></span>,<br>                      <span class="methodparam"><span class="type">Smarty_resource </span><span class="parameter">resource_handler</span></span>);</code><p>
+   Use this to dynamically register a
+   <a class="link" href="resources.html" title="Chapter 16. Resources">Resource plugin</a>
+   with Smarty.
+   Pass in the <em class="parameter"><code>name</code></em> of the Resource  and the object extending Smarty_Resource. See
+   <a class="link" href="resources.html" title="Chapter 16. Resources">template resources</a>
+   for more information on how to setup a function for fetching templates.
+     </p>
+<div class="note" title="Technical Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Technical Note</h3>
+<p>
+    A resource name must be at least two characters in length. One
+    character resource names will be ignored and used as part of the file
+    path, such as <code class="literal">$smarty-&gt;display('c:/path/to/index.tpl');</code>
+   </p>
+</div>
+<p>
+   </p>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+	Prior to Smarty 3.1 <code class="varname">registerResource()</code> accepted an array of callback functions. 
+	While this is still possible for backward compatibility reasons, it is strongly discouraged as callback 
+	functions have been deprecated as of Smarty 3.1.
+   </p>
+</div>
+<div class="example">
+<a name="id439500"></a><p class="title"><b>Example 14.42. registerResource()</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+$smarty-&gt;registerResource('mysql', new Smarty_Resource_Mysql());
+?&gt;
+
+   </pre></div>
+</div>
+<br class="example-break"><p>
+  See also
+  <a class="link" href="api.unregister.resource.html" title="unregisterResource()"><code class="varname">unregisterResource()</code></a>
+  and the
+  <a class="link" href="resources.html" title="Chapter 16. Resources">template resources</a> section.
+</p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.register.object.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.set.cache.dir.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">registerObject() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> setCacheDir()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+We can add a summary property to each field if grouping is enabled
+
+There are a two additional properties which define this - the summary type and summary template
+For the summary Type currently we support sum, avg, count, min, max functions.
+It is possible to add your own calculation.
+Note that all calculations are performed at client side.

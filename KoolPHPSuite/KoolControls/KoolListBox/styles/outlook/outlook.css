@@ -1,0 +1,419 @@
+.outlookKLB
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;	
+}
+
+
+.outlookKLB_Scrollable .klbGroup
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #ABC1DE;
+	overflow: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.outlookKLB .klbList
+{
+    height: 100%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.outlookKLB .klbItem
+{
+	line-height: 18px;
+    color: #000000;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    cursor: default;
+    padding: 2px 5px;
+    white-space: nowrap;	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 		
+}
+
+
+.outlookKLB .klbDisabledItem 
+{
+	color: #AAAAAA;
+}
+
+.outlookKLB .klbGroup .klbHovered
+{
+    background: none repeat scroll 0 0 #FFEEC2;
+    color: #000000;
+}
+
+.outlookKLB .klbGroup .klbSelected {
+    background: none repeat scroll 0 0 #306AC5;
+    color: #333333;
+}
+
+.outlookKLB .klbGroup .klbActive {
+    border: 1px dotted #555555;
+    padding: 1px 4px;
+}
+
+.outlookKLB .klbItem .klbText,
+.outlookKLB .klbItem .klbCheck,
+.outlookKLB .klbItem .klbImage
+{
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.outlookKLB .klbItem .klbImage
+{
+	padding-right:2px;
+}
+
+.outlookKLB .klbButtonAreaRight
+{
+	float:right;
+	width:30px;
+	height:100%;
+}
+
+.outlookKLB .klbButtonAreaLeft
+{
+	float:left;
+	width:30px;
+	height:100%;
+}
+
+.outlookKLB .klbButtonAreaTop,
+.outlookKLB .klbButtonAreaBottom
+{
+	float:left;
+	width:100%;
+	height:30px;
+}
+.outlookKLB .klbAlignLeft
+{
+	text-align:left;
+}
+.outlookKLB .klbAlignRight
+{
+	text-align:right;
+}
+.outlookKLB .klbAlignCenter
+{
+	text-align:center;
+}
+
+.outlookKLB .klbAlignTop td
+{
+	vertical-align:top;
+}
+.outlookKLB .klbAlignBottom td
+{
+	vertical-align:bottom;
+}
+.outlookKLB .klbAlignMiddle td
+{
+	vertical-align:middle;
+}
+
+
+
+
+.outlookKLB .klbButton
+{
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    line-height: 15px;
+    margin: 0 0 5px 6px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+.outlookKLB .klbButtonAreaLeft .klbButton
+{
+	margin: 0 6px 5px 0;
+}
+.outlookKLB .klbButtonAreaTop .klbButton
+{
+	display:inline-block;	
+	margin: 0 8px 6px 0;
+}
+.outlookKLB .klbButtonAreaBottom .klbButton
+{
+	display:inline-block;
+	margin: 6px 8px 0 0;
+}
+
+.outlookKLB .klbAlignBottom .klbButton
+{
+	margin-bottom:2px;
+	margin-top:5px;
+}
+.outlookKLB .klbAlignRight .klbButton
+{
+	margin-left:4px;
+	margin-right:4px;
+}
+
+
+
+.outlookKLB .klbButton .klbButtonBL,
+.outlookKLB .klbButton .klbButtonBR,
+.outlookKLB .klbButton .klbButtonTR,
+.outlookKLB .klbButton .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	display: inline-block;
+	position: relative;
+	width: auto;	
+}
+
+.outlookKLB .klbButton:hover .klbButtonBL,
+.outlookKLB .klbButton:hover .klbButtonBR,
+.outlookKLB .klbButton:hover .klbButtonTR,
+.outlookKLB .klbButton:hover .klbButtonTL
+{
+	background-image: url(ButtonHover.png);
+}
+
+.outlookKLB .klbDisabled:hover .klbButtonBL,
+.outlookKLB .klbDisabled:hover .klbButtonBR,
+.outlookKLB .klbDisabled:hover .klbButtonTR,
+.outlookKLB .klbDisabled:hover .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	cursor:default;
+}
+
+.outlookKLB .klbButton .klbButtonBL
+{
+    background-position: 0 100%;
+    right: 0;
+    top: 4px;	
+}
+
+.outlookKLB .klbButton .klbButtonBR
+{
+    background-position: 100% 100%;
+    display: inline-block;
+    right: -4px;
+}
+.outlookKLB .klbButton .klbButtonTR
+{
+    background-position: 100% 0;
+    bottom: 4px;
+    overflow: visible;
+    right: 0;	
+}
+.outlookKLB .klbButton .klbButtonTL
+{
+    background-position: 0 0;
+    left: -4px;
+}
+
+
+.outlookKLB .klbButton .klbButtonText
+{
+    background: url(Sprite.png) no-repeat;
+    display: inline-block;
+	position: relative;
+    width: 0px;
+    padding-left: 18px;
+	height:13px;
+	padding-top: 3px;
+    text-align: left;
+    z-index: 1;
+	font-size: 0;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;	   
+}
+
+/*Default and right*/
+.outlookKLB .klbDelete .klbButtonText
+{
+   background-position: 0 -50px;
+}
+.outlookKLB .klbMoveUp .klbButtonText
+{
+  background-position: 0 0;
+}
+.outlookKLB .klbMoveDown .klbButtonText
+{
+  background-position: 0 -25px;
+}
+
+.outlookKLB .klbTransferOut .klbButtonText
+{
+  background-position: 0 -75px;
+}
+.outlookKLB .klbTransferIn .klbButtonText
+{
+  background-position: 0px -100px;
+}
+
+.outlookKLB .klbTransferAllOut .klbButtonText
+{
+  background-position: 0 -125px;
+}
+.outlookKLB .klbTransferAllIn .klbButtonText
+{
+  background-position: 0px -150px;
+}
+
+
+
+.outlookKLB .klbDeleteDisabled .klbButtonText
+{
+   background-position: -200px -50px;
+}
+.outlookKLB .klbMoveUpDisabled .klbButtonText
+{
+  background-position: -200px 0;
+}
+.outlookKLB .klbMoveDownDisabled .klbButtonText
+{
+  background-position: -200px -25px;
+}
+
+.outlookKLB .klbTransferOutDisabled .klbButtonText
+{
+  background-position: -200px -75px;
+}
+.outlookKLB .klbTransferInDisabled .klbButtonText
+{
+  background-position: -200px -100px;
+}
+
+.outlookKLB .klbTransferAllOutDisabled .klbButtonText
+{
+  background-position: -200px -125px;
+}
+.outlookKLB .klbTransferAllInDisabled .klbButtonText
+{
+  background-position: -200px -150px;
+}
+
+/*Left*/
+.outlookKLB .klbButtonAreaLeft .klbTransferOut .klbButtonText
+{
+	background-position: 0px -100px;
+  
+}
+.outlookKLB .klbButtonAreaLeft .klbTransferIn .klbButtonText
+{
+	background-position: 0 -75px;
+}
+.outlookKLB .klbButtonAreaLeft .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -150px;
+}
+.outlookKLB .klbButtonAreaLeft .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -125px;
+}
+
+
+.outlookKLB .klbButtonAreaLeft .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -100px;
+}
+.outlookKLB .klbButtonAreaLeft .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -75px;
+}
+
+.outlookKLB .klbButtonAreaLeft .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -150px;
+}
+.outlookKLB .klbButtonAreaLeft .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -125px;
+}
+
+/*Top*/
+.outlookKLB .klbButtonAreaTop .klbTransferOut .klbButtonText
+{
+	background-position: 0px -200px;
+  
+}
+.outlookKLB .klbButtonAreaTop .klbTransferIn .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.outlookKLB .klbButtonAreaTop .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -250px;
+}
+.outlookKLB .klbButtonAreaTop .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -225px;
+}
+
+
+.outlookKLB .klbButtonAreaTop .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+.outlookKLB .klbButtonAreaTop .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+
+.outlookKLB .klbButtonAreaTop .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}
+.outlookKLB .klbButtonAreaTop .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+
+
+/*Bottom*/
+.outlookKLB .klbButtonAreaBottom .klbTransferOut .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.outlookKLB .klbButtonAreaBottom .klbTransferIn .klbButtonText
+{
+	background-position: 0px -200px;
+}
+.outlookKLB .klbButtonAreaBottom .klbTransferAllOut .klbButtonText
+{
+	background-position: 0 -225px;
+}
+.outlookKLB .klbButtonAreaBottom .klbTransferAllIn .klbButtonText
+{
+	background-position: 0px -250px;
+}
+
+
+.outlookKLB .klbButtonAreaBottom .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+.outlookKLB .klbButtonAreaBottom .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+
+.outlookKLB .klbButtonAreaBottom .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+.outlookKLB .klbButtonAreaBottom .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}

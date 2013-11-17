@@ -1,0 +1,19 @@
+<control>
+	<name>KoolMenu - Great PHP Menu</name>
+	<metadescription>KoolMenu is a great PHP Menu for your php website navigation. Strong customizability, beautiful skins and rich client-side operations. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php menu,php drop down menu,javascript menu, php skining menu, php style menu</metakeywords>	 
+	<description>KoolMenu is a great PHP Menu for your php website navigation. It has strong customizability, beautiful skins and rich client-side operations. </description>
+	<examples>
+		<example	name="First Look" 
+					link="Features/FirstLook/index.php" 
+					image="Features/FirstLook/preview.gif"/>
+
+		<example	name="Item Flow" 
+					link="Features/Item_Flow/index.php" 
+					image="Features/Item_Flow/preview.gif"/>
+
+		<example	name="ContextMenu" 
+					link="ContextMenu/Basic/index.php" 
+					image="ContextMenu/Basic/preview.gif"/>
+	</examples>			
+</control>

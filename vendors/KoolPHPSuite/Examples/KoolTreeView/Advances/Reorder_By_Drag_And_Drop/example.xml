@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Reorder_By_Drag_And_Drop" usedb="false">
+	<title>Reorder By Drag And Drop</title>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview, treeview drag and drop, php treeview mysql, kooltreeview</metakeywords>	 
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+
+	<description>
+		<![CDATA[ 
+The example shows how you can customize the drag and drop feature of KoolTreeView and make tree reorder the nodes.
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTreeView/kooltreeview.php";
+		
+	$treeview = new KoolTreeView("treeview");
+	$treeview->scriptFolder = $KoolControlsFolder."/KoolTreeView";
+	$treeview->imageFolder=$KoolControlsFolder."/KoolTreeView/icons";
+	$treeview->styleFolder = "default";
+	
+	$root = $treeview->getRootNode();
+	$root->text = "Please order the node";
+	$root->expand=true;
+	$root->image="ada.gif";
+	$treeview->selectEnable = false;
+	$treeview->width="200px";
+	$treeview->DragAndDropEnable=true;
+	$treeview->showLines = true;
+	
+	$treeview->Add("root","node1","Node 1",false,"square_blueS.gif");
+	$treeview->Add("root","node4","Node 4",false,"square_greenS.gif");
+	$treeview->Add("root","node9","Node 9",false,"square_redS.gif");
+	$treeview->Add("root","node8","Node 8",false,"square_redS.gif");
+	$treeview->Add("root","node7","Node 7",false,"square_greenS.gif");
+	$treeview->Add("root","node10","Node 10",false,"square_redS.gif");
+	$treeview->Add("root","node3","Node 3",false,"square_blueS.gif");
+	$treeview->Add("root","node2","Node 2",false,"square_blueS.gif");
+	$treeview->Add("root","node6","Node 6",false,"square_greenS.gif");
+	$treeview->Add("root","node5","Node 5",false,"square_greenS.gif");
+?>
+
+<form id="form1" method="post">
+	
+	<div style="padding:10px;">
+		<?php echo $treeview->Render();?>
+	</div>
+	<script type="text/javascript">
+		treeview.registerEvent("OnBeforeDrop",function(sender,arg){
+			var parentid = treeview.getNode(arg.NodeId).getParentId();
+			var childids = treeview.getNode(parentid).getChildIds();
+			var posdrag=0;posdrop = 0;
+			for(var i=0;i<childids.length;i++)
+			{
+				if (childids[i]==arg.NodeId)
+				{
+					posdrop = i;
+				}
+				if (childids[i]==arg.DragNodeId)
+				{
+					posdrag = i;
+				}	
+			}
+			if (posdrag<posdrop)
+			{
+				//Drag from above node to below node
+				treeview.getNode(arg.DragNodeId).moveToBelow(arg.NodeId);
+			}
+			else
+			{
+				//Drag from below node to node above
+				treeview.getNode(arg.DragNodeId).moveToAbove(arg.NodeId);
+			}
+
+			return false;//Cancel default attaching node behavior
+		});
+	</script>	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/PHP/KoolTreeView_Class/index.php#Add">PHP :: KoolTreeView :: Add()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/KoolTreeView_Class/index.php#getNode">Javascript :: KoolTreeView :: getNode()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/KoolTreeView_Class/index.php#registerEvent">Javascript :: KoolTreeView :: registerEvent()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/TreeNode_Class/index.php#moveToAbove">Javascript :: TreeNode :: moveToAbove()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTreeView/Javascript/TreeNode_Class/index.php#moveToBelow">Javascript :: TreeNode :: moveToBelow()</doc>
+		
+	</docs>
+</example>

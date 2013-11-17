@@ -1,0 +1,240 @@
+.appleKSM
+{
+	background-color:white;
+	padding:1px;
+}
+.appleKSM *
+{
+	margin:0px;
+	padding:0px;
+}
+
+.appleKSM .ksmLI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	line-height:0px;
+	font-size:11px;
+}
+
+.appleKSM .ksmIn,
+.appleKSM .ksmLeft,
+.appleKSM .ksmRight,
+.appleKSM .ksmBul
+{
+	display:block;
+}
+
+/*ksmA is class of a tag link covering parent and child of SlideMenu*/
+.appleKSM .ksmA
+{
+	text-decoration:none;
+	color:#F4F4F4;
+	font-family:verdana,sans-serif;
+	font-size:10px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+.appleKSM .ksmA:focus
+{
+	outline: none;
+}
+
+/*Childbox*/
+.appleKSM .ksmChildBox
+{
+	overflow:hidden;
+}
+.appleKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:3px; 
+}
+html>body .appleKSM .ksmChildBox .ksmCBB
+{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.appleKSM .ksmCollapse .ksmChildBox,
+.appleKSM .ksmEffect .ksmCollapse .ksmChildBox
+{
+	display:none;
+	overflow:hidden;
+}
+.appleKSM .ksmEffect .ksmChildBox
+{
+	display:block;
+}
+
+
+
+
+/*Parent*/
+.appleKSM .ksmParent
+{
+	line-height:23px;
+	cursor:pointer;
+	white-space:nowrap;	
+}
+.appleKSM .ksmCollapse .ksmParent
+{
+	line-height:23px;
+}
+
+
+.appleKSM .ksmParent .ksmIn
+{
+	overflow:hidden;
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:white;
+	line-height:23px;
+	height:23px;
+	margin-bottom:1px;
+}
+.appleKSM .ksmParent .ksmIn .ksmText
+{
+	margin-left:0px;
+	line-height:20px;
+}
+
+
+.appleKSM .ksmCollapse .ksmParent .ksmIn
+{
+	background:url(parent_mid.gif);
+	font-weight:bold;
+	color:#f4f4f4;	
+}
+.appleKSM .ksmParent .ksmIn img
+{
+	border:none;
+}
+
+/*Added*/
+.appleKSM .ksmParent .ksmLeft
+{
+	float:left;
+	width:9px;
+	height:23px;
+	background-image:url(parent_left.gif);
+}
+.appleKSM .ksmCollapse .ksmParent .ksmLeft
+{
+	height:23px;
+	background-image:url(parent_left.gif);
+}
+
+.appleKSM .ksmParent .ksmRight
+{
+	float:right;
+	width:23px;
+	height:23px;
+	background-image:url(parent_ex_right.gif);
+}
+.appleKSM .ksmCollapse .ksmParent .ksmRight
+{
+	height:23px;
+	background-image:url(parent_right.gif);
+}
+
+.appleKSM .ksmCollapse .ksmParent .ksmIn
+{
+	line-height:23px;
+	height:23px;
+}
+
+
+
+
+/*Child*/
+.appleKSM .ksmChild
+{
+	line-height:20px;
+	color:#333333;
+}
+
+.appleKSM .ksmChild .ksmIn
+{
+	background:url(arrow.gif) no-repeat 5pt 5pt;
+	margin-bottom:1px;
+}
+.appleKSM .ksmChild .ksmIn .ksmBul
+{
+	float:left;
+	width:20px;
+}
+
+
+
+.appleKSM a.ksmChild:hover .ksmIn
+{
+	background:#dae1eb;
+}
+
+.appleKSM a.ksmChild:hover .ksmIn .ksmBul
+{
+	
+}
+
+
+.appleKSM a.ksmChild:focus
+{
+	-moz-outline-style: none;
+}
+
+.appleKSM .ksmChild .ksmIn img
+{
+	border:none;
+}
+/*Add*/
+.appleKSM .ksmChild .ksmBul
+{
+	float:left;
+	width:20px;
+	height:20px;
+}
+
+
+/*Child Selected*/
+.appleKSM .ksmSelected .ksmIn
+{
+	background:#dae1eb;
+}
+
+.appleKSM .ksmSelected .ksmIn .ksmBul
+{
+	
+}
+
+.appleKSM a.ksmSelected:hover .ksmIn
+{
+	background:#dae1eb;
+	text-decoration:none;
+	cursor:default;
+}
+
+/*Panel*/
+.appleKSM .ksmPanel
+{
+	line-height:normal;
+}
+.appleKSM .ksmPanel .ksmIn
+{
+	clear:both;
+	color:#333333;
+	font-family:tahoma,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	white-space:normal;	
+}

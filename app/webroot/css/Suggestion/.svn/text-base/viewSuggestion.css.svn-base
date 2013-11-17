@@ -1,0 +1,12 @@
+.delLink:hover{
+    color: #367889;
+    cursor: pointer
+}
+.listSuggestion:hover{
+    color: #367889;
+    cursor: pointer
+}
+.delLink .listSuggestion{
+    color: #003D4C;
+    font-weight: bold;
+}

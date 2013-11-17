@@ -1,0 +1,273 @@
+<?php
+    require_once '../../../../../class/autoload.inc';
+    $webroot = "../../../..";
+    $stu = new student($_SESSION['Student']['Student']['s_user']);
+    $dep = new department();
+    $st_depart = $dep->getAll();
+    $st_major = $dep->getAllMajor($stu->dept_id);
+    $st_class = $dep->getAllClass($stu->major_id);
+   // $st_depart[-1] = "无";
+    $edu = new education();
+    $st_edu = $edu->getAll();
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="zh-CN" lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>个人信息</title>
+        
+         <script src="<?php echo $webroot . '/jquery-ui/js/jquery-1.9.1.js' ?>"></script>
+         <script src="<?php echo $webroot . '/js/profile.js' ?>"></script>
+        <script src="<?php echo $webroot . '/jquery-ui/js/jquery-ui-1.10.1.custom.js' ?>"></script>
+        <link rel="stylesheet" href="<?php echo $webroot . '/jquery-ui/development-bundle/themes/base/jquery-ui.css' ?>" />
+       
+        
+        <style>
+            .title {
+                width: 20%;
+                text-align: center;
+                
+            }
+            .content {
+                width: 80%
+            }
+            .info {
+                margin: 50px
+            }
+            .head {
+                font-weight: bold;
+                font-family: 黑体;
+                padding: 10px;
+                padding-top: 10px
+            }
+            .bg {
+                width:100%;
+                height: 30px;
+                background-color: #CCFFCC
+            }
+            #container {
+                width :900px
+            }
+            .editBlock {
+                display: none;
+                background-color: #DDDDDD
+            }
+            .btnDiv {
+                text-align: center
+            }
+            hr{ height:1px;border:none;border-top:1px dashed #0066CC;}
+            button.comboboxButton {width:80px; margin-left: -1px; font-size: 12px; }  
+            
+        </style>
+    </head>
+    <body style="padding:40px 20px 20px 200px;">
+        <div id="container">
+            
+            
+            <div class="info" value="0">
+                <div class="bg">
+                    <span class="head">帐号信息</span>
+                    <button class="edit" style="width:25px;height: 25px;float: right" value="0"></button>
+                    <hr />
+                </div>
+                <div class="viewBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">用户名：</td><td id="st_user" class="content"><?php echo $stu->s_user;?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">密码：</td><td class="content">******</td>
+                        </tr>
+                        <tr>
+                            <td class="title">注册时间：</td><td class="content"><?php echo $stu->reg_date?></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="editBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">原密码：</td><td class="content"><input type="password" id="old_pwd" /></td>
+                        </tr>
+                        <tr>
+                            <td class="title">新密码：</td><td class="content"><input type="password" id="new_pwd" /></td>
+                        </tr>
+                        <tr>
+                            <td class="title">新密码确认：</td><td class="content"><input type="password" id="new_pwd_con" /></td>
+                        </tr>
+                    </table>
+                    <div class="btnDiv">
+                        <button id="btn1" class="comboboxButton">确认编辑</button>
+                        <button id="btn_ret_0" class="comboboxButton">返回</button>
+                    </div>
+                </div>
+            </div>    
+                
+            <div class="info" value="1">
+                <div class="bg">
+                    <span class="head">个人信息</span>
+                    <button class="edit" style="width:25px;height: 25px;float: right" value="1"></button>
+                    <hr />
+                </div>
+                <div class="viewBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">姓名：</td><td class="content"><?php echo $stu->s_name; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">生日：</td><td class="content"><?php echo $stu->s_date; ?></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="editBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">姓名：</td><td class="content"><input type="text" id="st_name" value="<?php echo $stu->s_name; ?>"/></td>
+                        </tr>
+                        <tr>
+                            <td class="title">生日：</td><td class="content"><input type="text" id="datepicker" value="<?php echo $stu->s_date; ?>"/></td>
+                        </tr>
+                    </table>
+                    <div class="btnDiv">
+                        <button id="btn2" class="comboboxButton">确认编辑</button>
+                        <button id="btn_ret_1" class="comboboxButton">返回</button>
+                    </div>
+                </div>
+           </div>  
+                
+           <div class="info" value="2">
+               <div class="bg">
+                    <span class="head">联系方式</span>
+                    <button class="edit" style="width:25px;height: 25px;float: right" value="2"></button>
+                    <hr />
+               </div>
+               <div class="viewBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">联系电话：</td><td class="content"><?php echo $stu->s_phone; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">邮箱：</td><td class="content"><?php echo $stu->s_mail; ?></td>
+                        </tr>
+                    </table>
+               </div>
+               <div class="editBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">联系电话：</td><td class="content"><input type="text" id="st_phone" value="<?php echo $stu->s_phone; ?>"/></td>
+                        </tr>
+                        <tr>
+                            <td class="title">邮箱：</td><td class="content"><input type="text" id="st_mail" value="<?php echo $stu->s_mail; ?>"/></td>
+                        </tr>
+                    </table>
+                    <div class="btnDiv">
+                        <button id="btn3" class="comboboxButton">确认编辑</button>
+                        <button id="btn_ret_2" class="comboboxButton">返回</button>
+                    </div>
+                </div>
+           </div>
+            
+           <div class="info" value="3">
+               <div class="bg">
+                    <span class="head">学籍信息</span>
+                    <button class="edit" style="width:25px;height: 25px;float: right" value="3"></button>
+                    <hr />
+                </div>
+               <div class="viewBlock">
+                    <table width="100%">
+                        <tr>
+                            <td class="title">学号：</td><td class="content"><?php echo $stu->s_num; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">学历：</td><td class="content"><?php echo $stu->edu_name; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">学院：</td><td class="content"><?php echo $stu->dept_name; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">专业：</td><td class="content"><?php echo $stu->major_name; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="title">班级：</td><td class="content"><?php echo $stu->class_name; ?></td>
+                        </tr>
+                    </table>
+               </div>
+               <div class="editBlock">
+                   <table width="100%">
+                       <tr>
+                           <td class="title">学号：</td><td class="content"><input type="text" id="st_num" value="<?php echo $stu->s_num; ?>"/></td>
+                       </tr>
+                       <tr>
+                           <td class="title">学历：</td><td class="content">
+                               <select id="st_edu" name="st_edu">
+                                        <?php 
+                                            foreach ($st_edu as $key => $value) {
+                                                if($key==$stu->edu_id) {
+                                                    echo '<option value="'.$key.'" selected="true" >'.$value.'</option>';
+                                                } else {
+                                                    echo '<option value="'.$key.'">'.$value.'</option>';
+                                                }
+                                            }
+                                        ?>
+                                </select></td>
+                       </tr>
+                       <tr>
+                           <td class="title">学院：</td><td class="content">
+                               <select id="st_depart" name="id_depart">
+                                    <?php 
+                                        foreach ($st_depart as $key => $value) {
+                                            if($key == $stu->dept_id) {
+                                                echo '<option value="'.$key.'" selected="true">'.$value.'</option>';
+                                            } else {
+                                                echo '<option value="'.$key.'">'.$value.'</option>';
+                                            }
+                                        }
+                                    ?>
+                               </select>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td class="title">专业：</td><td class="content">
+                               <select id="st_major" name="id_major">
+                                    <?php 
+                                        foreach ($st_major as $key => $value) {
+                                            if($key == $stu->major_id) {
+                                                echo '<option value="'.$key.'" selected="true">'.$value.'</option>';
+                                            } else {
+                                                echo '<option value="'.$key.'">'.$value.'</option>';
+                                            }
+                                        }
+                                    ?>
+                               </select>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td class="title">班级：</td><td class="content">
+                               <select id="st_class" name="id_class">
+                                    <?php 
+                                    
+                                        foreach ($st_class as $key => $value) {
+                                            if($key == $stu->class_id) {
+                                                echo '<option value="'.$key.'" selected="true">'.$value.'</option>';
+                                            } else {
+                                                echo '<option value="'.$key.'">'.$value.'</option>';
+                                            }
+                                        }
+                                    ?>
+                               </select>
+                           </td>
+                       </tr>
+                   </table>
+                   <div class="btnDiv">
+                        <button id="btn4" class="comboboxButton">确认编辑</button>
+                        <button id="btn_ret_3" class="comboboxButton">返回</button>
+                    </div>
+               </div>
+           </div>
+        </div>
+    </body>
+</html>

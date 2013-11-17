@@ -1,0 +1,63 @@
+<!-- File: /app/View/Message/new_message.ctp -->
+
+<?php
+	echo $this->Html->script('plugin/ckeditor/ckeditor');
+	echo $this->Html->script('Message');
+?>
+
+<style>
+.main{
+	width:770px;
+}
+#msgTable td{
+	vertical-align:middle;
+}
+#msgTable #msgSubject{
+	width:400px;
+	height:20px;
+	padding:0 2px;
+}
+</style>
+
+<script type="text/javascript">
+$(function(){
+ 	var editor;
+ 	function createEditor(languageCode){
+ 		if ( editor ) editor.destroy();
+        editor=CKEDITOR.replace('msgInfo',{
+        	language: languageCode,
+        	skin : 'moono'
+        });
+    }
+    createEditor('zh-cn');
+    editor.setData($("#msgInfoHidden").html());
+})
+</script>
+
+<div class="main">
+	<form action="/messages/newMessage/<?php if(!empty($information['id'])) echo $information['id'];?>" method="post" id="form">
+	<table id="msgTable">
+		<tr>
+			<td width="70"><?php echo $this->Form->label('msgSubject','通知主题：');?></td>
+			<td><?php echo $this->Form->input('msgSubject',array('label'=>false,'value'=>$information['title']));?></td>
+		</tr>
+		<tr>
+			<td class="msgTitle"><?php echo $this->Form->label('msgType','通知类型：');?></td>
+			<td><?php echo $this->Form->select('msgType',$msgTypes,array('empty'=>false,'value'=>$information['information_type_id']));?></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<textarea cols="80" id="msgInfo" name="msgInfo" rows="10"></textarea>
+				<div style="display:none" id="msgInfoHidden">
+				<?php echo $information['info'];?>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<?php echo $this->Form->button('发布',array('type'=>'button','id'=>'postMessage'));?>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>

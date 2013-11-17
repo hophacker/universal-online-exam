@@ -1,0 +1,13 @@
+
+
+
+
+--This line, and those below, will be ignored--
+
+A    View/TryHistories
+A  + View/TryHistories/view_score.ctp
+M    View/Exams/index.ctp
+M    View/Assignments/assign.ctp
+M    View/TestTypes/edit_type.ctp
+M    View/TestTypes/index.ctp
+M    View/TestTypes/add_type.ctp

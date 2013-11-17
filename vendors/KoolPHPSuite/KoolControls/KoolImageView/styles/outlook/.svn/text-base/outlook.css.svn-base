@@ -1,0 +1,79 @@
+﻿.outlookZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.outlookKIV
+{
+	display:inline;
+}
+
+.outlookKIV .kivZoomPanel
+{
+    position:absolute;
+	background:#f3f3ee url(bg.gif) repeat-x left top ;
+	border:1px #d0d0be solid;
+	padding:10px;
+	
+}
+
+.outlookKIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:#f3f3ee ;
+    border:solid 1px gray;
+}
+
+.outlookKIV .kivBigImage
+{
+	cursor:url(zoomout.cur),pointer !important;
+	border:solid 1px #d0d0be;
+}
+
+
+.outlookKIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+.outlookKIV .kivEffectPanel
+{
+	background:#f3f3ee url(bg.gif) repeat-x left top ;
+	border:solid 1px gray;
+}
+
+.outlookKIV .kivEffectImage
+{
+    border:solid 1px gray;
+}
+
+.outlookKIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.outlookKIV .kivDescription
+{
+	float:left;
+	padding-top:5px;
+    color:#555;
+    font-family:Arial;
+    font-size:12px;
+}
+
+.outlookKIV .kivCloseButton
+{
+
+}
+
+.outlookKIV .kivMoveButton
+{
+
+}
+
+

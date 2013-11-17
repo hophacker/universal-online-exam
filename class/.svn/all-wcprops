@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/dxks/!svn/ver/257/yangda/class
+END
+education.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/171/yangda/class/education.php
+END
+REValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/86/yangda/class/REValidator.php
+END
+util.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/dxks/!svn/ver/112/yangda/class/util.php
+END
+test_type.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dxks/!svn/ver/133/yangda/class/test_type.php
+END
+sessionCheck.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/204/yangda/class/sessionCheck.php
+END
+session.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/dxks/!svn/ver/86/yangda/class/session.php
+END
+message.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/257/yangda/class/message.php
+END
+postGet.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/128/yangda/class/postGet.php
+END
+class.Calendar.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/dxks/!svn/ver/86/yangda/class/class.Calendar.inc.php
+END
+student.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/172/yangda/class/student.php
+END
+errorHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/119/yangda/class/errorHandler.php
+END
+autoload.inc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/183/yangda/class/autoload.inc
+END
+PDODataSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dxks/!svn/ver/92/yangda/class/PDODataSource.php
+END
+DB_Connect.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/183/yangda/class/DB_Connect.php
+END
+time.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/dxks/!svn/ver/101/yangda/class/time.php
+END
+LoadAndCheck.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dxks/!svn/ver/86/yangda/class/LoadAndCheck.php
+END
+DB_Connect_pdo.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dxks/!svn/ver/86/yangda/class/DB_Connect_pdo.php
+END
+department.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dxks/!svn/ver/145/yangda/class/department.php
+END
+SMT.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/dxks/!svn/ver/101/yangda/class/SMT.php
+END
+question.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/135/yangda/class/question.php
+END
+manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/dxks/!svn/ver/86/yangda/class/manager.php
+END

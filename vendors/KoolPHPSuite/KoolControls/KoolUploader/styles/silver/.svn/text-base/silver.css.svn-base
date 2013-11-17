@@ -1,0 +1,417 @@
+.silverKUL
+{
+	margin:0px;
+	padding:5px;
+	padding-bottom:3px;
+	border:solid 1px #7A7C80;
+	background-color:#fff;
+}
+
+.silverKUL .kulContainer
+{
+	background-color:white;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+.silverKUL .kulContainerCover
+{
+	border:solid 1px #aaa;
+	vertical-align:top;
+}
+
+.silverKUL .kulTemplate
+{
+	display:none;
+}
+
+
+
+.silverKUL .kulA
+{
+	display:block;
+}
+
+.silverKUL .kulText
+{
+	display:none;
+}
+
+/*btnAdd*/
+.silverKUL .kulAdd
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.silverKUL .kulAdd .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add.gif);
+}
+
+/*btnUploadAll*/
+.silverKUL .kulUploadAll
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.silverKUL .kulUploadAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall.gif);
+}
+.silverKUL .kulUploadAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall_over.gif);
+}
+/*btnClearAll*/
+.silverKUL .kulClearAll
+{
+	display:block;
+	float:right;
+	width:70px;	
+}
+
+.silverKUL .kulClearAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall.gif);
+}
+.silverKUL .kulClearAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall_over.gif);
+}
+/*Input File*/
+.silverKUL .kulFileInput
+{
+	display:block;
+	width:68px;
+	height:24px;
+	overflow:hidden;
+	margin-top:-24px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+}
+.silverKUL .kulFileInput input
+{
+	margin-left:-145px;
+}
+
+/*Item*/
+
+.silverKUL .kulItem
+{
+	height:60px;
+	background-color:#f9f9f9;
+	border-bottom:solid 1px #ccc;
+	vertical-align:top;
+	clear:both;
+}
+
+.silverKUL .kulSelected
+{
+	background-color:#f9f9f9;
+}
+
+
+.silverKUL .kulItem .kulText,
+.silverKUL .kulItem .kulA
+{
+	display:inline;
+}
+.silverKUL .kulItem .kulA .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	color:#555;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.silverKUL .kulItem .kulUpload .kulA:hover .kulText,
+.silverKUL .kulItem .kulCancel .kulA:hover .kulText
+{
+	color:#555;
+	text-decoration:none;
+}
+.silverKUL .kulItem .kulRemove .kulA:hover .kulText
+{
+	color:crimson;
+	text-decoration:none;
+}
+
+
+.silverKUL .kulFileName
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	display:block;
+}
+
+.silverKUL .kulUpload,
+.silverKUL .kulRemove,
+.silverKUL .kulCancel
+{
+	display:block;
+	line-height:20px;
+}
+
+.silverKUL .kulCancel
+{
+	display:none;
+}
+
+
+.silverKUL .kulUploading .kulUpload,
+.silverKUL .kulUploading .kulRemove,
+.silverKUL .kulDone .kulUpload,
+.silverKUL .kulDone .kulRemove,
+.silverKUL .kulDone .kulCancel
+{
+	display:none;
+}
+
+.silverKUL .kulUploading .kulCancel
+{
+	display:block;
+}
+
+.silverKUL .kulNotAllowed .kulRemove
+{
+	display:block;
+}
+
+
+.silverKUL .kulThumbnail
+{
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(ico_file.gif);
+}
+.silverKUL .kulProgress
+{
+	display:none;
+}
+.silverKUL .kulStatus
+{
+	display:none;
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	color:#555;
+}
+.silverKUL .kulError
+{
+	color:red;
+}
+
+.silverKUL .kulDone .kulStatus
+{
+	display:block;
+}
+
+.silverKUL .kulProgress
+{
+	vertical-align:top;
+}
+
+.silverKUL .kulProgress .kulBar
+{
+	width:123px;
+	height:10px;
+	background:url(progressbg_#2c3a8b.gif) no-repeat -123px;
+}
+/*Alternative bar in case the progressEnabled==false*/
+.silverKUL .kulProgress .kulAltBar
+{
+	width:96px;
+	height:10px;
+	background:url(progressbg_alt.gif);
+}
+
+.silverKUL .kulProgress .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;	
+}
+
+
+.silverKUL .kulUploading .kulProgress
+{
+	display:block;
+}
+
+
+.silverKUL .kulItem .kulLeft
+{
+	float:left;
+	height:50px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:10px;
+}
+
+.silverKUL .kulItem .kulRight
+{
+	float:right;
+	height:50px;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:7px;
+	vertical-align:top;
+}
+
+.silverKUL .kulItem .kulMiddle
+{
+	height:45px;
+	padding-top:12px;
+	overflow:hidden;	
+}
+/*Hide iframe: this important, do not change*/
+.silverKUL .kulItem iframe
+{
+	display:none;
+}
+/*Hide form: this important, do not change*/
+.silverKUL .kulItem form
+{
+	display:none;
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*Image for thumpnail*/
+.silverKUL .kuljpg
+{
+	background:url(ico_jpg.gif);
+}
+.silverKUL .kulgif
+{
+	background:url(ico_gif.gif);
+}
+
+.silverKUL .kulpng
+{
+	background:url(ico_png.gif);
+}
+.silverKUL .kulbmp,
+.silverKUL .kulpic,
+.silverKUL .kultiff
+{
+	background:url(ico_image.gif);
+}
+
+.silverKUL .kuldoc,
+.silverKUL .kuldocx
+{
+	background:url(ico_doc.gif);
+}
+.silverKUL .kulxls,
+.silverKUL .kulxlsx
+{
+	background:url(ico_xls.gif);
+}
+.silverKUL .kulmdb
+{
+	background:url(ico_mdb.gif);
+}
+.silverKUL .kulppt
+{
+	background:url(ico_ppt.gif);
+}
+.silverKUL .kulmdf
+{
+	background:url(ico_mdf.gif);
+}
+.silverKUL .kuldll
+{
+	background:url(ico_dll.gif);
+}
+.silverKUL .kulbat
+{
+	background:url(ico_bat.gif);
+}
+.silverKUL .kulaspx
+{
+	background:url(ico_aspx.gif);
+}
+.silverKUL .kulcs
+{
+	background:url(ico_cs.gif);
+}
+.silverKUL .kulhtml,
+.silverKUL .kulhtm
+{
+	background:url(ico_html.gif);
+}
+.silverKUL .kulini
+{
+	background:url(ico_ini.gif);
+}
+.silverKUL .kuljar
+{
+	background:url(ico_jar.gif);
+}
+.silverKUL .kuljs
+{
+	background:url(ico_js.gif);
+}
+.silverKUL .kullib
+{
+	background:url(ico_lib.gif);
+}
+.silverKUL .kulmp3
+{
+	background:url(ico_mp3.gif);
+}
+.silverKUL .kulmpg
+{
+	background:url(ico_mpg.gif);
+}
+.silverKUL .kulpdf
+{
+	background:url(ico_pdf.gif);
+}
+.silverKUL .kulphp
+{
+	background:url(ico_php.gif);
+}
+.silverKUL .kulrar,
+.silverKUL .kulzip,
+.silverKUL .kultgz
+{
+	background:url(ico_rar.gif);
+}
+.silverKUL .kultxt
+{
+	background:url(ico_txt.gif);
+}
+.silverKUL .kulvb
+{
+	background:url(ico_vb.gif);
+}
+.silverKUL .kulwma
+{
+	background:url(ico_wma.gif);
+}
+.silverKUL .kulxml
+{
+	background:url(ico_xml.gif);
+}

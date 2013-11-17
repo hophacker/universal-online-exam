@@ -1,0 +1,422 @@
+.outlookKUL
+{
+	margin:0px;
+	padding:5px;
+	padding-bottom:3px;
+	border:solid 1px #7A7C80;
+	background-color:#fff;
+}
+
+.outlookKUL .kulContainer
+{
+	background-color:white;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+.outlookKUL .kulContainerCover
+{
+	border:solid 1px #aaa;
+	vertical-align:top;
+}
+
+.outlookKUL .kulTemplate
+{
+	display:none;
+}
+
+
+
+.outlookKUL .kulA
+{
+	display:block;
+}
+
+.outlookKUL .kulText
+{
+	display:none;
+}
+
+/*btnAdd*/
+.outlookKUL .kulAdd
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.outlookKUL .kulAdd .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add.gif);
+}
+.outlookKUL .kulAddOver .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add_over.gif);
+}
+/*btnUploadAll*/
+.outlookKUL .kulUploadAll
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.outlookKUL .kulUploadAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall.gif);
+}
+.outlookKUL .kulUploadAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall_over.gif);
+}
+/*btnClearAll*/
+.outlookKUL .kulClearAll
+{
+	display:block;
+	float:right;
+	width:70px;	
+}
+
+.outlookKUL .kulClearAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall.gif);
+}
+.outlookKUL .kulClearAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall_over.gif);
+}
+/*Input File*/
+.outlookKUL .kulFileInput
+{
+	display:block;
+	width:68px;
+	height:24px;
+	overflow:hidden;
+	margin-top:-24px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+}
+.outlookKUL .kulFileInput input
+{
+	margin-left:-145px;
+}
+
+/*Item*/
+
+.outlookKUL .kulItem
+{
+	height:60px;
+	background-color:#dce6f9;
+	border-bottom:solid 1px #ddd;
+	vertical-align:top;
+	clear:both;
+}
+
+.outlookKUL .kulSelected
+{
+	background-color:#dce6f9;
+}
+
+
+.outlookKUL .kulItem .kulText,
+.outlookKUL .kulItem .kulA
+{
+	display:inline;
+}
+.outlookKUL .kulItem .kulA .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	color:#085398;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.outlookKUL .kulItem .kulUpload .kulA:hover .kulText,
+.outlookKUL .kulItem .kulCancel .kulA:hover .kulText
+{
+	color:#085398;
+	text-decoration:none;
+}
+.outlookKUL .kulItem .kulRemove .kulA:hover .kulText
+{
+	color:crimson;
+	text-decoration:none;
+}
+
+
+.outlookKUL .kulFileName
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	display:block;
+}
+
+.outlookKUL .kulUpload,
+.outlookKUL .kulRemove,
+.outlookKUL .kulCancel
+{
+	display:block;
+	line-height:20px;
+}
+
+.outlookKUL .kulCancel
+{
+	display:none;
+}
+
+
+.outlookKUL .kulUploading .kulUpload,
+.outlookKUL .kulUploading .kulRemove,
+.outlookKUL .kulDone .kulUpload,
+.outlookKUL .kulDone .kulRemove,
+.outlookKUL .kulDone .kulCancel
+{
+	display:none;
+}
+
+.outlookKUL .kulUploading .kulCancel
+{
+	display:block;
+}
+
+.outlookKUL .kulNotAllowed .kulRemove
+{
+	display:block;
+}
+
+
+.outlookKUL .kulThumbnail
+{
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(ico_file.gif);
+}
+.outlookKUL .kulProgress
+{
+	display:none;
+}
+.outlookKUL .kulStatus
+{
+	display:none;
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	color:#085398;
+}
+.outlookKUL .kulError
+{
+	color:red;
+}
+
+.outlookKUL .kulDone .kulStatus
+{
+	display:block;
+}
+
+.outlookKUL .kulProgress
+{
+	vertical-align:top;
+}
+
+.outlookKUL .kulProgress .kulBar
+{
+	width:123px;
+	height:10px;
+	background:url(progressbg_#2c3a8b.gif) no-repeat -123px;
+}
+/*Alternative bar in case the progressEnabled==false*/
+.outlookKUL .kulProgress .kulAltBar
+{
+	width:96px;
+	height:10px;
+	background:url(progressbg_alt.gif);
+}
+
+.outlookKUL .kulProgress .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;	
+}
+
+
+.outlookKUL .kulUploading .kulProgress
+{
+	display:block;
+}
+
+
+.outlookKUL .kulItem .kulLeft
+{
+	float:left;
+	height:50px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:10px;
+}
+
+.outlookKUL .kulItem .kulRight
+{
+	float:right;
+	height:50px;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:7px;
+	vertical-align:top;
+}
+
+.outlookKUL .kulItem .kulMiddle
+{
+	height:45px;
+	padding-top:12px;
+	overflow:hidden;	
+}
+/*Hide iframe: this important, do not change*/
+.outlookKUL .kulItem iframe
+{
+	display:none;
+}
+/*Hide form: this important, do not change*/
+.outlookKUL .kulItem form
+{
+	display:none;
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*Image for thumpnail*/
+.outlookKUL .kuljpg
+{
+	background:url(ico_jpg.gif);
+}
+.outlookKUL .kulgif
+{
+	background:url(ico_gif.gif);
+}
+
+.outlookKUL .kulpng
+{
+	background:url(ico_png.gif);
+}
+.outlookKUL .kulbmp,
+.outlookKUL .kulpic,
+.outlookKUL .kultiff
+{
+	background:url(ico_image.gif);
+}
+
+.outlookKUL .kuldoc,
+.outlookKUL .kuldocx
+{
+	background:url(ico_doc.gif);
+}
+.outlookKUL .kulxls,
+.outlookKUL .kulxlsx
+{
+	background:url(ico_xls.gif);
+}
+.outlookKUL .kulmdb
+{
+	background:url(ico_mdb.gif);
+}
+.outlookKUL .kulppt
+{
+	background:url(ico_ppt.gif);
+}
+.outlookKUL .kulmdf
+{
+	background:url(ico_mdf.gif);
+}
+.outlookKUL .kuldll
+{
+	background:url(ico_dll.gif);
+}
+.outlookKUL .kulbat
+{
+	background:url(ico_bat.gif);
+}
+.outlookKUL .kulaspx
+{
+	background:url(ico_aspx.gif);
+}
+.outlookKUL .kulcs
+{
+	background:url(ico_cs.gif);
+}
+.outlookKUL .kulhtml,
+.outlookKUL .kulhtm
+{
+	background:url(ico_html.gif);
+}
+.outlookKUL .kulini
+{
+	background:url(ico_ini.gif);
+}
+.outlookKUL .kuljar
+{
+	background:url(ico_jar.gif);
+}
+.outlookKUL .kuljs
+{
+	background:url(ico_js.gif);
+}
+.outlookKUL .kullib
+{
+	background:url(ico_lib.gif);
+}
+.outlookKUL .kulmp3
+{
+	background:url(ico_mp3.gif);
+}
+.outlookKUL .kulmpg
+{
+	background:url(ico_mpg.gif);
+}
+.outlookKUL .kulpdf
+{
+	background:url(ico_pdf.gif);
+}
+.outlookKUL .kulphp
+{
+	background:url(ico_php.gif);
+}
+.outlookKUL .kulrar,
+.outlookKUL .kulzip,
+.outlookKUL .kultgz
+{
+	background:url(ico_rar.gif);
+}
+.outlookKUL .kultxt
+{
+	background:url(ico_txt.gif);
+}
+.outlookKUL .kulvb
+{
+	background:url(ico_vb.gif);
+}
+.outlookKUL .kulwma
+{
+	background:url(ico_wma.gif);
+}
+.outlookKUL .kulxml
+{
+	background:url(ico_xml.gif);
+}

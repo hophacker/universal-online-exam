@@ -1,0 +1,69 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of TryHistories
+ *
+ * @author john
+ */
+class TryHistoriesController extends AppController {
+
+    //put your code here
+    public function testing(){
+        echo "fengjie";
+        $this->flash( "fengjie", array('controller' => 'TryHistories', 'actoin'=>'testing'), 10, '');
+    }
+    public function getExcresizeHitories() {
+
+        $student_id = $this->getInt($this->request->data('student_id'));
+        $test_type_id = $this->getInt($this->request->data('test_type_id'));
+
+        $this->autoRender = false;
+        $data = $this->TryHistory->find('all', array(
+            'conditions' => array(
+                'student_id' => $student_id,
+                'test_type_id' => $test_type_id
+            )
+        ));
+        return json_encode($data);
+    }
+
+    /*The student has already login, and student_id is in 
+     */
+    public function viewHistories($test_type_id = 0) {
+        $student_id = $_SESSION['Student']['Student']['id'];
+        $this->loadModel('TestType');
+        
+        $test_types = $this->TestType->getTestTypesList();
+        $this->set('test_types', $test_types);
+        
+        if ($test_type_id != 0) {
+            $this->set('list_it', 1);
+            $this->set('test_type_name', $test_types[$test_type_id]);
+            $this->set('excercise_histories', $this->TryHistory->find('all', array(
+                'conditions' => array(
+                    'try_type' => 0,
+                    'student_id' => $student_id,
+                    'test_type_id' => $test_type_id
+                )
+            )));
+            $this->set('exam_histories', $this->TryHistory->find('all', array(
+                'conditions' => array(
+                    'try_type' => 1,
+                    'student_id' => $student_id,
+                    'test_type_id' => $test_type_id
+                )
+            )));
+            
+            
+
+        }
+    }
+
+}
+
+?>

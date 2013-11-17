@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Set_ChildBox_Height" usedb="false">
+	<title>Set ChildBox Height </title>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolSlideMenu supports both fixed height and dynamic height of childbox. To use this feature you need to set the height of box to <b>boxHeight</b> property of KoolSlideMenu's instance.
+</p>
+<p>
+By default <b>boxHeight</b> has value <b>-1</b>, KoolSlideMenu's childbox height is in dynamic mode.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolSlideMenu/koolslidemenu.php";
+	$ksm = new KoolSlideMenu("sm");
+	$ksm->scriptFolder =  $KoolControlsFolder."/KoolSlideMenu";	
+	$ksm->styleFolder = $KoolControlsFolder."KoolSlideMenu/styles/redgray";
+	$ksm->addParent("root","company","Company");
+	$ksm->addChild("company","about","About Us");
+
+	$ksm->addParent("root","products","Products");
+	$ksm->addChild("products","koolajax","KoolAjax");
+	$ksm->addChild("products","kooltreeview","KoolTreeView");
+	$ksm->addChild("products","koolslidemenu","KoolSlideMenu");	
+	
+	$ksm->addParent("root","services","Services");
+	$ksm->addChild("services","outsourcing","Out-sourcing");
+	$ksm->addChild("services","freelancer","Free-lancer");	
+	
+	$ksm->width="200px";
+	$ksm->singleExpand = true;
+	// Box height Setting :
+	$ksm->boxHeight = 100;
+
+	
+	$ksm2 = new KoolSlideMenu("sm2");	
+	$ksm2->scriptFolder =  $KoolControlsFolder."/KoolSlideMenu";	
+	$ksm2->styleFolder = $KoolControlsFolder."KoolSlideMenu/styles/redgray";
+	$ksm2->addParent("root","company2","Company");
+	$ksm2->addChild("company2","about2","About Us");
+
+	$ksm2->addParent("root","products2","Products");
+	$ksm2->addChild("products2","koolajax2","KoolAjax");
+	$ksm2->addChild("products2","kooltreeview2","KoolTreeView");
+	$ksm2->addChild("products2","koolslidemenu2","KoolSlideMenu");	
+	
+	$ksm2->addParent("root","services2","Services");
+	$ksm2->addChild("services2","outsourcing2","Out-sourcing");
+	$ksm2->addChild("services2","freelancer2","Free-lancer");	
+	
+	$ksm2->width="200px";
+	$ksm2->singleExpand = true;
+	$ksm2->boxHeight = -1;//Default value
+?>
+<form id="form1" method="post">
+	<style type="text/css">
+		.box
+		{
+			float:left;
+			width:250px;
+			height:220px;
+			margin:10px;
+			padding:10px;
+		}
+		.focus
+		{
+			padding-left:50px;
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;			
+		}
+		.clear
+		{
+			clear:both;
+		}
+		#style_select
+		{
+			width:100px;	
+		}		
+	</style>
+	
+	<div class="box focus">
+		<div style="padding-bottom:10px;"><b>Fixed BoxHeight</b></div>
+		<?php echo $ksm->Render();?>
+	</div>
+	<div class="box focus">
+		<div style="padding-bottom:10px;"><b>Dynamic BoxHeight</b></div>
+		<?php echo $ksm2->Render();?>
+	</div>
+	<div class="clear"></div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolSlideMenu/PHP/KoolSlideMenu_Class/index.php#boxHeight">PHP :: KoolSlideMenu :: boxHeight</doc>
+	</docs>
+</example>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/default/classes
+END
+fixture.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/default/classes/fixture.ctp
+END
+test.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/default/classes/test.ctp
+END
+model.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/default/classes/model.ctp
+END
+controller.ctp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/default/classes/controller.ctp
+END

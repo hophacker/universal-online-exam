@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema
+END
+sessions.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema/sessions.php
+END
+i18n.sql
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema/i18n.sql
+END
+db_acl.sql
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema/db_acl.sql
+END
+sessions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema/sessions.sql
+END
+i18n.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema/i18n.php
+END
+db_acl.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dxks/!svn/ver/133/yangda/app/Config/Schema/db_acl.php
+END

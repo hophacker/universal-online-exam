@@ -1,0 +1,3 @@
+It is possible to define default options for all columns when they are created.
+In the example we demonstrate how the  all fields can not be sortable.
+By default all fields are sortable.

@@ -1,0 +1,62 @@
+/* CSS Document */
+#header{
+	font-size:18px;
+	color: #194F95;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight:900;
+	background-color:#F2F6FB;
+	border-bottom: 1px solid #D0DBE7;
+	margin:0;
+	padding:3px;
+	 }
+#bod{
+	min-width:960px;
+	margin-left:auto;
+	margin-right:auto;	
+	background-color:#FFFFFF;
+	}
+	
+#bodin{
+	border: 1px solid #D0DBE7;
+	height:320px;
+	}
+#addadmin,#addpwd,#adminame{
+		height:20px;
+	border-color:#0CF;
+	border-width:1px;
+	}
+
+#count,#pwd,#name,#dept{
+		margin-left:320px;
+	}
+		
+#name,#dept,#conf,#count,#pwd{
+	position: relative;
+	}
+	
+#count{
+	top:10px;
+	}	
+			
+#pwd{
+	top:20px;
+		}
+
+#name{
+	top:30px;
+		}
+#dept{
+
+	top:40px;
+}
+#conf{
+	  top:50px;
+	  width:60px;
+	  margin-left:460px;
+	}
+#count,#pwd,#name,#dept,#conf{
+	font-size:14px;
+	color:#194F95;
+	padding:3px;
+	}

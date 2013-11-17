@@ -1,0 +1,12 @@
+use dxks
+alter table ANSQUE add column id int auto_increment key;
+alter table DEPARTMENT add column id int auto_increment key;
+alter table DEPT_MANAGER add column id int auto_increment key;
+alter table INFOBROAD add column id int auto_increment key;
+alter table NUMCLASS add column id int auto_increment key;
+alter table QUESTION add column id int auto_increment key;
+alter table SCHOOL_MANAGER add column id int auto_increment key;
+alter table SCORE add column id int auto_increment key;
+alter table STUDENT add column id int auto_increment key;
+alter table TESTPAPER add column id int auto_increment key;
+alter table TEST_TIME add column id int auto_increment key;

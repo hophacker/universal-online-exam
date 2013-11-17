@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/dxks/!svn/ver/276/yangda/app/Controller
+END
+TestsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/221/yangda/app/Controller/TestsController.php
+END
+ParametersController.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/246/yangda/app/Controller/ParametersController.php
+END
+TestTypesController.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/268/yangda/app/Controller/TestTypesController.php
+END
+MessagesController.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/258/yangda/app/Controller/MessagesController.php
+END
+PostsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/166/yangda/app/Controller/PostsController.php
+END
+TryHistoriesController.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/dxks/!svn/ver/270/yangda/app/Controller/TryHistoriesController.php
+END
+PromotionsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/dxks/!svn/ver/140/yangda/app/Controller/PromotionsController.php
+END
+StudentsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/194/yangda/app/Controller/StudentsController.php
+END
+SuggestionsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/263/yangda/app/Controller/SuggestionsController.php
+END
+ExamsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/276/yangda/app/Controller/ExamsController.php
+END
+AccountsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/165/yangda/app/Controller/AccountsController.php
+END
+JqgridController.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/235/yangda/app/Controller/JqgridController.php
+END
+AppController.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/276/yangda/app/Controller/AppController.php
+END
+ClasController.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/276/yangda/app/Controller/ClasController.php
+END
+InformationController.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/190/yangda/app/Controller/InformationController.php
+END
+DepartmentsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/276/yangda/app/Controller/DepartmentsController.php
+END
+QuestionsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dxks/!svn/ver/166/yangda/app/Controller/QuestionsController.php
+END
+MajorsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/276/yangda/app/Controller/MajorsController.php
+END
+LoginsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dxks/!svn/ver/233/yangda/app/Controller/LoginsController.php
+END
+AssignmentsController.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/270/yangda/app/Controller/AssignmentsController.php
+END
+PagesController.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/app/Controller/PagesController.php
+END

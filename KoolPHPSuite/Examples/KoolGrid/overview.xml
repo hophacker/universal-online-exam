@@ -1,0 +1,54 @@
+<control>
+	<name>KoolGrid - Powerful PHP Grid</name>
+	<metadescription>KoolPHP PHP Grid - the fastest hierarchical AJAX powered Datagrid.  Featuring with powerful server-side functions, rich client-side operations, beautiful CSS, Excel-like behavior, minimum HTML output. Explore the powerful features and capabilities by browsing the hundreds of online examples on the KoolPHP demo site.</metadescription>
+	<metakeywords>PHP GRID, PHP Ajax GRID, PHP GridView, Ajax GRID PHP,Inline Editing GRID,PHP DATAGRID, PHP GRID, PHP Data Grid, PHP DATAGRID for mySQL, PHP DATAGRID for Oracle, PHP DATAGRID for SQL Server, PHP DATAGRID for PostGreSQL, PHP DATAGRID for Informix, PHP DATAGRID for DB2, PHP DATAGRID for MS Access, PHP DATA GRID, PHP GRID, Data grid ALTERNATIVE ROW COLOR, Datagrid EXCEL EXPORT, PHP Data grid EDIT COLUMN TITLE, RECORD SORT, DATAGRID AUTO RECORD PAGING, PHP GRID Master details, PHP Datagrid parent child, DATAGRID TUTORIAL, EXAMPLES, PHP INLINE EDIT, DATAGRID INLINE EDITING, AJAX DATAGRID, AJAX-BASED PHP DATAGRID, AJAX PHP GRID, PHP DATAGRID Built in search, PHP Datagrid Theme, PHP GRID Image display, PHP DATAGRID image display, PHP Datagrid Example</metakeywords>	 
+	<description>When it comes to web DataGrids, fast loading of large data combined with advanced Excel-like operations has been always a challenge. Having a solid experience in web technologies, we designed our AJAX powered PHP Grid to eliminate this tradeoff. Easy-to-use, rich client-side API, myriad of features topped with an unbeatable performance is what we call KoolGrid.</description>
+	<examples>
+		<example	name="Styles" 
+					link="Appearance/Styles/index.php" 
+					image="Appearance/Styles/preview.gif"/>
+		<example	name="Hierarchy" 
+					link="Hierarchy/Three_Levels_Hierarchy/index.php" 
+					image="Hierarchy/Three_Levels_Hierarchy/preview.gif"/>
+		<example	name="Scrolling" 
+					link="Scrolling/Basic_Scrolling/index.php" 
+					image="Scrolling/Basic_Scrolling/preview.gif"/>
+		<example	name="Editing" 
+					link="Editing/InlineEditing/index.php" 
+					image="Editing/InlineEditing/preview.gif"/>
+
+		<example	name="Filtering" 
+					link="Filtering/Basic_Filtering/index.php" 
+					image="Filtering/Basic_Filtering/preview.gif"/>
+
+		<example	name="Sorting" 
+					link="Sorting/Basic_Sorting/index.php" 
+					image="Sorting/Basic_Sorting/preview.gif"/>
+
+		<example	name="Resizing" 
+					link="Columns/Resizing/index.php" 
+					image="Columns/Resizing/preview.gif"/>
+
+		<example	name="Localization" 
+					link="Localization/Change_Language/index.php" 
+					image="Localization/Change_Language/preview.gif"/>
+
+		<example	name="Paging" 
+					link="Paging/PrevNextPager/index.php" 
+					image="Paging/PrevNextPager/preview.gif"/>
+
+		<example	name="Row Selecting" 
+					link="Rows/AllowMultiSelecting/index.php" 
+					image="Rows/AllowMultiSelecting/preview.gif"/>
+
+		<example	name="Validation" 
+					link="Validation/Insert_Edit_Validation/index.php" 
+					image="Validation/Insert_Edit_Validation/preview.gif"/>
+
+		<example	name="Client Events" 
+					link="Client_Side_API/ClientEvents/index.php" 
+					image="Client_Side_API/ClientEvents/preview.gif"/>
+
+
+	</examples>			
+</control>

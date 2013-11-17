@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Loading_Images" usedb="false">
+	<title>Loading Images Setting With UpdatePanel</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. This example shows how to set loading images for KoolAjax's UpdatePanel.</metadescription>
+	<description>
+		<![CDATA[ 
+		<div >
+		Using UpdatePanel of KoolAjax is very easy way to update partial page. <br/>
+		It has  function setLoading() which improve the performance for your page with many effect. <br />
+		Here is the structure of function : <code>setLoading(<code class="type">string</code> image,[ <code class="type">string</code> backColor],[ <code class="type">int</code> opacity])</code><br/>
+		<b>Arguments:</b><br />
+		<code><b>image:</b></code> Src of loading image ( link to the image )<br />
+		<code><b>backColor:</b></code> Color of background<br />
+		<code><b>opacity:</b></code> Transparent value of loading, max value is 100 
+		</div>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	$controlsURL = "../../../KoolControls";
+	require $controlsURL."/KoolAjax/koolajax.php";
+	
+	if ($koolajax->isCallback)
+	{
+		//If it is callback request, Slow down processing to see loading effect
+		// The normal is 1s, but this was increased into 3s for better look
+		sleep(3);
+	}
+	
+	function content($img,$bgcolor,$opacity,$numb,$color)
+	{			
+		$content .=  "<h4 style='color:$color'>This style is : </h4>"
+					."<ul><li>image = $img</li>"
+					."<li>backColor = $bgcolor</li>"
+					."<li>% opacity = $opacity</li></ul>"
+					."<div align='center' >"
+					."<input type='button' id='btn$numb' value='View the effect' /></div>";
+		return $content;
+	}
+	
+	// UpdatePannel declare
+	$StyleUpdate1 = new UpdatePanel( "StyleUpdate1" );
+	$StyleUpdate2 = new UpdatePanel( "StyleUpdate2" );
+	$StyleUpdate3 = new UpdatePanel( "StyleUpdate3" );
+	$StyleUpdate4 = new UpdatePanel( "StyleUpdate4" );	
+	// each panel has its own style to describe in its content .				
+	$StyleUpdate1->content = content( "picture #1" , "white"   , 50 , 1 , "green"  );
+	$StyleUpdate2->content = content( "picture #4" , "#f4f4f4" , 70 , 2 , "orange" );
+	$StyleUpdate3->content = content( "picture #3" , "#f4f599" , 55 , 3 , "blue"   );
+	$StyleUpdate4->content = content( "picture #9" , "(blank)" , 25 , 4 , "brown"  );	
+	// Add the event update for the button  to 4 updatepanel
+	$StyleUpdate1->addTrigger( "btn1" , 'onclick' );
+	$StyleUpdate2->addTrigger( "btn2" , 'onclick' );
+	$StyleUpdate3->addTrigger( "btn3" , 'onclick' );	
+	$StyleUpdate4->addTrigger( "btn4" , 'onclick' );
+	// 4 UpdatePanel have the same css style
+	$StyleUpdate1->cssclass = $StyleUpdate2->cssclass = $StyleUpdate3->cssclass = $StyleUpdate4->cssclass = "cssStyle";	
+	// each loading 
+	$StyleUpdate1->setLoading("KoolAjax/loading/1.gif" , "white"   , 50 );	
+	$StyleUpdate2->setLoading("KoolAjax/loading/4.gif" , "#f4f4f4" , 70 );	
+	$StyleUpdate3->setLoading("KoolAjax/loading/3.gif" , "#fff4f5" , 55 );
+	$StyleUpdate4->setLoading("KoolAjax/loading/9.gif" , ""        , 75 );
+?>
+	<?php echo $koolajax->Render();?>
+	<div class="sectionHeader">Show</div>
+		<!-- Start example -->
+		<style>
+			.cssStyle
+			{
+				border : solid 1px gray;		width 	: 190px;		float  : left ;
+				height : 150px;					padding : 10px; 		margin : 10px;				
+			}
+			h4{	font-size :  1.1em; }
+		</style>		
+	<div class="indent indent_right topspacing bottomspacing">			
+			<?php					
+				echo $StyleUpdate1->Render();
+				echo $StyleUpdate2->Render();
+				echo $StyleUpdate3->Render();
+				echo $StyleUpdate4->Render();
+			?>	
+	</div>		
+	<div style="clear:both"></div>
+			]]>			
+		</code>
+			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/PHP/UpdatePanel_Class/index.php#setLoading">PHP :: UpdatePanel :: setLoading()</doc>
+	</docs>
+</example>

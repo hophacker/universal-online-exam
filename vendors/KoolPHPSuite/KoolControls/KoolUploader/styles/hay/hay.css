@@ -1,0 +1,422 @@
+.hayKUL
+{
+	margin:0px;
+	padding:5px;
+	padding-bottom:3px;
+	border:solid 1px #7A7C80;
+	background-color:#fff;
+}
+
+.hayKUL .kulContainer
+{
+	background-color:white;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+.hayKUL .kulContainerCover
+{
+	border:solid 1px #aaa;
+	vertical-align:top;
+}
+
+.hayKUL .kulTemplate
+{
+	display:none;
+}
+
+
+
+.hayKUL .kulA
+{
+	display:block;
+}
+
+.hayKUL .kulText
+{
+	display:none;
+}
+
+/*btnAdd*/
+.hayKUL .kulAdd
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.hayKUL .kulAdd .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add.gif);
+}
+.hayKUL .kulAddOver .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add_over.gif);
+}
+/*btnUploadAll*/
+.hayKUL .kulUploadAll
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.hayKUL .kulUploadAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall.gif);
+}
+.hayKUL .kulUploadAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall_over.gif);
+}
+/*btnClearAll*/
+.hayKUL .kulClearAll
+{
+	display:block;
+	float:right;
+	width:70px;	
+}
+
+.hayKUL .kulClearAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall.gif);
+}
+.hayKUL .kulClearAll .kulA:hover
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall_over.gif);
+}
+/*Input File*/
+.hayKUL .kulFileInput
+{
+	display:block;
+	width:68px;
+	height:24px;
+	overflow:hidden;
+	margin-top:-24px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+}
+.hayKUL .kulFileInput input
+{
+	margin-left:-145px;
+}
+
+/*Item*/
+
+.hayKUL .kulItem
+{
+	height:60px;
+	background-color:#f0ffe3;
+	border-bottom:solid 1px #d1ffae;
+	vertical-align:top;
+	clear:both;
+}
+
+.hayKUL .kulSelected
+{
+	background-color:#f0ffe3;
+}
+
+
+.hayKUL .kulItem .kulText,
+.hayKUL .kulItem .kulA
+{
+	display:inline;
+}
+.hayKUL .kulItem .kulA .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	color:green;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.hayKUL .kulItem .kulUpload .kulA:hover .kulText,
+.hayKUL .kulItem .kulCancel .kulA:hover .kulText
+{
+	color:green;
+	text-decoration:none;
+}
+.hayKUL .kulItem .kulRemove .kulA:hover .kulText
+{
+	color:crimson;
+	text-decoration:none;
+}
+
+
+.hayKUL .kulFileName
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	display:block;
+}
+
+.hayKUL .kulUpload,
+.hayKUL .kulRemove,
+.hayKUL .kulCancel
+{
+	display:block;
+	line-height:20px;
+}
+
+.hayKUL .kulCancel
+{
+	display:none;
+}
+
+
+.hayKUL .kulUploading .kulUpload,
+.hayKUL .kulUploading .kulRemove,
+.hayKUL .kulDone .kulUpload,
+.hayKUL .kulDone .kulRemove,
+.hayKUL .kulDone .kulCancel
+{
+	display:none;
+}
+
+.hayKUL .kulUploading .kulCancel
+{
+	display:block;
+}
+
+.hayKUL .kulNotAllowed .kulRemove
+{
+	display:block;
+}
+
+
+.hayKUL .kulThumbnail
+{
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(ico_file.gif);
+}
+.hayKUL .kulProgress
+{
+	display:none;
+}
+.hayKUL .kulStatus
+{
+	display:none;
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	color:green;
+}
+.hayKUL .kulError
+{
+	color:red;
+}
+
+.hayKUL .kulDone .kulStatus
+{
+	display:block;
+}
+
+.hayKUL .kulProgress
+{
+	vertical-align:top;
+}
+
+.hayKUL .kulProgress .kulBar
+{
+	width:123px;
+	height:10px;
+	background:url(progressbg_#2c3a8b.gif) no-repeat -123px;
+}
+/*Alternative bar in case the progressEnabled==false*/
+.hayKUL .kulProgress .kulAltBar
+{
+	width:96px;
+	height:10px;
+	background:url(progressbg_alt.gif);
+}
+
+.hayKUL .kulProgress .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;	
+}
+
+
+.hayKUL .kulUploading .kulProgress
+{
+	display:block;
+}
+
+
+.hayKUL .kulItem .kulLeft
+{
+	float:left;
+	height:50px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:10px;
+}
+
+.hayKUL .kulItem .kulRight
+{
+	float:right;
+	height:50px;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:7px;
+	vertical-align:top;
+}
+
+.hayKUL .kulItem .kulMiddle
+{
+	height:45px;
+	padding-top:12px;
+	overflow:hidden;	
+}
+/*Hide iframe: this important, do not change*/
+.hayKUL .kulItem iframe
+{
+	display:none;
+}
+/*Hide form: this important, do not change*/
+.hayKUL .kulItem form
+{
+	display:none;
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*Image for thumpnail*/
+.hayKUL .kuljpg
+{
+	background:url(ico_jpg.gif);
+}
+.hayKUL .kulgif
+{
+	background:url(ico_gif.gif);
+}
+
+.hayKUL .kulpng
+{
+	background:url(ico_png.gif);
+}
+.hayKUL .kulbmp,
+.hayKUL .kulpic,
+.hayKUL .kultiff
+{
+	background:url(ico_image.gif);
+}
+
+.hayKUL .kuldoc,
+.hayKUL .kuldocx
+{
+	background:url(ico_doc.gif);
+}
+.hayKUL .kulxls,
+.hayKUL .kulxlsx
+{
+	background:url(ico_xls.gif);
+}
+.hayKUL .kulmdb
+{
+	background:url(ico_mdb.gif);
+}
+.hayKUL .kulppt
+{
+	background:url(ico_ppt.gif);
+}
+.hayKUL .kulmdf
+{
+	background:url(ico_mdf.gif);
+}
+.hayKUL .kuldll
+{
+	background:url(ico_dll.gif);
+}
+.hayKUL .kulbat
+{
+	background:url(ico_bat.gif);
+}
+.hayKUL .kulaspx
+{
+	background:url(ico_aspx.gif);
+}
+.hayKUL .kulcs
+{
+	background:url(ico_cs.gif);
+}
+.hayKUL .kulhtml,
+.hayKUL .kulhtm
+{
+	background:url(ico_html.gif);
+}
+.hayKUL .kulini
+{
+	background:url(ico_ini.gif);
+}
+.hayKUL .kuljar
+{
+	background:url(ico_jar.gif);
+}
+.hayKUL .kuljs
+{
+	background:url(ico_js.gif);
+}
+.hayKUL .kullib
+{
+	background:url(ico_lib.gif);
+}
+.hayKUL .kulmp3
+{
+	background:url(ico_mp3.gif);
+}
+.hayKUL .kulmpg
+{
+	background:url(ico_mpg.gif);
+}
+.hayKUL .kulpdf
+{
+	background:url(ico_pdf.gif);
+}
+.hayKUL .kulphp
+{
+	background:url(ico_php.gif);
+}
+.hayKUL .kulrar,
+.hayKUL .kulzip,
+.hayKUL .kultgz
+{
+	background:url(ico_rar.gif);
+}
+.hayKUL .kultxt
+{
+	background:url(ico_txt.gif);
+}
+.hayKUL .kulvb
+{
+	background:url(ico_vb.gif);
+}
+.hayKUL .kulwma
+{
+	background:url(ico_wma.gif);
+}
+.hayKUL .kulxml
+{
+	background:url(ico_xml.gif);
+}

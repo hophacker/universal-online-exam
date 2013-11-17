@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="PostBack_On_Selection" usedb="false">
+	<title>PostBack On Selection</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+
+	<description>
+		<![CDATA[ 
+<p>
+When the page does postback, the selected tab id will be sent to server. You may get the selected id through <b>$POST["[tabid]_selected"]</b>.
+</p>
+<p>
+For example, if you have a KoolTabs instance with id <b>"kts"</b>, the selected value will be stored in <b>$POST["kts_selected"]</b>.
+</p>
+
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->scriptFolder = $KoolControlsFolder."/KoolTabs";
+	$kts->styleFolder="black";
+		
+	$kts->addTab("root","Cadillac","Cadillac");	
+	$kts->addTab("root","Porsche","Porsche");
+	$kts->addTab("root","Mercedes","Mercedes");
+	
+	$_select_tab = "Cadillac";
+	if(isset($_POST["kts_selected"]))
+	{
+		$_select_tab = $_POST["kts_selected"];
+	}
+	$kts->getTab($_select_tab)->selected = true;
+	
+	$imagesrc = "Images/".$_select_tab.".JPG";
+	
+?>
+
+<form id="form1" method="post">
+
+	<div style="padding:10px;">
+		<?php echo $kts->Render();?>
+		<img src= "<?php echo $imagesrc;?>" alt="" />
+	</div>
+	
+	<script type="text/javascript">
+		kts.registerEvent("OnSelect",function(sender,arg){
+			document.getElementById("form1").submit();
+		});
+	</script>
+	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#getTab">PHP :: KoolTabs :: getTab()</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabsItem_Class/index.php#selected">PHP :: KoolTabsItem :: selected</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/Javascript/KoolTabs_Class/index.php#registerEvent">Javascript :: KoolTabs :: registerEvent()</doc>
+
+	</docs>
+</example>

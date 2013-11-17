@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Submitting forms</title>
+	</head>
+	<body>
+		<form id="myForm">
+			<input type="submit" value="Submit Form" />
+		</form>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$('input:button').click(function()
+				{
+					$('#myForm').submit();
+				});
+			});
+		</script>
+	</body>
+</html>

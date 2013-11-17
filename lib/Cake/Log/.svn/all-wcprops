@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Log
+END
+LogEngineCollection.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Log/LogEngineCollection.php
+END
+CakeLog.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Log/CakeLog.php
+END
+CakeLogInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Log/CakeLogInterface.php
+END

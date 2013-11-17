@@ -1,0 +1,209 @@
+.office2010blueKSS
+{
+	border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+
+	background-color: #DBE7F5;
+    border: 1px solid #9BABC2;
+}
+
+
+.office2010blueKSS ul.kssUL
+{
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;	
+}
+
+
+.office2010blueKSS li.kssItem
+{
+	display: inline-block;
+	margin:2px 0px 2px 0px;
+    vertical-align: middle;
+}
+
+.office2010blueKSS ul.kssVertical li.kssItem
+{
+	display:block;
+}
+
+.office2010blueKSS li.kssLineBreak
+{
+	display:block;
+	margin:0px;
+}
+.office2010blueKSS ul.kssVertical li.kssLineBreak
+{
+	margin:4px 0px 4px 0px;
+	background-color:#9BABC2;
+	height:1px;
+}
+
+
+.office2010blueKSS a.kssLink
+{
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+
+.office2010blueKSS span.kssText
+{
+	color: #3B3B3B;
+	vertical-align: middle;
+	margin:0px 2px 0px 2px;
+}
+
+.office2010blueKSS span.kssIcon
+{
+	background-image: url(SocialShareSprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin:0px 2px 0px 2px;
+    width: 16px;
+	vertical-align: middle;
+}
+
+/*Facebook*/
+.office2010blueKSS .kssFacebook span.kssIcon
+{
+	background-position: -260px 0;
+}
+.office2010blueKSS .kssFacebook:hover span.kssIcon
+{
+	background-position: -260px -20px;
+}
+
+/*Twitter*/
+.office2010blueKSS .kssTwitter span.kssIcon
+{
+	background-position: -20px 0;
+}
+.office2010blueKSS .kssTwitter:hover span.kssIcon
+{
+	background-position: -20px -20px;
+}
+
+/*Blogger*/
+.office2010blueKSS .kssBlogger span.kssIcon
+{
+	background-position: 0 0;
+}
+.office2010blueKSS .kssBlogger:hover span.kssIcon
+{
+	background-position: 0 -20px;
+}
+
+/*Delicious*/
+.office2010blueKSS .kssDelicious span.kssIcon
+{
+	background-position: -60px 0;
+}
+.office2010blueKSS .kssDelicious:hover span.kssIcon
+{
+	background-position: -60px -20px;
+}
+
+/*Digg*/
+.office2010blueKSS .kssDigg span.kssIcon
+{
+	background-position: -80px 0;
+}
+.office2010blueKSS .kssDigg:hover span.kssIcon
+{
+	background-position: -80px -20px;
+}
+
+/*GoogleBookmarks*/
+.office2010blueKSS .kssGoogleBookmarks span.kssIcon
+{
+	background-position: -120px 0;
+}
+.office2010blueKSS .kssGoogleBookmarks:hover span.kssIcon
+{
+	background-position: -120px -20px;
+}
+
+/*LinkedIn*/
+.office2010blueKSS .kssLinkedIn span.kssIcon
+{
+	background-position: -140px 0;
+}
+.office2010blueKSS .kssLinkedIn:hover span.kssIcon
+{
+	background-position: -140px -20px;
+}
+
+/*MySpace*/
+.office2010blueKSS .kssMySpace span.kssIcon
+{
+	background-position: -40px 0;
+}
+.office2010blueKSS .kssMySpace:hover span.kssIcon
+{
+	background-position: -40px -20px;
+}
+
+/*Reddit*/
+.office2010blueKSS .kssReddit span.kssIcon
+{
+	background-position: -160px 0;
+}
+.office2010blueKSS .kssReddit:hover span.kssIcon
+{
+	background-position: -160px -20px;
+}
+
+/*StumbleUpon*/
+.office2010blueKSS .kssStumbleUpon span.kssIcon
+{
+	background-position: -180px 0;
+}
+.office2010blueKSS .kssStumbleUpon:hover span.kssIcon
+{
+	background-position: -180px -20px;
+}
+
+/*Tumblr*/
+.office2010blueKSS .kssTumblr span.kssIcon
+{
+	background-position: -200px 0;
+}
+.office2010blueKSS .kssTumblr:hover span.kssIcon
+{
+	background-position: -200px -20px;
+}
+
+/*MailTo*/
+.office2010blueKSS .kssMailTo span.kssIcon
+{
+	background-position: -220px 0;
+}
+.office2010blueKSS .kssMailTo:hover span.kssIcon
+{
+	background-position: -220px -20px;
+}
+
+/*SendEmail*/
+.office2010blueKSS .kssSendEmail span.kssIcon
+{
+	background-position: -100px 0;
+}
+.office2010blueKSS .kssSendEmail:hover span.kssIcon
+{
+	background-position: -100px -20px;
+}
+
+.office2010blueKSS  li.kssFacebookButton,
+.office2010blueKSS  li.kssTwitterButton,
+.office2010blueKSS  li.kssLinkedInButton,
+.office2010blueKSS  li.kssGooglePlusButton
+{
+	margin:0px 2px 0px 2px;
+}

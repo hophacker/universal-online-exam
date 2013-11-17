@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="MultiLevels" usedb="false">
+	<title>Multi-Levels</title>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<metadescription>Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolTabs allows you to define unlimited level of tabs easily with <b>addTab()</b> function.
+</p>
+<p>
+You may have a look at our source-code for more details.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolTabs/kooltabs.php";
+
+	$kts = new KoolTabs("kts");
+	$kts->styleFolder = "silver";
+	$kts->addTab("root","home","Home",null,true);	
+	$kts->addTab("root","products","Products");
+	$kts->addTab("root","services","Services");
+	$kts->addTab("root","company","Company");
+	$kts->addTab("root","contactus","Contact us");
+	
+	$kts->addTab("home","intro","Introduction",null,true);	
+	$kts->addTab("home","strategy","Strategy",null,true);	
+	
+	$kts->addTab("products","kooltreeview","KoolTreeView");	
+	$kts->addTab("products","koolslidemenu","KoolSlideMenu");	
+	
+	$kts->addTab("services","oursource","Out-sourcing");	
+	$kts->addTab("services","consultant","Consultant Services");	
+	
+	$kts->addTab("company","aboutus","About us");	
+	$kts->addTab("company","keystaffs","Key staffs");
+	
+	$kts->addTab("contactus","headquater","Head Quater");	
+	$kts->addTab("contactus","branches","Branches");
+?>
+
+<form id="form1" method="post">
+	<div style="padding:10px;">
+		<?php echo $kts->Render();?>
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#addTab">PHP :: KoolTabs :: addTab()</doc>
+	</docs>
+</example>

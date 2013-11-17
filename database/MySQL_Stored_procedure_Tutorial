@@ -1,0 +1,312 @@
+Introduction to SQL Stored Procedures
+
+Definition of stored procedure
+A stored procedure, by definition, is a segment of declarative SQL code which is stored in the database catalog and can be invoked later by a program, a trigger or even a stored procedure.
+A stored procedure, which calls itself, is recursive stored procedure. Almost RDMBS supports recursive stored procedure but MySQL does not support it well. Check your version of MySQL before using recursive stored procedure
+Stored procedure in MySQL
+MySQL certainly is the most open source RDBMS which is widely used by both community and enterprise but during the first decade of its existence, it did not support stored procedure, trigger, event…Since MySQL version 5.0, those features has been added to MySQL database engine to allow MySQL more flexible and powerful. Therefore before start the tutorial series about Stored procedure, it is required that you have MySQL version > 5.x installed in your computer.
+Stored procedures advantages
+Stored procedure increases performance of application. Once created, stored procedure is compiled and stored in the database catalog. It runs faster than uncompiled SQL commands which are sent from application
+Stored procedure reduced the traffic between application and database server because instead of sending multiple uncompiled long SQL commands statement, application only has to send the stored procedure name and get the result back.
+Stored procedure is reusable and transparent to any application which wants to use it. Stored procedure exposes the database interface to all applications so developer doesn’t have to program the functions which are already supported in stored procedure in all programs.
+Stored procedure is secured. Database administrator can grant the right to application which to access which stored procedures in database catalog without granting any permission on the underlying database table.Beside those advantages, stored procedure still has its own disadvantages which are bellow
+Stored procedures disadvantages
+Stored procedure make the database server high load in both memory for and processors. Instead of being focused on the storing and retrieving data, you could be asking the database server to perform a number of logical operations or a complex of business logic which is not the role of it.
+Stored procedure only contains declarative SQL so it is very difficult to write a procedure with complexity of business like other languages in application layer such as Java, C#, C++…
+You cannot debug stored procedure in almost RDMBSs and in MySQL also. There are some workarounds on this problem but it still not good enough to do so.
+Writing and maintain stored procedure usually required specialized skill set that not all developers possess. This introduced the problem in both application development and maintain phrase.
+Stored procedure has it own advantages and disadvantages as mentioned above. So when developing application you should balance between them to choose whether to use stored procedure or not. The following tutorial we will guide you how to leverage stored procedure in your database programming task with a couple of practical examples.
+
+Getting Started with MySQL Stored Procedures
+In this tutorial, you will write the first simple stored procedure and invoke it from command line of MySQL.
+Writing the first stored procedure
+The first stored procedure is very simple. It retrieves all products from products table. First let’s take a look at the stored procedure source code bellow:
+DELIMITER //
+CREATE PROCEDURE GetAllProducts()
+BEGIN
+SELECT * FROM products;
+END //
+DELIMITER ;
+
+The first command you see is DELIMITER //. This command is not related to the stored procedure. DELIMITER statement is used to change the standard delimiter (semicolon) to another, in this case the delimiter is changed to //, so you can have multiple SQL statements inside stored procedure which can separate by the semicolon. After the END keyword we use delimiter // to show the end of the stored procedure. The last command changes the delimiter back to the standard one (semicolon).
+In order to create a new stored procedure you use CREATE PROCEDURE statement. After the CREATE PROCEDURE statement you can specify the name of stored procedure, in this case it is GetAllProducts.
+The body part of the stored procedure started with between BEGIN and END block. You can write declarative SQL code here. We can analysis more details of each part later. Now we have created a new stored procedure, but we also need to know however to invoke it in program or in command line of MySQL.
+Calling the stored procedure
+In order to invoke a stored procedure we use the following SQL command:
+CALL STORED_PROCEDURE_NAME()
+For example, we can call the stored procedure we have created like this
+CALL GetAllProducts();
+We get all products in the products database table.
+In this tutorial, you’ve learn how to change the delimiter by using DELIMITER statement. It allows you to type multiple SQL statements inside stored procedure. You’ve also learn how to write a simple stored procedure by using CREATE PROCEDURE statement and call it from command line by using CALL statement.
+
+Declaring variables
+Variables are used in stored procedure to store the immediate result. You can declare a variable by the following syntax:
+DECLARE variable_name datatype(size) DEFAULT default_value;
+Followed DECLARE statement is the variable name. The variable name should follow the naming convention and should not be the same name of table or column in a database. Next you can specify the data type of the variable, it can be any primitive type which MySQL supports such as INT, VARCHAR and DATETIME…along with the data type is the size of the variable. When you declare a variable, its initial value is NULL. You can also assign the default value for the variable by using DEFAULT statement.  For example, we can define a variable name total_sale with the data type INT and default value is 0 as follows:
+DECLARE total_sale INT DEFAULT 0
+To declare two or more variables with the same data type we can use only just one DECLARE such as:
+DECLARE x, y INT DEFAULT 0
+We declared two variables x and y with the same data type INT and their default value is zero.
+Assigning variables
+Once you declared a variable, you can start using it. To assign other value to a variable you can use SET statement, for example:
+DECLARE total_count INT DEFAULT 0
+SET total_count = 10;
+The total_count variable’s value now is ten (10).
+Beside SET statement, we can use SELECT … INTO to assign a query result to a variable.
+DECLARE total_products INT DEFAULT 0
+SELECT COUNT(*) INTO total_products
+FROM products
+In the example above, we declare a variable total_products and initialize its value to zero. Then we use SELECT … INTO statement to assign the variable total_products with the total products in products database table.
+Variables scope
+A variable has its own scope. If you declare a variable inside a stored procedure, it will be out of scope when the END of stored procedure reached. If you defined a variable inside block BEGIN/END inside a stored procedure it will be out of scope if the END reached. You can declare two variables or more variables with the same name in different scopes; the variable only is effective in its scope.
+A variable with the ‘@’ at the beginning is session variable. It exists until the session end.
+
+ » MySQL Stored Procedure » Stored Procedure Parameters
+Stored Procedure Parameters
+In this tutorial, you will learn how to write stored procedures with parameters. We will also give you a couple of stored procedure examples to help you understand more about parameters in stored procedures
+Almost stored procedures you develop require parameters. Parameters make the stored procedure more flexible and useful. In MySQL, a parameter has one of three modes IN, OUT and INOUT.
+IN this is the default mode. IN indicates that a parameter can be passed into stored procedures but any modification inside stored procedure does not change parameter. Suppose you pass parameter Id, which is equal 10, into stored procedure GetAll(Id), after executing the stored procedure the value of Id is still 10 even though the GetAll stored procedure can change the value of it.
+OUT this mode indicates that stored procedure can change this parameter and pass back to the calling program.
+INOUT obviously this mode is combined of IN and OUT mode; you can pass parameter into stored procedure and get it back with the new value from calling program.
+The syntax of defining a parameter in stored procedure is as follows:
+MODE param_name param_type(param_size)
+MODE could be IN, OUT or INOUT depending on the purpose of parameter you specified.
+param_name is the name of the parameter. The name must not be the same as the column name of tables and following naming convention. Followed the parameter name is the type of parameter and its size.
+Each parameter is separated by a comma if the stored procedure more than one parameter.
+
+Let’s practice with following examples to understand more.
+The first example is a stored procedure to get all offices in a country. Here is the SQL source code:
+DELIMITER //
+CREATE PROCEDURE GetOfficeByCountry(IN countryName VARCHAR(255))
+BEGIN
+SELECT city, phone
+FROM offices
+WHERE country = countryName;
+END //
+DELIMITER ;
+
+As you can see we use countryName as the IN parameter with its type is varchar and its size is 255. In body part of stored procedure, we retrieve all offices which its country is the countryName.
+Suppose you want to retrieve all office in USA, just pass the value to the stored procedures like this:
+CALL GetOfficeByCountry('USA')
+It returns all offices in USA
+To get all offices in France just call pass France to the stored procedure like following:
+CALL GetOfficeByCountry(‘France’)
+It returns all offices in USA
+The second example, we will write a store procedure to count the order in a specific order status such as shipped, resolved, cancelled, on hold, disputed or in process. Here is the stored procedure
+DELIMITER $$
+CREATE PROCEDURE CountOrderByStatus(
+IN orderStatus VARCHAR(25),
+OUT total INT)
+BEGIN
+SELECT count(orderNumber)
+INTO total
+FROM orders
+WHERE status = orderStatus;
+END$$
+DELIMITER ;
+
+The CountOrderByStatus stored procedure has two parameters:
+orderStatus parameter is IN parameter; we pass order status such as shipped or on hold in to get the number of it
+total parameter is the OUT parameter which we use to get the total order by a specified status back.
+So to get number of shipped orders, we just perform following statements
+CALL CountOrderByStatus('Shipped',@total);
+SELECT @total AS total_shipped;
+To get number of in process we do the same as above
+CALL CountOrderByStatus('in process',@total);
+SELECT @total AS total_in_process;
+ 
+In the third procedure, we will demonstrate the INOUT parameter. The stored procedure capitalizes all words in a string and returns it back to the calling program. The stored procedure source code is as follows:
+DELIMITER $$
+CREATE PROCEDURE `Capitalize`(INOUT str VARCHAR(1024))
+BEGIN
+DECLARE i INT DEFAULT 1;
+DECLARE myc, pc CHAR(1);
+DECLARE outstr VARCHAR(1000) DEFAULT str;
+WHILE i <= CHAR_LENGTH(str) DO
+SET myc = SUBSTRING(str, i, 1);
+SET pc = CASE WHEN i = 1 THEN ' '
+ELSE SUBSTRING(str, i - 1, 1)
+END;
+IF pc IN (' ', '&', '''', '_', '?', ';', ':', '!', ',', '-', '/', '(', '.') THEN
+SET outstr = INSERT(outstr, i, 1, UPPER(myc));
+END IF;
+SET i = i + 1;
+END WHILE;
+SET str = outstr;
+END$$
+DELIMITER ;
+Here is the usage of the Capitalize stored procedure
+SET @str = 'mysql stored procedure tutorial';
+CALL Capitalize(@str);
+SELECT @str;
+
+And the @str value is ‘Mysql Stored Procedure Tutorial’
+Conditional Control in Stored Procedure
+Conditional control enables you to execute the code based on the value of an expression or a combination of expression using logical operators. MySQL supports two conditional control statement such as IF and CASE.
+The IF Statement
+The syntax of IF statement is simple as follows:
+IF expression THEN commands
+[ELSEIF expression THEN commands]
+[ELSE commands]
+END IF;
+The commands associated with IF or ELSEIF or ELSE only executed when the expression is evaluated as TRUE. One of the common trap of IF statement is NULL value; When the expression is evaluated as NULL it is neither TRUE nor FALSE. Here are several combination of IF statement
+IF expression THEN commands
+END IF;
+IF expression THEN commands
+ELSE commands
+END IF;
+IF expression THEN commands
+ELSEIF expression THEN commands
+ELSE commands
+END IF;
+You can have IF statement nested with other IF statements.
+The CASE Statement
+When multiple conditions are used with IF statement the code is not easy to read. At this time, the CASE can be used to make the code clearer. The syntax of  the CASE statement is as follows:
+CASE
+WHEN expression THEN commands
+…
+WHEN expression THEN commands
+ELSE commands
+END CASE;
+
+Loop in Stored Procedures
+MySQL stored programming language supports loop which allows you to process commands iteratively. The standard loops are discuss as follows
+WHILE loop
+The syntax of while loop is as follows:
+WHILE expression DO
+Statements
+END WHILE
+First the while loop checks the expression, if it is true it will executes statement until the expression become false. Because while loop checks the expression before statements executed, it is often known as pretest loop. Here is an example of using while loop in stored procedure:
+DELIMITER $$
+DROP PROCEDURE IF EXISTS WhileLoopProc$$
+CREATE PROCEDURE WhileLoopProc()
+BEGIN
+DECLARE x INT;
+DECLARE str VARCHAR(255);
+SET x = 1;
+SET str = '';
+WHILE x <= 5 DO
+SET str = CONCAT(str,x,',');
+SET x = x + 1;
+END WHILE;
+SELECT str;
+END$$
+DELIMITER ;
+
+In stored procedures above, we build string repeatedly until the variable x greater than 5 and then we output the built string into console screen by using SELECT statement. One of common trap almost developers encounter is if the variable x is not initialized, its default value is NULL so the condition in while loop is always true; the code block inside while loop is executed indefinitively until your database server crashed.
+ 
+REPEAT loop
+The syntax of repeat loop is as follows:
+REPEAT
+Statements;
+UNTIL expression
+END REPEAT
+First the statements are executed, and then the expression is evaluated. If the expression is evaluated as true the statements are executed again and again until its value become false. Because the repeat loop checks the expression after the execution of statements so it is also known as post-test loop. We can rewrite the stored procedure above by using repeat loop as follows:
+DELIMITER $$
+DROP PROCEDURE IF EXISTS RepeatLoopProc$$
+CREATE PROCEDURE RepeatLoopProc()
+BEGIN
+DECLARE x INT;
+DECLARE str VARCHAR(255);
+SET x = 1;
+SET str = '';
+REPEAT
+SET str = CONCAT(str,x,',');
+SET x = x + 1;
+UNTIL x > 5
+END REPEAT;
+SELECT str;
+END$$
+DELIMITER ;
+
+Be noted that there is no delimiter (;) after UNTIL expression
+LOOP loop, LEAVE and ITERATE
+Leave statement allows you to leave the loop. It is a bit like break in other languages such as Java, C#...
+Iterate statement allows you to start the loop again. It is like continue in Java or C#.
+MySQL also support a LOOP loop which allows you to execute statements repeatedly more flexible. Here is an example of using LOOP loop.
+ 
+DELIMITER $$
+DROP PROCEDURE IF EXISTS LOOPLoopProc$$
+CREATE PROCEDURE LOOPLoopProc()
+BEGIN
+DECLARE x INT;
+DECLARE str VARCHAR(255);
+SET x = 1;
+SET str = '';
+loop_label: LOOP
+IF x > 10 THEN
+LEAVE loop_label;
+END IF;
+SET x = x + 1;
+IF (x mod 2) THEN
+ITERATE loop_label;
+ELSE
+SET str = CONCAT(str,x,',');
+END IF;
+
+END LOOP;
+SELECT str;
+END$$
+ 
+DELIMITER ;
+The stored procedure only constructs string with even numbers. First we define a loop label, if a variable x is greater than 10 the loop is ended because of leave statement. Otherwise if the variable x is odd, the ITERATE ignores everything bellow it and continues, if the variable x is even, the block after ELSE constructs strings with even numbers.
+
+
+SQL Cursor in Stored Procedures
+MySQL supported cursor in stored procedures, functions and triggers. Cursor is used to iterate through a set of rows, which returned by a query, and process individual row. Currently with all versions greater 5.x, MySQL cursor has following properties:
+Read only: it means you cannot update the cursor.
+Non-scrollable: it only can traverse in one direction and cannot skip, move back or forth in result set.
+Asensitive: you should avoid update table while open a cursor on that table otherwise you may get unexpected results.
+MySQL supports following statements for working with cursor.
+First you have to declare a cursor using DECLARE statement:
+DECLARE cursor_name CURSOR FOR SELECT_statement;
+Second you have to open the cursor using OPEN statement. You must open cursor before fetching rows from it.
+OPEN cursor_name;
+Next you can retrieve next row from cursor and move the cursor to the following row in a result set by using FETCH statement.
+FETCH cursor_name INTO variable list;
+And finally, you must close the cursor to deactivate it and release the memory associated with that cursor. To close the cursor you use CLOSE statement:
+CLOSE cursor_name;
+One of the most important point when working with cursor is you should use a NOT FOUND handler to avoid raising a fatal “no data to fetch” condition.
+We use a stored procedure example bellow to demonstrate cursor.
+ 
+DELIMITER $$
+DROP PROCEDURE IF EXISTS CursorProc$$
+CREATE PROCEDURE CursorProc()
+BEGIN
+DECLARE no_more_products, quantity_in_stock INT DEFAULT 0;
+DECLARE prd_code VARCHAR(255);
+            DECLARE cur_product CURSOR FOR
+SELECT productCode FROM products;
+  DECLARE CONTINUE HANDLER FOR NOT FOUND
+SET no_more_products = 1;
+
+/* for loggging information */
+CREATE TABLE infologs (
+Id int(11) NOT NULL AUTO_INCREMENT,
+Msg varchar(255) NOT NULL,
+PRIMARY KEY (Id)
+);
+OPEN cur_product;
+
+FETCH cur_product INTO prd_code;
+REPEAT
+SELECT quantityInStock INTO quantity_in_stock
+FROM products
+WHERE productCode = prd_code;
+
+IF quantity_in_stock < 100 THEN
+INSERT INTO infologs(msg)
+VALUES (prd_code);
+END IF;
+FETCH cur_product INTO prd_code;
+UNTIL no_more_products = 1
+END REPEAT;
+CLOSE cur_product;
+SELECT * FROM infologs;
+DROP TABLE infologs;
+END$$
+DELIMITER;
+
+The stored procedure is very simple and can archive the same result by SQL query. We use it only for demonstrating how cursors work.
+We use a cursor for products table and loop though the products result set. If the quantity in stock of a product is less than 100, we log it into to a temporary table and after the loop we select all products to print it on screen.
+Remember you must declare cursor first and then declare a NOT FOUND handler; otherwise you will get an error.

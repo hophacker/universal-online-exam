@@ -1,0 +1,1 @@
+1.backup格式:   mysqldump -u root -p123 dxks > ~/yangda/backup/dxks`date +%Y%m%d%H%M`.sql

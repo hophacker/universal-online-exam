@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>setTemplateDir()</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="api.functions.html" title="Chapter 14. Smarty Class Methods">
+<link rel="prev" href="api.set.plugins.dir.html" title="setPluginsDir()">
+<link rel="next" href="api.template.exists.html" title="templateExists()">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">setTemplateDir()</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="api.set.plugins.dir.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 14. Smarty Class Methods</th>
+<td width="20%" align="right"> <a accesskey="n" href="api.template.exists.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="refentry" title="setTemplateDir()">
+<a name="api.set.template.dir"></a><div class="titlepage"></div>
+<div class="refnamediv">
+<h2>Name</h2>
+<p>setTemplateDir() — set the directories where templates are stored</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="id440093"></a><h2>Description</h2>
+<code class="methodsynopsis"><span class="type">Smarty </span><span class="methodname">setTemplateDir</span>(<span class="methodparam"><span class="type">string|array </span><span class="parameter">template_dir</span></span>);</code><div class="example">
+<a name="id440570"></a><p class="title"><b>Example 14.47. setTemplateDir()</b></p>
+<div class="example-contents"><pre class="programlisting">
+
+&lt;?php
+
+// set a single directory where the templates are stored
+$smarty-&gt;setTemplateDir('./cache');
+
+// view the template dir chain
+var_dump($smarty-&gt;getTemplateDir());
+
+// set multiple directoríes where templates are stored
+$smarty-&gt;setTemplateDir(array(
+    'one' =&gt; './templates',
+    'two' =&gt; './templates_2',
+    'three' =&gt; './templates_3',
+));
+
+// view the template dir chain
+var_dump($smarty-&gt;getTemplateDir());
+
+// chaining of method calls
+$smarty-&gt;setTemplateDir('./templates')
+       -&gt;setCompileDir('./templates_c')
+       -&gt;setCacheDir('./cache');
+
+?&gt;
+
+   </pre></div>
+</div>
+<br class="example-break"><p>
+   See also
+   <a class="link" href="api.get.template.dir.html" title="getTemplateDir()"><code class="varname">getTemplateDir()</code></a>,
+   <a class="link" href="api.add.template.dir.html" title="addTemplateDir()"><code class="varname">addTemplateDir()</code></a> and
+   <a class="link" href="variable.template.dir.html" title="$template_dir"><em class="parameter"><code>$template_dir</code></em></a>.
+  </p>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="api.set.plugins.dir.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="api.functions.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="api.template.exists.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">setPluginsDir() </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> templateExists()</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

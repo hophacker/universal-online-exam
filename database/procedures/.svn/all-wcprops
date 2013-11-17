@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/dxks/!svn/ver/70/yangda/database/procedures
+END
+generate_id_col.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/dxks/!svn/ver/28/yangda/database/procedures/generate_id_col.sh
+END
+generate_state_col.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/dxks/!svn/ver/28/yangda/database/procedures/generate_state_col.sh
+END
+lower_tables
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dxks/!svn/ver/15/yangda/database/procedures/lower_tables
+END
+procedure.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dxks/!svn/ver/70/yangda/database/procedures/procedure.sql
+END

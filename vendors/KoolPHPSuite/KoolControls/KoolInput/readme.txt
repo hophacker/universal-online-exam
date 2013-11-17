@@ -1,0 +1,1 @@
+KoolInput is integrated inside KoolForm.

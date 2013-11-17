@@ -1,0 +1,55 @@
+Array../sys/class/class.Calendar.inc.php
+/home/j/workspace/yangda/website/public
+Notice: Undefined variable: dbHost in /home/j/workspace/yangda/website/sys/class/class.db_connect.inc.php on line 11
+
+Call Stack:
+    0.0002     324740   1. {main}() /home/j/workspace/yangda/website/public/index.php:0
+    0.0061     702776   2. Calendar->__construct() /home/j/workspace/yangda/website/public/index.php:4
+    0.0061     702776   3. DB_Connect->__construct() /home/j/workspace/yangda/website/sys/class/class.Calendar.inc.php:13
+
+
+Notice: Undefined variable: dbDatabase in /home/j/workspace/yangda/website/sys/class/class.db_connect.inc.php on line 11
+
+Call Stack:
+    0.0002     324740   1. {main}() /home/j/workspace/yangda/website/public/index.php:0
+    0.0061     702776   2. Calendar->__construct() /home/j/workspace/yangda/website/public/index.php:4
+    0.0061     702776   3. DB_Connect->__construct() /home/j/workspace/yangda/website/sys/class/class.Calendar.inc.php:13
+
+
+Notice: Undefined variable: dbUsername in /home/j/workspace/yangda/website/sys/class/class.db_connect.inc.php on line 13
+
+Call Stack:
+    0.0002     324740   1. {main}() /home/j/workspace/yangda/website/public/index.php:0
+    0.0061     702776   2. Calendar->__construct() /home/j/workspace/yangda/website/public/index.php:4
+    0.0061     702776   3. DB_Connect->__construct() /home/j/workspace/yangda/website/sys/class/class.Calendar.inc.php:13
+
+
+Notice: Undefined variable: dbPassword in /home/j/workspace/yangda/website/sys/class/class.db_connect.inc.php on line 13
+
+Call Stack:
+    0.0002     324740   1. {main}() /home/j/workspace/yangda/website/public/index.php:0
+    0.0061     702776   2. Calendar->__construct() /home/j/workspace/yangda/website/public/index.php:4
+    0.0061     702776   3. DB_Connect->__construct() /home/j/workspace/yangda/website/sys/class/class.Calendar.inc.php:13
+
+<pre>class Calendar#2 (9) {
+  private $_y =>
+  NULL
+  private $_daysInMonth =>
+  NULL
+  private $_startDay =>
+  NULL
+  private $_useDate =>
+  NULL
+  private $_m =>
+  NULL
+  protected $_db =>
+  NULL
+  private $_ok =>
+  NULL
+  public $hah =>
+  NULL
+  public $db =>
+  class PDO#3 (0) {
+  }
+}
+</pre>

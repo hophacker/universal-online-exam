@@ -1,0 +1,17 @@
+<control>
+	<name>KoolUploader - PHP Ajax File Upload</name>
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<description>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</description>
+	<examples>
+		<example	name="Many Styles" 
+					link="Appearance/Styles/index.php" 
+					image="Appearance/Styles/preview.gif"/>
+		<example	name="Ajax Progress Tracking" 
+					link="Features/Ajax_Progress_Tracking/index.php"
+					image="Features/Ajax_Progress_Tracking/preview.gif"/>
+		<example	name="Sequential Uploading" 
+					link="Advances/Sequential_Uploading/index.php" 
+					image="Advances/Sequential_Uploading/preview.gif"/>
+	</examples>
+</control>

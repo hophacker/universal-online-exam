@@ -1,0 +1,420 @@
+.windows7KLB
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;	
+}
+
+
+.windows7KLB_Scrollable .klbGroup
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C1DBFC;
+	overflow: auto;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.windows7KLB .klbList
+{
+    height: 100%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.windows7KLB .klbItem
+{
+	line-height: 18px;
+    color: #000000;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    cursor: default;
+    padding: 2px 5px;
+    white-space: nowrap;	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 		
+}
+
+.windows7KLB .klbDisabledItem 
+{
+	color: #AAAAAA;
+}
+
+
+
+.windows7KLB .klbGroup .klbHovered
+{
+    background: none repeat scroll 0 0 #EEF6FF;
+    color: #000000;
+}
+
+.windows7KLB .klbGroup .klbSelected {
+    background: none repeat scroll 0 0 #C3DCFC;
+    color: #000000;
+}
+
+.windows7KLB .klbGroup .klbActive {
+    border: 1px dotted #555555;
+    padding: 1px 4px;
+}
+
+.windows7KLB .klbItem .klbText,
+.windows7KLB .klbItem .klbCheck,
+.windows7KLB .klbItem .klbImage
+{
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.windows7KLB .klbItem .klbImage
+{
+	padding-right:2px;
+}
+
+.windows7KLB .klbButtonAreaRight
+{
+	float:right;
+	width:30px;
+	height:100%;
+}
+
+.windows7KLB .klbButtonAreaLeft
+{
+	float:left;
+	width:30px;
+	height:100%;
+}
+
+.windows7KLB .klbButtonAreaTop,
+.windows7KLB .klbButtonAreaBottom
+{
+	float:left;
+	width:100%;
+	height:30px;
+}
+.windows7KLB .klbAlignLeft
+{
+	text-align:left;
+}
+.windows7KLB .klbAlignRight
+{
+	text-align:right;
+}
+.windows7KLB .klbAlignCenter
+{
+	text-align:center;
+}
+
+.windows7KLB .klbAlignTop td
+{
+	vertical-align:top;
+}
+.windows7KLB .klbAlignBottom td
+{
+	vertical-align:bottom;
+}
+.windows7KLB .klbAlignMiddle td
+{
+	vertical-align:middle;
+}
+
+
+
+
+.windows7KLB .klbButton
+{
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    line-height: 15px;
+    margin: 0 0 5px 6px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+.windows7KLB .klbButtonAreaLeft .klbButton
+{
+	margin: 0 6px 5px 0;
+}
+.windows7KLB .klbButtonAreaTop .klbButton
+{
+	display:inline-block;	
+	margin: 0 8px 6px 0;
+}
+.windows7KLB .klbButtonAreaBottom .klbButton
+{
+	display:inline-block;
+	margin: 6px 8px 0 0;
+}
+
+.windows7KLB .klbAlignBottom .klbButton
+{
+	margin-bottom:2px;
+	margin-top:5px;
+}
+.windows7KLB .klbAlignRight .klbButton
+{
+	margin-left:4px;
+	margin-right:4px;
+}
+
+
+
+.windows7KLB .klbButton .klbButtonBL,
+.windows7KLB .klbButton .klbButtonBR,
+.windows7KLB .klbButton .klbButtonTR,
+.windows7KLB .klbButton .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	display: inline-block;
+	position: relative;
+	width: auto;	
+}
+
+.windows7KLB .klbButton:hover .klbButtonBL,
+.windows7KLB .klbButton:hover .klbButtonBR,
+.windows7KLB .klbButton:hover .klbButtonTR,
+.windows7KLB .klbButton:hover .klbButtonTL
+{
+	background-image: url(ButtonHover.png);
+}
+
+.windows7KLB .klbDisabled:hover .klbButtonBL,
+.windows7KLB .klbDisabled:hover .klbButtonBR,
+.windows7KLB .klbDisabled:hover .klbButtonTR,
+.windows7KLB .klbDisabled:hover .klbButtonTL
+{
+	background-image: url(ButtonNormal.png);
+	cursor:default;
+}
+
+.windows7KLB .klbButton .klbButtonBL
+{
+    background-position: 0 100%;
+    right: 0;
+    top: 4px;	
+}
+
+.windows7KLB .klbButton .klbButtonBR
+{
+    background-position: 100% 100%;
+    display: inline-block;
+    right: -4px;
+}
+.windows7KLB .klbButton .klbButtonTR
+{
+    background-position: 100% 0;
+    bottom: 4px;
+    overflow: visible;
+    right: 0;	
+}
+.windows7KLB .klbButton .klbButtonTL
+{
+    background-position: 0 0;
+    left: -4px;
+}
+
+
+.windows7KLB .klbButton .klbButtonText
+{
+    background: url(Sprite.png) no-repeat;
+    display: inline-block;
+	position: relative;
+    width: 0px;
+    padding-left: 18px;
+	height:13px;
+	padding-top: 3px;
+    text-align: left;
+    z-index: 1;
+	font-size: 0;
+    color: #3B3B3B;
+    font-family: "Segoe UI",Arial,sans-serif;	   
+}
+
+/*Default and right*/
+.windows7KLB .klbDelete .klbButtonText
+{
+   background-position: 0 -50px;
+}
+.windows7KLB .klbMoveUp .klbButtonText
+{
+  background-position: 0 0;
+}
+.windows7KLB .klbMoveDown .klbButtonText
+{
+  background-position: 0 -25px;
+}
+
+.windows7KLB .klbTransferOut .klbButtonText
+{
+  background-position: 0 -75px;
+}
+.windows7KLB .klbTransferIn .klbButtonText
+{
+  background-position: 0px -100px;
+}
+
+.windows7KLB .klbTransferAllOut .klbButtonText
+{
+  background-position: 0 -125px;
+}
+.windows7KLB .klbTransferAllIn .klbButtonText
+{
+  background-position: 0px -150px;
+}
+
+
+
+.windows7KLB .klbDeleteDisabled .klbButtonText
+{
+   background-position: -200px -50px;
+}
+.windows7KLB .klbMoveUpDisabled .klbButtonText
+{
+  background-position: -200px 0;
+}
+.windows7KLB .klbMoveDownDisabled .klbButtonText
+{
+  background-position: -200px -25px;
+}
+
+.windows7KLB .klbTransferOutDisabled .klbButtonText
+{
+  background-position: -200px -75px;
+}
+.windows7KLB .klbTransferInDisabled .klbButtonText
+{
+  background-position: -200px -100px;
+}
+
+.windows7KLB .klbTransferAllOutDisabled .klbButtonText
+{
+  background-position: -200px -125px;
+}
+.windows7KLB .klbTransferAllInDisabled .klbButtonText
+{
+  background-position: -200px -150px;
+}
+
+/*Left*/
+.windows7KLB .klbButtonAreaLeft .klbTransferOut .klbButtonText
+{
+	background-position: 0px -100px;
+  
+}
+.windows7KLB .klbButtonAreaLeft .klbTransferIn .klbButtonText
+{
+	background-position: 0 -75px;
+}
+.windows7KLB .klbButtonAreaLeft .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -150px;
+}
+.windows7KLB .klbButtonAreaLeft .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -125px;
+}
+
+
+.windows7KLB .klbButtonAreaLeft .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -100px;
+}
+.windows7KLB .klbButtonAreaLeft .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -75px;
+}
+
+.windows7KLB .klbButtonAreaLeft .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -150px;
+}
+.windows7KLB .klbButtonAreaLeft .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -125px;
+}
+
+/*Top*/
+.windows7KLB .klbButtonAreaTop .klbTransferOut .klbButtonText
+{
+	background-position: 0px -200px;
+  
+}
+.windows7KLB .klbButtonAreaTop .klbTransferIn .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.windows7KLB .klbButtonAreaTop .klbTransferAllOut .klbButtonText
+{
+	background-position: 0px -250px;
+}
+.windows7KLB .klbButtonAreaTop .klbTransferAllIn .klbButtonText
+{
+	background-position: 0 -225px;
+}
+
+
+.windows7KLB .klbButtonAreaTop .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+.windows7KLB .klbButtonAreaTop .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+
+.windows7KLB .klbButtonAreaTop .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}
+.windows7KLB .klbButtonAreaTop .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+
+
+/*Bottom*/
+.windows7KLB .klbButtonAreaBottom .klbTransferOut .klbButtonText
+{
+	background-position: 0 -175px;
+}
+.windows7KLB .klbButtonAreaBottom .klbTransferIn .klbButtonText
+{
+	background-position: 0px -200px;
+}
+.windows7KLB .klbButtonAreaBottom .klbTransferAllOut .klbButtonText
+{
+	background-position: 0 -225px;
+}
+.windows7KLB .klbButtonAreaBottom .klbTransferAllIn .klbButtonText
+{
+	background-position: 0px -250px;
+}
+
+
+.windows7KLB .klbButtonAreaBottom .klbTransferOutDisabled .klbButtonText
+{
+	background-position: -200px -175px;
+}
+.windows7KLB .klbButtonAreaBottom .klbTransferInDisabled .klbButtonText
+{
+	background-position: -200px -200px;
+}
+
+.windows7KLB .klbButtonAreaBottom .klbTransferAllOutDisabled .klbButtonText
+{
+	background-position: -200px -225px;
+}
+.windows7KLB .klbButtonAreaBottom .klbTransferAllInDisabled .klbButtonText
+{
+	background-position: -200px -250px;
+}

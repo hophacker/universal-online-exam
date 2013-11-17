@@ -1,0 +1,14 @@
+.show-example div,
+.show-example p,
+.show-example input,
+.show-example select,
+.show-example td 
+{ 
+	font-family:Arial;
+}
+.show-example table {
+	border-collapse:separate;
+}
+.show-example ol, .show-example ul {
+	list-style:disc;
+}

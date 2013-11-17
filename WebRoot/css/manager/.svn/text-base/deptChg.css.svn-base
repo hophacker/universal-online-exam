@@ -1,0 +1,22 @@
+@charset "gb2312";
+/* CSS Document */
+body{
+	color: #194F95;
+	}
+legend{
+	font-size:16px;
+	color: #194F95;
+	}
+span,.con{
+	font-size:14px;
+	}
+.con{
+	color: #194F95;
+	margin-top:20px;
+	margin-left:200px;
+	}
+#deptName{
+		height:20px;
+	border-color:#0CF;
+	border-width:1px;
+	}

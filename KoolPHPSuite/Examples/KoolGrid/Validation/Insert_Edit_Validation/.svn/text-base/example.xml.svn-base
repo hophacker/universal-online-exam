@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Insert_Edit_Validation" usedb="true">
+	<title>Insert/Edit Validation</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>This example shows you how to add validator to grid column. The validator will ensure the input from user is correct before doing data operation task.</metadescription>
+	<description>
+		<![CDATA[
+<p> 
+This example shows you how to add validator to grid column. The validator will ensure the input from user is correct before doing data operation task.
+In above example, we have used <b>RequiredFieldValidator</b> and <b>RegularExpressionValidator</b>. The <b>RequiredFieldValidator</b> make sure that input from user is not empty. And the <b>RegularExpressionValidator</b> helps to ensure the input for customerNumber is <b>integer</b>.   
+</p>
+<p> 
+Together with above two validators, there are other two validators: <b>RangeValidator</b> and <b>CustomValidator</b>, all cover full range of grid input validation.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+		
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber as pk, customerNumber,customerName,phone,city from customers";
+	$ds->UpdateCommand = "update customers set customerNumber=@customerNumber, customerName='@customerName', phone='@phone', city='@city' where customerNumber=@pk";
+	$ds->DeleteCommand = "delete from customers where customerNumber=@pk";
+	$ds->InsertCommand = "insert into customers (customerNumber,customerName,phone,city) values (@customerNumber,'@customerName','@phone','@city');";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+
+	$grid->AjaxEnabled = true;
+	$grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/5.gif";	
+	$grid->DataSource = $ds;
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->Width = "655px";
+	$grid->ColumnWrap = true;
+	$grid->AllowEditing = true;
+	$grid->AllowDeleting = true;
+
+	$grid->MasterTable->ShowFunctionPanel = true;	
+	$grid->MasterTable->InsertSettings->ColumnNumber = 2;	
+
+	$column = new GridBoundColumn();
+	$column->HeaderText = "CustomerNumber";
+	$column->DataField = "customerNumber";
+	//Create regular expression validator to make sure the input is an integer.
+	$validator = new RegularExpressionValidator();
+	$validator->ValidationExpression = "/^([0-9])+$/";
+	$validator->ErrorMessage = "Please input an integer";
+	$column->AddValidator($validator);
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->HeaderText = "CustomerName";
+	$column->DataField = "customerName";
+	//Add required field validator to make sure the input is not empty.
+	$validator = new RequiredFieldValidator();
+	$column->AddValidator($validator);
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->HeaderText = "Phone";
+	$column->DataField = "phone";
+	//Add required field validator to make sure the input is not empty.
+	$validator = new RequiredFieldValidator();
+	$column->AddValidator($validator);
+	$grid->MasterTable->AddColumn($column);
+
+	$column = new GridBoundColumn();
+	$column->HeaderText = "City";
+	$column->DataField = "city";
+	//Add required field validator to make sure the input is not empty.
+	$validator = new RequiredFieldValidator();
+	$column->AddValidator($validator);
+	$grid->MasterTable->AddColumn($column);
+	$column = new GridEditDeleteColumn();
+	$grid->MasterTable->AddColumn($column);
+	
+	$grid->Process();
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+
+	<div style='padding-bottom:5px;width:655px;'>	
+		<i>*Note:</i> When editing or inserting row, you may test putting non-integer to CustomerNumber field or leave other input fields empty.
+	</div>
+	<?php echo $grid->Render();?>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/RequiredFieldValidator/index.php">RequiredFieldValidator</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/RangeValidator/index.php">RangeValidator</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/RegularExpressionValidator/index.php">RegularExpressionValidator</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/CustomValidator/index.php">CustomValidator</doc>
+	</docs>
+</example>

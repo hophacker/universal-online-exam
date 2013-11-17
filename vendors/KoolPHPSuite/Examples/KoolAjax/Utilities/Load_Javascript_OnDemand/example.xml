@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Load_Javascript_OnDemand" usedb="false">
+	<title>Load Javascript On-Demand</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, 	php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. This examples show how to load javascript library on-demand.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolAjax supports loading Javascript on-demand. This feature is useful when you want your page less overhead. The script can be loaded when it is needed. To make this, you use the client-side <b>loadScript()</b> function of KoolAjax's instance.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+?>
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>	
+	<style type="text/css">
+		div.box
+		{
+			float:left;
+			margin:5px;
+			padding:10px;
+			width:290px;
+			height:190px;
+		}
+		div.disable
+		{
+			padding-top:50px;
+			height:140px;
+			text-align:center;					
+			background:#EEEEEE;
+			border:solid 1px #CCCCCC;
+
+		}
+		div.enable
+		{
+			padding-top:50px;
+			height:140px;			
+			text-align:center;
+			background:#DFF3FF;
+			border:solid 1px #C6E1F2;	
+		}
+		.clear
+		{
+			clear:both;
+		}
+	</style>
+	<script type="text/javascript">
+		function loadjs()
+		{
+			koolajax.loadScript("sayhello.js",on_loadjs_done);
+			document.getElementById("btnLoad").disabled = true;
+		}
+		function on_loadjs_done()
+		{
+			document.getElementById("divHello").className = "box enable";
+			document.getElementById("btnHello").disabled = false;
+		}
+	</script>
+
+	<div class="box">
+		<input id="btnLoad" type="button" value="Load Javascript On-Demand" onclick="loadjs()" />
+	</div>		
+	<div id="divHello" class="box disable">
+		<input id="btnHello" type="button" value="Say Hello" onclick="sayhello()" disabled="true" />
+	</div>
+	<div class="clear"></div>
+</form>
+			]]>			
+		</code>		
+		<code header="SayHello.js">
+			<![CDATA[
+function sayhello()
+{
+	alert("Hello from javascript loaded on-demand");
+}
+			]]>			
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/KoolAjax_Class/index.php#loadScript">Javascript :: KoolAjax :: loadScript()</doc>
+	</docs>
+</example>

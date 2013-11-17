@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command
+END
+ApiShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/ApiShellTest.php
+END
+CommandListShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/CommandListShellTest.php
+END
+AclShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/AclShellTest.php
+END
+TestShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/TestShellTest.php
+END
+SchemaShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/SchemaShellTest.php
+END
+BakeShellTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Test/Case/Console/Command/BakeShellTest.php
+END

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Attach_Extra_Data" usedb="false">
+	<title>Attach Extra Data</title>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolUploader is able to attachdata from client-side to send to server-side. At client-side you need to use the attachData() function of KoolUploaderItem's instance to add extra data to file item. The data will be sent to server by POST.
+</p>
+<p>
+In above example, there will be a description sent along with each uploaded file. The file will be saved in the format <b>[desc]filename.extension</b> at server-side.
+</p>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+
+	$kul = new KoolUploader("kul");
+	$kul->scriptFolder = $KoolControlsFolder."/KoolUploader";
+	$kul->handlePage = "handle.php";
+	$kul->allowedExtension = "gif,jpg,txt,doc,pdf";
+	$kul->styleFolder=$KoolControlsFolder."/KoolUploader/styles/default";
+	$kul->progressTracking = true;
+	$kul->maxFileSize = 512*1024; //500KB
+	
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $kul->Render();?>
+	<script type="text/javascript">
+		kul.registerEvent("OnBeforeUpload",function(sender,arg){
+			var _item = kul.getItem(arg.ItemId);
+			var _short_desc = prompt("Enter short description:","contain good information");
+			if(_short_desc!=null)
+			{
+				_item.attachData("short_desc",_short_desc);
+				return true;	
+			}	
+			else
+			{
+				return false;
+			}
+			
+		});
+		kul.registerEvent("OnUploadDone",function(sender,arg){
+			var _item = kul.getItem(arg.ItemId);
+			alert(_item.getFileName());			
+		});
+	</script>
+	
+	<div style="padding-top:20px;">
+		<i>*Note:</i> Please test uploading with *.txt, *.doc, *.pdf, *.jpg, *.gif ( size &lt; 500KB )
+	</div>	
+
+</form>
+			]]>			
+		</code>	
+		<code header="Handle.php">
+			<![CDATA[			
+<?php
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	// always modified
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	// HTTP/1.1
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	// HTTP/1.0
+	header("Pragma: no-cache");	
+	
+	$KoolControlsFolder = "../../../../KoolControls";
+	require  $KoolControlsFolder."/KoolUploader/kooluploader.php";
+	
+	//Create handle object and edit upload settings.
+	$kulhandle = new KoolUploadHandler();
+	$kulhandle->targetFolder = "../../Temp";
+	//Call the handle function to handle the request from client
+	echo $kulhandle->handleUpload();
+?>
+			]]>
+		</code>				
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolUploader/PHP/KoolUploader_Class/index.php#styleFolder">PHP :: KoolUploader :: styleFolder</doc>
+	</docs>
+</example>

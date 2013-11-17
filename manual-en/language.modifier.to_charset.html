@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>to_charset</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Smarty 3 Manual">
+<link rel="up" href="language.modifiers.html" title="Chapter 5. Variable Modifiers">
+<link rel="prev" href="language.modifier.strip.tags.html" title="strip_tags">
+<link rel="next" href="language.modifier.truncate.html" title="truncate">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">to_charset</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="language.modifier.strip.tags.html">Prev</a> </td>
+<th width="60%" align="center">Chapter 5. Variable Modifiers</th>
+<td width="20%" align="right"> <a accesskey="n" href="language.modifier.truncate.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="sect1" title="to_charset">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="language.modifier.to_charset"></a>to_charset</h2></div></div></div>
+<p>
+   <code class="varname">to_charset</code> is used to transcode a string from the internal charset to a given charset.
+   This is the exact opposite of the <a class="link" href="language.modifier.from_charset.html" title="from_charset">from_charset modifier</a>.
+  </p>
+<div class="informaltable"><table border="1">
+<colgroup>
+<col align="center">
+<col align="center">
+<col align="center">
+<col align="center">
+<col align="center">
+<col>
+</colgroup>
+<thead><tr>
+<th align="center">Parameter Position</th>
+<th align="center">Type</th>
+<th align="center">Required</th>
+<th align="center">Possible Values</th>
+<th align="center">Default</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">string</td>
+<td align="center">No</td>
+<td align="center">
+<code class="literal">ISO-8859-1</code>, <code class="literal">UTF-8</code>,
+      and any character set supported by
+      <a class="ulink" href="http://php.net/mb_convert_encoding" target="_top">
+      <code class="varname">mb_convert_encoding()</code></a>
+      </td>
+<td align="center"><code class="literal">ISO-8859-1</code></td>
+<td>The charset encoding the value is supposed to be encoded to</td>
+</tr></tbody>
+</table></div>
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>
+    Charset encoding should be handled by the application itself. 
+    This modifier should only be used in cases where the application cannot anticipate that a certain string is required in another encoding.
+   </p>
+</div>
+<p>
+   See also
+   <a class="link" href="charset.html" title="Chapter 11. Charset Encoding">Charset Enconding</a>,
+   <a class="link" href="language.modifier.from_charset.html" title="from_charset">from_charset modifier</a>.
+  </p>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="language.modifier.strip.tags.html">Prev</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="language.modifiers.html">Up</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="language.modifier.truncate.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">strip_tags </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+<td width="40%" align="right" valign="top"> truncate</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

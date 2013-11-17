@@ -1,0 +1,76 @@
+﻿.simpleZoomOut
+{
+    cursor:url(zoomin.cur),pointer !important;
+}
+.simpleKIV
+{
+	display:inline;
+}
+
+.simpleKIV .kivZoomPanel
+{
+    position:absolute;
+    background:white;
+    border:solid 1px gray;
+}
+
+.simpleKIV .kivLoading
+{
+    position:absolute;
+    font-family:Verdana;
+    font-size:11px;
+    background:white;
+    border:solid 1px gray;
+}
+
+.simpleKIV .kivBigImage
+{
+	cursor:url(zoomout.cur),pointer !important;
+	border:solid 1px gray;
+}
+
+
+.simpleKIV .kivBackground
+{
+	position:absolute;
+	direction:rtl;
+	background-color:black;
+}
+
+.simpleKIV .kivEffectPanel
+{
+	background-color:white;
+	border:solid 1px gray;
+}
+
+.simpleKIV .kivEffectImage
+{
+    border:solid 1px gray;
+}
+
+.simpleKIV .kivTransparent
+{
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;    
+}
+
+.simpleKIV .kivDescription
+{
+    color:black;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.simpleKIV .kivCloseButton
+{
+
+}
+
+.simpleKIV .kivMoveButton
+{
+
+}
+
+

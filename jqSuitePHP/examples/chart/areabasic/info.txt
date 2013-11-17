@@ -1,0 +1,1 @@
+jqChart use a technology from <a href="http://www.highcharts.com" target="_blank"> Highcharts </a>

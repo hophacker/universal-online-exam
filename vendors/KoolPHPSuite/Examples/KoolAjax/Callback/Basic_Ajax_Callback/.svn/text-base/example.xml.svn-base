@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Basic_Ajax_Callback" usedb="false">
+	<title>Basic Ajax Callback</title>
+	<metakeywords>php ajax, php ajax framework, php callback, ajax for php, php ajax examples, php ajax scripts, php ajax tutorial, php ajax post, php ajax toolkit</metakeywords>	 
+	<metadescription>KoolAjax is a great PHP Ajax Framework. This example shows how to use KoolAjax to call a PHP function from client-side without refreshing page.</metadescription>
+	
+	<description>
+		<![CDATA[ 
+The example shows how to use KoolAjax to call a PHP function from client-side.
+When Calculate button is clicked, values of two first input boxes will be sent to server to be calculated.
+Later the result is sent back to client and shown in last input box. All are done silently without refreshing page.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+		
+	function calculate($x,$y)
+	{
+		return $x+$y;
+	}
+	//Enable calculate function to be called at client-side
+	$koolajax->enableFunction("calculate");	
+	
+?>
+<div style="height:50px;padding-left:10px;">
+
+	<?php echo $koolajax->Render();?>
+	<style type="text/css">
+		#loading
+		{
+			position:relative;
+			left:-22px;
+			top:3px;
+			visibility:hidden;
+		}
+	</style>		
+		
+	
+	<input id="txtX" type="textbox" value="2" /> + 
+	<input id="txtY" type="textbox" value="3" />
+	<input id="btnCal" type="button" value="Calculate" onclick="btnCal_Click()" />
+	<input id="txtZ" type="textbox" />
+	<img id="loading" src="Images/loading.gif" alt="Loading..." />
+		
+	<script type="text/javascript">
+		function btnCal_Click()
+		{
+			x = document.getElementById("txtX").value;
+			y = document.getElementById("txtY").value;
+			koolajax.callback(calculate(x,y),onDone);
+			document.getElementById("loading").style.visibility ="visible";			
+		}
+		function onDone(s)
+		{
+			document.getElementById("txtZ").value = s;
+			document.getElementById("loading").style.visibility ="hidden";
+		}
+	</script>
+</div>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolAjax/Javascript/KoolAjax_Class/index.php#callback">Javascript :: KoolAjax :: callback()</doc>
+	</docs>
+</example>

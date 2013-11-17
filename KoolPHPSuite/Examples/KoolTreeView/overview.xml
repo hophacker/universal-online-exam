@@ -1,0 +1,33 @@
+<control>
+	<name>KoolTreeView - Great PHP TreeView</name>
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance. VIEW DEMO NOW!</metadescription>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview, treeview drag and drop, php treeview mysql, kooltreeview</metakeywords>	 
+	<description>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</description>
+	<examples>
+		<example	name="Many Styles" 
+					link="Appearance/Styles/index.php" 
+					image="Appearance/Styles/preview.gif"/>
+		<example	name="Drag And Drop" 
+					link="Features/Drag_And_Drop/index.php" 
+					image="Features/Drag_And_Drop/preview.gif"/>
+		<example	name="Node Text Editing" 
+					link="Features/Node_Text_Editing/index.php"
+					image="Features/Node_Text_Editing/preview.gif"/>
+
+		<example	name="Attach Data To Node" 
+					link="Features/Node_Data/index.php" 
+					image="Features/Node_Data/preview.gif"/>
+		<example	name="Dynamic Loading" 
+					link="Features/Dynamic_Loading/index.php"
+					image="Features/Dynamic_Loading/preview.gif"/>
+		<example	name="TreeView With CheckBox" 
+					link="Advances/TreeView_With_CheckBox/index.php"  
+					image="Advances/TreeView_With_CheckBox/preview.gif"/>
+		<example	name="State Persistent With Database" 
+					link="Advances/State_Persistent_With_Database/index.php"
+					image="Advances/State_Persistent_With_Database/preview.gif"/>
+		<example	name="Add/Remove/Expand/Collapse Node" 
+					link="Client_Side_API/Add_Remove_Expand_Collapse_Node/index.php"
+					image="Client_Side_API/Add_Remove_Expand_Collapse_Node/preview.gif"/>
+	</examples>			
+</control>

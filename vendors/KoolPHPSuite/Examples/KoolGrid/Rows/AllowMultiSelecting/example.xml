@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="AllowMultiSelecting" usedb="true">
+	<title>AllowMultiSelecting</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolGrid allows selecting multi-rows.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolGrid allows selecting multi-rows. To enable this feature, you set <b>$AllowMultiSelecting</b> of KoolGrid's instance or GridTableView's instance to <b>true</b>
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+	require $KoolControlsFolder."/KoolGrid/koolgrid.php";
+	$ds = new MySQLDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->MasterTable->DataSource = $ds;
+	$grid->MasterTable->DataKeyNames = "customerNumber"; // Need to set to get selection.
+	$grid->Width = "655px";
+
+	$grid->AllowMultiSelecting = true;// Allow multi row selecting
+
+	$grid->AjaxEnabled = true;
+	$grid->AutoGenerateColumns = true;
+		
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	
+	$grid->Process();
+	
+	//Get selected keys after grid processing
+	$selected_keys = $grid->GetInstanceMasterTable()->SelectedKeys;
+?>
+
+<form id="form1" method="post">
+	<?php echo $koolajax->Render();?>
+	<?php echo $grid->Render();?>
+	
+	<div style="padding-top:10px;">
+		<input type="submit" value = "Submit" />
+	</div>
+	<div style="padding-top:10px;">
+		<?php
+			if (sizeof($selected_keys)>0)
+			{
+				echo "You selected rows with <b>customerNumber = [ ";
+				for($i=0;$i<sizeof($selected_keys);$i++)
+				{
+					echo $selected_keys[$i]["customerNumber"];
+					if($i<sizeof($selected_keys)-1)
+					{
+						echo " ,";	
+					}
+				}
+				echo " ]</b>";
+			}
+		?>
+	</div>	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/KoolGrid/index.php#AllowMultiSelecting">KoolGrid::AllowMultiSelecting</doc>
+		<doc link="http://doc.koolphp.net/Controls/KoolGrid/PHP/GridTableView/index.php#AllowMultiSelecting">GridTableView::AllowMultiSelecting</doc>
+	</docs>
+</example>

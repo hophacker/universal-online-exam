@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization xmlns="koolcalendar:localization-schema">
+	<Commands 
+		Today			= "Hôm nay"
+		OK 				= "Chọn"
+		Cancel 			= "Hủy"
+	/>
+	<Months_Full
+		January			= "Tháng Một"
+		February		= "Tháng Hai"
+		March			= "Tháng Ba"
+		April			= "Tháng Tư"
+		May				= "Tháng Năm"
+		June			= "Tháng Sáu"
+		July			= "Tháng Bảy"
+		August			= "Tháng Tám"
+		September		= "Tháng Chín"
+		October			= "Tháng Mười"
+		November		= "Tháng Mười Một"
+		December		= "Tháng Mười Hai"	
+	/>
+	<Months_Short
+		January			= "Một"
+		February		= "Hai"
+		March			= "Ba"
+		April			= "Bốn"
+		May				= "Năm"
+		June			= "Sáu"
+		July			= "Bảy"
+		August			= "Tám"
+		September		= "Chín"
+		October			= "Mười"
+		November		= "Mười Một"
+		December		= "Mười Hai"	
+	/>
+	<DaysOfWeek_Full
+		Sunday			= "Chủ Nhật"
+		Monday			= "Thứ Hai"
+		Tuesday			= "Thứ Ba"
+		Wednesday		= "Thứ Tư"
+		Thursday		= "Thứ Năm"
+		Friday			= "Thứ Sáu"
+		Saturday		= "Thứ Bảy"		
+	/>
+	<DaysOfWeek_Short
+		Sunday			= "CN"
+		Monday			= "T2"
+		Tuesday			= "T3"
+		Wednesday		= "T4"
+		Thursday		= "T5"
+		Friday			= "T6"
+		Saturday		= "T7"		
+	/>
+	<DaysOfWeek_Shortest
+		Sunday			= "CN"
+		Monday			= "T2"
+		Tuesday			= "T3"
+		Wednesday		= "T4"
+		Thursday		= "T5"
+		Friday			= "T6"
+		Saturday		= "T7"		
+	/>	
+</localization>

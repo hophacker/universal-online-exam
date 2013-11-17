@@ -1,0 +1,58 @@
+<navigation id="KoolForm" title="PHP Form">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="Form_Decoration" text="Decoration">
+			<link 	id="Decoration_First_Look" 
+					text="First Look"
+					link="../KoolForm/Decoration/First_Look/index.php" 
+					new="true"/>
+			<link 	id="With_Ajax" 
+					text="With Ajax"
+					link="../KoolForm/Decoration/With_Ajax/index.php" 
+					new="true"/>		
+		</category>
+		<category id="Validation" text="Validation">
+			<link 	id="Validation_First_Look" 
+					text="First Look"
+					link="../KoolForm/Validation/First_Look/index.php" 
+					new="true"/>
+		</category>
+		<category id="TextBox" text="TextBox">
+			<link 	id="KoolTextBox" 
+					text="KoolTextBox"
+					link="../KoolInput/TextBox/KoolTextBox/index.php" 
+					new="true"/>
+			<link 	id="KoolNumericTextBox" 
+					text="KoolNumericTextBox"
+					link="../KoolInput/TextBox/KoolNumericTextBox/index.php" 
+					new="true"/>
+			<link 	id="KoolPasswordTextBox" 
+					text="KoolPasswordTextBox"
+					link="../KoolInput/TextBox/KoolPasswordTextBox/index.php" 
+					new="true"/>
+			<link 	id="KoolMaskedTextBox" 
+					text="KoolMaskedTextBox"
+					link="../KoolInput/TextBox/KoolMaskedTextBox/index.php" 
+					new="true"/>
+		</category>
+		<category id="Button" text="Button">
+			<link 	id="KoolButton" 
+					text="KoolButton"
+					link="../KoolButton/Button/KoolButton/index.php" 
+					new="true"/>
+			<link 	id="KoolLinkButton" 
+					text="KoolLinkButton"
+					link="../KoolButton/Button/KoolLinkButton/index.php" 
+					new="true"/>
+			<link 	id="KoolToggleButton" 
+					text="KoolToggleButton"
+					link="../KoolButton/Button/KoolToggleButton/index.php" 
+					new="true"/>
+			<link 	id="KoolSplitButton" 
+					text="KoolSplitButton"
+					link="../KoolButton/Button/KoolSplitButton/index.php" 
+					new="true"/>
+		</category>
+		
+	</category>
+</navigation>

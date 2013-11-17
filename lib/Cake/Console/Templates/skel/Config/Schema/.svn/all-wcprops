@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema
+END
+db_acl.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema/db_acl.php
+END
+sessions.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema/sessions.php
+END
+i18n.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema/i18n.sql
+END
+db_acl.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema/db_acl.sql
+END
+sessions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema/sessions.sql
+END
+i18n.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/dxks/!svn/ver/133/yangda/lib/Cake/Console/Templates/skel/Config/Schema/i18n.php
+END

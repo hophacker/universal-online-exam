@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Expand_Direction" usedb="false">
+	<title>Expand Direction</title>
+	<metakeywords>php menu,php drop down menu,javascript menu</metakeywords>	 
+	<metadescription>You can control the expand direction of an item by settings the $ExpandDirection of $GroupSettings of that item</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+You can control the expand direction of an item by settings the <b>$ExpandDirection</b> of <b>$GroupSettings</b> of that item
+</p>
+<p>
+	$item = $km->Add("root","edit","Edit");<br/>
+	$item->GroupSettings->ExpandDirection = "Up";
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolMenu/koolmenu.php";
+	
+	$km = new KoolMenu("km");
+	$km->scriptFolder = $KoolControlsFolder."/KoolMenu";
+	$km->styleFolder="default";
+	
+	$item = $km->Add("root","file","File");
+	$item->GroupSettings->ExpandDirection = "Down";
+	
+	$km->Add("file","new","New...");
+	$km->Add("new","newfile","File");
+	$km->Add("new","newfolder","Folder");
+	$km->AddSeparator("file");
+	$km->Add("file","open","Open");
+	$km->Add("file","close","Close");
+	$km->Add("file","save","Save");
+	$item = $km->Add("file","saveas","Save as ...");
+	$item->Enabled = false;
+
+	$km->Add("file","permission","Permission");
+
+	$km->Add("permission","unrestrict","Unrestricted Access");
+	$km->Add("permission","donotattribute","Do not attribute");
+	
+	$item = $km->Add("root","edit","Edit");
+	$item->GroupSettings->ExpandDirection = "Up";
+	
+	$km->Add("edit","cut","Cut");
+	$km->Add("edit","copy","Copy");
+	$km->Add("edit","paste","Paste");
+
+	$item = $km->Add("root","view","View");
+	$item->GroupSettings->ExpandDirection = "Right";
+
+	$km->Add("view","normal","Normal");
+	$km->Add("view","print","Print");
+	$km->Add("view","weblayout","Web Layout");
+	
+	$item = $km->Add("root","help","Help");
+	$item->Enabled = false;
+	
+	$flow_select = "Horizontal";	
+	if(isset($_POST["flow_select"]))
+	{
+		$flow_select = $_POST["flow_select"];
+	}
+	$km->Flow = $flow_select;
+	
+?>
+
+<form id="form1" method="post">
+
+	<div style="padding-top:20px;padding-bottom:100px;width:650px;">
+		<?php echo $km->Render();?>
+	</div>
+	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolMenu/PHP/KoolMenu_Class/index.php#styleFolder">PHP :: KoolMenu :: styleFolder</doc>
+	</docs>
+</example>

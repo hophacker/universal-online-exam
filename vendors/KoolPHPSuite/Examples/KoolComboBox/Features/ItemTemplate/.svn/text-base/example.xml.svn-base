@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="ItemTemplate" usedb="false">
+	<title>ItemTemplate</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+<p>
+KoolComboBox supports item template, in which we can define our own item's display. To use this feature, you need to set your template to <b>itemTemplate</b> property of KoolComboBox's instance. Above example show you how to add image to item.
+</p>
+<p>
+When an item is rendered, KoolComboBox will read the <b>itemTemplate</b> and start fill in data to placeholder of template.
+</p>
+
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->styleFolder= "inox";
+	$kcb->width = "160px";
+	$kcb->itemTemplate = "<table><tr><td valign='middle' style='width:22px;height:20px;'><img src='../../Resources/Flags/{image}' alt='{text}' title='{text}' /></td><td valign='middle'>{text}</td></tr></table>";
+	
+	$kcb->addItem("Canada","Canada",array("image"=>"flag_canada.png"),true);
+	$kcb->addItem("Finland","Finland",array("image"=>"flag_finland.png"));
+	$kcb->addItem("France","France",array("image"=>"flag_france.png"));
+	$kcb->addItem("Germany","Germany",array("image"=>"flag_germany.png"));
+	$kcb->addItem("Great Britain","Great Britain",array("image"=>"flag_great_britain.png"));
+	$kcb->addItem("USA","USA",array("image"=>"flag_usa.png"));	
+
+?>
+
+<form id="form1" method="post">
+	<div style="padding-left:10px;">	
+		Which country you want to visit?
+	</div>	
+	<div style="padding:10px;">	
+	<?php echo $kcb->Render();?>
+	</div>	
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolTabs/PHP/KoolTabs_Class/index.php#styleFolder">PHP :: KoolTabs :: styleFolder</doc>
+	</docs>
+</example>

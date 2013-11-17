@@ -1,0 +1,406 @@
+.defaultKUL
+{
+	margin:0px;
+	padding:5px;
+	padding-bottom:3px;
+	border:solid 1px #7A7C80;
+	background-color:#EDEEEF;
+}
+
+.defaultKUL .kulContainer
+{
+	background-color:white;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+.defaultKUL .kulContainerCover
+{
+	border:solid 1px #878E95;
+}
+
+.defaultKUL .kulTemplate
+{
+	display:none;
+}
+
+
+
+.defaultKUL .kulA
+{
+	display:block;
+}
+
+.defaultKUL .kulText
+{
+	display:none;
+}
+
+/*btnAdd*/
+.defaultKUL .kulAdd
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.defaultKUL .kulAdd .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_add.gif);
+}
+
+/*btnUploadAll*/
+.defaultKUL .kulUploadAll
+{
+	display:block;
+	float:left;
+	width:70px;	
+}
+
+.defaultKUL .kulUploadAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_uploadall.gif);
+}
+
+/*btnClearAll*/
+.defaultKUL .kulClearAll
+{
+	display:block;
+	float:right;
+	width:70px;	
+}
+
+.defaultKUL .kulClearAll .kulA
+{
+	width:68px;
+	height:24px;
+	background:url(btn_clearall.gif);
+}
+
+/*Input File*/
+.defaultKUL .kulFileInput
+{
+	display:block;
+	width:68px;
+	height:24px;
+	overflow:hidden;
+	margin-top:-24px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0.0;
+	opacity:0.0;
+}
+.defaultKUL .kulFileInput input
+{
+	margin-left:-145px;
+}
+
+/*Item*/
+
+.defaultKUL .kulItem
+{
+	height:60px;
+	background-color:white;
+	border-bottom:solid 1px #E2E2E2;
+	vertical-align:middle;
+	clear:both;
+}
+
+.defaultKUL .kulSelected
+{
+	background-color:#F3F3F3;
+}
+
+
+.defaultKUL .kulItem .kulText,
+.defaultKUL .kulItem .kulA
+{
+	display:inline;
+}
+.defaultKUL .kulItem .kulA .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	color:blue;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.defaultKUL .kulItem .kulUpload .kulA:hover .kulText,
+.defaultKUL .kulItem .kulCancel .kulA:hover .kulText
+{
+	color:green;
+	text-decoration:none;
+}
+.defaultKUL .kulItem .kulRemove .kulA:hover .kulText
+{
+	color:crimson;
+	text-decoration:none;
+}
+
+
+.defaultKUL .kulFileName
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	display:block;
+}
+
+.defaultKUL .kulUpload,
+.defaultKUL .kulRemove,
+.defaultKUL .kulCancel
+{
+	display:block;
+	line-height:20px;
+}
+
+.defaultKUL .kulCancel
+{
+	display:none;
+}
+
+
+.defaultKUL .kulUploading .kulUpload,
+.defaultKUL .kulUploading .kulRemove,
+.defaultKUL .kulDone .kulUpload,
+.defaultKUL .kulDone .kulRemove,
+.defaultKUL .kulDone .kulCancel
+{
+	display:none;
+}
+
+.defaultKUL .kulUploading .kulCancel
+{
+	display:block;
+}
+
+.defaultKUL .kulNotAllowed .kulRemove
+{
+	display:block;
+}
+
+
+.defaultKUL .kulThumbnail
+{
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(ico_file.gif);
+}
+.defaultKUL .kulProgress
+{
+	display:none;
+}
+.defaultKUL .kulStatus
+{
+	display:none;
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;
+	cursor:default;
+	color:green;
+}
+.defaultKUL .kulError
+{
+	color:red;
+}
+
+.defaultKUL .kulDone .kulStatus
+{
+	display:block;
+}
+
+.defaultKUL .kulProgress
+{
+	vertical-align:middle;
+}
+
+.defaultKUL .kulProgress .kulBar
+{
+	width:123px;
+	height:10px;
+	background:url(progressbg_green.gif) no-repeat -123px;
+}
+/*Alternative bar in case the progressEnabled==false*/
+.defaultKUL .kulProgress .kulAltBar
+{
+	width:96px;
+	height:10px;
+	background:url(progressbg_alt.gif);
+}
+
+.defaultKUL .kulProgress .kulText
+{
+	font-family:Verdana;
+	font-size:8pt;
+	white-space:nowrap;	
+}
+
+
+.defaultKUL .kulUploading .kulProgress
+{
+	display:block;
+}
+
+
+.defaultKUL .kulItem .kulLeft
+{
+	float:left;
+	height:50px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:10px;
+}
+
+.defaultKUL .kulItem .kulRight
+{
+	float:right;
+	height:50px;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:7px;
+	vertical-align:middle;
+}
+
+.defaultKUL .kulItem .kulMiddle
+{
+	height:45px;
+	padding-top:12px;
+	overflow:hidden;	
+}
+/*Hide iframe: this important, do not change*/
+.defaultKUL .kulItem iframe
+{
+	display:none;
+}
+/*Hide form: this important, do not change*/
+.defaultKUL .kulItem form
+{
+	display:none;
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*Image for thumpnail*/
+.defaultKUL .kuljpg
+{
+	background:url(ico_jpg.gif);
+}
+.defaultKUL .kulgif
+{
+	background:url(ico_gif.gif);
+}
+
+.defaultKUL .kulpng
+{
+	background:url(ico_png.gif);
+}
+.defaultKUL .kulbmp,
+.defaultKUL .kulpic,
+.defaultKUL .kultiff
+{
+	background:url(ico_image.gif);
+}
+
+.defaultKUL .kuldoc,
+.defaultKUL .kuldocx
+{
+	background:url(ico_doc.gif);
+}
+.defaultKUL .kulxls,
+.defaultKUL .kulxlsx
+{
+	background:url(ico_xls.gif);
+}
+.defaultKUL .kulmdb
+{
+	background:url(ico_mdb.gif);
+}
+.defaultKUL .kulppt
+{
+	background:url(ico_ppt.gif);
+}
+.defaultKUL .kulmdf
+{
+	background:url(ico_mdf.gif);
+}
+.defaultKUL .kuldll
+{
+	background:url(ico_dll.gif);
+}
+.defaultKUL .kulbat
+{
+	background:url(ico_bat.gif);
+}
+.defaultKUL .kulaspx
+{
+	background:url(ico_aspx.gif);
+}
+.defaultKUL .kulcs
+{
+	background:url(ico_cs.gif);
+}
+.defaultKUL .kulhtml,
+.defaultKUL .kulhtm
+{
+	background:url(ico_html.gif);
+}
+.defaultKUL .kulini
+{
+	background:url(ico_ini.gif);
+}
+.defaultKUL .kuljar
+{
+	background:url(ico_jar.gif);
+}
+.defaultKUL .kuljs
+{
+	background:url(ico_js.gif);
+}
+.defaultKUL .kullib
+{
+	background:url(ico_lib.gif);
+}
+.defaultKUL .kulmp3
+{
+	background:url(ico_mp3.gif);
+}
+.defaultKUL .kulmpg
+{
+	background:url(ico_mpg.gif);
+}
+.defaultKUL .kulpdf
+{
+	background:url(ico_pdf.gif);
+}
+.defaultKUL .kulphp
+{
+	background:url(ico_php.gif);
+}
+.defaultKUL .kulrar,
+.defaultKUL .kulzip,
+.defaultKUL .kultgz
+{
+	background:url(ico_rar.gif);
+}
+.defaultKUL .kultxt
+{
+	background:url(ico_txt.gif);
+}
+.defaultKUL .kulvb
+{
+	background:url(ico_vb.gif);
+}
+.defaultKUL .kulwma
+{
+	background:url(ico_wma.gif);
+}
+.defaultKUL .kulxml
+{
+	background:url(ico_xml.gif);
+}

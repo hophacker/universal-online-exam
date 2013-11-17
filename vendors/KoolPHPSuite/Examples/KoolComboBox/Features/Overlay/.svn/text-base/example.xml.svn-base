@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example id="Overlay" usedb="false">
+	<title>Overlay</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+KoolComboBox fully supports overlay. Its dropdown can hover over the &lt;select&gt; element and/or flash object.This mechanism is enabled by default.
+If you want to turn this feature off, you can set <b>superAbove=false</b>.
+		]]>		
+	</description>
+	
+	<samplecodes>
+		<code header="Example.php">
+			<![CDATA[
+<?php
+	require $KoolControlsFolder."/KoolComboBox/koolcombobox.php";
+
+	$kcb = new KoolComboBox("kcb");
+	$kcb->scriptFolder = $KoolControlsFolder."/KoolComboBox";
+	$kcb->styleFolder= "inox";
+	$kcb->width = "160px";
+	$kcb->itemTemplate = "<table><tr><td valign='middle' style='width:22px;height:20px;'><img src='../../Resources/Flags/{image}' alt='{text}' title='{text}' /></td><td valign='middle'>{text}</td></tr></table>";
+	
+	$kcb->addItem("Canada","Canada",array("image"=>"flag_canada.png"),true);
+	$kcb->addItem("Finland","Finland",array("image"=>"flag_finland.png"));
+	$kcb->addItem("France","France",array("image"=>"flag_france.png"));
+	$kcb->addItem("Germany","Germany",array("image"=>"flag_germany.png"));
+	$kcb->addItem("Great Britain","Great Britain",array("image"=>"flag_great_britain.png"));
+	$kcb->addItem("USA","USA",array("image"=>"flag_usa.png"));	
+?>
+
+<form id="form1" method="post">
+	<div style="padding-left:10px;padding-bottom:10px;">	
+		Choose a nation:
+	</div>	
+	<div style="padding-left:10px;padding-bottom:10px;">	
+	<?php echo $kcb->Render();?>
+	</div>
+	<div style="padding-left:10px;padding-bottom:10px;">	
+		<select>
+			<option>KoolComBoBox will be over this</option>
+			
+		</select>		
+	</div>	
+	<div style="padding:10px;">	
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="425" height="344">
+			<param name="movie" value="http://www.youtube.com/v/AxKzTowWxko&hl=en&fs=1" />
+			<param name="wmode" value="transparent" />
+			<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/AxKzTowWxko&hl=en&fs=1"
+				width="425" height="344">
+				<param name="wmode" value="transparent" />
+					<p>KoolComboBox overlays flash files</p>
+			</object>
+		</object>	
+	</div>
+</form>
+			]]>			
+		</code>			
+	</samplecodes>
+	<docs>
+		<doc link="http://doc.koolphp.net/Controls/KoolComboBox/PHP/KoolComboBox_Class/index.php#superAbove">PHP :: KoolComboBox :: superAbove</doc>
+	</docs>
+</example>
