@@ -1,1 +1,3 @@
-app/tmp/logs/*
+app/tmp/
+app/Plugin/DebugKit/
+
